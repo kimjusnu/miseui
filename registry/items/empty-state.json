@@ -1,0 +1,10 @@
+{
+  "name": "empty-state",
+  "type": "registry:block",
+  "title": "Empty State",
+  "description": "A first screen that gives people somewhere to start, with one action and three worked examples.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/button.json"],
+  "categories": ["blocks"],
+  "files": [{ "path": "registry/miseui/blocks/empty-state.tsx", "type": "registry:component" }]
+}

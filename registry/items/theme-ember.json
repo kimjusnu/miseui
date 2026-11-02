@@ -1,0 +1,86 @@
+{
+  "name": "theme-ember",
+  "type": "registry:theme",
+  "title": "Ember theme",
+  "description": "Hot rose. Bold, for consumer and creative products. Complete tokens, motion included.",
+  "cssVars": {
+    "theme": {
+      "font-display": "\"Geist Variable\", -apple-system, BlinkMacSystemFont, \"SF Pro Display\", system-ui, sans-serif",
+      "ease-mise": "cubic-bezier(0.2, 0, 0, 1)",
+      "ease-mise-out": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "duration-fast": "150ms",
+      "duration-base": "240ms",
+      "duration-slow": "400ms",
+      "color-mise": "var(--mise)",
+      "color-mise-foreground": "var(--mise-foreground)",
+      "color-mise-soft": "var(--mise-soft)"
+    },
+    "light": {
+      "radius": "1.125rem",
+      "background": "oklch(0.995 0.0013 15)",
+      "foreground": "oklch(0.21 0.005 15)",
+      "card": "oklch(0.975 0.0025 15)",
+      "card-foreground": "oklch(0.21 0.005 15)",
+      "popover": "oklch(0.995 0.0013 15)",
+      "popover-foreground": "oklch(0.21 0.005 15)",
+      "primary": "oklch(0.21 0.005 15)",
+      "primary-foreground": "oklch(0.99 0.0013 15)",
+      "secondary": "oklch(0.955 0.0037 15)",
+      "secondary-foreground": "oklch(0.21 0.005 15)",
+      "muted": "oklch(0.965 0.0025 15)",
+      "muted-foreground": "oklch(0.5 0.01 15)",
+      "accent": "oklch(0.955 0.0037 15)",
+      "accent-foreground": "oklch(0.21 0.005 15)",
+      "destructive": "oklch(0.6 0.22 27)",
+      "border": "oklch(0.9 0.0037 15)",
+      "input": "oklch(0.9 0.0037 15)",
+      "mise": "oklch(0.58 0.21 15)",
+      "mise-foreground": "oklch(0.985 0.006 15)",
+      "mise-soft": "oklch(0.95 0.03 15)",
+      "ring": "oklch(0.64 0.18 15)"
+    },
+    "dark": {
+      "background": "oklch(0.14 0.0063 15)",
+      "foreground": "oklch(0.96 0.0025 15)",
+      "card": "oklch(0.19 0.0063 15)",
+      "card-foreground": "oklch(0.96 0.0025 15)",
+      "popover": "oklch(0.2 0.0063 15)",
+      "popover-foreground": "oklch(0.96 0.0025 15)",
+      "primary": "oklch(0.96 0.0025 15)",
+      "primary-foreground": "oklch(0.17 0.005 15)",
+      "secondary": "oklch(0.24 0.0063 15)",
+      "secondary-foreground": "oklch(0.96 0.0025 15)",
+      "muted": "oklch(0.22 0.0063 15)",
+      "muted-foreground": "oklch(0.7 0.0075 15)",
+      "accent": "oklch(0.26 0.0063 15)",
+      "accent-foreground": "oklch(0.96 0.0025 15)",
+      "destructive": "oklch(0.7 0.19 22)",
+      "border": "oklch(1 0 0 / 12%)",
+      "input": "oklch(1 0 0 / 15%)",
+      "mise": "oklch(0.71 0.18 15)",
+      "mise-foreground": "oklch(0.18 0.04 15)",
+      "mise-soft": "oklch(0.31 0.07 15)",
+      "ring": "oklch(0.66 0.17 15)"
+    }
+  },
+  "css": {
+    "@utility text-display": {
+      "font-family": "var(--font-display)",
+      "font-weight": "600",
+      "letter-spacing": "-0.03em",
+      "line-height": "1.04"
+    },
+    "@utility text-title": {
+      "font-family": "var(--font-display)",
+      "font-weight": "600",
+      "letter-spacing": "-0.02em",
+      "line-height": "1.12"
+    },
+    "@utility material": {
+      "background-color": "color-mix(in oklab, var(--background) 72%, transparent)",
+      "backdrop-filter": "blur(20px) saturate(180%)",
+      "-webkit-backdrop-filter": "blur(20px) saturate(180%)"
+    }
+  },
+  "files": []
+}

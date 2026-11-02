@@ -1,4 +1,4 @@
-export type Category = "ai" | "effects" | "transitions" | "core"
+export type Category = "blocks" | "ai" | "effects" | "transitions" | "core"
 
 export interface EffectMeta {
   /** value of the `effect` prop */
@@ -32,10 +32,11 @@ export interface ComponentMeta {
   exports: string[]
 }
 
-/** AI first, then the effects and transitions that make a screen feel alive, then the base kit. */
-export const CATEGORY_ORDER: readonly Category[] = ["ai", "effects", "transitions", "core"]
+/** Whole screens first: they are what someone who does not design came for. Then the parts, AI first. */
+export const CATEGORY_ORDER: readonly Category[] = ["blocks", "ai", "effects", "transitions", "core"]
 
 export const CATEGORY_LABELS: Record<Category, string> = {
+  blocks: "Blocks",
   ai: "AI states",
   effects: "Effects",
   transitions: "Transitions",

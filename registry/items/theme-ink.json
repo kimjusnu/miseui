@@ -1,0 +1,86 @@
+{
+  "name": "theme-ink",
+  "type": "registry:theme",
+  "title": "Ink theme",
+  "description": "No colour at all. Serious, for tools and documents. Complete tokens, motion included.",
+  "cssVars": {
+    "theme": {
+      "font-display": "\"Geist Variable\", -apple-system, BlinkMacSystemFont, \"SF Pro Display\", system-ui, sans-serif",
+      "ease-mise": "cubic-bezier(0.2, 0, 0, 1)",
+      "ease-mise-out": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "duration-fast": "150ms",
+      "duration-base": "240ms",
+      "duration-slow": "400ms",
+      "color-mise": "var(--mise)",
+      "color-mise-foreground": "var(--mise-foreground)",
+      "color-mise-soft": "var(--mise-soft)"
+    },
+    "light": {
+      "radius": "0.5rem",
+      "background": "oklch(0.995 0.0005 90)",
+      "foreground": "oklch(0.21 0.002 90)",
+      "card": "oklch(0.975 0.001 90)",
+      "card-foreground": "oklch(0.21 0.002 90)",
+      "popover": "oklch(0.995 0.0005 90)",
+      "popover-foreground": "oklch(0.21 0.002 90)",
+      "primary": "oklch(0.21 0.002 90)",
+      "primary-foreground": "oklch(0.99 0.0005 90)",
+      "secondary": "oklch(0.955 0.0015 90)",
+      "secondary-foreground": "oklch(0.21 0.002 90)",
+      "muted": "oklch(0.965 0.001 90)",
+      "muted-foreground": "oklch(0.5 0.004 90)",
+      "accent": "oklch(0.955 0.0015 90)",
+      "accent-foreground": "oklch(0.21 0.002 90)",
+      "destructive": "oklch(0.6 0.22 27)",
+      "border": "oklch(0.9 0.0015 90)",
+      "input": "oklch(0.9 0.0015 90)",
+      "mise": "oklch(0.24 0.004 90)",
+      "mise-foreground": "oklch(0.985 0.002 90)",
+      "mise-soft": "oklch(0.94 0.003 90)",
+      "ring": "oklch(0.55 0.004 90)"
+    },
+    "dark": {
+      "background": "oklch(0.14 0.0025 90)",
+      "foreground": "oklch(0.96 0.001 90)",
+      "card": "oklch(0.19 0.0025 90)",
+      "card-foreground": "oklch(0.96 0.001 90)",
+      "popover": "oklch(0.2 0.0025 90)",
+      "popover-foreground": "oklch(0.96 0.001 90)",
+      "primary": "oklch(0.96 0.001 90)",
+      "primary-foreground": "oklch(0.17 0.002 90)",
+      "secondary": "oklch(0.24 0.0025 90)",
+      "secondary-foreground": "oklch(0.96 0.001 90)",
+      "muted": "oklch(0.22 0.0025 90)",
+      "muted-foreground": "oklch(0.7 0.003 90)",
+      "accent": "oklch(0.26 0.0025 90)",
+      "accent-foreground": "oklch(0.96 0.001 90)",
+      "destructive": "oklch(0.7 0.19 22)",
+      "border": "oklch(1 0 0 / 12%)",
+      "input": "oklch(1 0 0 / 15%)",
+      "mise": "oklch(0.95 0.003 90)",
+      "mise-foreground": "oklch(0.18 0.003 90)",
+      "mise-soft": "oklch(0.3 0.003 90)",
+      "ring": "oklch(0.7 0.004 90)"
+    }
+  },
+  "css": {
+    "@utility text-display": {
+      "font-family": "var(--font-display)",
+      "font-weight": "600",
+      "letter-spacing": "-0.03em",
+      "line-height": "1.04"
+    },
+    "@utility text-title": {
+      "font-family": "var(--font-display)",
+      "font-weight": "600",
+      "letter-spacing": "-0.02em",
+      "line-height": "1.12"
+    },
+    "@utility material": {
+      "background-color": "color-mix(in oklab, var(--background) 72%, transparent)",
+      "backdrop-filter": "blur(20px) saturate(180%)",
+      "-webkit-backdrop-filter": "blur(20px) saturate(180%)"
+    }
+  },
+  "files": []
+}

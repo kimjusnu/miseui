@@ -3,6 +3,7 @@ import { findComponent } from "@/src/content"
 import { CATEGORY_LABELS } from "@/src/content/types"
 import { demos } from "@/src/demos"
 import { installCommand } from "@/src/lib/site"
+import { BlockPreview } from "@/src/components/block-preview"
 import { CodeBlock } from "@/src/components/code-block"
 import { WhyPanel } from "@/src/components/why-panel"
 import { NotFound } from "./not-found"
@@ -23,9 +24,15 @@ export function ComponentPage() {
         <p className="mt-2 max-w-prose text-[15px] leading-relaxed text-muted-foreground">{meta.description}</p>
       </header>
 
-      <section aria-label="Demo" className="flex min-h-56 items-center rounded-2xl bg-card p-8 md:p-10">
-        <Demo />
-      </section>
+      {meta.category === "blocks" ? (
+        <BlockPreview>
+          <Demo />
+        </BlockPreview>
+      ) : (
+        <section aria-label="Demo" className="flex min-h-56 items-center rounded-2xl bg-card p-8 md:p-10">
+          <Demo />
+        </section>
+      )}
 
       <WhyPanel why={meta.why} effects={meta.effects} />
 
