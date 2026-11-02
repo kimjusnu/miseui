@@ -1,0 +1,10 @@
+{
+  "name": "spinner",
+  "type": "registry:ui",
+  "title": "Spinner",
+  "description": "Says work is running when nobody knows how long it will take: a ring, three dots, eight bars or an orbit, with a pulse instead of movement for people who turned motion off.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["feedback"],
+  "files": [{ "path": "registry/miseui/ui/spinner.tsx", "type": "registry:ui" }]
+}

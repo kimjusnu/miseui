@@ -1,0 +1,9 @@
+{
+  "name": "kbd",
+  "type": "registry:ui",
+  "title": "Kbd",
+  "description": "Keyboard keys as hairline caps, physical keys, tight chips or plain text, with chords, a platform-aware modifier and a cap that dips on the real key.",
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/kbd.tsx", "type": "registry:ui" }]
+}

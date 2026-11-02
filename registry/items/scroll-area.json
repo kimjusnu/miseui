@@ -1,0 +1,13 @@
+{
+  "name": "scroll-area",
+  "type": "registry:ui",
+  "title": "Scroll Area",
+  "description": "A scroller with a styled bar that matches the theme, as a hover bar, a thin overlay, edge shadows or a snapping row.",
+  "dependencies": ["radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/scroll-area.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/scroll-area-parts.tsx", "type": "registry:ui" }
+  ]
+}

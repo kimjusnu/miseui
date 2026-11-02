@@ -1,0 +1,15 @@
+{
+  "name": "number-input",
+  "type": "registry:ui",
+  "title": "Number Input",
+  "description": "A field for amounts that clamps to its range, repeats while a button is held, reads formatted text back, and comes as chevrons, split, pill or one big number.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/number-input.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/number-input-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/number-input-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/number-input-math.ts", "type": "registry:ui" }
+  ]
+}

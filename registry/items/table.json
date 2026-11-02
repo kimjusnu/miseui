@@ -1,0 +1,16 @@
+{
+  "name": "table",
+  "type": "registry:ui",
+  "title": "Table",
+  "description": "Real table markup with sortable headers, a sticky head, selection state, an empty row and right-aligned figures, in plain, striped, card or compact, scrolling inside itself when narrow.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/table.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/table-head.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/table-highlight.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/table-context.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/table-state.ts", "type": "registry:ui" }
+  ]
+}

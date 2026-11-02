@@ -1,0 +1,21 @@
+{
+  "name": "color-picker",
+  "type": "registry:ui",
+  "title": "Color Picker",
+  "description": "A saturation square, hue and opacity sliders, typed hex and presets, in a popover, inline, as presets only, or as a compact field, with a thumb that never lags behind the hand.",
+  "dependencies": ["motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/popover.json"
+  ],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/color-picker.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/color-picker-panel.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/color-picker-drag.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/color-picker-swatches.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/color-picker-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/color-picker-math.ts", "type": "registry:ui" }
+  ]
+}

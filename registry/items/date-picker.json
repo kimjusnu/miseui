@@ -1,0 +1,22 @@
+{
+  "name": "date-picker",
+  "type": "registry:ui",
+  "title": "Date Picker",
+  "description": "A calendar with no date library: single days or ranges, limits, a full keyboard grid and any locale, as a popover, inline, a typed field or two months with a band.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/popover.json",
+    "https://miseui.junsu4621.workers.dev/r/input.json"
+  ],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/date-picker.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/date-picker-calendar.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/date-picker-month.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/date-picker-typed.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/date-picker-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/date-picker-math.ts", "type": "registry:ui" }
+  ]
+}

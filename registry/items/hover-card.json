@@ -1,0 +1,13 @@
+{
+  "name": "hover-card",
+  "type": "registry:ui",
+  "title": "Hover Card",
+  "description": "A preview that appears over a link when the pointer rests on it, laid out for free content, a person, a page or a number.",
+  "dependencies": ["radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["overlays"],
+  "files": [
+    { "path": "registry/miseui/ui/hover-card.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/hover-card-bodies.tsx", "type": "registry:ui" }
+  ]
+}

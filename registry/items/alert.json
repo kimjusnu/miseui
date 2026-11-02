@@ -1,0 +1,13 @@
+{
+  "name": "alert",
+  "type": "registry:ui",
+  "title": "Alert",
+  "description": "An in-page message with a title, description, action and dismiss, in neutral, success, warning and error tones and four layouts.",
+  "dependencies": ["lucide-react", "motion", "radix-ui"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["feedback"],
+  "files": [
+    { "path": "registry/miseui/ui/alert.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/alert-parts.tsx", "type": "registry:ui" }
+  ]
+}

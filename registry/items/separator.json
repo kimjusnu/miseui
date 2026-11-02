@@ -1,0 +1,10 @@
+{
+  "name": "separator",
+  "type": "registry:ui",
+  "title": "Separator",
+  "description": "A rule between groups of content, as a hairline, a dashed break, a labelled divider or a line that fades at both ends.",
+  "dependencies": ["radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/separator.tsx", "type": "registry:ui" }]
+}

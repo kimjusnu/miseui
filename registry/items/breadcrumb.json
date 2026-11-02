@@ -1,0 +1,17 @@
+{
+  "name": "breadcrumb",
+  "type": "registry:ui",
+  "title": "Breadcrumb",
+  "description": "A trail from the root to the current page, with a nav landmark, a current marker and a middle that collapses into a menu.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/dropdown-menu.json"
+  ],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/breadcrumb.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/breadcrumb-parts.tsx", "type": "registry:ui" }
+  ]
+}

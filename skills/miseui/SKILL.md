@@ -89,19 +89,24 @@ UI that explains itself. Every component ships with the principle behind its sha
 
 - **Button** (`button`): Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged. — Doherty threshold · [reference](references/button.md)
 - **Checkbox** (`checkbox`): Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked. — Immediate feedback · [reference](references/checkbox.md)
+- **Color Picker** (`color-picker`): A saturation square, hue and opacity sliders, typed hex and presets, in four layouts, with a thumb that never lags behind the hand. — Direct manipulation · [reference](references/color-picker.md)
 - **Combobox** (`combobox`): A searchable select for long lists, single or multiple, with people rows, section headers, chips and loading built in. — Hick's law · [reference](references/combobox.md)
+- **Date Picker** (`date-picker`): A calendar with no date library: single days or ranges, limits, a full keyboard grid and any locale, in four layouts. — Recognition over recall · [reference](references/date-picker.md)
 - **Field** (`field`): Gives any control a label, description, error and required mark, and wires the ids and aria attributes so nobody has to remember them. — Proximity · [reference](references/field.md)
 - **Input** (`input`): Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring. — Fitts's law · [reference](references/input.md)
 - **Input OTP** (`input-otp`): One-time code entry drawn as boxes but built on one real input, so SMS autofill, paste, backspace and screen readers all work. — Error prevention · [reference](references/input-otp.md)
 - **Label** (`label`): Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled. — Law of proximity · [reference](references/label.md)
+- **Number Input** (`number-input`): A field for amounts that clamps to its range, repeats while a button is held and reads formatted text back. — Error prevention · [reference](references/number-input.md)
 - **Radio Group** (`radio-group`): One choice from a short list with every option in view, as dots, selectable cards, joined buttons or rows, with arrow keys built in. — Recognition over recall · [reference](references/radio-group.md)
 - **Select** (`select`): Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support. — Default effect · [reference](references/select.md)
 - **Slider** (`slider`): Picks a value or a range by feel, as a thin line, a thick volume track, labelled steps or a value bubble, with full keyboard control. — Direct manipulation · [reference](references/slider.md)
 - **Switch** (`switch`): Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates. — Affordance · [reference](references/switch.md)
 - **Textarea** (`textarea`): Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar. — Chunking · [reference](references/textarea.md)
+- **Toggle** (`toggle`): A button that stays pressed, for turning a view or format on and off without leaving the page. — Visibility of system status · [reference](references/toggle.md)
 
 ## Navigation
 
+- **Breadcrumb** (`breadcrumb`): A trail from the root to the current page, with a nav landmark, a current marker and a middle that collapses into a menu. — Information scent · [reference](references/breadcrumb.md)
 - **Dropdown Menu** (`dropdown-menu`): Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant. — Hick's law · [reference](references/dropdown-menu.md)
 - **Pagination** (`pagination`): Moves through a long list in steady chunks, with the window of pages always the same width so controls never shift. — Spatial memory · [reference](references/pagination.md)
 - **Tabs** (`tabs`): Segmented control that swaps one panel for another in place, so related views share a single spot on the screen. — Chunking · [reference](references/tabs.md)
@@ -110,6 +115,7 @@ UI that explains itself. Every component ships with the principle behind its sha
 
 - **Dialog** (`dialog`): Modal surface that dims everything else and holds focus until the user answers one question. — Attention funnel · [reference](references/dialog.md)
 - **Drawer** (`drawer`): A panel that slides in from an edge for a side task, so the page you came from stays where you left it. — Spatial continuity · [reference](references/drawer.md)
+- **Hover Card** (`hover-card`): A preview that appears over a link when the pointer rests on it, laid out for free content, a person, a page or a number. — Progressive disclosure · [reference](references/hover-card.md)
 - **Popover** (`popover`): Small floating panel anchored to the control that opened it, for a form or detail that does not need a full dialog. — Spatial memory · [reference](references/popover.md)
 - **Tooltip** (`tooltip`): One-line hint that appears on hover or focus with no delay and leaves with the pointer, for detail that does not deserve screen space. — Progressive disclosure · [reference](references/tooltip.md)
 
@@ -120,11 +126,19 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Badge** (`badge`): Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out. — Von Restorff effect · [reference](references/badge.md)
 - **Card** (`card`): Bordered surface with header, content and footer slots that reads as one region before anyone reads the text. — Law of common region · [reference](references/card.md)
 - **Collapsible** (`collapsible`): One disclosure: a label that opens the detail under it, for the one thing most readers can skip. — Progressive disclosure · [reference](references/collapsible.md)
+- **Kbd** (`kbd`): Keyboard keys as hairline caps, physical keys, tight chips or plain text, with chords, a platform-aware modifier and a cap that dips on the real key. — Flexibility and efficiency of use · [reference](references/kbd.md)
+- **Resizable** (`resizable`): Two panes with a draggable divider, horizontal or vertical, with limits that stretch, a keyboard-operable separator and a double-click reset. — User control and freedom · [reference](references/resizable.md)
+- **Scroll Area** (`scroll-area`): A scroller with a styled bar that matches the theme, as a hover bar, a thin overlay, edge shadows or a snapping row. — Law of continuity · [reference](references/scroll-area.md)
+- **Separator** (`separator`): A rule between groups of content, as a hairline, a dashed break, a labelled divider or a line that fades at both ends. — Law of uniform connectedness · [reference](references/separator.md)
 - **Skeleton** (`skeleton`): Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner. — Perceived performance · [reference](references/skeleton.md)
+- **Table** (`table`): Real table markup with sortable headers, a sticky head, selection, an empty row and aligned figures, in four densities. — Law of continuity · [reference](references/table.md)
 
 ## Feedback
 
+- **Alert** (`alert`): An in-page message with a title, description, action and dismiss, in neutral, success, warning and error tones and four layouts. — Visibility of system status · [reference](references/alert.md)
 - **Progress** (`progress`): Shows how far a task has come, as a bar, a hairline, discrete steps or a labelled percent, and admits it when nobody knows yet. — Visibility of system status · [reference](references/progress.md)
+- **Progress Circular** (`progress-circular`): Progress in a small square, with the number in the middle and an honest state for when nobody knows how far along it is. — Goal-gradient effect · [reference](references/progress-circular.md)
+- **Spinner** (`spinner`): Says work is running when nobody knows how long it will take, in four shapes, with a pulse instead of movement for people who turned motion off. — Visibility of system status · [reference](references/spinner.md)
 - **Toast** (`toast`): A brief message about something that just happened, which waits while you read it and leaves without being asked. — Visibility of system status · [reference](references/toast.md)
 
 ## Effects

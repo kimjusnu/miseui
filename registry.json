@@ -50,6 +50,34 @@
       ]
     },
     {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "An in-page message with a title, description, action and dismiss, in neutral, success, warning and error tones and four layouts.",
+      "dependencies": [
+        "lucide-react",
+        "motion",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "feedback"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/alert.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/alert-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "avatar",
       "type": "registry:ui",
       "title": "Avatar",
@@ -122,6 +150,34 @@
       "files": [
         {
           "path": "registry/miseui/ui/beam-border.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "A trail from the root to the current page, with a nav landmark, a current marker and a middle that collapses into a menu.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/dropdown-menu.json"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/breadcrumb.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/breadcrumb-parts.tsx",
           "type": "registry:ui"
         }
       ]
@@ -288,6 +344,49 @@
       ]
     },
     {
+      "name": "color-picker",
+      "type": "registry:ui",
+      "title": "Color Picker",
+      "description": "A saturation square, hue and opacity sliders, typed hex and presets, in a popover, inline, as presets only, or as a compact field, with a thumb that never lags behind the hand.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/popover.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/color-picker.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/color-picker-panel.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/color-picker-drag.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/color-picker-swatches.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/color-picker-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/color-picker-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "combobox",
       "type": "registry:ui",
       "title": "Combobox",
@@ -362,6 +461,51 @@
         {
           "path": "registry/miseui/blocks/dashboard-overview-sample.ts",
           "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "A calendar with no date library: single days or ranges, limits, a full keyboard grid and any locale, as a popover, inline, a typed field or two months with a band.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/popover.json",
+        "https://miseui.junsu4621.workers.dev/r/input.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/date-picker.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/date-picker-calendar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/date-picker-month.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/date-picker-typed.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/date-picker-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/date-picker-math.ts",
+          "type": "registry:ui"
         }
       ]
     },
@@ -551,6 +695,31 @@
       ]
     },
     {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "description": "A preview that appears over a link when the pointer rests on it, laid out for free content, a person, a page or a number.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "overlays"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/hover-card.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/hover-card-bodies.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
@@ -617,6 +786,24 @@
       "files": [
         {
           "path": "registry/miseui/ui/intelligence-glow.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "Keyboard keys as hairline caps, physical keys, tight chips or plain text, with chords, a platform-aware modifier and a cap that dips on the real key.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/kbd.tsx",
           "type": "registry:ui"
         }
       ]
@@ -772,6 +959,41 @@
       ]
     },
     {
+      "name": "number-input",
+      "type": "registry:ui",
+      "title": "Number Input",
+      "description": "A field for amounts that clamps to its range, repeats while a button is held, reads formatted text back, and comes as chevrons, split, pill or one big number.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/number-input.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/number-input-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/number-input-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/number-input-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "pagination",
       "type": "registry:ui",
       "title": "Pagination",
@@ -883,6 +1105,36 @@
       ]
     },
     {
+      "name": "progress-circular",
+      "type": "registry:ui",
+      "title": "Progress Circular",
+      "description": "Progress in a small square: a ring, a hairline, a 270 degree gauge or discrete cells, with the value in the middle and an honest state when nobody knows.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "feedback"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/progress-circular.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/progress-circular-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/progress-circular-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "radio-group",
       "type": "registry:ui",
       "title": "Radio Group",
@@ -933,6 +1185,44 @@
       ]
     },
     {
+      "name": "resizable",
+      "type": "registry:ui",
+      "title": "Resizable",
+      "description": "Two panes with a draggable divider, horizontal or vertical, with limits that stretch, a keyboard-operable separator and a double-click reset.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/resizable.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/resizable-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/resizable-drag.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/resizable-handle.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/resizable-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "reveal-image",
       "type": "registry:ui",
       "title": "Reveal Image",
@@ -950,6 +1240,31 @@
       "files": [
         {
           "path": "registry/miseui/ui/reveal-image.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "A scroller with a styled bar that matches the theme, as a hover bar, a thin overlay, edge shadows or a snapping row.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/scroll-area.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/scroll-area-parts.tsx",
           "type": "registry:ui"
         }
       ]
@@ -978,6 +1293,27 @@
         },
         {
           "path": "registry/miseui/ui/select-effects.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "A rule between groups of content, as a hairline, a dashed break, a labelled divider or a line that fades at both ends.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/separator.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1161,6 +1497,27 @@
       ]
     },
     {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "Says work is running when nobody knows how long it will take: a ring, three dots, eight bars or an orbit, with a pulse instead of movement for people who turned motion off.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "feedback"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "streaming-text",
       "type": "registry:ui",
       "title": "Streaming Text",
@@ -1202,6 +1559,45 @@
         },
         {
           "path": "registry/miseui/ui/switch-effects.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "Real table markup with sortable headers, a sticky head, selection state, an empty row and right-aligned figures, in plain, striped, card or compact, scrolling inside itself when narrow.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/table.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/table-head.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/table-highlight.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/table-context.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/table-state.ts",
           "type": "registry:ui"
         }
       ]
@@ -1752,6 +2148,30 @@
         },
         {
           "path": "registry/miseui/ui/toast-store.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "A button that stays pressed: quiet fill, darkening border, filter chip with a check, or a square icon in the accent.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/toggle.tsx",
           "type": "registry:ui"
         }
       ]

@@ -1,0 +1,14 @@
+{
+  "name": "progress-circular",
+  "type": "registry:ui",
+  "title": "Progress Circular",
+  "description": "Progress in a small square: a ring, a hairline, a 270 degree gauge or discrete cells, with the value in the middle and an honest state when nobody knows.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["feedback"],
+  "files": [
+    { "path": "registry/miseui/ui/progress-circular.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/progress-circular-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/progress-circular-math.ts", "type": "registry:ui" }
+  ]
+}
