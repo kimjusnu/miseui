@@ -1,0 +1,10 @@
+{
+  "name": "button",
+  "type": "registry:ui",
+  "title": "Button",
+  "description": "Press target with a 150 ms settle and a 2% press-down so the click feels acknowledged.",
+  "dependencies": ["radix-ui", "class-variance-authority"],
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/button.tsx", "type": "registry:ui" }]
+}

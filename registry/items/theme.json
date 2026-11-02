@@ -1,0 +1,71 @@
+{
+  "name": "theme",
+  "type": "registry:theme",
+  "title": "Mise theme",
+  "description": "Warm neutral tokens plus the motion tokens every Mise UI component uses.",
+  "cssVars": {
+    "theme": {
+      "font-display": "\"Instrument Serif\", ui-serif, Georgia, serif",
+      "ease-mise": "cubic-bezier(0.2, 0, 0, 1)",
+      "ease-mise-out": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "light": {
+      "background": "oklch(0.995 0.002 90)",
+      "foreground": "oklch(0.17 0.01 60)",
+      "card": "oklch(1 0 0)",
+      "card-foreground": "oklch(0.17 0.01 60)",
+      "popover": "oklch(1 0 0)",
+      "popover-foreground": "oklch(0.17 0.01 60)",
+      "primary": "oklch(0.22 0.012 60)",
+      "primary-foreground": "oklch(0.985 0.004 90)",
+      "secondary": "oklch(0.965 0.006 85)",
+      "secondary-foreground": "oklch(0.22 0.012 60)",
+      "muted": "oklch(0.965 0.006 85)",
+      "muted-foreground": "oklch(0.54 0.012 70)",
+      "accent": "oklch(0.955 0.012 80)",
+      "accent-foreground": "oklch(0.22 0.012 60)",
+      "destructive": "oklch(0.577 0.245 27.325)",
+      "border": "oklch(0.91 0.008 80)",
+      "input": "oklch(0.91 0.008 80)",
+      "ring": "oklch(0.72 0.14 62)",
+      "mise": "oklch(0.74 0.15 62)",
+      "mise-foreground": "oklch(0.2 0.03 60)",
+      "mise-soft": "oklch(0.95 0.04 75)",
+      "ease-mise": "cubic-bezier(0.2, 0, 0, 1)",
+      "ease-mise-out": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "duration-fast": "150ms",
+      "duration-base": "240ms",
+      "duration-slow": "400ms"
+    },
+    "dark": {
+      "background": "oklch(0.15 0.008 60)",
+      "foreground": "oklch(0.975 0.004 90)",
+      "card": "oklch(0.2 0.009 60)",
+      "card-foreground": "oklch(0.975 0.004 90)",
+      "popover": "oklch(0.2 0.009 60)",
+      "popover-foreground": "oklch(0.975 0.004 90)",
+      "primary": "oklch(0.93 0.006 85)",
+      "primary-foreground": "oklch(0.2 0.009 60)",
+      "secondary": "oklch(0.27 0.009 60)",
+      "secondary-foreground": "oklch(0.975 0.004 90)",
+      "muted": "oklch(0.27 0.009 60)",
+      "muted-foreground": "oklch(0.7 0.01 75)",
+      "accent": "oklch(0.29 0.012 65)",
+      "accent-foreground": "oklch(0.975 0.004 90)",
+      "destructive": "oklch(0.704 0.191 22.216)",
+      "border": "oklch(1 0 0 / 10%)",
+      "input": "oklch(1 0 0 / 15%)",
+      "ring": "oklch(0.72 0.14 62)",
+      "mise": "oklch(0.78 0.15 65)",
+      "mise-foreground": "oklch(0.18 0.03 60)",
+      "mise-soft": "oklch(0.3 0.05 65)"
+    }
+  },
+  "css": {
+    "@theme inline": {
+      "--color-mise": "var(--mise)",
+      "--color-mise-foreground": "var(--mise-foreground)",
+      "--color-mise-soft": "var(--mise-soft)"
+    }
+  }
+}

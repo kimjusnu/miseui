@@ -1,0 +1,8 @@
+{
+  "name": "utils",
+  "type": "registry:lib",
+  "title": "Utils",
+  "description": "cn() class merger.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [{ "path": "registry/miseui/lib/utils.ts", "type": "registry:lib" }]
+}

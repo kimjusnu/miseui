@@ -1,0 +1,10 @@
+{
+  "name": "thinking-indicator",
+  "type": "registry:ui",
+  "title": "Thinking Indicator",
+  "description": "Three breathing dots and a live label that tell the user the model is working, and on what.",
+  "dependencies": ["motion", "lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["ai"],
+  "files": [{ "path": "registry/miseui/ui/thinking-indicator.tsx", "type": "registry:ui" }]
+}
