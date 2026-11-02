@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "textarea",
   title: "Textarea",
-  category: "core",
+  category: "forms",
   description:
     "Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar.",
   why: {

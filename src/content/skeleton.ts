@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "skeleton",
   title: "Skeleton",
-  category: "core",
+  category: "display",
   description: "Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner.",
   why: {
     principle: "Perceived performance",

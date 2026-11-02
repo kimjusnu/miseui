@@ -155,7 +155,7 @@ function DashboardOverview({
   const [currentRange, selectRange] = useRange(range, defaultRange, onRangeChange)
 
   return (
-    <div data-slot="dashboard-overview" className={cn("@container w-full bg-muted", className)} {...props}>
+    <div data-slot="dashboard-overview" className={cn("@container w-full bg-muted dark:bg-background", className)} {...props}>
       <div className="flex min-w-0 flex-col @3xl:flex-row">
         <DashboardRail product={product} nav={nav} onNavigate={onNavigate} />
         <Tabs value={currentRange} onValueChange={selectRange} className="min-w-0 flex-1 gap-6 p-4 @md:p-6 @3xl:p-8">

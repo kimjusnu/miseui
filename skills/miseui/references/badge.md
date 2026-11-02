@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/badge.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `glow` (Von Restorff effect): On the single badge that must be noticed first, such as a new feature in a long list.
 - `beam` (Selective attention): On the one item the model is working on right now, while its siblings stay quiet.

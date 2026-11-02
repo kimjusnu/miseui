@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "label",
   title: "Label",
-  category: "core",
+  category: "forms",
   description:
     "Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled.",
   why: {

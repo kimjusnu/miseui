@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "badge",
   title: "Badge",
-  category: "core",
+  category: "display",
   description:
     "Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out.",
   why: {

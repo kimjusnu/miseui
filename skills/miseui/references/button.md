@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/button.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `liquid` (Aesthetic-usability effect): On the one hero control of a page, where a material cue should signal value before anyone reads the label.
 - `beam` (Selective attention): When this button is the single next step on the screen, so the eye knows where to go without a louder colour.

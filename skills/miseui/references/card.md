@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/card.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `beam` (Selective attention): On the one card the model is writing into, so the eye knows where the answer will land.
 - `spotlight` (Perceived affordance): On a grid of clickable cards reached with a mouse, where the light under the pointer says which one would respond.

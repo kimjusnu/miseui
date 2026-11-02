@@ -4,7 +4,7 @@ import type { ComponentMeta } from "../src/content/types"
 const button: ComponentMeta = {
   name: "button",
   title: "Button",
-  category: "core",
+  category: "forms",
   description: "Press target.",
   why: { principle: "Doherty threshold", explanation: "Feedback under 400 ms.", avoid: "No glow everywhere." },
   usage: "<Button>Save</Button>",
@@ -54,16 +54,16 @@ describe("formatSkill", () => {
   it("starts with frontmatter and lists every component under its category", () => {
     const text = formatSkill([button, thinking], site)
     expect(text.startsWith("---\nname: miseui\ndescription: ")).toBe(true)
-    expect(text).toContain("## Core")
+    expect(text).toContain("## Forms")
     expect(text).toContain("## AI states")
     expect(text).toContain("- **Button** (`button`): Press target. — Doherty threshold")
     expect(text).toContain("- **Thinking Indicator** (`thinking-indicator`): Breathing dots. — Visibility of system status")
     expect(text).toContain("references/button.md")
   })
 
-  it("lists the AI category before core so agents see the differentiator first", () => {
+  it("lists the AI category before forms so agents see the differentiator first", () => {
     const text = formatSkill([button, thinking], site)
-    expect(text.indexOf("## AI states")).toBeLessThan(text.indexOf("## Core"))
+    expect(text.indexOf("## AI states")).toBeLessThan(text.indexOf("## Forms"))
   })
 })
 

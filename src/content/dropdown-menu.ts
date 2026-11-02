@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "dropdown-menu",
   title: "Dropdown Menu",
-  category: "core",
+  category: "navigation",
   description:
     "Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant.",
   why: {

@@ -5,6 +5,6 @@
   "description": "Small floating panel anchored to the control that opened it, for a form or detail that does not need a full dialog.",
   "dependencies": ["radix-ui"],
   "registryDependencies": ["utils"],
-  "categories": ["core"],
+  "categories": ["overlays"],
   "files": [{ "path": "registry/miseui/ui/popover.tsx", "type": "registry:ui" }]
 }

@@ -1,4 +1,5 @@
 import type * as React from "react"
+import { Suspense } from "react"
 import { Link } from "react-router"
 import { IntelligenceGlow } from "@/registry/miseui/ui/intelligence-glow"
 import { RevealImage, type RevealMode } from "@/registry/miseui/ui/reveal-image"
@@ -45,7 +46,11 @@ function GlowScene() {
 /** A wrapped live demo: its controls stay usable, so the title is the only link on the card. */
 function LiveDemo({ name }: { name: string }) {
   const Demo = demos[name]
-  return Demo ? <Demo /> : null
+  return Demo ? (
+    <Suspense fallback={null}>
+      <Demo />
+    </Suspense>
+  ) : null
 }
 
 function BentoCard({ name, className, children }: { name: string; className?: string; children: React.ReactNode }) {

@@ -33,7 +33,7 @@ function SectionNav({ sections, active, onSelect }: SectionNavProps) {
                 "inline-flex h-9 w-full items-center rounded-md px-3 text-[13px] whitespace-nowrap outline-none",
                 "transition-colors duration-(--duration-fast) ease-(--ease-mise)",
                 "focus-visible:ring-[3px] focus-visible:ring-inset focus-visible:ring-ring/50",
-                section.id === active ? "bg-background text-foreground shadow-xs" : "text-muted-foreground hover:bg-background/60",
+                section.id === active ? "bg-background dark:bg-card text-foreground shadow-xs" : "text-muted-foreground hover:bg-background/60",
               )}
             >
               {section.title}
@@ -100,7 +100,7 @@ function SectionBlock({ section, anchorId, children }: { section: SettingsSectio
           </>
         ) : null}
       </div>
-      <div className={cn("flex flex-col divide-y rounded-2xl border bg-background", danger ? "border-destructive/40" : SOFT_SHADOW_CLASS)}>{children}</div>
+      <div className={cn("flex flex-col divide-y rounded-2xl border bg-background dark:bg-card", danger ? "border-destructive/40" : SOFT_SHADOW_CLASS)}>{children}</div>
     </section>
   )
 }
@@ -159,7 +159,7 @@ function SettingsPage({ title = "Settings.", titleQuiet = "Nothing changes until
   }
 
   return (
-    <div data-slot="settings-page" className={cn("@container w-full bg-muted", className)} {...props}>
+    <div data-slot="settings-page" className={cn("@container w-full bg-muted dark:bg-background", className)} {...props}>
       <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-8 @2xl:gap-12 @2xl:px-8 @2xl:py-12">
         <h2 className="text-display text-3xl text-balance @2xl:text-4xl">
           {title} {titleQuiet ? <span className="text-muted-foreground">{titleQuiet}</span> : null}

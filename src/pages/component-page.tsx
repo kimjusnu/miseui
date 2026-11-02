@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { useParams } from "react-router"
 import { findComponent } from "@/src/content"
 import { CATEGORY_LABELS } from "@/src/content/types"
@@ -26,15 +27,19 @@ export function ComponentPage() {
 
       {meta.category === "blocks" ? (
         <BlockPreview name={meta.name}>
-          <Demo />
+          <Suspense fallback={<div className="min-h-96" />}>
+            <Demo />
+          </Suspense>
         </BlockPreview>
       ) : (
         <section aria-label="Demo" className="flex min-h-56 items-center rounded-2xl bg-card p-8 md:p-10">
-          <Demo />
+          <Suspense fallback={null}>
+            <Demo />
+          </Suspense>
         </section>
       )}
 
-      <WhyPanel why={meta.why} effects={meta.effects} />
+      <WhyPanel why={meta.why} designs={meta.designs} effects={meta.effects} />
 
       <section aria-labelledby="install-heading" className="flex flex-col gap-3">
         <h2 id="install-heading" className="text-lg font-semibold">

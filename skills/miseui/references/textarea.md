@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/textarea.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `glow` (Focus of attention): On the one composer a screen exists for, where focus should feel like the room dimming around it.
 - `ai` (Labor illusion): While the model drafts into this field, so the wait is visible where the answer will appear.

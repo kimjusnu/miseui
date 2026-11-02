@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/select.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `materialize` (Spatial continuity): Use it for a select that opens rarely, where the entrance can afford to be seen; for one opened all day, the plain list is quicker.
 - `spring` (Object constancy): Use it for a short list scanned by pointer or arrow keys, where one highlight travelling makes the current row easy to keep track of.

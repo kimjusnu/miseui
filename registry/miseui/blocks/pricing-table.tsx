@@ -135,7 +135,7 @@ function PricingTable({
   }
 
   return (
-    <section data-slot="pricing-table" className={cn("@container w-full bg-muted/40 px-6 py-12 @2xl:py-16", className)} {...props}>
+    <section data-slot="pricing-table" className={cn("@container w-full bg-muted/40 dark:bg-background px-6 py-12 @2xl:py-16", className)} {...props}>
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
         <header className="flex flex-col gap-6 @2xl:flex-row @2xl:items-end @2xl:justify-between">
           <h2 className="text-display max-w-lg text-3xl leading-[1.12]! text-balance @2xl:text-4xl">

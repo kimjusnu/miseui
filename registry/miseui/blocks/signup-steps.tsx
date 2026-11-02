@@ -78,7 +78,7 @@ function SignupSteps({
   const completed = flow.done ? steps.length : credited + flow.index
 
   return (
-    <section data-slot="signup-steps" className={cn("@container w-full bg-muted/40 px-4 py-12 @md:px-6 @2xl:py-16", className)} {...props}>
+    <section data-slot="signup-steps" className={cn("@container w-full bg-muted/40 dark:bg-background px-4 py-12 @md:px-6 @2xl:py-16", className)} {...props}>
       <div className="mx-auto flex w-full max-w-lg flex-col gap-8 rounded-2xl border bg-popover p-6 shadow-[0_16px_40px_-24px_color-mix(in_oklab,var(--mise)_24%,oklch(0_0_0/40%))] @md:p-8">
         <StepProgress steps={steps} completed={completed} />
         {flow.done ? <Confirmation {...confirmation(flow.values)} /> : <QuestionForm flow={flow} submitLabel={submitLabel} />}

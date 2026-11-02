@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/switch.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `gooey` (Squash and stretch): Use it for one playful, prominent setting; a long list of stretching thumbs turns a settings page into noise.
 - `haptic` (Direct manipulation): Use it wherever a switch has to feel physical without being loud, since the thumb answers the finger before the state changes.

@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/skeleton.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `pulse` (Perceived performance): As the default for short loads, where the shape alone does the work and motion should stay quiet.
 - `wave` (Perceived progress): On loads of a few seconds, where a band travelling one way suggests something is moving toward done.

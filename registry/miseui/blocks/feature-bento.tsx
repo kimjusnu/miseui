@@ -80,7 +80,7 @@ function BentoCell({ feature }: { feature: BentoFeature }) {
       className={cn(
         "flex min-w-0 flex-col justify-between gap-6 rounded-2xl border p-6 @4xl:p-8",
         // The dark class flips the tokens on this element, but colour inherits as a value, so it has to be restated.
-        dark ? "dark bg-card text-card-foreground" : ["bg-background text-foreground", SOFT_SHADOW_CLASS],
+        dark ? "dark bg-card text-card-foreground" : ["bg-background dark:bg-card text-foreground", SOFT_SHADOW_CLASS],
         wide && "@2xl:flex-row @2xl:items-center",
         SPAN_CLASS[span],
       )}
@@ -117,7 +117,7 @@ function FeatureBento({
   ...props
 }: FeatureBentoProps) {
   return (
-    <section data-slot="feature-bento" className={cn("@container w-full bg-muted", className)} {...props}>
+    <section data-slot="feature-bento" className={cn("@container w-full bg-muted dark:bg-background", className)} {...props}>
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-16 @2xl:gap-12 @2xl:px-8">
         <h2 className="max-w-2xl text-display text-3xl text-balance @2xl:text-4xl">
           {title} {titleQuiet ? <span className="text-muted-foreground">{titleQuiet}</span> : null}

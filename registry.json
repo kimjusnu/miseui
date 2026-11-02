@@ -37,7 +37,7 @@
         "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
-        "core"
+        "display"
       ],
       "files": [
         {
@@ -88,7 +88,7 @@
         "https://miseui.junsu4621.workers.dev/r/shimmer-text.json"
       ],
       "categories": [
-        "core"
+        "forms"
       ],
       "files": [
         {
@@ -115,7 +115,7 @@
         "https://miseui.junsu4621.workers.dev/r/materialize.json"
       ],
       "categories": [
-        "core"
+        "display"
       ],
       "files": [
         {
@@ -191,7 +191,7 @@
         "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
-        "core"
+        "forms"
       ],
       "files": [
         {
@@ -255,7 +255,7 @@
         "utils"
       ],
       "categories": [
-        "core"
+        "overlays"
       ],
       "files": [
         {
@@ -278,7 +278,7 @@
         "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
-        "core"
+        "navigation"
       ],
       "files": [
         {
@@ -378,7 +378,7 @@
         "https://miseui.junsu4621.workers.dev/r/shimmer-text.json"
       ],
       "categories": [
-        "core"
+        "forms"
       ],
       "files": [
         {
@@ -421,7 +421,7 @@
         "utils"
       ],
       "categories": [
-        "core"
+        "forms"
       ],
       "files": [
         {
@@ -571,7 +571,7 @@
         "utils"
       ],
       "categories": [
-        "core"
+        "overlays"
       ],
       "files": [
         {
@@ -671,7 +671,7 @@
         "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
-        "core"
+        "forms"
       ],
       "files": [
         {
@@ -822,7 +822,7 @@
         "utils"
       ],
       "categories": [
-        "core"
+        "display"
       ],
       "files": [
         {
@@ -864,7 +864,7 @@
         "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
-        "core"
+        "forms"
       ],
       "files": [
         {
@@ -891,7 +891,7 @@
         "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
-        "core"
+        "navigation"
       ],
       "files": [
         {
@@ -910,7 +910,7 @@
         "https://miseui.junsu4621.workers.dev/r/shimmer-text.json"
       ],
       "categories": [
-        "core"
+        "forms"
       ],
       "files": [
         {
@@ -1421,7 +1421,7 @@
         "utils"
       ],
       "categories": [
-        "core"
+        "overlays"
       ],
       "files": [
         {

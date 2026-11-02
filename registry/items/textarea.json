@@ -4,6 +4,6 @@
   "title": "Textarea",
   "description": "Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar.",
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/shimmer-text.json"],
-  "categories": ["core"],
+  "categories": ["forms"],
   "files": [{ "path": "registry/miseui/ui/textarea.tsx", "type": "registry:ui" }]
 }

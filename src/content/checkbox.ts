@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "checkbox",
   title: "Checkbox",
-  category: "core",
+  category: "forms",
   description:
     "Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked.",
   why: {

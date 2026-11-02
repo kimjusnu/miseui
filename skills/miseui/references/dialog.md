@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/dialog.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `materialize` (Focus pull): Use it for a routine dialog that should arrive with presence while the page stays legible behind the usual scrim.
 - `scrim-blur` (Depth of field): Use it for a decision that deserves the whole screen, such as a destructive confirmation, where the page should stop competing for attention.

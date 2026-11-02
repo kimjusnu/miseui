@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/tabs.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `spring` (Object constancy): Use it for page-level tabs, where one quiet underline travelling between labels shows that the view moved rather than was replaced.
 - `pill` (Figure-ground): Use it for a small segmented control that is the main choice in its area, where a filled accent makes the current option readable from across the screen.

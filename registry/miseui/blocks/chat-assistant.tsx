@@ -108,7 +108,7 @@ function ChatScreen({
       data-slot="chat-assistant"
       data-status={status}
       aria-label={`Chat with ${agentName}`}
-      className={cn("@container flex h-[640px] max-h-dvh w-full flex-col bg-muted/40", className)}
+      className={cn("@container flex h-[640px] max-h-dvh w-full flex-col bg-muted/40 dark:bg-background", className)}
       {...props}
     >
       <ChatHeader agentName={agentName} description={agentDescription} generating={generating} onNewChat={onNewChat} />

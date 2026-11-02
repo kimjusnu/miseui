@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "card",
   title: "Card",
-  category: "core",
+  category: "display",
   description:
     "Bordered surface with header, content and footer slots that reads as one region before anyone reads the text.",
   why: {

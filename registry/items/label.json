@@ -5,6 +5,6 @@
   "description": "Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled.",
   "dependencies": ["radix-ui"],
   "registryDependencies": ["utils"],
-  "categories": ["core"],
+  "categories": ["forms"],
   "files": [{ "path": "registry/miseui/ui/label.tsx", "type": "registry:ui" }]
 }

@@ -5,6 +5,6 @@
   "description": "Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked.",
   "dependencies": ["radix-ui", "lucide-react", "motion"],
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
-  "categories": ["core"],
+  "categories": ["forms"],
   "files": [{ "path": "registry/miseui/ui/checkbox.tsx", "type": "registry:ui" }]
 }

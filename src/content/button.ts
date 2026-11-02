@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "button",
   title: "Button",
-  category: "core",
+  category: "forms",
   description: "Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged.",
   why: {
     principle: "Doherty threshold",

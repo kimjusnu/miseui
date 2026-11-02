@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/input.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `glow` (Focus of attention): On the one field a screen is really asking for, such as a prompt box, where focus should feel like the room dimming around it.
 - `ai` (Labor illusion): While the model prepares a suggestion for this field, so the wait is visible where the answer will appear.

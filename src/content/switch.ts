@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "switch",
   title: "Switch",
-  category: "core",
+  category: "forms",
   description:
     "Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates.",
   why: {

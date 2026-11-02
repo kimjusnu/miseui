@@ -5,6 +5,6 @@
   "description": "Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner.",
   "dependencies": ["motion"],
   "registryDependencies": ["utils"],
-  "categories": ["core"],
+  "categories": ["display"],
   "files": [{ "path": "registry/miseui/ui/skeleton.tsx", "type": "registry:ui" }]
 }

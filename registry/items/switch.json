@@ -5,7 +5,7 @@
   "description": "Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates.",
   "dependencies": ["radix-ui", "motion"],
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
-  "categories": ["core"],
+  "categories": ["forms"],
   "files": [
     { "path": "registry/miseui/ui/switch.tsx", "type": "registry:ui" },
     { "path": "registry/miseui/ui/switch-effects.tsx", "type": "registry:ui" }

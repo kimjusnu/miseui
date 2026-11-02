@@ -5,6 +5,6 @@
   "description": "Segmented control that swaps one panel for another in place, so related views share a single spot on the screen.",
   "dependencies": ["radix-ui", "motion"],
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
-  "categories": ["core"],
+  "categories": ["navigation"],
   "files": [{ "path": "registry/miseui/ui/tabs.tsx", "type": "registry:ui" }]
 }

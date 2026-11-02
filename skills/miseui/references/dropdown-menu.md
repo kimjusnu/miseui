@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/dropdown-menu.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `materialize` (Spatial continuity): Use it for a menu opened now and then from one prominent button, so it clearly belongs to what was pressed.
 - `spring` (Object constancy): Use it for a menu people browse before choosing, where one travelling highlight keeps the eye on the current item instead of flickering row by row.

@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "tabs",
   title: "Tabs",
-  category: "core",
+  category: "navigation",
   description:
     "Segmented control that swaps one panel for another in place, so related views share a single spot on the screen.",
   why: {

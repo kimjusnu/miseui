@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "dialog",
   title: "Dialog",
-  category: "core",
+  category: "overlays",
   description: "Modal surface that dims everything else and holds focus until the user answers one question.",
   why: {
     principle: "Attention funnel",

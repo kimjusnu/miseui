@@ -44,7 +44,7 @@ interface DashboardNavItem {
 const CAPTION_CLASS = "text-[13px] leading-relaxed text-muted-foreground"
 /** A white panel on the pale canvas. Tinted from the ink, and off in dark mode, where it would read as a glow. */
 const PANEL_CLASS =
-  "rounded-2xl border bg-background shadow-[0_1px_2px_color-mix(in_oklab,var(--foreground)_6%,transparent),0_16px_32px_-16px_color-mix(in_oklab,var(--foreground)_16%,transparent)] dark:shadow-none"
+  "rounded-2xl border bg-background dark:bg-card shadow-[0_1px_2px_color-mix(in_oklab,var(--foreground)_6%,transparent),0_16px_32px_-16px_color-mix(in_oklab,var(--foreground)_16%,transparent)] dark:shadow-none"
 const TONE_CLASS: Record<ChangeTone, string> = {
   positive: "text-foreground",
   negative: "text-destructive",
@@ -148,7 +148,7 @@ function DashboardRail({ product, nav, onNavigate }: DashboardRailProps) {
               "inline-flex h-9 shrink-0 items-center gap-3 rounded-md px-3 text-[13px] whitespace-nowrap outline-none",
               "transition-colors duration-(--duration-fast) ease-(--ease-mise)",
               "focus-visible:ring-[3px] focus-visible:ring-inset focus-visible:ring-ring/50",
-              item.id === active ? "bg-background text-foreground shadow-xs" : "text-muted-foreground hover:bg-background/60",
+              item.id === active ? "bg-background dark:bg-card text-foreground shadow-xs" : "text-muted-foreground hover:bg-background/60",
             )}
           >
             <item.icon className="size-4" />

@@ -5,7 +5,7 @@
   "description": "Bordered surface with header, content and footer slots that reads as one region before anyone reads the text.",
   "dependencies": ["motion"],
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/beam-border.json", "https://miseui.junsu4621.workers.dev/r/materialize.json"],
-  "categories": ["core"],
+  "categories": ["display"],
   "files": [
     { "path": "registry/miseui/ui/card.tsx", "type": "registry:ui" },
     { "path": "registry/miseui/ui/card-effects.tsx", "type": "registry:ui" }

@@ -5,7 +5,7 @@
   "description": "Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged.",
   "dependencies": ["radix-ui", "class-variance-authority", "motion"],
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/beam-border.json", "https://miseui.junsu4621.workers.dev/r/liquid-metal.json", "https://miseui.junsu4621.workers.dev/r/shimmer-text.json"],
-  "categories": ["core"],
+  "categories": ["forms"],
   "files": [
     { "path": "registry/miseui/ui/button.tsx", "type": "registry:ui" },
     { "path": "registry/miseui/ui/button-effects.tsx", "type": "registry:ui" }

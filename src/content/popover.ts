@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "popover",
   title: "Popover",
-  category: "core",
+  category: "overlays",
   description:
     "Small floating panel anchored to the control that opened it, for a form or detail that does not need a full dialog.",
   why: {

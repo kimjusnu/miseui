@@ -58,7 +58,7 @@ function LandingHero({
 }: LandingHeroProps) {
   const hasPreview = preview !== null
   return (
-    <section data-slot="landing-hero" className={cn("@container w-full bg-muted", className)} {...props}>
+    <section data-slot="landing-hero" className={cn("@container w-full bg-muted dark:bg-background", className)} {...props}>
       <div
         className={cn(
           "mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 @5xl:px-8",

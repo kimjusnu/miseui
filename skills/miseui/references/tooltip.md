@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/tooltip.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `materialize` (Spatial continuity): Use it for occasional hints on sparse toolbars; on a row of icons people sweep across, the plain tooltip gets out of the way sooner.
 

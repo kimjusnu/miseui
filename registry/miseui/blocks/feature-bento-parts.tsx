@@ -70,7 +70,7 @@ function OrbVisual() {
     <div className="flex w-full flex-col items-center pb-4" style={NEUTRAL_ACCENT}>
       <ThinkingOrb state="thinking" size={ORB_PX} label="Looking through the call" />
       <div className="relative -mt-2 w-full">
-        <Input readOnly tabIndex={-1} aria-label="Question asked of the call" value="Who said January?" className="bg-background" />
+        <Input readOnly tabIndex={-1} aria-label="Question asked of the call" value="Who said January?" className="bg-background dark:bg-card" />
         <Badge variant="outline" className={cn(CHIP_CLASS, "absolute top-full right-2 -translate-y-1/2")}>
           Priya, 14:02
         </Badge>
@@ -101,7 +101,7 @@ function SendVisual() {
   const [sent, setSent] = useState(false)
   return (
     <div className="relative w-full pb-4">
-      <Card className="flex-row flex-wrap items-center justify-between gap-4 rounded-2xl bg-background p-3 pl-4 shadow-none">
+      <Card className="flex-row flex-wrap items-center justify-between gap-4 rounded-2xl bg-background dark:bg-card p-3 pl-4 shadow-none">
         <span className="text-[13px] text-muted-foreground">Pricing review summary</span>
         <div style={SILVER_METAL}>
           <Button effect="liquid" onClick={() => setSent(true)}>

@@ -103,12 +103,12 @@ function LandingHeroPreview({ className }: { className?: string }) {
       <Card
         aria-hidden="true"
         data-testid="preview-back-card"
-        className={cn("absolute top-0 right-4 -z-10 h-24 w-2/3 flex-row justify-between gap-3 rounded-2xl bg-background p-3 text-[13px] text-muted-foreground", SOFT_SHADOW_CLASS)}
+        className={cn("absolute top-0 right-4 -z-10 h-24 w-2/3 flex-row justify-between gap-3 rounded-2xl bg-background dark:bg-card p-3 text-[13px] text-muted-foreground", SOFT_SHADOW_CLASS)}
       >
         <span>Transcript</span>
         <span>38:12</span>
       </Card>
-      <Card className={cn("relative gap-4 rounded-2xl bg-background p-6", SOFT_SHADOW_CLASS)}>
+      <Card className={cn("relative gap-4 rounded-2xl bg-background dark:bg-card p-6", SOFT_SHADOW_CLASS)}>
         <div className="flex items-center gap-3">
           <ThinkingOrb state={ORB_BY_PHASE[phase]} size={40} label={STATUS_BY_PHASE[phase]} />
           <div className="min-w-0 flex-1 leading-relaxed">

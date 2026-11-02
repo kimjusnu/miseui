@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "select",
   title: "Select",
-  category: "core",
+  category: "forms",
   description:
     "Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support.",
   why: {

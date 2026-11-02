@@ -5,6 +5,6 @@
   "description": "One-line hint that appears on hover or focus with no delay and leaves with the pointer, for detail that does not deserve screen space.",
   "dependencies": ["radix-ui"],
   "registryDependencies": ["utils"],
-  "categories": ["core"],
+  "categories": ["overlays"],
   "files": [{ "path": "registry/miseui/ui/tooltip.tsx", "type": "registry:ui" }]
 }

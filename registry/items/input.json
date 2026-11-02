@@ -4,6 +4,6 @@
   "title": "Input",
   "description": "Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring.",
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/shimmer-text.json"],
-  "categories": ["core"],
+  "categories": ["forms"],
   "files": [{ "path": "registry/miseui/ui/input.tsx", "type": "registry:ui" }]
 }

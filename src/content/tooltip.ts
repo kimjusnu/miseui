@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "tooltip",
   title: "Tooltip",
-  category: "core",
+  category: "overlays",
   description:
     "One-line hint that appears on hover or focus with no delay and leaves with the pointer, for detail that does not deserve screen space.",
   why: {

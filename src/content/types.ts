@@ -1,7 +1,7 @@
-export type Category = "blocks" | "ai" | "effects" | "transitions" | "core"
+export type Category = "blocks" | "ai" | "forms" | "navigation" | "overlays" | "display" | "feedback" | "text" | "backgrounds" | "effects" | "transitions"
 
 export interface EffectMeta {
-  /** value of the `effect` prop */
+  /** value of the `variant` or `effect` prop */
   name: string
   /** named principle, shorter than the component's */
   principle: string
@@ -24,7 +24,9 @@ export interface ComponentMeta {
     /** when this component or effect should NOT be used */
     avoid: string
   }
-  /** the `effect` prop values a core component offers; each carries its own reason, like the component does */
+  /** the `variant` prop values: different looks for the same job, each with its own reason */
+  designs?: readonly EffectMeta[]
+  /** the `effect` prop values: motion and behaviour, each with its own reason */
   effects?: readonly EffectMeta[]
   /** minimal usage snippet, TSX */
   usage: string
@@ -33,12 +35,30 @@ export interface ComponentMeta {
 }
 
 /** Whole screens first: they are what someone who does not design came for. Then the parts, AI first. */
-export const CATEGORY_ORDER: readonly Category[] = ["blocks", "ai", "effects", "transitions", "core"]
+export const CATEGORY_ORDER: readonly Category[] = [
+  "blocks",
+  "ai",
+  "forms",
+  "navigation",
+  "overlays",
+  "display",
+  "feedback",
+  "text",
+  "backgrounds",
+  "effects",
+  "transitions",
+]
 
 export const CATEGORY_LABELS: Record<Category, string> = {
   blocks: "Blocks",
   ai: "AI states",
+  forms: "Forms",
+  navigation: "Navigation",
+  overlays: "Overlays",
+  display: "Display",
+  feedback: "Feedback",
+  text: "Text",
+  backgrounds: "Backgrounds",
   effects: "Effects",
   transitions: "Transitions",
-  core: "Core",
 }

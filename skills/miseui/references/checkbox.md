@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/checkbox.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `draw` (Peak-end rule): Use it where ticking is the reward, like a to-do list or a final confirmation; in a dense table of checkboxes the drawing slows the eye down.
 

@@ -16,7 +16,7 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/popover.json
 
 ## Effects
 
-Pass one as the `effect` prop. The plain component stays the default.
+Pass one as the `effect` prop.
 
 - `materialize` (Spatial continuity): Use it when a panel holds richer content and people should feel it came from the button they pressed, not from nowhere.
 

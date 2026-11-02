@@ -5,7 +5,7 @@
   "description": "Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant.",
   "dependencies": ["radix-ui", "motion"],
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
-  "categories": ["core"],
+  "categories": ["navigation"],
   "files": [
     { "path": "registry/miseui/ui/dropdown-menu.tsx", "type": "registry:ui" },
     { "path": "registry/miseui/ui/dropdown-menu-effects.tsx", "type": "registry:ui" }

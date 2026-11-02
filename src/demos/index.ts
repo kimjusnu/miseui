@@ -1,9 +1,13 @@
-import type { ComponentType } from "react"
+import { lazy, type ComponentType, type LazyExoticComponent } from "react"
 
-const modules = import.meta.glob<{ Demo: ComponentType }>("./*.tsx", { eager: true })
+/** Lazy, because every page was paying for every demo and the kit keeps growing. Render inside Suspense. */
+const loaders = import.meta.glob<{ Demo: ComponentType }>("./*.tsx")
 
 const nameFromPath = (path: string) => path.replace("./", "").replace(".tsx", "")
 
-export const demos: Readonly<Record<string, ComponentType>> = Object.fromEntries(
-  Object.entries(modules).map(([path, module]) => [nameFromPath(path), module.Demo]),
+export const demos: Readonly<Record<string, LazyExoticComponent<ComponentType>>> = Object.fromEntries(
+  Object.entries(loaders).map(([path, load]) => [
+    nameFromPath(path),
+    lazy(() => load().then((module) => ({ default: module.Demo }))),
+  ]),
 )

@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "input",
   title: "Input",
-  category: "core",
+  category: "forms",
   description:
     "Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring.",
   why: {

@@ -85,6 +85,33 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Tool Call Card** (`tool-call-card`): Collapsible record of one tool call: name, status, duration, and the exact input and output on demand. — Transparency builds trust · [reference](references/tool-call-card.md)
 - **Voice Wave** (`voice-wave`): Bars that rise with the microphone level so the user can see they are being heard, and see when they are not. — Visibility of system status · [reference](references/voice-wave.md)
 
+## Forms
+
+- **Button** (`button`): Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged. — Doherty threshold · [reference](references/button.md)
+- **Checkbox** (`checkbox`): Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked. — Immediate feedback · [reference](references/checkbox.md)
+- **Input** (`input`): Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring. — Fitts's law · [reference](references/input.md)
+- **Label** (`label`): Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled. — Law of proximity · [reference](references/label.md)
+- **Select** (`select`): Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support. — Default effect · [reference](references/select.md)
+- **Switch** (`switch`): Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates. — Affordance · [reference](references/switch.md)
+- **Textarea** (`textarea`): Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar. — Chunking · [reference](references/textarea.md)
+
+## Navigation
+
+- **Dropdown Menu** (`dropdown-menu`): Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant. — Hick's law · [reference](references/dropdown-menu.md)
+- **Tabs** (`tabs`): Segmented control that swaps one panel for another in place, so related views share a single spot on the screen. — Chunking · [reference](references/tabs.md)
+
+## Overlays
+
+- **Dialog** (`dialog`): Modal surface that dims everything else and holds focus until the user answers one question. — Attention funnel · [reference](references/dialog.md)
+- **Popover** (`popover`): Small floating panel anchored to the control that opened it, for a form or detail that does not need a full dialog. — Spatial memory · [reference](references/popover.md)
+- **Tooltip** (`tooltip`): One-line hint that appears on hover or focus with no delay and leaves with the pointer, for detail that does not deserve screen space. — Progressive disclosure · [reference](references/tooltip.md)
+
+## Display
+
+- **Badge** (`badge`): Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out. — Von Restorff effect · [reference](references/badge.md)
+- **Card** (`card`): Bordered surface with header, content and footer slots that reads as one region before anyone reads the text. — Law of common region · [reference](references/card.md)
+- **Skeleton** (`skeleton`): Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner. — Perceived performance · [reference](references/skeleton.md)
+
 ## Effects
 
 - **Agent Avatar** (`agent-avatar`): A deterministic SVG face for an agent: the same seed always draws the same overlapping blobs, in theme colours. — Familiarity · identity · [reference](references/agent-avatar.md)
@@ -102,23 +129,5 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Materialize** (`materialize`): A surface that arrives like a material coming into focus: slightly smaller, softer, from its anchor, and leaves the same way. — Spatial consistency · materials · [reference](references/materialize.md)
 - **Sheet** (`sheet`): Bottom sheet you can grab mid-flight: it tracks the finger 1:1, rubber-bands at the top, and lands where the release velocity was heading. — Interruptibility · momentum projection · [reference](references/sheet.md)
 - **useViewTransition** (`use-view-transition`): Five named page-transition presets on the View Transitions API, with a reduced-motion cross-fade and a plain fallback. — Wayfinding · spatial memory · [reference](references/use-view-transition.md)
-
-## Core
-
-- **Badge** (`badge`): Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out. — Von Restorff effect · [reference](references/badge.md)
-- **Button** (`button`): Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged. — Doherty threshold · [reference](references/button.md)
-- **Card** (`card`): Bordered surface with header, content and footer slots that reads as one region before anyone reads the text. — Law of common region · [reference](references/card.md)
-- **Checkbox** (`checkbox`): Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked. — Immediate feedback · [reference](references/checkbox.md)
-- **Dialog** (`dialog`): Modal surface that dims everything else and holds focus until the user answers one question. — Attention funnel · [reference](references/dialog.md)
-- **Dropdown Menu** (`dropdown-menu`): Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant. — Hick's law · [reference](references/dropdown-menu.md)
-- **Input** (`input`): Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring. — Fitts's law · [reference](references/input.md)
-- **Label** (`label`): Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled. — Law of proximity · [reference](references/label.md)
-- **Popover** (`popover`): Small floating panel anchored to the control that opened it, for a form or detail that does not need a full dialog. — Spatial memory · [reference](references/popover.md)
-- **Select** (`select`): Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support. — Default effect · [reference](references/select.md)
-- **Skeleton** (`skeleton`): Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner. — Perceived performance · [reference](references/skeleton.md)
-- **Switch** (`switch`): Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates. — Affordance · [reference](references/switch.md)
-- **Tabs** (`tabs`): Segmented control that swaps one panel for another in place, so related views share a single spot on the screen. — Chunking · [reference](references/tabs.md)
-- **Textarea** (`textarea`): Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar. — Chunking · [reference](references/textarea.md)
-- **Tooltip** (`tooltip`): One-line hint that appears on hover or focus with no delay and leaves with the pointer, for detail that does not deserve screen space. — Progressive disclosure · [reference](references/tooltip.md)
 
 Source and issues: https://github.com/kimjusnu/miseui

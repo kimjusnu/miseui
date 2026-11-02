@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { useParams } from "react-router"
 import { findComponent } from "@/src/content"
 import { demos } from "@/src/demos"
@@ -11,7 +12,9 @@ export function BlockPreviewPage() {
   if (!Demo || meta?.category !== "blocks") return <NotFound />
   return (
     <main className="flex min-h-dvh flex-col bg-background text-foreground [&>*]:flex-1">
-      <Demo />
+      <Suspense fallback={null}>
+        <Demo />
+      </Suspense>
     </main>
   )
 }
