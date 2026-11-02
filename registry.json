@@ -4,6 +4,34 @@
   "homepage": "https://miseui.junsu4621.workers.dev",
   "items": [
     {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "Stacked rows that open in place, so a long page of answers stays short until someone asks for one.",
+      "dependencies": [
+        "radix-ui",
+        "motion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/accordion.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/accordion-classes.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "agent-avatar",
       "type": "registry:ui",
       "title": "Agent Avatar",
@@ -17,6 +45,33 @@
       "files": [
         {
           "path": "registry/miseui/ui/agent-avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "A face or initials that identifies a person at a glance, alone or as an overlapping group with a +N.",
+      "dependencies": [
+        "radix-ui",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/avatar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/avatar-tokens.ts",
           "type": "registry:ui"
         }
       ]
@@ -201,6 +256,74 @@
       ]
     },
     {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "One disclosure: a label that opens the detail under it, for the one thing most readers can skip.",
+      "dependencies": [
+        "radix-ui",
+        "motion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/collapsible.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/collapsible-content.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/collapsible-classes.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "A searchable select for long lists, single or multiple, with people rows, section headers, chips and loading built in.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/popover.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/combobox.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/combobox-list.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/combobox-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/combobox-trigger.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dashboard-overview",
       "type": "registry:block",
       "title": "Dashboard Overview",
@@ -260,6 +383,38 @@
       "files": [
         {
           "path": "registry/miseui/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "A panel that slides in from an edge for a side task, so the page you came from stays where you left it.",
+      "dependencies": [
+        "radix-ui",
+        "motion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/sheet.json"
+      ],
+      "categories": [
+        "overlays"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/drawer.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/drawer-classes.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/drawer-parts.tsx",
           "type": "registry:ui"
         }
       ]
@@ -347,6 +502,33 @@
       ]
     },
     {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "Gives any control a label, description, error and required mark, and wires the ids and aria attributes so nobody has to remember them.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/label.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/field.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/field-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "gooey-morph",
       "type": "registry:ui",
       "title": "Gooey Morph",
@@ -383,6 +565,36 @@
       "files": [
         {
           "path": "registry/miseui/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input OTP",
+      "description": "One-time code entry drawn as boxes but built on one real input, so SMS autofill, paste, backspace and screen readers all work.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/input-otp.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/input-otp-box.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/input-otp-state.ts",
           "type": "registry:ui"
         }
       ]
@@ -560,6 +772,37 @@
       ]
     },
     {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Moves through a long list in steady chunks, with the window of pages always the same width so controls never shift.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/pagination.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/pagination-views.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/pagination-window.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
@@ -609,6 +852,61 @@
         {
           "path": "registry/miseui/blocks/pricing-table-parts.tsx",
           "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "Shows how far a task has come, as a bar, a hairline, discrete steps or a labelled percent, and admits it when nobody knows yet.",
+      "dependencies": [
+        "radix-ui",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "feedback"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/progress.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/progress-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "description": "One choice from a short list with every option in view, as dots, selectable cards, joined buttons or rows, with arrow keys built in.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/radio-group.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/radio-group-parts.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -827,6 +1125,37 @@
       "files": [
         {
           "path": "registry/miseui/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "Picks a value or a range by feel, as a thin line, a thick volume track, labelled steps or a value bubble, with full keyboard control.",
+      "dependencies": [
+        "radix-ui",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/slider.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/slider-stage.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/slider-parts.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1384,6 +1713,45 @@
       "files": [
         {
           "path": "registry/miseui/ui/thinking-orb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "A brief message about something that just happened, which waits while you read it and leaves without being asked.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "feedback"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/toast.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/toast-item.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/toast-row.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/toast-layout.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/toast-store.ts",
           "type": "registry:ui"
         }
       ]

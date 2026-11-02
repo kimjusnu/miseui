@@ -1,0 +1,13 @@
+{
+  "name": "avatar",
+  "type": "registry:ui",
+  "title": "Avatar",
+  "description": "A face or initials that identifies a person at a glance, alone or as an overlapping group with a +N.",
+  "dependencies": ["radix-ui", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    {"path": "registry/miseui/ui/avatar.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/avatar-tokens.ts", "type": "registry:ui"}
+  ]
+}

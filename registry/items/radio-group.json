@@ -1,0 +1,13 @@
+{
+  "name": "radio-group",
+  "type": "registry:ui",
+  "title": "Radio Group",
+  "description": "One choice from a short list with every option in view, as dots, selectable cards, joined buttons or rows, with arrow keys built in.",
+  "dependencies": ["radix-ui", "lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/radio-group.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/radio-group-parts.tsx", "type": "registry:ui" }
+  ]
+}

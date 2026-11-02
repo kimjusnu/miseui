@@ -1,0 +1,14 @@
+{
+  "name": "slider",
+  "type": "registry:ui",
+  "title": "Slider",
+  "description": "Picks a value or a range by feel, as a thin line, a thick volume track, labelled steps or a value bubble, with full keyboard control.",
+  "dependencies": ["radix-ui", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/slider.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/slider-stage.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/slider-parts.tsx", "type": "registry:ui" }
+  ]
+}

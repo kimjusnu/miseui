@@ -1,0 +1,13 @@
+{
+  "name": "progress",
+  "type": "registry:ui",
+  "title": "Progress",
+  "description": "Shows how far a task has come, as a bar, a hairline, discrete steps or a labelled percent, and admits it when nobody knows yet.",
+  "dependencies": ["radix-ui", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["feedback"],
+  "files": [
+    { "path": "registry/miseui/ui/progress.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/progress-parts.tsx", "type": "registry:ui" }
+  ]
+}

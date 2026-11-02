@@ -89,28 +89,43 @@ UI that explains itself. Every component ships with the principle behind its sha
 
 - **Button** (`button`): Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged. — Doherty threshold · [reference](references/button.md)
 - **Checkbox** (`checkbox`): Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked. — Immediate feedback · [reference](references/checkbox.md)
+- **Combobox** (`combobox`): A searchable select for long lists, single or multiple, with people rows, section headers, chips and loading built in. — Hick's law · [reference](references/combobox.md)
+- **Field** (`field`): Gives any control a label, description, error and required mark, and wires the ids and aria attributes so nobody has to remember them. — Proximity · [reference](references/field.md)
 - **Input** (`input`): Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring. — Fitts's law · [reference](references/input.md)
+- **Input OTP** (`input-otp`): One-time code entry drawn as boxes but built on one real input, so SMS autofill, paste, backspace and screen readers all work. — Error prevention · [reference](references/input-otp.md)
 - **Label** (`label`): Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled. — Law of proximity · [reference](references/label.md)
+- **Radio Group** (`radio-group`): One choice from a short list with every option in view, as dots, selectable cards, joined buttons or rows, with arrow keys built in. — Recognition over recall · [reference](references/radio-group.md)
 - **Select** (`select`): Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support. — Default effect · [reference](references/select.md)
+- **Slider** (`slider`): Picks a value or a range by feel, as a thin line, a thick volume track, labelled steps or a value bubble, with full keyboard control. — Direct manipulation · [reference](references/slider.md)
 - **Switch** (`switch`): Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates. — Affordance · [reference](references/switch.md)
 - **Textarea** (`textarea`): Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar. — Chunking · [reference](references/textarea.md)
 
 ## Navigation
 
 - **Dropdown Menu** (`dropdown-menu`): Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant. — Hick's law · [reference](references/dropdown-menu.md)
+- **Pagination** (`pagination`): Moves through a long list in steady chunks, with the window of pages always the same width so controls never shift. — Spatial memory · [reference](references/pagination.md)
 - **Tabs** (`tabs`): Segmented control that swaps one panel for another in place, so related views share a single spot on the screen. — Chunking · [reference](references/tabs.md)
 
 ## Overlays
 
 - **Dialog** (`dialog`): Modal surface that dims everything else and holds focus until the user answers one question. — Attention funnel · [reference](references/dialog.md)
+- **Drawer** (`drawer`): A panel that slides in from an edge for a side task, so the page you came from stays where you left it. — Spatial continuity · [reference](references/drawer.md)
 - **Popover** (`popover`): Small floating panel anchored to the control that opened it, for a form or detail that does not need a full dialog. — Spatial memory · [reference](references/popover.md)
 - **Tooltip** (`tooltip`): One-line hint that appears on hover or focus with no delay and leaves with the pointer, for detail that does not deserve screen space. — Progressive disclosure · [reference](references/tooltip.md)
 
 ## Display
 
+- **Accordion** (`accordion`): Stacked rows that open in place, so a long page of answers stays short until someone asks for one. — Progressive disclosure · [reference](references/accordion.md)
+- **Avatar** (`avatar`): A face or initials that identifies a person at a glance, alone or as an overlapping group with a +N. — Recognition over recall · [reference](references/avatar.md)
 - **Badge** (`badge`): Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out. — Von Restorff effect · [reference](references/badge.md)
 - **Card** (`card`): Bordered surface with header, content and footer slots that reads as one region before anyone reads the text. — Law of common region · [reference](references/card.md)
+- **Collapsible** (`collapsible`): One disclosure: a label that opens the detail under it, for the one thing most readers can skip. — Progressive disclosure · [reference](references/collapsible.md)
 - **Skeleton** (`skeleton`): Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner. — Perceived performance · [reference](references/skeleton.md)
+
+## Feedback
+
+- **Progress** (`progress`): Shows how far a task has come, as a bar, a hairline, discrete steps or a labelled percent, and admits it when nobody knows yet. — Visibility of system status · [reference](references/progress.md)
+- **Toast** (`toast`): A brief message about something that just happened, which waits while you read it and leaves without being asked. — Visibility of system status · [reference](references/toast.md)
 
 ## Effects
 

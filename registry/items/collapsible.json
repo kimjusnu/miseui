@@ -1,0 +1,14 @@
+{
+  "name": "collapsible",
+  "type": "registry:ui",
+  "title": "Collapsible",
+  "description": "One disclosure: a label that opens the detail under it, for the one thing most readers can skip.",
+  "dependencies": ["radix-ui", "motion", "lucide-react"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    {"path": "registry/miseui/ui/collapsible.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/collapsible-content.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/collapsible-classes.ts", "type": "registry:ui"}
+  ]
+}

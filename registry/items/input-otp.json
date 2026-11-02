@@ -1,0 +1,14 @@
+{
+  "name": "input-otp",
+  "type": "registry:ui",
+  "title": "Input OTP",
+  "description": "One-time code entry drawn as boxes but built on one real input, so SMS autofill, paste, backspace and screen readers all work.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/input-otp.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/input-otp-box.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/input-otp-state.ts", "type": "registry:ui" }
+  ]
+}

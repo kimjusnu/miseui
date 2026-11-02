@@ -1,0 +1,16 @@
+{
+  "name": "toast",
+  "type": "registry:ui",
+  "title": "Toast",
+  "description": "A brief message about something that just happened, which waits while you read it and leaves without being asked.",
+  "dependencies": ["motion", "lucide-react"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["feedback"],
+  "files": [
+    {"path": "registry/miseui/ui/toast.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/toast-item.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/toast-row.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/toast-layout.ts", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/toast-store.ts", "type": "registry:ui"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "pagination",
+  "type": "registry:ui",
+  "title": "Pagination",
+  "description": "Moves through a long list in steady chunks, with the window of pages always the same width so controls never shift.",
+  "dependencies": ["motion", "lucide-react"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["navigation"],
+  "files": [
+    {"path": "registry/miseui/ui/pagination.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/pagination-views.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/pagination-window.ts", "type": "registry:ui"}
+  ]
+}

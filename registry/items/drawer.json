@@ -1,0 +1,14 @@
+{
+  "name": "drawer",
+  "type": "registry:ui",
+  "title": "Drawer",
+  "description": "A panel that slides in from an edge for a side task, so the page you came from stays where you left it.",
+  "dependencies": ["radix-ui", "motion", "lucide-react"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/sheet.json"],
+  "categories": ["overlays"],
+  "files": [
+    {"path": "registry/miseui/ui/drawer.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/drawer-classes.ts", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/drawer-parts.tsx", "type": "registry:ui"}
+  ]
+}

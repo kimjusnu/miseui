@@ -1,0 +1,17 @@
+{
+  "name": "field",
+  "type": "registry:ui",
+  "title": "Field",
+  "description": "Gives any control a label, description, error and required mark, and wires the ids and aria attributes so nobody has to remember them.",
+  "dependencies": ["motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/label.json"
+  ],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/field.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/field-parts.tsx", "type": "registry:ui" }
+  ]
+}

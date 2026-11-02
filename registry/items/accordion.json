@@ -1,0 +1,13 @@
+{
+  "name": "accordion",
+  "type": "registry:ui",
+  "title": "Accordion",
+  "description": "Stacked rows that open in place, so a long page of answers stays short until someone asks for one.",
+  "dependencies": ["radix-ui", "motion", "lucide-react"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    {"path": "registry/miseui/ui/accordion.tsx", "type": "registry:ui"},
+    {"path": "registry/miseui/ui/accordion-classes.ts", "type": "registry:ui"}
+  ]
+}
