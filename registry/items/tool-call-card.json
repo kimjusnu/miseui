@@ -1,0 +1,10 @@
+{
+  "name": "tool-call-card",
+  "type": "registry:ui",
+  "title": "Tool Call Card",
+  "description": "Collapsible record of one tool call: name, status, duration, and the exact input and output on demand.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["ai"],
+  "files": [{ "path": "registry/miseui/ui/tool-call-card.tsx", "type": "registry:ui" }]
+}

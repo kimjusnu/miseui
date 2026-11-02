@@ -1,0 +1,10 @@
+{
+  "name": "voice-wave",
+  "type": "registry:ui",
+  "title": "Voice Wave",
+  "description": "Bars that rise with the microphone level so the user can see they are being heard, and see when they are not.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["ai"],
+  "files": [{ "path": "registry/miseui/ui/voice-wave.tsx", "type": "registry:ui" }]
+}

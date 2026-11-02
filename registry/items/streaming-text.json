@@ -1,0 +1,10 @@
+{
+  "name": "streaming-text",
+  "type": "registry:ui",
+  "title": "Streaming Text",
+  "description": "Reveals arriving text character by character at reading speed, with a caret that marks where the next word lands.",
+  "dependencies": [],
+  "registryDependencies": ["utils"],
+  "categories": ["ai"],
+  "files": [{ "path": "registry/miseui/ui/streaming-text.tsx", "type": "registry:ui" }]
+}

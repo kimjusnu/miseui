@@ -1,0 +1,34 @@
+# Mise UI
+
+> UI that explains itself. shadcn-registry React components and AI-era states, each with the psychology behind it and an agent skill.
+
+Site: https://miseui.junsu4621.workers.dev
+Registry: https://miseui.junsu4621.workers.dev/r/<name>.json (theme first: https://miseui.junsu4621.workers.dev/r/theme.json)
+Agent skill: https://github.com/kimjusnu/miseui/tree/main/skills/miseui
+Getting started: https://miseui.junsu4621.workers.dev/docs
+
+## AI states
+
+- [Reasoning Steps](https://miseui.junsu4621.workers.dev/components/reasoning-steps): Collapsed timeline of the model's steps; the header names the current one, the body shows them all. — Progressive disclosure. Install: https://miseui.junsu4621.workers.dev/r/reasoning-steps.json
+- [Streaming Text](https://miseui.junsu4621.workers.dev/components/streaming-text): Reveals arriving text character by character at reading speed, with a caret that marks where the next word lands. — Perceived latency. Install: https://miseui.junsu4621.workers.dev/r/streaming-text.json
+- [Thinking Indicator](https://miseui.junsu4621.workers.dev/components/thinking-indicator): Three breathing dots and a live label that tell the user the model is working, and on what. — Visibility of system status · labor illusion. Install: https://miseui.junsu4621.workers.dev/r/thinking-indicator.json
+- [Tool Call Card](https://miseui.junsu4621.workers.dev/components/tool-call-card): Collapsible record of one tool call: name, status, duration, and the exact input and output on demand. — Transparency builds trust. Install: https://miseui.junsu4621.workers.dev/r/tool-call-card.json
+- [Voice Wave](https://miseui.junsu4621.workers.dev/components/voice-wave): Bars that rise with the microphone level so the user can see they are being heard, and see when they are not. — Visibility of system status. Install: https://miseui.junsu4621.workers.dev/r/voice-wave.json
+
+## Core
+
+- [Badge](https://miseui.junsu4621.workers.dev/components/badge): Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out. — Von Restorff effect. Install: https://miseui.junsu4621.workers.dev/r/badge.json
+- [Button](https://miseui.junsu4621.workers.dev/components/button): Press target with a 150 ms settle and a 2% press-down so the click feels acknowledged. — Doherty threshold. Install: https://miseui.junsu4621.workers.dev/r/button.json
+- [Card](https://miseui.junsu4621.workers.dev/components/card): Bordered surface with header, content and footer slots that reads as one region before anyone reads the text. — Law of common region. Install: https://miseui.junsu4621.workers.dev/r/card.json
+- [Checkbox](https://miseui.junsu4621.workers.dev/components/checkbox): Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked. — Immediate feedback. Install: https://miseui.junsu4621.workers.dev/r/checkbox.json
+- [Dialog](https://miseui.junsu4621.workers.dev/components/dialog): Modal surface that dims everything else and holds focus until the user answers one question. — Attention funnel. Install: https://miseui.junsu4621.workers.dev/r/dialog.json
+- [Dropdown Menu](https://miseui.junsu4621.workers.dev/components/dropdown-menu): Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant. — Hick's law. Install: https://miseui.junsu4621.workers.dev/r/dropdown-menu.json
+- [Input](https://miseui.junsu4621.workers.dev/components/input): Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring. — Fitts's law. Install: https://miseui.junsu4621.workers.dev/r/input.json
+- [Label](https://miseui.junsu4621.workers.dev/components/label): Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled. — Law of proximity. Install: https://miseui.junsu4621.workers.dev/r/label.json
+- [Popover](https://miseui.junsu4621.workers.dev/components/popover): Small floating panel anchored to the control that opened it, for a form or detail that does not need a full dialog. — Spatial memory. Install: https://miseui.junsu4621.workers.dev/r/popover.json
+- [Select](https://miseui.junsu4621.workers.dev/components/select): Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support. — Default effect. Install: https://miseui.junsu4621.workers.dev/r/select.json
+- [Skeleton](https://miseui.junsu4621.workers.dev/components/skeleton): Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner. — Perceived performance. Install: https://miseui.junsu4621.workers.dev/r/skeleton.json
+- [Switch](https://miseui.junsu4621.workers.dev/components/switch): Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates. — Affordance. Install: https://miseui.junsu4621.workers.dev/r/switch.json
+- [Tabs](https://miseui.junsu4621.workers.dev/components/tabs): Segmented control that swaps one panel for another in place, so related views share a single spot on the screen. — Chunking. Install: https://miseui.junsu4621.workers.dev/r/tabs.json
+- [Textarea](https://miseui.junsu4621.workers.dev/components/textarea): Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar. — Chunking. Install: https://miseui.junsu4621.workers.dev/r/textarea.json
+- [Tooltip](https://miseui.junsu4621.workers.dev/components/tooltip): One-line hint that appears on hover or focus with no delay and leaves with the pointer, for detail that does not deserve screen space. — Progressive disclosure. Install: https://miseui.junsu4621.workers.dev/r/tooltip.json

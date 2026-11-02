@@ -1,0 +1,10 @@
+{
+  "name": "reasoning-steps",
+  "type": "registry:ui",
+  "title": "Reasoning Steps",
+  "description": "Collapsed timeline of the model's steps; the header names the current one, the body shows them all.",
+  "dependencies": ["motion", "lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["ai"],
+  "files": [{ "path": "registry/miseui/ui/reasoning-steps.tsx", "type": "registry:ui" }]
+}
