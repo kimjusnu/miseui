@@ -340,7 +340,10 @@
         "theme": {
           "font-display": "\"Instrument Serif\", ui-serif, Georgia, serif",
           "ease-mise": "cubic-bezier(0.2, 0, 0, 1)",
-          "ease-mise-out": "cubic-bezier(0.16, 1, 0.3, 1)"
+          "ease-mise-out": "cubic-bezier(0.16, 1, 0.3, 1)",
+          "duration-fast": "150ms",
+          "duration-base": "240ms",
+          "duration-slow": "400ms"
         },
         "light": {
           "background": "oklch(0.995 0.002 90)",
@@ -363,12 +366,7 @@
           "ring": "oklch(0.72 0.14 62)",
           "mise": "oklch(0.74 0.15 62)",
           "mise-foreground": "oklch(0.2 0.03 60)",
-          "mise-soft": "oklch(0.95 0.04 75)",
-          "ease-mise": "cubic-bezier(0.2, 0, 0, 1)",
-          "ease-mise-out": "cubic-bezier(0.16, 1, 0.3, 1)",
-          "duration-fast": "150ms",
-          "duration-base": "240ms",
-          "duration-slow": "400ms"
+          "mise-soft": "oklch(0.95 0.04 75)"
         },
         "dark": {
           "background": "oklch(0.15 0.008 60)",
@@ -392,13 +390,6 @@
           "mise": "oklch(0.78 0.15 65)",
           "mise-foreground": "oklch(0.18 0.03 60)",
           "mise-soft": "oklch(0.3 0.05 65)"
-        }
-      },
-      "css": {
-        "@theme inline": {
-          "--color-mise": "var(--mise)",
-          "--color-mise-foreground": "var(--mise-foreground)",
-          "--color-mise-soft": "var(--mise-soft)"
         }
       }
     },
