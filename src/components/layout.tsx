@@ -19,21 +19,18 @@ export function Brand() {
 
 export function Layout() {
   const { pathname } = useLocation()
-  const isLanding = pathname === "/"
+  const isFullBleed = pathname === "/" || pathname === "/blocks"
 
   return (
-    <div className={cn("min-h-dvh", isLanding && "bg-black")}>
-      <header
-        className={cn(
-          "sticky top-0 z-20 text-foreground",
-          // Over the light sections further down the page, a thin dark material turns grey; the landing bar stays near-solid.
-          isLanding ? "dark bg-background/88 backdrop-blur-xl" : "material",
-        )}
-      >
+    <div className={cn("min-h-dvh", isFullBleed && "bg-muted")}>
+      <header className="material sticky top-0 z-20 text-foreground">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-4 md:px-6">
           <Brand />
           <div className="flex items-center gap-1">
             <Button variant="ghost" size="sm" asChild>
+              <Link to="/blocks">Blocks</Link>
+            </Button>
+            <Button variant="ghost" size="sm" asChild className="hidden sm:inline-flex">
               <Link to="/components/thinking-indicator">Components</Link>
             </Button>
             <Button variant="ghost" size="sm" asChild>
@@ -48,7 +45,7 @@ export function Layout() {
           </div>
         </div>
       </header>
-      {isLanding ? (
+      {isFullBleed ? (
         <Outlet />
       ) : (
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-10 md:grid-cols-[200px_1fr]">

@@ -24,7 +24,7 @@ export function PalettePicker({ className }: { className?: string }) {
               selected && "ring-[1.5px] ring-foreground/70",
             )}
           >
-            <span className="size-4 rounded-full" style={{ backgroundColor: option.dark.mise }} />
+            <span className="size-4 rounded-full ring-1 ring-foreground/15" style={{ backgroundColor: option.light.mise }} />
           </button>
         )
       })}

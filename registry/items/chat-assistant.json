@@ -1,0 +1,28 @@
+{
+  "name": "chat-assistant",
+  "type": "registry:block",
+  "title": "Chat Assistant",
+  "description": "A full AI chat screen that shows the model working: steps, tool calls, streaming text and a composer that swaps Send for Stop.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/agent-avatar.json",
+    "https://miseui.junsu4621.workers.dev/r/beam-border.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/reasoning-steps.json",
+    "https://miseui.junsu4621.workers.dev/r/shimmer-text.json",
+    "https://miseui.junsu4621.workers.dev/r/streaming-text.json",
+    "https://miseui.junsu4621.workers.dev/r/textarea.json",
+    "https://miseui.junsu4621.workers.dev/r/thinking-orb.json",
+    "https://miseui.junsu4621.workers.dev/r/tool-call-card.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/chat-assistant.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/chat-assistant-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/chat-assistant-thread.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/chat-assistant-composer.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/chat-assistant-sample.ts", "type": "registry:component" }
+  ]
+}

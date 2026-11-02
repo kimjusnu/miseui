@@ -13,6 +13,8 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: ["./vitest.setup.ts"],
+    // Tests that re-import motion after vi.resetModules take seconds while the whole suite runs in parallel.
+    testTimeout: 20000,
     include: ["registry/**/*.test.{ts,tsx}", "src/**/*.test.{ts,tsx}", "scripts/**/*.test.ts"],
     coverage: {
       provider: "v8",

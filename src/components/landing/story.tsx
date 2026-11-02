@@ -4,6 +4,7 @@ import { motion, useInView } from "motion/react"
 import { SPRING_DEFAULT } from "@/registry/miseui/lib/motion"
 import { findComponent } from "@/src/content"
 import { AgentConsole } from "./agent-console"
+import { SectionHeading } from "./section-heading"
 
 const STORY = [
   {
@@ -53,8 +54,8 @@ function StoryStep({ index, active, onEnter }: { index: number; active: boolean;
       animate={{ opacity: active ? 1 : IDLE_STEP_OPACITY }}
       transition={SPRING_DEFAULT}
     >
-      <h3 className="text-display text-4xl md:text-5xl">{step.title}</h3>
-      <p className="max-w-md text-[17px] leading-relaxed text-pretty text-muted-foreground">{step.body}</p>
+      <h3 className="text-title text-3xl md:text-4xl">{step.title}</h3>
+      <p className="max-w-md text-[15px] leading-relaxed text-pretty text-muted-foreground">{step.body}</p>
       <ul className="flex flex-wrap gap-2">
         {step.pieces.map((name) => {
           const meta = findComponent(name)
@@ -80,17 +81,14 @@ export function Story() {
   const [step, setStep] = useState(0)
 
   return (
-    <section aria-labelledby="story-heading" className="dark bg-background text-foreground">
-      <div className="mx-auto w-full max-w-6xl px-4 pt-24 md:px-6">
-        <h2 id="story-heading" className="text-display max-w-3xl text-4xl text-balance md:text-6xl">
-          One answer, five states. Each one designed.
-        </h2>
-        <p className="mt-4 max-w-xl text-lg text-pretty text-muted-foreground">
-          Most kits stop at the button. An AI product lives in the seconds around it. Scroll, and every state you see is
-          a real component from the kit.
+    <section aria-labelledby="story-heading" className="dark rounded-[28px] bg-background text-foreground">
+      <div className="mx-auto w-full max-w-7xl px-4 pt-16 md:px-10 md:pt-20">
+        <SectionHeading id="story-heading" lead="One answer, five states." quiet="Most kits stop at the button." />
+        <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-pretty text-muted-foreground">
+          An AI product lives in the seconds around it. Scroll, and every state you see is a real component from the kit.
         </p>
         <div className="mt-8 grid gap-x-16 lg:grid-cols-2">
-          <div className="sticky top-14 z-10 -mx-4 self-start bg-linear-to-b from-background from-90% to-transparent px-4 py-4 md:-mx-6 md:px-6 lg:top-[calc(50dvh-13rem)] lg:order-2 lg:mx-0 lg:bg-none lg:px-0 lg:py-0">
+          <div className="sticky top-14 z-10 -mx-4 self-start bg-linear-to-b from-background from-90% to-transparent px-4 py-4 md:-mx-10 md:px-10 lg:top-[calc(50dvh-13rem)] lg:order-2 lg:mx-0 lg:bg-none lg:px-0 lg:py-0">
             <AgentConsole step={step} />
           </div>
           <ol className="pb-24 lg:order-1">

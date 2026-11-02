@@ -1,6 +1,6 @@
 ---
 name: miseui
-description: Use when building React UI with shadcn-style components, AI-era states (thinking, streaming, tool calls, voice), living effects (beam borders, glows, liquid metal, gooey morphs) and fluid transitions. Install from the Mise UI registry and follow each component's psychological rationale.
+description: Use when building React UI and no designer is involved: whole screens (pricing, login, signup, dashboard, settings, chat, landing), complete palettes, shadcn-style components, AI-era states and living effects. Install from the Mise UI registry and follow each piece's psychological rationale.
 ---
 
 # Mise UI
@@ -15,12 +15,13 @@ UI that explains itself. Every component ships with the principle behind its sha
 
 ## Install
 
-1. Theme, once per project: `npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/theme.json`
+1. Theme, once per project: `npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/theme.json` (or `theme-ink`, `theme-cobalt`, `theme-forest`, `theme-ember`; pick one, do not mix colours by hand)
 2. Each component: `npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/<name>.json` (dependencies install automatically)
 3. Read `references/<name>.md` before using a component for the first time
 
 ## Rules
 
+0. Reach for a block first. If a whole screen fits, install it and change the words before composing from parts. Do not restyle it; the spacing and hierarchy are the point.
 1. Respect `prefers-reduced-motion`. Every Mise component already does; keep that when you edit one.
 2. One `mise` accent per screen. It marks the primary action or live AI activity, never decoration.
 3. Name the wait. Any model call over about a second gets a `thinking-indicator` whose label says what is happening.
@@ -31,6 +32,15 @@ UI that explains itself. Every component ships with the principle behind its sha
 
 | When you see | Reach for |
 |---|---|
+| Building a chat screen for an assistant | `chat-assistant` |
+| A pricing page where one plan should be the obvious choice | `pricing-table` |
+| A login screen | `login-form` |
+| A signup flow people abandon halfway | `signup-steps` |
+| A dashboard with too many numbers of equal weight | `dashboard-overview` |
+| A settings screen | `settings-page` |
+| A marketing page needs its first screen | `landing-hero` |
+| A marketing page needs its feature section | `feature-bento` |
+| A new user sees an empty screen | `empty-state` |
 | User waits on a model call longer than about a second | `thinking-indicator` |
 | Tokens arrive one by one and should read as typing, not as a frozen block | `streaming-text` |
 | An agent ran a tool and the user should be able to trust the result | `tool-call-card` |
@@ -54,6 +64,18 @@ UI that explains itself. Every component ships with the principle behind its sha
 | The user must decide before doing anything else | `dialog` |
 | Extra detail that only some users need | `tooltip` |
 | Related controls that belong together | `card` |
+
+## Blocks
+
+- **Chat Assistant** (`chat-assistant`): A full AI chat screen that shows the model working: steps, tool calls, streaming text and a composer that swaps Send for Stop. — Labor illusion · [reference](references/chat-assistant.md)
+- **Dashboard Overview** (`dashboard-overview`): A product dashboard built around one number: a large metric with its chart, a quieter row under it, recent activity and the one thing that needs you. All figures shown are sample data. — Visual hierarchy: one number first · [reference](references/dashboard-overview.md)
+- **Empty State** (`empty-state`): A first screen that gives people somewhere to start, with one action and three worked examples. — Blank page paralysis · [reference](references/empty-state.md)
+- **Feature Bento** (`feature-bento`): An asymmetric feature grid: mixed cell sizes, live visuals built from kit effects in some cells and large type in the others. The features shown are sample content. — Aesthetic-usability effect · [reference](references/feature-bento.md)
+- **Landing Hero** (`landing-hero`): A left-aligned marketing hero with one message, two actions and a live product preview built from real components, not a screenshot. The call and the people in it are sample content. — Serial position effect · [reference](references/landing-hero.md)
+- **Login Form** (`login-form`): A split login screen with labels that stay visible, inline errors, a password you can reveal and a calm brand panel. — Recognition over recall · [reference](references/login-form.md)
+- **Pricing Table** (`pricing-table`): Three plans with one dominant centre, an honest yearly anchor and feature rows you can read straight across. — Default effect and anchoring · [reference](references/pricing-table.md)
+- **Settings Page** (`settings-page`): A settings screen in grouped rows, with a save bar that appears only when something changed and a destructive area kept well away from the rest. The person and plan shown are sample data. — Chunking and forgiveness · [reference](references/settings-page.md)
+- **Signup Steps** (`signup-steps`): A sign-up that asks one question at a time, starts with real progress on the bar and never ticks consent for anyone. — Goal-gradient effect · [reference](references/signup-steps.md)
 
 ## AI states
 

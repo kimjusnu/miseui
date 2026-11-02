@@ -1,6 +1,11 @@
 import { GITHUB_URL } from "@/src/lib/site"
+import { SectionHeading } from "./section-heading"
 
 const FAQ = [
+  {
+    q: "I can't design at all. Will this still look good?",
+    a: "That is who it is for. Spacing, type sizes, colour and motion are already decided. Pick a palette, copy a block, change the words. The reasons are written down in case someone asks.",
+  },
   {
     q: "Is it free?",
     a: "Yes. Everything is MIT licensed and installs as source into your project. There is nothing to subscribe to and nothing to uninstall later.",
@@ -25,10 +30,8 @@ const FAQ = [
 
 export function Faq() {
   return (
-    <section aria-labelledby="faq-heading" className="mx-auto w-full max-w-6xl px-4 py-24 md:px-6">
-      <h2 id="faq-heading" className="text-display text-4xl md:text-5xl">
-        Questions.
-      </h2>
+    <section aria-labelledby="faq-heading" className="mx-auto w-full max-w-7xl px-4 py-16 md:px-10 md:py-20">
+      <SectionHeading id="faq-heading" lead="Questions." />
       <div className="mt-10 divide-y">
         {FAQ.map((item) => (
           <details key={item.q} className="group py-5">

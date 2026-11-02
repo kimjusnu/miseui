@@ -1,0 +1,23 @@
+{
+  "name": "feature-bento",
+  "type": "registry:block",
+  "title": "Feature Bento",
+  "description": "An asymmetric feature grid: mixed cell sizes, live visuals built from kit effects in some cells and large type in the others.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/badge.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/card.json",
+    "https://miseui.junsu4621.workers.dev/r/gooey-morph.json",
+    "https://miseui.junsu4621.workers.dev/r/input.json",
+    "https://miseui.junsu4621.workers.dev/r/materialize.json",
+    "https://miseui.junsu4621.workers.dev/r/shimmer-text.json",
+    "https://miseui.junsu4621.workers.dev/r/thinking-orb.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/feature-bento.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/feature-bento-parts.tsx", "type": "registry:component" }
+  ]
+}

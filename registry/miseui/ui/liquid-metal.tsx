@@ -142,7 +142,8 @@ function useMetalCanvas(
     if (!gl || !program) return
     gl.useProgram(program)
     gl.uniform1f(gl.getUniformLocation(program, "u_intensity"), intensity)
-    gl.uniform3fv(gl.getUniformLocation(program, "u_tint"), tintRgb(host, tint))
+    const tintLocation = gl.getUniformLocation(program, "u_tint")
+    gl.uniform3fv(tintLocation, tintRgb(host, tint))
     const resolutionLocation = gl.getUniformLocation(program, "u_resolution")
     const timeLocation = gl.getUniformLocation(program, "u_time")
     const draw = (seconds: number) => {
@@ -174,6 +175,16 @@ function useMetalCanvas(
     }
     fit()
     draw(0)
+    // The tint comes from a token, and tokens change with the theme or palette on <html>. Repaint so the
+    // metal never keeps an old colour, including under reduced motion where no loop would redraw it.
+    const retint =
+      tint === "silver" || typeof MutationObserver === "undefined"
+        ? null
+        : new MutationObserver(() => {
+            gl.uniform3fv(tintLocation, tintRgb(host, tint))
+            draw(lastSeconds)
+          })
+    retint?.observe(document.documentElement, { attributes: true, attributeFilter: ["class", "data-palette"] })
     // Setting canvas.width clears it. The loop repaints on its next frame, but under reduced motion, or
     // while off screen, there is no next frame, so the canvas would stay blank.
     const sizer =
@@ -192,6 +203,7 @@ function useMetalCanvas(
     else play()
     return () => {
       pause()
+      retint?.disconnect()
       sizer?.disconnect()
       watcher?.disconnect()
       gl.deleteProgram(program)

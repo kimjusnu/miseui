@@ -1,9 +1,12 @@
+import { ArrowRight } from "lucide-react"
 import { Link } from "react-router"
 import { Bento } from "@/src/components/landing/bento"
+import { BlockGallery } from "@/src/components/landing/block-gallery"
 import { EffectPlayground } from "@/src/components/landing/effect-playground"
 import { Faq } from "@/src/components/landing/faq"
 import { Footer } from "@/src/components/landing/footer"
 import { Hero } from "@/src/components/landing/hero"
+import { SectionHeading } from "@/src/components/landing/section-heading"
 import { Steps } from "@/src/components/landing/steps"
 import { Story } from "@/src/components/landing/story"
 import { WhyPanel } from "@/src/components/why-panel"
@@ -11,19 +14,34 @@ import { byCategory, findComponent } from "@/src/content"
 import { CATEGORY_LABELS, CATEGORY_ORDER } from "@/src/content/types"
 
 const WHY_EXAMPLE = "thinking-indicator"
+const BLOCK_PREVIEW_COUNT = 6
+
+function BlocksSection() {
+  return (
+    <section aria-labelledby="blocks-heading" className="rounded-[28px] bg-background">
+      <div className="mx-auto w-full max-w-7xl px-4 py-16 md:px-10 md:py-20">
+        <SectionHeading id="blocks-heading" lead="Whole screens, not parts." quiet="Pick one, copy it, change the words." />
+        <div className="mt-10">
+          <BlockGallery limit={BLOCK_PREVIEW_COUNT} />
+        </div>
+        <Link to="/blocks" className="mt-4 inline-flex items-center gap-1.5 text-[15px] font-medium underline-offset-4 hover:underline">
+          See every block <ArrowRight className="size-4" />
+        </Link>
+      </div>
+    </section>
+  )
+}
 
 function WhySection() {
   const example = findComponent(WHY_EXAMPLE)
   if (!example) return null
 
   return (
-    <section aria-labelledby="why-heading-home" className="bg-card">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-24 md:grid-cols-2 md:items-center md:px-6">
+    <section aria-labelledby="why-heading-home" className="rounded-[28px] bg-background">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-2 md:items-center md:px-10 md:py-20">
         <div>
-          <h2 id="why-heading-home" className="text-display text-4xl text-balance md:text-5xl">
-            Every piece comes with its reason.
-          </h2>
-          <p className="mt-4 max-w-md text-lg text-muted-foreground">
+          <SectionHeading id="why-heading-home" lead="Every piece comes with its reason." quiet="So your design review has an argument." />
+          <p className="mt-4 max-w-md text-[15px] leading-relaxed text-muted-foreground">
             The same metadata renders this panel, the agent skill and llms.txt, so people and models read one truth.
           </p>
           <Link
@@ -33,9 +51,7 @@ function WhySection() {
             See {example.title}
           </Link>
         </div>
-        <div className="rounded-2xl bg-background p-2 shadow-[0_8px_30px_-12px_rgb(0_0_0/0.25)]">
-          <WhyPanel why={example.why} />
-        </div>
+        <WhyPanel why={example.why} />
       </div>
     </section>
   )
@@ -43,10 +59,8 @@ function WhySection() {
 
 function KitIndex() {
   return (
-    <section aria-labelledby="all-components" className="mx-auto w-full max-w-6xl border-t px-4 py-24 md:px-6">
-      <h2 id="all-components" className="text-display text-4xl md:text-5xl">
-        Everything in the kit.
-      </h2>
+    <section aria-labelledby="all-components" className="mx-auto w-full max-w-7xl px-4 py-16 md:px-10 md:py-20">
+      <SectionHeading id="all-components" lead="Everything in the kit." quiet="Install one piece or all of them." />
       <div className="mt-10 flex flex-col gap-8">
         {CATEGORY_ORDER.map((category) => {
           const items = byCategory(category)
@@ -79,13 +93,14 @@ function KitIndex() {
 
 export function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-2 p-2">
       <Hero />
+      <BlocksSection />
       <Story />
       <Bento />
       <EffectPlayground />
-      <div className="bg-background text-foreground">
-        <WhySection />
+      <WhySection />
+      <div className="rounded-[28px] bg-background">
         <Steps />
         <KitIndex />
         <Faq />

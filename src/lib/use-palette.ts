@@ -21,12 +21,17 @@ function ensureStyles() {
   document.head.append(style)
 }
 
+/** Runs before the first render, so a saved palette applies on every page, including ones without a picker. */
+export function applyStoredPalette() {
+  ensureStyles()
+  document.documentElement.dataset.palette = readStored()
+}
+
 /** Palette choice for this site's own preview. Installed projects pick theirs with a registry item instead. */
 export function usePalette() {
   const [palette, setPaletteState] = useState(readStored)
 
   useEffect(() => {
-    ensureStyles()
     document.documentElement.dataset.palette = palette
   }, [palette])
 

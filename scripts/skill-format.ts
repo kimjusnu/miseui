@@ -2,13 +2,22 @@ import { CATEGORY_LABELS, CATEGORY_ORDER, type ComponentMeta } from "../src/cont
 
 const SKILL_NAME = "miseui"
 const SKILL_DESCRIPTION =
-  "Use when building React UI with shadcn-style components, AI-era states (thinking, streaming, tool calls, voice), living effects (beam borders, glows, liquid metal, gooey morphs) and fluid transitions. Install from the Mise UI registry and follow each component's psychological rationale."
+  "Use when building React UI and no designer is involved: whole screens (pricing, login, signup, dashboard, settings, chat, landing), complete palettes, shadcn-style components, AI-era states and living effects. Install from the Mise UI registry and follow each piece's psychological rationale."
 const GITHUB_URL = "https://github.com/kimjusnu/miseui"
 
 const CATEGORY_HEADINGS = CATEGORY_LABELS
 
 /** Symptom → component map. Rows whose component is not in the registry are dropped at build time. */
 const SYMPTOMS: ReadonlyArray<readonly [symptom: string, component: string]> = [
+  ["Building a chat screen for an assistant", "chat-assistant"],
+  ["A pricing page where one plan should be the obvious choice", "pricing-table"],
+  ["A login screen", "login-form"],
+  ["A signup flow people abandon halfway", "signup-steps"],
+  ["A dashboard with too many numbers of equal weight", "dashboard-overview"],
+  ["A settings screen", "settings-page"],
+  ["A marketing page needs its first screen", "landing-hero"],
+  ["A marketing page needs its feature section", "feature-bento"],
+  ["A new user sees an empty screen", "empty-state"],
   ["User waits on a model call longer than about a second", "thinking-indicator"],
   ["Tokens arrive one by one and should read as typing, not as a frozen block", "streaming-text"],
   ["An agent ran a tool and the user should be able to trust the result", "tool-call-card"],
@@ -123,12 +132,13 @@ export function formatSkill(components: readonly ComponentMeta[], site: string):
     "",
     "## Install",
     "",
-    `1. Theme, once per project: \`${installCommand(site, "theme")}\``,
+    `1. Theme, once per project: \`${installCommand(site, "theme")}\` (or \`theme-ink\`, \`theme-cobalt\`, \`theme-forest\`, \`theme-ember\`; pick one, do not mix colours by hand)`,
     `2. Each component: \`${installCommand(site, "<name>")}\` (dependencies install automatically)`,
     "3. Read `references/<name>.md` before using a component for the first time",
     "",
     "## Rules",
     "",
+    "0. Reach for a block first. If a whole screen fits, install it and change the words before composing from parts. Do not restyle it; the spacing and hierarchy are the point.",
     "1. Respect `prefers-reduced-motion`. Every Mise component already does; keep that when you edit one.",
     "2. One `mise` accent per screen. It marks the primary action or live AI activity, never decoration.",
     "3. Name the wait. Any model call over about a second gets a `thinking-indicator` whose label says what is happening.",

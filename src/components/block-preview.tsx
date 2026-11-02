@@ -1,6 +1,6 @@
 import type * as React from "react"
 import { useState } from "react"
-import { Monitor, Smartphone } from "lucide-react"
+import { ExternalLink, Monitor, Smartphone } from "lucide-react"
 import { motion, useReducedMotion } from "motion/react"
 import { SPRING_DEFAULT } from "@/registry/miseui/lib/motion"
 import { cn } from "@/registry/miseui/lib/utils"
@@ -16,7 +16,7 @@ const VIEWPORTS: ReadonlyArray<{ id: Viewport; label: string; Icon: typeof Monit
 ]
 
 /** Blocks respond to their container, so resizing this frame shows the real phone layout without an iframe. */
-export function BlockPreview({ children }: { children: React.ReactNode }) {
+export function BlockPreview({ name, children }: { name: string; children: React.ReactNode }) {
   const reduceMotion = useReducedMotion()
   const [viewport, setViewport] = useState<Viewport>("desktop")
 
@@ -41,6 +41,16 @@ export function BlockPreview({ children }: { children: React.ReactNode }) {
               <Icon className="size-4" />
             </button>
           ))}
+          <a
+            href={`/preview/${name}`}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open full screen in a new tab"
+            title="Open full screen"
+            className="grid size-8 place-items-center rounded-lg text-muted-foreground outline-none transition-colors duration-(--duration-fast) ease-(--ease-mise) hover:text-foreground focus-visible:ring-[3px] focus-visible:ring-ring/50"
+          >
+            <ExternalLink className="size-4" />
+          </a>
         </div>
       </div>
       <div className="flex justify-center rounded-2xl bg-muted p-2 sm:p-3">

@@ -45,7 +45,7 @@ export function BeamScene() {
 export function MetalScene() {
   return (
     <LiquidMetal intensity={0.85} className="rounded-full shadow-sm">
-      <span className="relative inline-flex h-11 items-center rounded-full px-7 text-[15px] font-medium text-mise-foreground">
+      <span className="relative inline-flex h-11 items-center rounded-full px-7 text-[15px] font-medium text-[oklch(0.2_0_0)]">
         Continue
       </span>
     </LiquidMetal>

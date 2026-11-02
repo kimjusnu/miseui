@@ -1,4 +1,5 @@
 import { CodeBlock } from "@/src/components/code-block"
+import { SectionHeading } from "./section-heading"
 import { installCommand } from "@/src/lib/site"
 
 const STEPS = [
@@ -26,10 +27,8 @@ Don't: one orb per screen.`,
 
 export function Steps() {
   return (
-    <section aria-labelledby="steps-heading" className="mx-auto w-full max-w-6xl px-4 py-24 md:px-6">
-      <h2 id="steps-heading" className="text-display max-w-2xl text-4xl text-balance md:text-5xl">
-        Copy the command. Paste it to your agent.
-      </h2>
+    <section aria-labelledby="steps-heading" className="mx-auto w-full max-w-7xl px-4 py-16 md:px-10 md:py-20">
+      <SectionHeading id="steps-heading" lead="Copy the command." quiet="Paste it to your agent." />
       <ol className="mt-12 grid gap-10 md:grid-cols-3">
         {STEPS.map((step, index) => (
           <li key={step.title} className="flex min-w-0 flex-col gap-3">

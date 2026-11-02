@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/miseui/ui/t
 import { CodeBlock } from "@/src/components/code-block"
 import { findComponent } from "@/src/content"
 import { STAGES, type Stage } from "./effect-stage-list"
+import { SectionHeading } from "./section-heading"
 
 const PLAIN = {
   name: "plain",
@@ -80,12 +81,10 @@ function StagePanel({ stage }: { stage: Stage }) {
 
 export function EffectPlayground() {
   return (
-    <section aria-labelledby="playground-heading" className="bg-background text-foreground">
-      <div className="mx-auto w-full max-w-6xl px-4 py-24 md:px-6">
-        <h2 id="playground-heading" className="text-display max-w-3xl text-4xl text-balance md:text-6xl">
-          Boring by default. Alive on demand.
-        </h2>
-        <p className="mt-4 max-w-xl text-lg text-pretty text-muted-foreground">
+    <section aria-labelledby="playground-heading" className="rounded-[28px] bg-background text-foreground">
+      <div className="mx-auto w-full max-w-7xl px-4 py-16 md:px-10 md:py-20">
+        <SectionHeading id="playground-heading" lead="Boring by default." quiet="Alive on demand." />
+        <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-pretty text-muted-foreground">
           Every core component starts as the plain one you expect. Pass one prop and it comes alive, and the reason for
           that effect comes with it.
         </p>

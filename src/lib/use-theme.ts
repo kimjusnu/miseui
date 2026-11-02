@@ -22,6 +22,11 @@ function applyTheme(theme: Theme) {
   document.documentElement.classList.toggle(DARK_CLASS, theme === "dark")
 }
 
+/** Runs before the first render: the block preview route has no toggle to apply the theme for it. */
+export function applyStoredTheme() {
+  applyTheme(readStoredTheme() ?? systemTheme())
+}
+
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>(() => readStoredTheme() ?? systemTheme())
 

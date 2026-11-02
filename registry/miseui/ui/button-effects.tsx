@@ -23,12 +23,13 @@ const FRAME_PRESS_CLASS = "active:scale-100"
 
 /**
  * Applied to the button itself, between its variant and the consumer's className.
- * Dark ink on every metal: both tints stay light in both themes, and --mise-foreground is dark in both.
+ * Silver stays light in every theme and palette, so its ink is a fixed dark. --mise-foreground is white in
+ * palettes with a deep accent, which would vanish on silver, so only the tinted metal uses it (LIQUID_TINTED_INK).
  */
 const EFFECT_SURFACE_CLASS: Record<ButtonEffect, string> = {
   liquid: cn(
-    "border-transparent bg-transparent font-semibold text-mise-foreground shadow-none",
-    "hover:bg-transparent hover:text-mise-foreground disabled:opacity-100",
+    "border-transparent bg-transparent font-semibold text-[oklch(0.2_0_0)] shadow-none",
+    "hover:bg-transparent hover:text-[oklch(0.2_0_0)] disabled:opacity-100",
     FRAME_PRESS_CLASS,
   ),
   beam: FRAME_PRESS_CLASS,
@@ -178,4 +179,6 @@ function ButtonEffectFrame({ effect, variant, size, className, disabled, childre
   )
 }
 
-export { ButtonEffectFrame, EFFECT_SURFACE_CLASS, shimmerLabel, type ButtonEffect }
+const LIQUID_TINTED_INK = "text-mise-foreground hover:text-mise-foreground"
+
+export { ButtonEffectFrame, EFFECT_SURFACE_CLASS, LIQUID_TINTED_INK, shimmerLabel, type ButtonEffect }

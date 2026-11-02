@@ -1,0 +1,25 @@
+{
+  "name": "settings-page",
+  "type": "registry:block",
+  "title": "Settings Page",
+  "description": "A settings screen in grouped rows, with a save bar that appears only when something changed and a destructive area kept well away from the rest.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/input.json",
+    "https://miseui.junsu4621.workers.dev/r/label.json",
+    "https://miseui.junsu4621.workers.dev/r/materialize.json",
+    "https://miseui.junsu4621.workers.dev/r/select.json",
+    "https://miseui.junsu4621.workers.dev/r/switch.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/settings-page.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/settings-page-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/settings-page-row-text.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/settings-page-danger.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/settings-page-form.ts", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/settings-page-sample.ts", "type": "registry:component" }
+  ]
+}

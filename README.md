@@ -1,6 +1,6 @@
 # Mise UI
 
-**UI that explains itself.** React components and effects for the AI era, distributed as a [shadcn](https://ui.shadcn.com) registry. Every component ships with the psychology behind its shape, the situation where you should *not* use it, and an agent skill so Claude Code, Cursor and friends install the right piece and keep the rationale.
+**Design decisions, already made.** Whole screens, palettes and living effects for developers who would rather not open Figma, distributed as a [shadcn](https://ui.shadcn.com) registry. Every piece ships with the psychology behind its shape, the situation where you should *not* use it, and an agent skill so Claude Code, Cursor and friends install the right piece and keep the rationale.
 
 Site and docs: **https://miseui.junsu4621.workers.dev** · For agents: [`/llms.txt`](https://miseui.junsu4621.workers.dev/llms.txt) · [`skills/miseui`](skills/miseui)
 
@@ -8,6 +8,7 @@ Site and docs: **https://miseui.junsu4621.workers.dev** · For agents: [`/llms.t
 
 ## Why
 
+- **Made for people who do not design.** Copy a whole screen and change the words. Spacing, type, colour and motion are already decided.
 - **It explains itself.** Each component names the principle behind it (Doherty threshold, visibility of system status, Hick's law…) and a `Don't` rule. Reviewers get an argument, not a vibe.
 - **Built for AI states.** Thinking, searching, streaming text, tool calls, reasoning steps, voice input. The waits and hand-offs ordinary kits never designed for.
 - **Alive, not decorated.** Beam borders, liquid metal, gooey morphs, fluid transitions. Each effect marks a real state and names when not to use it.
@@ -21,12 +22,12 @@ Mise UI copies source into your project; there is nothing to uninstall later.
 # 1. a shadcn project (React + Tailwind CSS v4)
 npx shadcn@latest init
 
-# 2. tokens: warm neutrals, one accent (mise), motion tokens
+# 2. pick one palette: theme (amber), theme-ink, theme-cobalt, theme-forest, theme-ember
 npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/theme.json
 
-# 3. components
-npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/thinking-indicator.json
-npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/button.json
+# 3. a whole screen, or any single piece
+npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/pricing-table.json
+npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/thinking-orb.json
 ```
 
 Give your coding agent the skill:
@@ -37,6 +38,8 @@ npx skills add kimjusnu/miseui
 ```
 
 ## Components
+
+**Blocks** — `chat-assistant`, `dashboard-overview`, `empty-state`, `feature-bento`, `landing-hero`, `login-form`, `pricing-table`, `settings-page`, `signup-steps`
 
 **AI states** — `thinking-indicator`, `streaming-text`, `tool-call-card`, `reasoning-steps`, `voice-wave`
 

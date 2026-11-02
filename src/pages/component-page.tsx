@@ -25,7 +25,7 @@ export function ComponentPage() {
       </header>
 
       {meta.category === "blocks" ? (
-        <BlockPreview>
+        <BlockPreview name={meta.name}>
           <Demo />
         </BlockPreview>
       ) : (

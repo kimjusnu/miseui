@@ -109,8 +109,17 @@ describe("Button effect=liquid", () => {
     const button = screen.getByRole("button", { name: "Continue" })
     expect(button).toHaveAttribute("data-slot", "button")
     expect(button).toHaveAttribute("data-effect", "liquid")
-    expect(button).toHaveClass("bg-transparent", "text-mise-foreground")
+    expect(button).toHaveClass("bg-transparent", "text-[oklch(0.2_0_0)]")
     expect(button.parentElement).toHaveAttribute("data-slot", "liquid-metal")
+  })
+
+  it("keeps silver ink dark but follows the accent on tinted metal, whose foreground may be white", () => {
+    render(
+      <Button effect="liquid" variant="mise">
+        Tinted
+      </Button>,
+    )
+    expect(screen.getByRole("button", { name: "Tinted" })).toHaveClass("text-mise-foreground")
   })
 
   it("takes the accent tint on the mise variant and silver otherwise", () => {

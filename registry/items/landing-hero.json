@@ -1,0 +1,23 @@
+{
+  "name": "landing-hero",
+  "type": "registry:block",
+  "title": "Landing Hero",
+  "description": "A left-aligned marketing hero with one message, two actions and a live product preview built from real components, not a screenshot.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/badge.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/card.json",
+    "https://miseui.junsu4621.workers.dev/r/materialize.json",
+    "https://miseui.junsu4621.workers.dev/r/shimmer-text.json",
+    "https://miseui.junsu4621.workers.dev/r/streaming-text.json",
+    "https://miseui.junsu4621.workers.dev/r/thinking-orb.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/landing-hero.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/landing-hero-parts.tsx", "type": "registry:component" }
+  ]
+}

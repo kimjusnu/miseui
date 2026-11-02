@@ -4,6 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import {
   ButtonEffectFrame,
   EFFECT_SURFACE_CLASS,
+  LIQUID_TINTED_INK,
   shimmerLabel,
   type ButtonEffect,
 } from "@/registry/miseui/ui/button-effects"
@@ -56,7 +57,12 @@ function Button({ className, variant, size, asChild = false, effect, children, .
       data-variant={variant ?? "default"}
       data-effect={effect}
       aria-busy={isShimmer ? true : undefined}
-      className={cn(buttonVariants({ variant, size }), effect && EFFECT_SURFACE_CLASS[effect], className)}
+      className={cn(
+        buttonVariants({ variant, size }),
+        effect && EFFECT_SURFACE_CLASS[effect],
+        effect === "liquid" && variant === "mise" && LIQUID_TINTED_INK,
+        className,
+      )}
       {...props}
     >
       {isShimmer ? shimmerLabel(children, asChild, variant) : children}

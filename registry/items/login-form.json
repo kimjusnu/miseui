@@ -1,0 +1,22 @@
+{
+  "name": "login-form",
+  "type": "registry:block",
+  "title": "Login Form",
+  "description": "A split login screen with labels that stay visible, inline errors, a password you can reveal and a calm brand panel.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/badge.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/card.json",
+    "https://miseui.junsu4621.workers.dev/r/input.json",
+    "https://miseui.junsu4621.workers.dev/r/label.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/login-form.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/login-form-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/login-form-visual.tsx", "type": "registry:component" }
+  ]
+}

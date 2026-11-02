@@ -1,0 +1,21 @@
+{
+  "name": "pricing-table",
+  "type": "registry:block",
+  "title": "Pricing Table",
+  "description": "Three plans with one dominant centre, an honest yearly anchor and feature rows you can read straight across.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/badge.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/card.json",
+    "https://miseui.junsu4621.workers.dev/r/label.json",
+    "https://miseui.junsu4621.workers.dev/r/switch.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/pricing-table.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/pricing-table-parts.tsx", "type": "registry:component" }
+  ]
+}
