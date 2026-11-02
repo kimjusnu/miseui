@@ -84,11 +84,13 @@ export function Home() {
       <Story />
       <Bento />
       <EffectPlayground />
-      <WhySection />
-      <Steps />
-      <KitIndex />
-      <Faq />
-      <Footer />
+      <div className="bg-background text-foreground">
+        <WhySection />
+        <Steps />
+        <KitIndex />
+        <Faq />
+        <Footer />
+      </div>
     </div>
   )
 }

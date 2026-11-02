@@ -22,7 +22,7 @@ export function Layout() {
   const isLanding = pathname === "/"
 
   return (
-    <div className="min-h-dvh">
+    <div className={cn("min-h-dvh", isLanding && "bg-black")}>
       <header
         className={cn(
           "sticky top-0 z-20 text-foreground",

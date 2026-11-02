@@ -158,9 +158,11 @@ function useMetalCanvas(
       gl.uniform2f(resolutionLocation, canvas.width, canvas.height)
     }
     let frame = 0
+    let lastSeconds = 0
     const start = performance.now()
     const loop = (now: number) => {
-      draw((now - start) / MILLISECONDS_PER_SECOND)
+      lastSeconds = (now - start) / MILLISECONDS_PER_SECOND
+      draw(lastSeconds)
       frame = requestAnimationFrame(loop)
     }
     const play = () => {
@@ -172,7 +174,15 @@ function useMetalCanvas(
     }
     fit()
     draw(0)
-    const sizer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(() => fit())
+    // Setting canvas.width clears it. The loop repaints on its next frame, but under reduced motion, or
+    // while off screen, there is no next frame, so the canvas would stay blank.
+    const sizer =
+      typeof ResizeObserver === "undefined"
+        ? null
+        : new ResizeObserver(() => {
+            fit()
+            draw(lastSeconds)
+          })
     sizer?.observe(canvas)
     const watcher =
       typeof IntersectionObserver === "undefined"
