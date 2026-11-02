@@ -4,6 +4,24 @@
   "homepage": "https://miseui.junsu4621.workers.dev",
   "items": [
     {
+      "name": "agent-avatar",
+      "type": "registry:ui",
+      "title": "Agent Avatar",
+      "description": "A deterministic SVG face for an agent: the same seed always draws the same overlapping blobs, in theme colours.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "effects"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/agent-avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "badge",
       "type": "registry:ui",
       "title": "Badge",
@@ -21,6 +39,27 @@
       "files": [
         {
           "path": "registry/miseui/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "beam-border",
+      "type": "registry:ui",
+      "title": "Beam Border",
+      "description": "One beam of light travelling the border of the surface the model is working on, so the eye knows where to wait.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "effects"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/beam-border.tsx",
           "type": "registry:ui"
         }
       ]
@@ -131,6 +170,28 @@
       ]
     },
     {
+      "name": "gooey-morph",
+      "type": "registry:ui",
+      "title": "Gooey Morph",
+      "description": "Status dots that merge into one body and split apart again like a liquid, so the eye tracks one thing changing.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "effects"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/gooey-morph.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
@@ -144,6 +205,28 @@
       "files": [
         {
           "path": "registry/miseui/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "intelligence-glow",
+      "type": "registry:ui",
+      "title": "Intelligence Glow",
+      "description": "A slow light around the screen edge while the assistant listens or thinks, visible from anywhere on the page.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "effects"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/intelligence-glow.tsx",
           "type": "registry:ui"
         }
       ]
@@ -165,6 +248,28 @@
       "files": [
         {
           "path": "registry/miseui/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "liquid-metal",
+      "type": "registry:ui",
+      "title": "Liquid Metal",
+      "description": "A WebGL metal surface behind a button or chip, with reflections that drift so the control reads as a real, premium material.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "effects"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/liquid-metal.tsx",
           "type": "registry:ui"
         }
       ]
@@ -250,6 +355,28 @@
       ]
     },
     {
+      "name": "reveal-image",
+      "type": "registry:ui",
+      "title": "Reveal Image",
+      "description": "An image that arrives as it is generated: blur to sharp, coarse mosaic to fine, or a left-to-right wipe, driven by a progress value.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "effects"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/reveal-image.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "select",
       "type": "registry:ui",
       "title": "Select",
@@ -289,6 +416,27 @@
       "files": [
         {
           "path": "registry/miseui/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-text",
+      "type": "registry:ui",
+      "title": "Shimmer Text",
+      "description": "A band of light passing over a status label, so “Thinking…” reads as in progress without inventing a percentage.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "effects"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/shimmer-text.tsx",
           "type": "registry:ui"
         }
       ]
@@ -475,6 +623,28 @@
       ]
     },
     {
+      "name": "thinking-orb",
+      "type": "registry:ui",
+      "title": "Thinking Orb",
+      "description": "A breathing sphere whose motion says idle, listening, thinking or speaking without a word of text.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "effects"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/thinking-orb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "tool-call-card",
       "type": "registry:ui",
       "title": "Tool Call Card",
@@ -544,6 +714,28 @@
         {
           "path": "registry/miseui/lib/utils.ts",
           "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "voice-glow",
+      "type": "registry:ui",
+      "title": "Voice Glow",
+      "description": "A round glow that swells with the microphone level, so the user sees the assistant is listening and how loudly it hears them.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "effects"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/voice-glow.tsx",
+          "type": "registry:ui"
         }
       ]
     },

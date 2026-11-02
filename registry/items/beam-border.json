@@ -1,0 +1,10 @@
+{
+  "name": "beam-border",
+  "type": "registry:ui",
+  "title": "Beam Border",
+  "description": "One beam of light travelling the border of the surface the model is working on, so the eye knows where to wait.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["effects"],
+  "files": [{ "path": "registry/miseui/ui/beam-border.tsx", "type": "registry:ui" }]
+}

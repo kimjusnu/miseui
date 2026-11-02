@@ -1,0 +1,10 @@
+{
+  "name": "thinking-orb",
+  "type": "registry:ui",
+  "title": "Thinking Orb",
+  "description": "A breathing sphere whose motion says idle, listening, thinking or speaking without a word of text.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["effects"],
+  "files": [{ "path": "registry/miseui/ui/thinking-orb.tsx", "type": "registry:ui" }]
+}

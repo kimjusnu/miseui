@@ -1,0 +1,10 @@
+{
+  "name": "gooey-morph",
+  "type": "registry:ui",
+  "title": "Gooey Morph",
+  "description": "Status dots that merge into one body and split apart again like a liquid, so the eye tracks one thing changing.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["effects"],
+  "files": [{ "path": "registry/miseui/ui/gooey-morph.tsx", "type": "registry:ui" }]
+}

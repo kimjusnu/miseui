@@ -1,0 +1,10 @@
+{
+  "name": "intelligence-glow",
+  "type": "registry:ui",
+  "title": "Intelligence Glow",
+  "description": "A slow light around the screen edge while the assistant listens or thinks, visible from anywhere on the page.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["effects"],
+  "files": [{ "path": "registry/miseui/ui/intelligence-glow.tsx", "type": "registry:ui" }]
+}
