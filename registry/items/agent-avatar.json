@@ -1,0 +1,9 @@
+{
+  "name": "agent-avatar",
+  "type": "registry:ui",
+  "title": "Agent Avatar",
+  "description": "A deterministic SVG face for an agent: the same seed always draws the same overlapping blobs, in theme colours.",
+  "registryDependencies": ["utils"],
+  "categories": ["effects"],
+  "files": [{ "path": "registry/miseui/ui/agent-avatar.tsx", "type": "registry:ui" }]
+}

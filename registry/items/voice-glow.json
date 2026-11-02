@@ -1,0 +1,10 @@
+{
+  "name": "voice-glow",
+  "type": "registry:ui",
+  "title": "Voice Glow",
+  "description": "A round glow that swells with the microphone level, so the user sees the assistant is listening and how loudly it hears them.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["effects"],
+  "files": [{ "path": "registry/miseui/ui/voice-glow.tsx", "type": "registry:ui" }]
+}

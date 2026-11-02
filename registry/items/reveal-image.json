@@ -1,0 +1,10 @@
+{
+  "name": "reveal-image",
+  "type": "registry:ui",
+  "title": "Reveal Image",
+  "description": "An image that arrives as it is generated: blur to sharp, coarse mosaic to fine, or a left-to-right wipe, driven by a progress value.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["effects"],
+  "files": [{ "path": "registry/miseui/ui/reveal-image.tsx", "type": "registry:ui" }]
+}
