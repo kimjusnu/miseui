@@ -1,11 +1,12 @@
 import { Link } from "react-router"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/registry/miseui/ui/button"
-import { CodeBlock } from "@/src/components/code-block"
+import { Hero } from "@/src/components/landing/hero"
+import { Steps } from "@/src/components/landing/steps"
+import { Faq } from "@/src/components/landing/faq"
+import { Footer } from "@/src/components/landing/footer"
 import { Showcase } from "@/src/components/showcase"
-import { byCategory } from "@/src/content"
+import { WhyPanel } from "@/src/components/why-panel"
+import { byCategory, findComponent } from "@/src/content"
 import { CATEGORY_LABELS, CATEGORY_ORDER } from "@/src/content/types"
-import { installCommand } from "@/src/lib/site"
 
 const PILLARS = [
   {
@@ -26,35 +27,54 @@ const PILLARS = [
   },
 ] as const
 
+const WHY_EXAMPLE = "thinking-indicator"
+
 export function Home() {
+  const example = findComponent(WHY_EXAMPLE)
+
   return (
-    <div className="flex flex-col gap-20">
-      <section className="flex flex-col items-start gap-6 pt-6 md:pt-14">
-        <h1 className="text-display text-[2.75rem] text-balance md:text-7xl">
-          UI that explains itself.
-          <br />
-          Built for the AI era.
-        </h1>
-        <p className="max-w-xl text-lg leading-relaxed text-pretty text-muted-foreground md:text-xl">
-          Living components, effects and transitions for interfaces that think. Each one ships with the psychology
-          behind it and an agent skill, so people and models both know why it looks the way it does.
+    <div className="flex flex-col">
+      <Hero />
+
+      <section aria-labelledby="effects-heading" className="mx-auto w-full max-w-6xl px-6 py-24">
+        <h2 id="effects-heading" className="text-display max-w-2xl text-4xl text-balance md:text-5xl">
+          Effects that mean something.
+        </h2>
+        <p className="mt-4 max-w-xl text-lg text-muted-foreground">
+          Each one marks a real state: the AI is working, listening, arriving. Nothing glows for decoration.
         </p>
-        <div className="flex flex-wrap items-center gap-2">
-          <Button variant="mise" size="lg" asChild>
-            <Link to="/docs">
-              Get started <ArrowRight />
-            </Link>
-          </Button>
-          <Button variant="ghost" size="lg" asChild>
-            <Link to="/components/thinking-orb">See it move</Link>
-          </Button>
+        <div className="mt-10">
+          <Showcase />
         </div>
-        <CodeBlock code={installCommand("thinking-orb")} language="bash" className="w-full max-w-xl" />
       </section>
 
-      <Showcase />
+      {example && (
+        <section aria-labelledby="why-heading-home" className="bg-card">
+          <div className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-2 md:items-center">
+            <div>
+              <h2 id="why-heading-home" className="text-display text-4xl text-balance md:text-5xl">
+                Every piece comes with its reason.
+              </h2>
+              <p className="mt-4 max-w-md text-lg text-muted-foreground">
+                The same metadata renders this panel, the agent skill and llms.txt, so people and models read one truth.
+              </p>
+              <Link
+                to={`/components/${example.name}`}
+                className="mt-6 inline-block text-[15px] font-medium underline underline-offset-4"
+              >
+                See {example.title}
+              </Link>
+            </div>
+            <div className="rounded-2xl bg-background p-2 shadow-[0_8px_30px_-12px_rgb(0_0_0/0.25)]">
+              <WhyPanel why={example.why} />
+            </div>
+          </div>
+        </section>
+      )}
 
-      <section className="grid gap-x-10 gap-y-10 md:grid-cols-2">
+      <Steps />
+
+      <section className="mx-auto grid w-full max-w-6xl gap-x-10 gap-y-10 px-6 py-24 md:grid-cols-2">
         {PILLARS.map((pillar) => (
           <div key={pillar.title} className="flex flex-col gap-2">
             <h2 className="text-title text-2xl">{pillar.title}</h2>
@@ -63,35 +83,40 @@ export function Home() {
         ))}
       </section>
 
-      <section aria-labelledby="all-components" className="flex flex-col gap-8 border-t pt-12">
-        <h2 id="all-components" className="text-title text-3xl">
+      <section aria-labelledby="all-components" className="mx-auto w-full max-w-6xl border-t px-6 py-24">
+        <h2 id="all-components" className="text-display text-4xl md:text-5xl">
           Everything in the kit.
         </h2>
-        {CATEGORY_ORDER.map((category) => {
-          const items = byCategory(category)
-          if (items.length === 0) return null
-          return (
-            <div key={category} className="grid gap-4 md:grid-cols-[180px_1fr]">
-              <h3 className="text-sm font-medium text-muted-foreground">{CATEGORY_LABELS[category]}</h3>
-              <ul className="grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
-                {items.map((component) => (
-                  <li key={component.name}>
-                    <Link
-                      to={`/components/${component.name}`}
-                      className="group flex items-baseline justify-between gap-4 rounded-md py-1 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
-                    >
-                      <span className="text-[15px] font-medium group-hover:underline group-hover:underline-offset-4">
-                        {component.title}
-                      </span>
-                      <span className="truncate text-xs text-muted-foreground">{component.why.principle}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )
-        })}
+        <div className="mt-10 flex flex-col gap-8">
+          {CATEGORY_ORDER.map((category) => {
+            const items = byCategory(category)
+            if (items.length === 0) return null
+            return (
+              <div key={category} className="grid gap-4 md:grid-cols-[180px_1fr]">
+                <h3 className="text-sm font-medium text-muted-foreground">{CATEGORY_LABELS[category]}</h3>
+                <ul className="grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
+                  {items.map((component) => (
+                    <li key={component.name}>
+                      <Link
+                        to={`/components/${component.name}`}
+                        className="group flex items-baseline justify-between gap-4 rounded-md py-1 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                      >
+                        <span className="text-[15px] font-medium group-hover:underline group-hover:underline-offset-4">
+                          {component.title}
+                        </span>
+                        <span className="truncate text-xs text-muted-foreground">{component.why.principle}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
       </section>
+
+      <Faq />
+      <Footer />
     </div>
   )
 }
