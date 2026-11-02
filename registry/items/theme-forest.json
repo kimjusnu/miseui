@@ -78,8 +78,7 @@
     },
     "@utility material": {
       "background-color": "color-mix(in oklab, var(--background) 72%, transparent)",
-      "backdrop-filter": "blur(20px) saturate(180%)",
-      "-webkit-backdrop-filter": "blur(20px) saturate(180%)"
+      "backdrop-filter": "blur(20px) saturate(180%)"
     }
   },
   "files": []

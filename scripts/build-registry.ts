@@ -56,8 +56,8 @@ const THEME_CSS = {
   },
   "@utility material": {
     "background-color": "color-mix(in oklab, var(--background) 72%, transparent)",
+    // Standard property only: Tailwind's build adds the prefix, and writing it by hand made it drop this line.
     "backdrop-filter": "blur(20px) saturate(180%)",
-    "-webkit-backdrop-filter": "blur(20px) saturate(180%)",
   },
 }
 
