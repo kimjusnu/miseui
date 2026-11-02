@@ -1,0 +1,10 @@
+{
+  "name": "badge",
+  "type": "registry:ui",
+  "title": "Badge",
+  "description": "Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out.",
+  "dependencies": ["radix-ui", "class-variance-authority"],
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/badge.tsx", "type": "registry:ui" }]
+}

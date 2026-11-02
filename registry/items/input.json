@@ -1,0 +1,9 @@
+{
+  "name": "input",
+  "type": "registry:ui",
+  "title": "Input",
+  "description": "Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring.",
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/input.tsx", "type": "registry:ui" }]
+}

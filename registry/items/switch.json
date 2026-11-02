@@ -1,0 +1,10 @@
+{
+  "name": "switch",
+  "type": "registry:ui",
+  "title": "Switch",
+  "description": "Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates.",
+  "dependencies": ["radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/switch.tsx", "type": "registry:ui" }]
+}

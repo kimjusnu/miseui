@@ -1,0 +1,10 @@
+{
+  "name": "checkbox",
+  "type": "registry:ui",
+  "title": "Checkbox",
+  "description": "Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked.",
+  "dependencies": ["radix-ui", "lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/checkbox.tsx", "type": "registry:ui" }]
+}

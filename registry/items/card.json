@@ -1,0 +1,9 @@
+{
+  "name": "card",
+  "type": "registry:ui",
+  "title": "Card",
+  "description": "Bordered surface with header, content and footer slots that reads as one region before anyone reads the text.",
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/card.tsx", "type": "registry:ui" }]
+}

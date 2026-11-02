@@ -1,0 +1,10 @@
+{
+  "name": "label",
+  "type": "registry:ui",
+  "title": "Label",
+  "description": "Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled.",
+  "dependencies": ["radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/label.tsx", "type": "registry:ui" }]
+}

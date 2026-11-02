@@ -1,0 +1,9 @@
+{
+  "name": "textarea",
+  "type": "registry:ui",
+  "title": "Textarea",
+  "description": "Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar.",
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/textarea.tsx", "type": "registry:ui" }]
+}

@@ -4,6 +4,28 @@
   "homepage": "https://miseui.pages.dev",
   "items": [
     {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out.",
+      "dependencies": [
+        "radix-ui",
+        "class-variance-authority"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "button",
       "type": "registry:ui",
       "title": "Button",
@@ -21,6 +43,163 @@
       "files": [
         {
           "path": "registry/miseui/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Bordered surface with header, content and footer slots that reads as one region before anyone reads the text.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Segmented control that swaps one panel for another in place, so related views share a single spot on the screen.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/textarea.tsx",
           "type": "registry:ui"
         }
       ]
@@ -114,6 +293,27 @@
       "files": [
         {
           "path": "registry/miseui/ui/thinking-indicator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "One-line hint that appears on hover or focus with no delay and leaves with the pointer, for detail that does not deserve screen space.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/tooltip.tsx",
           "type": "registry:ui"
         }
       ]
