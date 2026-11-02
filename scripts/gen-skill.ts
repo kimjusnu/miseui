@@ -4,7 +4,7 @@ import { fileURLToPath, pathToFileURL } from "node:url"
 import type { ComponentMeta } from "../src/content/types"
 import { formatLlmsTxt, formatReference, formatSkill } from "./skill-format"
 
-const DEFAULT_SITE_URL = "https://miseui.pages.dev"
+const DEFAULT_SITE_URL = "https://miseui.junsu4621.workers.dev"
 const NON_META_FILES = new Set(["index.ts", "types.ts"])
 
 async function readComponentMetas(contentDir: string): Promise<ComponentMeta[]> {

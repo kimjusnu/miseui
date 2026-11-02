@@ -15,7 +15,7 @@ interface RegistryInfo {
 }
 
 const SCHEMA_URL = "https://ui.shadcn.com/schema/registry.json"
-const DEFAULT_SITE_URL = "https://miseui.pages.dev"
+const DEFAULT_SITE_URL = "https://miseui.junsu4621.workers.dev"
 
 export function mergeRegistryItems(items: readonly RegistryItem[], info: RegistryInfo) {
   const names = items.map((item) => item.name)

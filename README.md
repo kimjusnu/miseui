@@ -2,7 +2,7 @@
 
 **UI that explains itself.** React components and effects for the AI era, distributed as a [shadcn](https://ui.shadcn.com) registry. Every component ships with the psychology behind its shape, the situation where you should *not* use it, and an agent skill so Claude Code, Cursor and friends install the right piece and keep the rationale.
 
-Site and docs: **https://miseui.pages.dev** · For agents: [`/llms.txt`](https://miseui.pages.dev/llms.txt) · [`skills/miseui`](skills/miseui)
+Site and docs: **https://miseui.junsu4621.workers.dev** · For agents: [`/llms.txt`](https://miseui.junsu4621.workers.dev/llms.txt) · [`skills/miseui`](skills/miseui)
 
 > *Mise* (/miːz/) as in *mise en place*: everything in the place it belongs, for a reason.
 
@@ -21,11 +21,11 @@ Mise UI copies source into your project; there is nothing to uninstall later.
 npx shadcn@latest init
 
 # 2. tokens: warm neutrals, one accent (mise), motion tokens
-npx shadcn@latest add https://miseui.pages.dev/r/theme.json
+npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/theme.json
 
 # 3. components
-npx shadcn@latest add https://miseui.pages.dev/r/thinking-indicator.json
-npx shadcn@latest add https://miseui.pages.dev/r/button.json
+npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/thinking-indicator.json
+npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/button.json
 ```
 
 Give your coding agent the skill:
@@ -41,7 +41,7 @@ npx skills add kimjusnu/miseui
 
 **Core** — `button`, `badge`, `card`, `input`, `textarea`, `label`, `checkbox`, `switch`, `tabs`, `tooltip`, `dialog`, `dropdown-menu`, `popover`, `select`, `skeleton`
 
-Each one has a page with a live demo, its principle and install command: https://miseui.pages.dev/components/thinking-indicator
+Each one has a page with a live demo, its principle and install command: https://miseui.junsu4621.workers.dev/components/thinking-indicator
 
 ## Principles
 
