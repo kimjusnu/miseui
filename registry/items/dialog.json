@@ -1,0 +1,10 @@
+{
+  "name": "dialog",
+  "type": "registry:ui",
+  "title": "Dialog",
+  "description": "Modal surface that dims everything else and holds focus until the user answers one question.",
+  "dependencies": ["radix-ui", "lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/dialog.tsx", "type": "registry:ui" }]
+}

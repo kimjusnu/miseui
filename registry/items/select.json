@@ -1,0 +1,10 @@
+{
+  "name": "select",
+  "type": "registry:ui",
+  "title": "Select",
+  "description": "Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support.",
+  "dependencies": ["radix-ui", "lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/select.tsx", "type": "registry:ui" }]
+}

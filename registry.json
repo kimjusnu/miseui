@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "miseui",
-  "homepage": "https://miseui.pages.dev",
+  "homepage": "https://miseui.junsu4621.workers.dev",
   "items": [
     {
       "name": "badge",
@@ -88,6 +88,49 @@
       ]
     },
     {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Modal surface that dims everything else and holds focus until the user answers one question.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
@@ -122,6 +165,49 @@
       "files": [
         {
           "path": "registry/miseui/ui/label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Small floating panel anchored to the control that opened it, for a form or detail that does not need a full dialog.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "core"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/select.tsx",
           "type": "registry:ui"
         }
       ]

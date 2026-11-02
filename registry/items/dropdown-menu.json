@@ -1,0 +1,10 @@
+{
+  "name": "dropdown-menu",
+  "type": "registry:ui",
+  "title": "Dropdown Menu",
+  "description": "Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant.",
+  "dependencies": ["radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["core"],
+  "files": [{ "path": "registry/miseui/ui/dropdown-menu.tsx", "type": "registry:ui" }]
+}
