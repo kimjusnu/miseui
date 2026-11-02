@@ -17,7 +17,7 @@ describe("avatarTone", () => {
   it("is deterministic and only uses theme tokens", () => {
     NAMES.forEach((name) => {
       expect(avatarTone(name)).toBe(avatarTone(name))
-      expect(avatarTone(name)).toMatch(/^bg-(muted|mise-soft|mise\/30|primary|mise) text-(foreground|primary-foreground|mise-foreground)$/)
+      expect(avatarTone(name)).toMatch(/^bg-(muted|mise-soft|mise\/30|foreground\/10|secondary) text-(foreground|secondary-foreground)$/)
     })
   })
 

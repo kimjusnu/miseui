@@ -33,9 +33,12 @@ export function ComponentPage() {
         </BlockPreview>
       ) : (
         <section aria-label="Demo" className="flex min-h-56 items-center rounded-2xl bg-card p-8 md:p-10">
-          <Suspense fallback={null}>
-            <Demo />
-          </Suspense>
+          {/* The panel is a flex row: without this wrapper a demo sizes to its content and can push the page wide. */}
+          <div className="w-full min-w-0">
+            <Suspense fallback={null}>
+              <Demo />
+            </Suspense>
+          </div>
         </section>
       )}
 
@@ -53,8 +56,13 @@ export function ComponentPage() {
           Usage
         </h2>
         <CodeBlock code={meta.usage} />
-        <p className="text-sm text-muted-foreground">
-          Exports: {meta.exports.map((name) => <code key={name} className="mr-2 font-mono text-[13px]">{name}</code>)}
+        <p className="flex flex-wrap gap-x-2 text-sm text-muted-foreground">
+          Exports:
+          {meta.exports.map((name) => (
+            <code key={name} className="font-mono text-[13px]">
+              {name}
+            </code>
+          ))}
         </p>
       </section>
     </article>

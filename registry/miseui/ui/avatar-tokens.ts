@@ -21,8 +21,8 @@ const TONES = [
   "bg-muted text-foreground",
   "bg-mise-soft text-foreground",
   "bg-mise/30 text-foreground",
-  "bg-primary text-primary-foreground",
-  "bg-mise text-mise-foreground",
+  "bg-foreground/10 text-foreground",
+  "bg-secondary text-secondary-foreground",
 ] as const
 
 /** Shape as well as colour, so presence survives colour blindness and every accent palette. */
