@@ -1,36 +1,36 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "@fontsource-variable/inter";
-@import "@fontsource/instrument-serif";
 @import "@fontsource-variable/jetbrains-mono";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(0.995 0.002 90);
-  --foreground: oklch(0.17 0.01 60);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.17 0.01 60);
+  /* Apple-style surfaces: pure white, near-black ink, one quiet gray for grouped content. */
+  --radius: 0.875rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.21 0.004 270);
+  --card: oklch(0.975 0.002 270);
+  --card-foreground: oklch(0.21 0.004 270);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.17 0.01 60);
-  --primary: oklch(0.22 0.012 60);
-  --primary-foreground: oklch(0.985 0.004 90);
-  --secondary: oklch(0.965 0.006 85);
-  --secondary-foreground: oklch(0.22 0.012 60);
-  --muted: oklch(0.965 0.006 85);
-  --muted-foreground: oklch(0.54 0.012 70);
-  --accent: oklch(0.955 0.012 80);
-  --accent-foreground: oklch(0.22 0.012 60);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.91 0.008 80);
-  --input: oklch(0.91 0.008 80);
+  --popover-foreground: oklch(0.21 0.004 270);
+  --primary: oklch(0.21 0.004 270);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.955 0.003 270);
+  --secondary-foreground: oklch(0.21 0.004 270);
+  --muted: oklch(0.965 0.002 270);
+  --muted-foreground: oklch(0.52 0.008 270);
+  --accent: oklch(0.955 0.003 270);
+  --accent-foreground: oklch(0.21 0.004 270);
+  --destructive: oklch(0.6 0.22 27);
+  --border: oklch(0.9 0.003 270);
+  --input: oklch(0.9 0.003 270);
   --ring: oklch(0.72 0.14 62);
-  /* Mise: the one warm accent. Used for AI activity and focus, never for decoration. */
+  /* Mise: the one warm accent. Used for AI activity and the primary action, never for decoration. */
   --mise: oklch(0.74 0.15 62);
   --mise-foreground: oklch(0.2 0.03 60);
   --mise-soft: oklch(0.95 0.04 75);
-  /* Motion tokens: every animation in Mise UI uses these, nothing else. */
+  /* Motion tokens. Timed transitions use these; anything a hand can touch uses springs (lib/motion.ts). */
   --ease-mise: cubic-bezier(0.2, 0, 0, 1);
   --ease-mise-out: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-fast: 150ms;
@@ -39,22 +39,22 @@
 }
 
 .dark {
-  --background: oklch(0.15 0.008 60);
-  --foreground: oklch(0.975 0.004 90);
-  --card: oklch(0.2 0.009 60);
-  --card-foreground: oklch(0.975 0.004 90);
-  --popover: oklch(0.2 0.009 60);
-  --popover-foreground: oklch(0.975 0.004 90);
-  --primary: oklch(0.93 0.006 85);
-  --primary-foreground: oklch(0.2 0.009 60);
-  --secondary: oklch(0.27 0.009 60);
-  --secondary-foreground: oklch(0.975 0.004 90);
-  --muted: oklch(0.27 0.009 60);
-  --muted-foreground: oklch(0.7 0.01 75);
-  --accent: oklch(0.29 0.012 65);
-  --accent-foreground: oklch(0.975 0.004 90);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --background: oklch(0.08 0 0);
+  --foreground: oklch(0.96 0.002 270);
+  --card: oklch(0.16 0.003 270);
+  --card-foreground: oklch(0.96 0.002 270);
+  --popover: oklch(0.16 0.003 270);
+  --popover-foreground: oklch(0.96 0.002 270);
+  --primary: oklch(0.96 0.002 270);
+  --primary-foreground: oklch(0.12 0 0);
+  --secondary: oklch(0.22 0.003 270);
+  --secondary-foreground: oklch(0.96 0.002 270);
+  --muted: oklch(0.19 0.003 270);
+  --muted-foreground: oklch(0.66 0.006 270);
+  --accent: oklch(0.24 0.004 270);
+  --accent-foreground: oklch(0.96 0.002 270);
+  --destructive: oklch(0.7 0.19 22);
+  --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.72 0.14 62);
   --mise: oklch(0.78 0.15 65);
@@ -63,9 +63,9 @@
 }
 
 @theme inline {
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
-  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+  --font-sans: "Inter Variable", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  --font-display: "Inter Variable", -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, "SF Mono", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -87,10 +87,11 @@
   --color-mise: var(--mise);
   --color-mise-foreground: var(--mise-foreground);
   --color-mise-soft: var(--mise-soft);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 12px);
   --ease-mise: var(--ease-mise);
   --ease-mise-out: var(--ease-mise-out);
 }
@@ -99,7 +100,50 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    color-scheme: light;
+    transition: background-color var(--duration-slow) var(--ease-mise);
+  }
+  html.dark {
+    color-scheme: dark;
+  }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@utility text-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+}
+
+@utility text-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+@utility material {
+  background-color: color-mix(in oklab, var(--background) 72%, transparent);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .material {
+    background-color: var(--background);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    transition: none;
   }
 }

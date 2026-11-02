@@ -1,13 +1,11 @@
-import type { Category, ComponentMeta } from "../src/content/types"
+import { CATEGORY_LABELS, CATEGORY_ORDER, type ComponentMeta } from "../src/content/types"
 
 const SKILL_NAME = "miseui"
 const SKILL_DESCRIPTION =
-  "Use when building React UI with shadcn-style components and AI-era states (thinking, searching, streaming, tool calls, voice). Install from the Mise UI registry and follow each component's psychological rationale."
+  "Use when building React UI with shadcn-style components, AI-era states (thinking, streaming, tool calls, voice), living effects (beam borders, glows, liquid metal, gooey morphs) and fluid transitions. Install from the Mise UI registry and follow each component's psychological rationale."
 const GITHUB_URL = "https://github.com/kimjusnu/miseui"
 
-/** AI first: it is the differentiator an agent should see before the base kit. */
-const CATEGORY_ORDER: readonly Category[] = ["ai", "core"]
-const CATEGORY_HEADINGS: Record<Category, string> = { ai: "AI states", core: "Core" }
+const CATEGORY_HEADINGS = CATEGORY_LABELS
 
 /** Symptom → component map. Rows whose component is not in the registry are dropped at build time. */
 const SYMPTOMS: ReadonlyArray<readonly [symptom: string, component: string]> = [
@@ -15,7 +13,19 @@ const SYMPTOMS: ReadonlyArray<readonly [symptom: string, component: string]> = [
   ["Tokens arrive one by one and should read as typing, not as a frozen block", "streaming-text"],
   ["An agent ran a tool and the user should be able to trust the result", "tool-call-card"],
   ["A multi-step plan the user may want to inspect but should not be forced to read", "reasoning-steps"],
-  ["The microphone is live and the user must know it", "voice-wave"],
+  ["The microphone is live and the user must know it", "voice-glow"],
+  ["The microphone is live and you want bars rather than a glow", "voice-wave"],
+  ["One surface on the screen is where the AI is working right now", "beam-border"],
+  ["The whole app should signal that AI is listening or working", "intelligence-glow"],
+  ["A placeholder like “Thinking…” needs to read as progress without a number", "shimmer-text"],
+  ["Status should be felt in the periphery, without text", "thinking-orb"],
+  ["A premium, physical material cue for one hero control", "liquid-metal"],
+  ["Several status elements merge or split and should feel like one substance", "gooey-morph"],
+  ["Each agent needs a stable, recognisable face", "agent-avatar"],
+  ["An image is being generated and the user should see it arrive", "reveal-image"],
+  ["Navigating between views should keep spatial context", "page-transition"],
+  ["A sheet or panel the user can drag and flick", "sheet"],
+  ["A surface should arrive like a material, not a fade", "materialize"],
   ["Content is loading and the final layout is known", "skeleton"],
   ["One action matters more than the rest of the screen", "button"],
   ["Too many options in one place", "select"],

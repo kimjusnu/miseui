@@ -28,7 +28,7 @@ export function GettingStarted() {
   return (
     <article className="flex flex-col gap-10">
       <header>
-        <h1 className="text-3xl font-semibold tracking-tight">Getting started</h1>
+        <h1 className="text-display text-4xl">Getting started</h1>
         <p className="mt-2 max-w-prose text-[15px] leading-relaxed text-muted-foreground">
           Four commands. Nothing to configure, nothing to uninstall later: the code lands in your project.
         </p>
@@ -36,7 +36,7 @@ export function GettingStarted() {
       <ol className="flex flex-col gap-8">
         {STEPS.map((step, index) => (
           <li key={step.title} className="grid gap-3 md:grid-cols-[2rem_1fr]">
-            <span className="font-display text-2xl text-muted-foreground italic">{index + 1}</span>
+            <span className="text-title text-2xl text-muted-foreground">{index + 1}</span>
             <div className="flex flex-col gap-3">
               <h2 className="text-lg font-semibold">{step.title}</h2>
               <p className="max-w-prose text-sm leading-relaxed text-muted-foreground">{step.body}</p>

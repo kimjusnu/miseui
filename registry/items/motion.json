@@ -1,0 +1,8 @@
+{
+  "name": "motion",
+  "type": "registry:lib",
+  "title": "Motion presets",
+  "description": "Critically damped and momentum springs, Apple's momentum projection and rubber-banding, shared by every moving Mise UI component.",
+  "dependencies": ["motion"],
+  "files": [{ "path": "registry/miseui/lib/motion.ts", "type": "registry:lib" }]
+}

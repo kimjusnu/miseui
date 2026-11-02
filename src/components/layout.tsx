@@ -7,9 +7,11 @@ import { ThemeToggle } from "./theme-toggle"
 
 export function Brand() {
   return (
-    <Link to="/" className="flex items-baseline gap-1.5 rounded-md outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50">
-      <span className="font-display text-[26px] leading-none italic">Mise</span>
-      <span className="text-sm font-medium text-muted-foreground">UI</span>
+    <Link
+      to="/"
+      className="text-title rounded-md text-[19px] outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
+    >
+      Mise<span className="text-muted-foreground"> UI</span>
     </Link>
   )
 }
@@ -17,7 +19,7 @@ export function Brand() {
 export function Layout() {
   return (
     <div className="min-h-dvh">
-      <header className="sticky top-0 z-20 border-b bg-background/85 backdrop-blur">
+      <header className="material sticky top-0 z-20">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
           <Brand />
           <div className="flex items-center gap-1">
@@ -34,7 +36,7 @@ export function Layout() {
         </div>
       </header>
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-10 md:grid-cols-[200px_1fr]">
-        <aside className="md:sticky md:top-24 md:self-start">
+        <aside className="md:sticky md:top-24 md:max-h-[calc(100dvh-7rem)] md:self-start md:overflow-y-auto md:[scrollbar-width:none]">
           <Sidebar />
         </aside>
         <main className="min-w-0">

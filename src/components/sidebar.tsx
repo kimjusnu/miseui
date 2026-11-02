@@ -1,9 +1,7 @@
 import { NavLink } from "react-router"
 import { byCategory } from "@/src/content"
-import { CATEGORY_LABELS, type Category } from "@/src/content/types"
+import { CATEGORY_LABELS, CATEGORY_ORDER } from "@/src/content/types"
 import { cn } from "@/registry/miseui/lib/utils"
-
-const CATEGORY_ORDER: readonly Category[] = ["ai", "core"]
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
   cn(

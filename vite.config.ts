@@ -13,7 +13,7 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: ["./vitest.setup.ts"],
-    include: ["registry/**/*.test.tsx", "src/**/*.test.{ts,tsx}", "scripts/**/*.test.ts"],
+    include: ["registry/**/*.test.{ts,tsx}", "src/**/*.test.{ts,tsx}", "scripts/**/*.test.ts"],
     coverage: {
       provider: "v8",
       include: ["registry/miseui/**/*.{ts,tsx}", "scripts/skill-format.ts"],

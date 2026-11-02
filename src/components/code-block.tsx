@@ -35,7 +35,8 @@ export function CodeBlock({ code, language = "tsx", className }: CodeBlockProps)
         data-language={language}
         className={cn(
           "px-4 py-3 pr-12 font-mono text-[13px] leading-relaxed text-foreground",
-          language === "bash" ? "whitespace-pre-wrap break-all" : "overflow-x-auto",
+          "overflow-x-auto [scrollbar-width:none]",
+          language === "bash" && "whitespace-pre",
         )}
       >
         <code>{code}</code>

@@ -1,4 +1,4 @@
-export type Category = "core" | "ai"
+export type Category = "ai" | "effects" | "transitions" | "core"
 
 export interface ComponentMeta {
   /** registry item name, kebab-case, equals file name */
@@ -21,7 +21,12 @@ export interface ComponentMeta {
   exports: string[]
 }
 
+/** AI first, then the effects and transitions that make a screen feel alive, then the base kit. */
+export const CATEGORY_ORDER: readonly Category[] = ["ai", "effects", "transitions", "core"]
+
 export const CATEGORY_LABELS: Record<Category, string> = {
-  core: "Core",
   ai: "AI states",
+  effects: "Effects",
+  transitions: "Transitions",
+  core: "Core",
 }

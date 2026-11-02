@@ -4,11 +4,11 @@ export const meta: ComponentMeta = {
   name: "button",
   title: "Button",
   category: "core",
-  description: "Press target with a 150 ms settle and a 2% press-down so the click feels acknowledged.",
+  description: "Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged.",
   why: {
     principle: "Doherty threshold",
     explanation:
-      "Feedback under 400 ms keeps the user in flow. The button settles in 150 ms and dips 2% on press, so every click is visibly acknowledged before the request even starts.",
+      "Feedback under 400 ms keeps the user in flow. The button answers on pointer-down, not on release: it dips 3% in 100 ms the instant it is pressed, so every click is acknowledged before the request even starts.",
     avoid:
       "Do not add hover lift or glow to every button. Reserve the mise variant for the single primary action on a screen; more than one and nothing is primary.",
   },

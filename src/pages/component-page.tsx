@@ -19,11 +19,11 @@ export function ComponentPage() {
         <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
           {CATEGORY_LABELS[meta.category]}
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight">{meta.title}</h1>
+        <h1 className="text-display mt-2 text-4xl">{meta.title}</h1>
         <p className="mt-2 max-w-prose text-[15px] leading-relaxed text-muted-foreground">{meta.description}</p>
       </header>
 
-      <section aria-label="Demo" className="rounded-xl border bg-card p-8">
+      <section aria-label="Demo" className="flex min-h-56 items-center rounded-2xl bg-card p-8 md:p-10">
         <Demo />
       </section>
 
