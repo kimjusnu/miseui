@@ -1,9 +1,26 @@
 import type * as React from "react"
 import { DropdownMenu as DropdownMenuPrimitive } from "radix-ui"
 import { cn } from "@/registry/miseui/lib/utils"
+import {
+  MENU_MATERIALIZE_CLASS,
+  MENU_SPRING_CONTENT_CLASS,
+  MENU_SPRING_ITEM_CLASS,
+  MenuHighlight,
+  MenuSpringScope,
+  useMenuItemHighlight,
+  type DropdownMenuEffect,
+} from "@/registry/miseui/ui/dropdown-menu-effects"
 
 /** Gap between the trigger and the menu, in px. */
 const SIDE_OFFSET_PX = 4
+
+const PLAIN_MOTION_CLASS = [
+  "duration-(--duration-fast) ease-(--ease-mise)",
+  "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
+  "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+  "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2",
+  "data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+]
 
 function DropdownMenu({ ...props }: React.ComponentProps<typeof DropdownMenuPrimitive.Root>) {
   return <DropdownMenuPrimitive.Root data-slot="dropdown-menu" {...props} />
@@ -13,29 +30,30 @@ function DropdownMenuTrigger({ ...props }: React.ComponentProps<typeof DropdownM
   return <DropdownMenuPrimitive.Trigger data-slot="dropdown-menu-trigger" {...props} />
 }
 
-function DropdownMenuContent({
-  className,
-  sideOffset = SIDE_OFFSET_PX,
-  ...props
-}: React.ComponentProps<typeof DropdownMenuPrimitive.Content>) {
+type DropdownMenuContentProps = React.ComponentProps<typeof DropdownMenuPrimitive.Content> & {
+  /** `materialize` grows the menu out of the trigger; `spring` slides one highlight between the items. */
+  effect?: DropdownMenuEffect
+}
+
+function DropdownMenuContent({ className, sideOffset = SIDE_OFFSET_PX, effect, ...props }: DropdownMenuContentProps) {
   return (
-    <DropdownMenuPrimitive.Portal>
-      <DropdownMenuPrimitive.Content
-        data-slot="dropdown-menu-content"
-        sideOffset={sideOffset}
-        className={cn(
-          "z-50 min-w-32 overflow-x-hidden overflow-y-auto rounded-md border bg-popover p-1 text-popover-foreground shadow-md",
-          "max-h-(--radix-dropdown-menu-content-available-height) origin-(--radix-dropdown-menu-content-transform-origin)",
-          "duration-(--duration-fast) ease-(--ease-mise)",
-          "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
-          "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
-          "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2",
-          "data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-          className,
-        )}
-        {...props}
-      />
-    </DropdownMenuPrimitive.Portal>
+    <MenuSpringScope enabled={effect === "spring"}>
+      <DropdownMenuPrimitive.Portal>
+        <DropdownMenuPrimitive.Content
+          data-slot="dropdown-menu-content"
+          data-effect={effect}
+          sideOffset={sideOffset}
+          className={cn(
+            "z-50 min-w-32 overflow-x-hidden overflow-y-auto rounded-md border bg-popover p-1 text-popover-foreground shadow-md",
+            "max-h-(--radix-dropdown-menu-content-available-height) origin-(--radix-dropdown-menu-content-transform-origin)",
+            effect === "materialize" ? MENU_MATERIALIZE_CLASS : PLAIN_MOTION_CLASS,
+            effect === "spring" && MENU_SPRING_CONTENT_CLASS,
+            className,
+          )}
+          {...props}
+        />
+      </DropdownMenuPrimitive.Portal>
+    </MenuSpringScope>
   )
 }
 
@@ -48,11 +66,21 @@ type DropdownMenuItemProps = React.ComponentProps<typeof DropdownMenuPrimitive.I
   variant?: "default" | "destructive"
 }
 
-function DropdownMenuItem({ className, variant = "default", ...props }: DropdownMenuItemProps) {
+function DropdownMenuItem({
+  className,
+  variant = "default",
+  asChild,
+  children,
+  onFocus,
+  onBlur,
+  ...props
+}: DropdownMenuItemProps) {
+  const highlight = useMenuItemHighlight({ asChild, onFocus, onBlur })
   return (
     <DropdownMenuPrimitive.Item
       data-slot="dropdown-menu-item"
       data-variant={variant}
+      asChild={asChild}
       className={cn(
         "relative flex cursor-default items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none",
         "transition-[color,background-color] duration-(--duration-fast) ease-(--ease-mise)",
@@ -61,10 +89,22 @@ function DropdownMenuItem({ className, variant = "default", ...props }: Dropdown
         "data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 data-[variant=destructive]:focus:text-destructive",
         "dark:data-[variant=destructive]:focus:bg-destructive/20 data-[variant=destructive]:*:[svg]:text-destructive!",
         "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground",
+        highlight.spring && MENU_SPRING_ITEM_CLASS,
         className,
       )}
+      onFocus={highlight.onFocus}
+      onBlur={highlight.onBlur}
       {...props}
-    />
+    >
+      {highlight.spring ? (
+        <>
+          {highlight.highlighted ? <MenuHighlight variant={variant} reduceMotion={highlight.reduceMotion} /> : null}
+          {children}
+        </>
+      ) : (
+        children
+      )}
+    </DropdownMenuPrimitive.Item>
   )
 }
 
@@ -111,4 +151,6 @@ export {
   DropdownMenuShortcut,
   DropdownMenuGroup,
   type DropdownMenuItemProps,
+  type DropdownMenuContentProps,
+  type DropdownMenuEffect,
 }

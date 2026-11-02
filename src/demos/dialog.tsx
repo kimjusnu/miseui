@@ -8,15 +8,18 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  type DialogEffect,
 } from "@/registry/miseui/ui/dialog"
 
-export function Demo() {
+const EFFECTS: readonly DialogEffect[] = ["materialize", "scrim-blur"]
+
+function DeleteDialog({ effect }: { effect?: DialogEffect }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Delete project</Button>
+        <Button variant="outline">{effect ? "Open" : "Delete project"}</Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent effect={effect}>
         <DialogHeader>
           <DialogTitle>Delete this project?</DialogTitle>
           <DialogDescription>
@@ -33,5 +36,21 @@ export function Demo() {
         </DialogFooter>
       </DialogContent>
     </Dialog>
+  )
+}
+
+export function Demo() {
+  return (
+    <div className="grid justify-items-start gap-6">
+      <DeleteDialog />
+      <div className="flex flex-wrap gap-4">
+        {EFFECTS.map((effect) => (
+          <div key={effect} className="grid justify-items-start gap-1.5">
+            <p className="text-xs text-muted-foreground">{effect}</p>
+            <DeleteDialog effect={effect} />
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }

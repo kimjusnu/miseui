@@ -1,20 +1,21 @@
 import type * as React from "react"
+import { CARD_EFFECT_ROOTS, type CardEffect } from "@/registry/miseui/ui/card-effects"
 import { cn } from "@/registry/miseui/lib/utils"
 
 /** One horizontal inset for every slot, so edges line up and the region reads as a unit. */
 const INSET_CLASS = "px-6"
 
-function Card({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="card"
-      className={cn(
-        "flex flex-col gap-6 rounded-xl border bg-card py-6 text-card-foreground shadow-xs",
-        className,
-      )}
-      {...props}
-    />
-  )
+const CARD_CLASS = "flex flex-col gap-6 rounded-xl border bg-card py-6 text-card-foreground shadow-xs"
+
+type CardProps = React.ComponentProps<"div"> & {
+  /** A living treatment on the surface. Undefined is the plain card. */
+  effect?: CardEffect
+}
+
+function Card({ className, effect, ...props }: CardProps) {
+  if (!effect) return <div data-slot="card" className={cn(CARD_CLASS, className)} {...props} />
+  const Root = CARD_EFFECT_ROOTS[effect]
+  return <Root data-slot="card" data-effect={effect} className={cn(CARD_CLASS, className)} {...props} />
 }
 
 function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
@@ -70,4 +71,4 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
-export { Card, CardHeader, CardTitle, CardDescription, CardAction, CardContent, CardFooter }
+export { Card, CardHeader, CardTitle, CardDescription, CardAction, CardContent, CardFooter, type CardProps, type CardEffect }

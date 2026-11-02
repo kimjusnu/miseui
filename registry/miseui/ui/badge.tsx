@@ -1,6 +1,7 @@
 import type * as React from "react"
 import { Slot } from "radix-ui"
 import { cva, type VariantProps } from "class-variance-authority"
+import { BeamFrame, GlowFrame, GooeyCount, LiveDot, type BadgeEffect } from "@/registry/miseui/ui/badge-effects"
 import { cn } from "@/registry/miseui/lib/utils"
 
 const badgeVariants = cva(
@@ -25,18 +26,42 @@ const badgeVariants = cva(
 )
 
 type BadgeProps = React.ComponentProps<"span"> &
-  VariantProps<typeof badgeVariants> & { asChild?: boolean }
+  VariantProps<typeof badgeVariants> & {
+    asChild?: boolean
+    /** A living treatment on top of the variant. `count` needs text or number children and no asChild; otherwise it renders plain. */
+    effect?: BadgeEffect
+  }
 
-function Badge({ className, variant, asChild = false, ...props }: BadgeProps) {
+/**
+ * Slottable lets the dot join a child element under asChild, where Slot expects exactly one child.
+ * An array, not a fragment: Slot looks through arrays, but would pour its props onto a fragment.
+ */
+function badgeContent(effect: BadgeEffect | undefined, asChild: boolean, variant: BadgeProps["variant"], children: React.ReactNode) {
+  if (effect === "live") {
+    return [<LiveDot key="dot" variant={variant} />, <Slot.Slottable key="label">{children}</Slot.Slottable>]
+  }
+  if (effect === "count" && !asChild && (typeof children === "number" || typeof children === "string")) {
+    return <GooeyCount value={String(children)} />
+  }
+  return children
+}
+
+function Badge({ className, variant, asChild = false, effect, children, ...props }: BadgeProps) {
   const Comp = asChild ? Slot.Root : "span"
-  return (
+  const badge = (
     <Comp
       data-slot="badge"
       data-variant={variant ?? "default"}
-      className={cn(badgeVariants({ variant, className }))}
+      data-effect={effect}
+      className={cn(badgeVariants({ variant }), effect === "glow" && "border-mise/60", className)}
       {...props}
-    />
+    >
+      {badgeContent(effect, asChild, variant, children)}
+    </Comp>
   )
+  if (effect === "glow") return <GlowFrame className={className}>{badge}</GlowFrame>
+  if (effect === "beam") return <BeamFrame variant={variant} className={className}>{badge}</BeamFrame>
+  return badge
 }
 
-export { Badge, badgeVariants, type BadgeProps }
+export { Badge, badgeVariants, type BadgeProps, type BadgeEffect }

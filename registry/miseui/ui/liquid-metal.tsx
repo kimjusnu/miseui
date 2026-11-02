@@ -28,8 +28,8 @@ void main() {
  * Two octaves of value noise warp each other and drift, like a room sliding across a curved surface. The field
  * becomes cosine bands, bright and dark (environment streaks), over a sky-to-ground gradient, and the edges catch
  * extra light, a cheap stand-in for Fresnel on a bevel. Cosines and quintic noise matter: a triangle wave or
- * cubic fade leaves creases that read as hard lines. Frequencies are low so a 44 px button holds two or three
- * reflections, not a texture.
+ * cubic fade leaves creases. The coordinates lean over and the warp stays small because a button is one noise
+ * cell tall: stronger warp folds the field into hard vertical lines, while streaks that run along the surface read as chrome.
  */
 const FRAGMENT_SHADER = `#version 300 es
 precision highp float;
@@ -59,14 +59,15 @@ void main() {
   float aspect = u_resolution.x / u_resolution.y;
   vec2 p = vec2(uv.x * aspect, uv.y);
   float t = u_time;
-  float warp = fbm(p * 0.9 + vec2(t * 0.1, -t * 0.07));
-  float field = fbm(p * 1.3 + vec2(warp * 1.1 - t * 0.14, warp * 0.5 + t * 0.08));
-  float band = pow(0.5 + 0.5 * cos(6.2832 * (field * 1.7 + t * 0.03)), 3.0);
+  vec2 q = vec2(p.x * 0.45 + p.y * 0.3, p.y * 1.25 - p.x * 0.1);
+  float warp = fbm(q * 0.9 + vec2(t * 0.1, -t * 0.07));
+  float field = fbm(q * 1.2 + vec2(warp * 0.55 - t * 0.14, warp * 0.3 + t * 0.08));
+  float band = pow(0.5 + 0.5 * cos(6.2832 * (field * 1.5 + t * 0.03)), 2.5);
   float dark = pow(0.5 + 0.5 * cos(6.2832 * (field * 0.9 - t * 0.02) + 1.7), 2.0);
   float sky = 0.74 + 0.3 * uv.y;
   float edge = min(min(uv.x, 1.0 - uv.x) * aspect, min(uv.y, 1.0 - uv.y));
   float fresnel = pow(1.0 - smoothstep(0.0, 0.5, edge), 2.0);
-  float shade = sky * (0.68 + 0.1 * field) - u_intensity * 0.2 * dark + u_intensity * (0.4 * band + 0.2 * fresnel);
+  float shade = sky * (0.76 + 0.1 * field) - u_intensity * 0.16 * dark + u_intensity * (0.36 * band + 0.2 * fresnel);
   fragColor = vec4(u_tint * shade + vec3(0.24) * u_intensity * band, 1.0);
 }`
 

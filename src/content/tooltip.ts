@@ -13,6 +13,13 @@ export const meta: ComponentMeta = {
     avoid:
       "Never put essential instructions, links or buttons in a tooltip: touch users cannot hover and screen readers only hear it as a description. If the text is needed to finish the task, put it on the page.",
   },
+  effects: [
+    {
+      name: "materialize",
+      principle: "Spatial continuity",
+      use: "Use it for occasional hints on sparse toolbars; on a row of icons people sweep across, the plain tooltip gets out of the way sooner.",
+    },
+  ],
   usage: `import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { Button } from "@/components/ui/button"
 
@@ -21,6 +28,8 @@ import { Button } from "@/components/ui/button"
     <Button variant="outline">Save</Button>
   </TooltipTrigger>
   <TooltipContent>Saves the draft without publishing</TooltipContent>
-</Tooltip>`,
+</Tooltip>
+
+// <TooltipContent effect="materialize"> grows the hint out of its trigger with scale, blur and opacity together.`,
   exports: ["Tooltip", "TooltipTrigger", "TooltipContent", "TooltipProvider"],
 }

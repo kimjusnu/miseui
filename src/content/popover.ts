@@ -13,6 +13,13 @@ export const meta: ComponentMeta = {
     avoid:
       "Do not use it for destructive confirmations or anything the user must not miss; it is easy to dismiss by accident, so use a Dialog. For a plain text hint a Tooltip is lighter.",
   },
+  effects: [
+    {
+      name: "materialize",
+      principle: "Spatial continuity",
+      use: "Use it when a panel holds richer content and people should feel it came from the button they pressed, not from nowhere.",
+    },
+  ],
   usage: `import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Button } from "@/components/ui/button"
 
@@ -24,6 +31,8 @@ import { Button } from "@/components/ui/button"
     <p className="text-sm font-medium">Show only</p>
     <p className="text-sm text-muted-foreground">Open issues assigned to you.</p>
   </PopoverContent>
-</Popover>`,
+</Popover>
+
+// <PopoverContent effect="materialize"> grows the panel out of its trigger with scale, blur and opacity together.`,
   exports: ["Popover", "PopoverTrigger", "PopoverContent", "PopoverAnchor"],
 }

@@ -3,8 +3,11 @@
   "type": "registry:ui",
   "title": "Select",
   "description": "Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support.",
-  "dependencies": ["radix-ui", "lucide-react"],
-  "registryDependencies": ["utils"],
+  "dependencies": ["radix-ui", "lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
   "categories": ["core"],
-  "files": [{ "path": "registry/miseui/ui/select.tsx", "type": "registry:ui" }]
+  "files": [
+    { "path": "registry/miseui/ui/select.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/select-effects.tsx", "type": "registry:ui" }
+  ]
 }

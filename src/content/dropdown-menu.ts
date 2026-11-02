@@ -13,6 +13,18 @@ export const meta: ComponentMeta = {
     avoid:
       "Do not hide the primary action in a menu, and do not use it to navigate between pages or to pick a value; Tabs and Select exist for those.",
   },
+  effects: [
+    {
+      name: "materialize",
+      principle: "Spatial continuity",
+      use: "Use it for a menu opened now and then from one prominent button, so it clearly belongs to what was pressed.",
+    },
+    {
+      name: "spring",
+      principle: "Object constancy",
+      use: "Use it for a menu people browse before choosing, where one travelling highlight keeps the eye on the current item instead of flickering row by row.",
+    },
+  ],
   usage: `import {
   DropdownMenu,
   DropdownMenuContent,
@@ -35,7 +47,9 @@ import { Button } from "@/components/ui/button"
     <DropdownMenuSeparator />
     <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
   </DropdownMenuContent>
-</DropdownMenu>`,
+</DropdownMenu>
+
+// <DropdownMenuContent effect="materialize"> grows the menu out of the trigger; effect="spring" slides one highlight between items.`,
   exports: [
     "DropdownMenu",
     "DropdownMenuTrigger",

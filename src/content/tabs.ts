@@ -13,6 +13,18 @@ export const meta: ComponentMeta = {
     avoid:
       "Do not use tabs when the user needs to compare two panels at once, or for steps that must be completed in order. Never put a required field behind an inactive tab; hidden panels are easy to forget.",
   },
+  effects: [
+    {
+      name: "spring",
+      principle: "Object constancy",
+      use: "Use it for page-level tabs, where one quiet underline travelling between labels shows that the view moved rather than was replaced.",
+    },
+    {
+      name: "pill",
+      principle: "Figure-ground",
+      use: "Use it for a small segmented control that is the main choice in its area, where a filled accent makes the current option readable from across the screen.",
+    },
+  ],
   usage: `import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 <Tabs defaultValue="overview">
@@ -22,6 +34,8 @@ export const meta: ComponentMeta = {
   </TabsList>
   <TabsContent value="overview">Overview panel</TabsContent>
   <TabsContent value="activity">Activity panel</TabsContent>
-</Tabs>`,
+</Tabs>
+
+// Add effect="spring" or effect="pill" to <Tabs> and the active marker slides between triggers on a spring.`,
   exports: ["Tabs", "TabsList", "TabsTrigger", "TabsContent"],
 }

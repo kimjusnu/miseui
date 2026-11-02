@@ -3,6 +3,39 @@ import { Dialog as DialogPrimitive } from "radix-ui"
 import { X } from "lucide-react"
 import { cn } from "@/registry/miseui/lib/utils"
 
+const PLAIN_CONTENT_MOTION_CLASS = [
+  "duration-(--duration-base) ease-(--ease-mise)",
+  "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
+  "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+]
+
+/**
+ * Radix exposes no transform-origin for a dialog, since it has no anchor, so the surface grows from its own centre.
+ * The enter and exit values stay unqualified so the media overrides below win on source order.
+ */
+const MATERIALIZE_CLASS = [
+  "duration-(--duration-slow) ease-(--ease-mise-out) will-change-[transform,opacity,filter]",
+  "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-(--duration-base)",
+  "fade-in-0 zoom-in-90 blur-in-md fade-out-0 zoom-out-90 blur-out-md",
+  "motion-reduce:zoom-in-100 motion-reduce:zoom-out-100 motion-reduce:blur-in-0 motion-reduce:blur-out-0",
+  "[@media(prefers-reduced-transparency:reduce)]:blur-in-0 [@media(prefers-reduced-transparency:reduce)]:blur-out-0",
+]
+
+/**
+ * A registry component cannot own the app root, so the page cannot really scale back. The overlay fakes that
+ * depth: the blur radius grows, and the page loses brightness and colour, as an out-of-focus background does.
+ * `blur(0px)` rather than `backdrop-blur-none`: only filter lists of the same shape interpolate.
+ */
+const SCRIM_BLUR_CLASS = [
+  "bg-background/40 backdrop-blur-xl backdrop-brightness-75 backdrop-saturate-50",
+  "transition-[backdrop-filter] duration-(--duration-slow) ease-(--ease-mise-out)",
+  "starting:backdrop-blur-[0px] data-[state=closed]:backdrop-blur-[0px] data-[state=closed]:duration-(--duration-base)",
+  "motion-reduce:transition-none",
+  "[@media(prefers-reduced-transparency:reduce)]:bg-background/90 [@media(prefers-reduced-transparency:reduce)]:backdrop-filter-none",
+]
+
+type DialogEffect = "materialize" | "scrim-blur"
+
 function Dialog({ ...props }: React.ComponentProps<typeof DialogPrimitive.Root>) {
   return <DialogPrimitive.Root data-slot="dialog" {...props} />
 }
@@ -19,15 +52,22 @@ function DialogClose({ ...props }: React.ComponentProps<typeof DialogPrimitive.C
   return <DialogPrimitive.Close data-slot="dialog-close" {...props} />
 }
 
-function DialogOverlay({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
+type DialogOverlayProps = React.ComponentProps<typeof DialogPrimitive.Overlay> & {
+  /** `scrim-blur` pushes the page back behind a deep blur; DialogContent passes its own effect through. */
+  effect?: DialogEffect
+}
+
+function DialogOverlay({ className, effect, ...props }: DialogOverlayProps) {
   return (
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
+      data-effect={effect}
       className={cn(
         "fixed inset-0 z-50 bg-background/80 backdrop-blur-sm",
         "duration-(--duration-base) ease-(--ease-mise)",
         "data-[state=open]:animate-in data-[state=open]:fade-in-0",
         "data-[state=closed]:animate-out data-[state=closed]:fade-out-0",
+        effect === "scrim-blur" && SCRIM_BLUR_CLASS,
         className,
       )}
       {...props}
@@ -38,19 +78,21 @@ function DialogOverlay({ className, ...props }: React.ComponentProps<typeof Dial
 type DialogContentProps = React.ComponentProps<typeof DialogPrimitive.Content> & {
   /** Hide the corner close button when the footer already offers a way out. */
   showCloseButton?: boolean
+  /** `materialize` brings the surface into focus; `scrim-blur` pushes the page back behind it. */
+  effect?: DialogEffect
 }
 
-function DialogContent({ className, children, showCloseButton = true, ...props }: DialogContentProps) {
+function DialogContent({ className, children, showCloseButton = true, effect, ...props }: DialogContentProps) {
   return (
     <DialogPortal>
-      <DialogOverlay />
+      <DialogOverlay effect={effect} />
       <DialogPrimitive.Content
         data-slot="dialog-content"
+        data-effect={effect}
         className={cn(
           "fixed top-1/2 left-1/2 z-50 grid w-full max-w-[calc(100%-2rem)] -translate-x-1/2 -translate-y-1/2 gap-4 rounded-lg border bg-background p-6 shadow-lg sm:max-w-lg",
-          "duration-(--duration-base) ease-(--ease-mise)",
-          "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
-          "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+          effect === "materialize" ? MATERIALIZE_CLASS : PLAIN_CONTENT_MOTION_CLASS,
+          effect === "scrim-blur" && "shadow-2xl",
           className,
         )}
         {...props}
@@ -128,4 +170,6 @@ export {
   DialogTitle,
   DialogDescription,
   type DialogContentProps,
+  type DialogOverlayProps,
+  type DialogEffect,
 }

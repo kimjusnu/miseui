@@ -13,12 +13,21 @@ export const meta: ComponentMeta = {
     avoid:
       "Do not use a checkbox for a setting that takes effect immediately on a server; that is a Switch. Do not use it for mutually exclusive options either, which belong in a radio group.",
   },
+  effects: [
+    {
+      name: "draw",
+      principle: "Peak-end rule",
+      use: "Use it where ticking is the reward, like a to-do list or a final confirmation; in a dense table of checkboxes the drawing slows the eye down.",
+    },
+  ],
   usage: `import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 
 <div className="flex items-center gap-2">
   <Checkbox id="terms" />
   <Label htmlFor="terms">Accept terms</Label>
-</div>`,
+</div>
+
+// effect="draw" strokes the check on a spring, as if written by hand, and retracts it when unticked.`,
   exports: ["Checkbox"],
 }

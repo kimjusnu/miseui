@@ -1,12 +1,18 @@
 import type * as React from "react"
 import { Slot } from "radix-ui"
 import { cva, type VariantProps } from "class-variance-authority"
+import {
+  ButtonEffectFrame,
+  EFFECT_SURFACE_CLASS,
+  shimmerLabel,
+  type ButtonEffect,
+} from "@/registry/miseui/ui/button-effects"
 import { cn } from "@/registry/miseui/lib/utils"
 
 const buttonVariants = cva(
   [
     "inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium",
-    "transition-[color,background-color,border-color,box-shadow,transform] duration-(--duration-fast) ease-(--ease-mise)",
+    "transition-[color,background-color,border-color,box-shadow,scale] duration-(--duration-fast) ease-(--ease-mise)",
     "outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50",
     "disabled:pointer-events-none disabled:opacity-50 active:scale-[0.97] active:duration-100",
     "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
@@ -35,18 +41,39 @@ const buttonVariants = cva(
 )
 
 type ButtonProps = React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & { asChild?: boolean }
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean
+    /** A living treatment on top of the variant. Undefined is the plain button. */
+    effect?: ButtonEffect
+  }
 
-function Button({ className, variant, size, asChild = false, ...props }: ButtonProps) {
+function Button({ className, variant, size, asChild = false, effect, children, ...props }: ButtonProps) {
   const Comp = asChild ? Slot.Root : "button"
-  return (
+  const isShimmer = effect === "shimmer"
+  const button = (
     <Comp
       data-slot="button"
       data-variant={variant ?? "default"}
-      className={cn(buttonVariants({ variant, size, className }))}
+      data-effect={effect}
+      aria-busy={isShimmer ? true : undefined}
+      className={cn(buttonVariants({ variant, size }), effect && EFFECT_SURFACE_CLASS[effect], className)}
       {...props}
-    />
+    >
+      {isShimmer ? shimmerLabel(children, asChild, variant) : children}
+    </Comp>
+  )
+  if (!effect || effect === "shimmer") return button
+  return (
+    <ButtonEffectFrame
+      effect={effect}
+      variant={variant}
+      size={size}
+      className={className}
+      disabled={Boolean(props.disabled)}
+    >
+      {button}
+    </ButtonEffectFrame>
   )
 }
 
-export { Button, buttonVariants, type ButtonProps }
+export { Button, buttonVariants, type ButtonProps, type ButtonEffect }

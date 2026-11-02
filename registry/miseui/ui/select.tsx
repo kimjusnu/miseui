@@ -2,6 +2,23 @@ import type * as React from "react"
 import { Select as SelectPrimitive } from "radix-ui"
 import { Check, ChevronDown, ChevronUp } from "lucide-react"
 import { cn } from "@/registry/miseui/lib/utils"
+import {
+  SELECT_MATERIALIZE_CLASS,
+  SELECT_SPRING_CONTENT_CLASS,
+  SELECT_SPRING_ITEM_CLASS,
+  SelectHighlight,
+  SelectSpringScope,
+  useSelectItemHighlight,
+  type SelectEffect,
+} from "@/registry/miseui/ui/select-effects"
+
+const PLAIN_MOTION_CLASS = [
+  "duration-(--duration-fast) ease-(--ease-mise)",
+  "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
+  "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+  "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2",
+  "data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+]
 
 function Select({ ...props }: React.ComponentProps<typeof SelectPrimitive.Root>) {
   return <SelectPrimitive.Root data-slot="select" {...props} />
@@ -72,43 +89,43 @@ function SelectScrollDownButton({
   )
 }
 
-function SelectContent({
-  className,
-  children,
-  position = "popper",
-  ...props
-}: React.ComponentProps<typeof SelectPrimitive.Content>) {
+type SelectContentProps = React.ComponentProps<typeof SelectPrimitive.Content> & {
+  /** `materialize` grows the list out of the trigger; `spring` slides one highlight between the rows. */
+  effect?: SelectEffect
+}
+
+function SelectContent({ className, children, position = "popper", effect, ...props }: SelectContentProps) {
   return (
-    <SelectPrimitive.Portal>
-      <SelectPrimitive.Content
-        data-slot="select-content"
-        position={position}
-        className={cn(
-          "relative z-50 max-h-(--radix-select-content-available-height) min-w-32 overflow-x-hidden overflow-y-auto rounded-md border bg-popover text-popover-foreground shadow-md",
-          "origin-(--radix-select-content-transform-origin)",
-          "duration-(--duration-fast) ease-(--ease-mise)",
-          "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95",
-          "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
-          "data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2",
-          "data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-          position === "popper" &&
-            "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
-          className,
-        )}
-        {...props}
-      >
-        <SelectScrollUpButton />
-        <SelectPrimitive.Viewport
+    <SelectSpringScope enabled={effect === "spring"}>
+      <SelectPrimitive.Portal>
+        <SelectPrimitive.Content
+          data-slot="select-content"
+          data-effect={effect}
+          position={position}
           className={cn(
-            "p-1",
-            position === "popper" && "h-(--radix-select-trigger-height) w-full min-w-(--radix-select-trigger-width) scroll-my-1",
+            "relative z-50 max-h-(--radix-select-content-available-height) min-w-32 overflow-x-hidden overflow-y-auto rounded-md border bg-popover text-popover-foreground shadow-md",
+            "origin-(--radix-select-content-transform-origin)",
+            effect === "materialize" ? SELECT_MATERIALIZE_CLASS : PLAIN_MOTION_CLASS,
+            effect === "spring" && SELECT_SPRING_CONTENT_CLASS,
+            position === "popper" &&
+              "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+            className,
           )}
+          {...props}
         >
-          {children}
-        </SelectPrimitive.Viewport>
-        <SelectScrollDownButton />
-      </SelectPrimitive.Content>
-    </SelectPrimitive.Portal>
+          <SelectScrollUpButton />
+          <SelectPrimitive.Viewport
+            className={cn(
+              "p-1",
+              position === "popper" && "h-(--radix-select-trigger-height) w-full min-w-(--radix-select-trigger-width) scroll-my-1",
+            )}
+          >
+            {children}
+          </SelectPrimitive.Viewport>
+          <SelectScrollDownButton />
+        </SelectPrimitive.Content>
+      </SelectPrimitive.Portal>
+    </SelectSpringScope>
   )
 }
 
@@ -122,7 +139,14 @@ function SelectLabel({ className, ...props }: React.ComponentProps<typeof Select
   )
 }
 
-function SelectItem({ className, children, ...props }: React.ComponentProps<typeof SelectPrimitive.Item>) {
+function SelectItem({
+  className,
+  children,
+  onFocus,
+  onBlur,
+  ...props
+}: React.ComponentProps<typeof SelectPrimitive.Item>) {
+  const highlight = useSelectItemHighlight({ onFocus, onBlur })
   return (
     <SelectPrimitive.Item
       data-slot="select-item"
@@ -131,10 +155,14 @@ function SelectItem({ className, children, ...props }: React.ComponentProps<type
         "transition-[color,background-color] duration-(--duration-fast) ease-(--ease-mise)",
         "focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
         "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-muted-foreground",
+        highlight.spring && SELECT_SPRING_ITEM_CLASS,
         className,
       )}
+      onFocus={highlight.onFocus}
+      onBlur={highlight.onBlur}
       {...props}
     >
+      {highlight.highlighted ? <SelectHighlight reduceMotion={highlight.reduceMotion} /> : null}
       <span className="absolute right-2 flex size-3.5 items-center justify-center">
         <SelectPrimitive.ItemIndicator>
           <Check className="size-4" />
@@ -165,4 +193,6 @@ export {
   SelectLabel,
   SelectSeparator,
   type SelectTriggerProps,
+  type SelectContentProps,
+  type SelectEffect,
 }

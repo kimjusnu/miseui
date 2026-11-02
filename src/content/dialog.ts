@@ -12,6 +12,18 @@ export const meta: ComponentMeta = {
     avoid:
       "Do not open a dialog for information that could sit inline, and never stack one dialog on another. Keep long forms out of it; a full page keeps the user's context visible.",
   },
+  effects: [
+    {
+      name: "materialize",
+      principle: "Focus pull",
+      use: "Use it for a routine dialog that should arrive with presence while the page stays legible behind the usual scrim.",
+    },
+    {
+      name: "scrim-blur",
+      principle: "Depth of field",
+      use: "Use it for a decision that deserves the whole screen, such as a destructive confirmation, where the page should stop competing for attention.",
+    },
+  ],
   usage: `import {
   Dialog,
   DialogContent,
@@ -36,7 +48,9 @@ import { Button } from "@/components/ui/button"
       <Button variant="destructive">Delete</Button>
     </DialogFooter>
   </DialogContent>
-</Dialog>`,
+</Dialog>
+
+// <DialogContent effect="materialize"> brings the surface into focus; effect="scrim-blur" pushes the page back behind it.`,
   exports: [
     "Dialog",
     "DialogTrigger",

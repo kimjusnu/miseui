@@ -13,6 +13,18 @@ export const meta: ComponentMeta = {
     avoid:
       "Skip it for fewer than four options, where radio buttons show everything at once, and for more than about fifteen, where a searchable combobox is faster. Never use it to trigger navigation on change.",
   },
+  effects: [
+    {
+      name: "materialize",
+      principle: "Spatial continuity",
+      use: "Use it for a select that opens rarely, where the entrance can afford to be seen; for one opened all day, the plain list is quicker.",
+    },
+    {
+      name: "spring",
+      principle: "Object constancy",
+      use: "Use it for a short list scanned by pointer or arrow keys, where one highlight travelling makes the current row easy to keep track of.",
+    },
+  ],
   usage: `import {
   Select,
   SelectContent,
@@ -30,7 +42,9 @@ export const meta: ComponentMeta = {
     <SelectItem value="weekly">Weekly</SelectItem>
     <SelectItem value="never">Never</SelectItem>
   </SelectContent>
-</Select>`,
+</Select>
+
+// <SelectContent effect="materialize"> grows the list out of the trigger; effect="spring" slides one highlight between rows.`,
   exports: [
     "Select",
     "SelectTrigger",

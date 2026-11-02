@@ -28,10 +28,13 @@
       "description": "Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out.",
       "dependencies": [
         "radix-ui",
-        "class-variance-authority"
+        "class-variance-authority",
+        "motion"
       ],
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/beam-border.json",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
         "core"
@@ -39,6 +42,10 @@
       "files": [
         {
           "path": "registry/miseui/ui/badge.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/badge-effects.tsx",
           "type": "registry:ui"
         }
       ]
@@ -71,10 +78,14 @@
       "description": "Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged.",
       "dependencies": [
         "radix-ui",
-        "class-variance-authority"
+        "class-variance-authority",
+        "motion"
       ],
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/beam-border.json",
+        "https://miseui.junsu4621.workers.dev/r/liquid-metal.json",
+        "https://miseui.junsu4621.workers.dev/r/shimmer-text.json"
       ],
       "categories": [
         "core"
@@ -82,6 +93,10 @@
       "files": [
         {
           "path": "registry/miseui/ui/button.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/button-effects.tsx",
           "type": "registry:ui"
         }
       ]
@@ -91,8 +106,13 @@
       "type": "registry:ui",
       "title": "Card",
       "description": "Bordered surface with header, content and footer slots that reads as one region before anyone reads the text.",
+      "dependencies": [
+        "motion"
+      ],
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/beam-border.json",
+        "https://miseui.junsu4621.workers.dev/r/materialize.json"
       ],
       "categories": [
         "core"
@@ -100,6 +120,10 @@
       "files": [
         {
           "path": "registry/miseui/ui/card.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-effects.tsx",
           "type": "registry:ui"
         }
       ]
@@ -111,10 +135,12 @@
       "description": "Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked.",
       "dependencies": [
         "radix-ui",
-        "lucide-react"
+        "lucide-react",
+        "motion"
       ],
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
         "core"
@@ -154,10 +180,12 @@
       "title": "Dropdown Menu",
       "description": "Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant.",
       "dependencies": [
-        "radix-ui"
+        "radix-ui",
+        "motion"
       ],
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
         "core"
@@ -165,6 +193,10 @@
       "files": [
         {
           "path": "registry/miseui/ui/dropdown-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/dropdown-menu-effects.tsx",
           "type": "registry:ui"
         }
       ]
@@ -197,7 +229,8 @@
       "title": "Input",
       "description": "Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring.",
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/shimmer-text.json"
       ],
       "categories": [
         "core"
@@ -383,10 +416,12 @@
       "description": "Dropdown for one choice from a list, with a placeholder, groups, a check on the chosen row and full keyboard support.",
       "dependencies": [
         "radix-ui",
-        "lucide-react"
+        "lucide-react",
+        "motion"
       ],
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
         "core"
@@ -394,6 +429,10 @@
       "files": [
         {
           "path": "registry/miseui/ui/select.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/select-effects.tsx",
           "type": "registry:ui"
         }
       ]
@@ -446,6 +485,9 @@
       "type": "registry:ui",
       "title": "Skeleton",
       "description": "Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner.",
+      "dependencies": [
+        "motion"
+      ],
       "registryDependencies": [
         "utils"
       ],
@@ -484,10 +526,12 @@
       "title": "Switch",
       "description": "Sliding on/off control whose thumb travels 16 px in 150 ms, mirroring the physical toggle it imitates.",
       "dependencies": [
-        "radix-ui"
+        "radix-ui",
+        "motion"
       ],
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
         "core"
@@ -495,6 +539,10 @@
       "files": [
         {
           "path": "registry/miseui/ui/switch.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/switch-effects.tsx",
           "type": "registry:ui"
         }
       ]
@@ -505,10 +553,12 @@
       "title": "Tabs",
       "description": "Segmented control that swaps one panel for another in place, so related views share a single spot on the screen.",
       "dependencies": [
-        "radix-ui"
+        "radix-ui",
+        "motion"
       ],
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
         "core"
@@ -526,7 +576,8 @@
       "title": "Textarea",
       "description": "Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar.",
       "registryDependencies": [
-        "utils"
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/shimmer-text.json"
       ],
       "categories": [
         "core"
