@@ -1,0 +1,8 @@
+{
+  "name": "use-view-transition",
+  "type": "registry:hook",
+  "title": "useViewTransition",
+  "description": "Five named page-transition presets on the View Transitions API, with a reduced-motion cross-fade and a plain fallback.",
+  "categories": ["transitions"],
+  "files": [{ "path": "registry/miseui/hooks/use-view-transition.ts", "type": "registry:hook" }]
+}

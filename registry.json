@@ -29,7 +29,7 @@
       "name": "button",
       "type": "registry:ui",
       "title": "Button",
-      "description": "Press target with a 150 ms settle and a 2% press-down so the click feels acknowledged.",
+      "description": "Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged.",
       "dependencies": [
         "radix-ui",
         "class-variance-authority"
@@ -166,6 +166,43 @@
         {
           "path": "registry/miseui/ui/label.tsx",
           "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "materialize",
+      "type": "registry:ui",
+      "title": "Materialize",
+      "description": "A surface that arrives like a material coming into focus: slightly smaller, softer, from its anchor, and leaves the same way.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "transitions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/materialize.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "motion",
+      "type": "registry:lib",
+      "title": "Motion presets",
+      "description": "Critically damped and momentum springs, Apple's momentum projection and rubber-banding, shared by every moving Mise UI component.",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/lib/motion.ts",
+          "type": "registry:lib"
         }
       ]
     },
@@ -454,6 +491,21 @@
         {
           "path": "registry/miseui/ui/tooltip.tsx",
           "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "use-view-transition",
+      "type": "registry:hook",
+      "title": "useViewTransition",
+      "description": "Five named page-transition presets on the View Transitions API, with a reduced-motion cross-fade and a plain fallback.",
+      "categories": [
+        "transitions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/hooks/use-view-transition.ts",
+          "type": "registry:hook"
         }
       ]
     },

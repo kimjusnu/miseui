@@ -1,0 +1,10 @@
+{
+  "name": "materialize",
+  "type": "registry:ui",
+  "title": "Materialize",
+  "description": "A surface that arrives like a material coming into focus: slightly smaller, softer, from its anchor, and leaves the same way.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["transitions"],
+  "files": [{ "path": "registry/miseui/ui/materialize.tsx", "type": "registry:ui" }]
+}
