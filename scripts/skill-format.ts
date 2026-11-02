@@ -39,6 +39,18 @@ const installCommand = (site: string, name: string) => `npx shadcn@latest add ${
 
 const codeFence = (language: string, body: string) => `\`\`\`${language}\n${body}\n\`\`\``
 
+function effectLines(meta: ComponentMeta): string[] {
+  if (!meta.effects?.length) return []
+  return [
+    "## Effects",
+    "",
+    "Pass one as the `effect` prop. The plain component stays the default.",
+    "",
+    ...meta.effects.map((effect) => `- \`${effect.name}\` (${effect.principle}): ${effect.use}`),
+    "",
+  ]
+}
+
 export function formatReference(meta: ComponentMeta, site: string): string {
   const exportsList = meta.exports.map((name) => `\`${name}\``).join(", ")
   return [
@@ -56,6 +68,7 @@ export function formatReference(meta: ComponentMeta, site: string): string {
     "",
     `**Don't.** ${meta.why.avoid}`,
     "",
+    ...effectLines(meta),
     "## Usage",
     "",
     codeFence("tsx", meta.usage),

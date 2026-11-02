@@ -27,7 +27,7 @@ export function ComponentPage() {
         <Demo />
       </section>
 
-      <WhyPanel why={meta.why} />
+      <WhyPanel why={meta.why} effects={meta.effects} />
 
       <section aria-labelledby="install-heading" className="flex flex-col gap-3">
         <h2 id="install-heading" className="text-lg font-semibold">

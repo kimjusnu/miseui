@@ -1,5 +1,14 @@
 export type Category = "ai" | "effects" | "transitions" | "core"
 
+export interface EffectMeta {
+  /** value of the `effect` prop */
+  name: string
+  /** named principle, shorter than the component's */
+  principle: string
+  /** one sentence: the moment this effect is the right one */
+  use: string
+}
+
 export interface ComponentMeta {
   /** registry item name, kebab-case, equals file name */
   name: string
@@ -15,6 +24,8 @@ export interface ComponentMeta {
     /** when this component or effect should NOT be used */
     avoid: string
   }
+  /** the `effect` prop values a core component offers; each carries its own reason, like the component does */
+  effects?: readonly EffectMeta[]
   /** minimal usage snippet, TSX */
   usage: string
   /** named exports of the component file */

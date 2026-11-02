@@ -35,6 +35,21 @@ describe("formatReference", () => {
   })
 })
 
+describe("formatReference effects", () => {
+  it("lists each effect with its principle and moment", () => {
+    const text = formatReference(
+      { ...button, effects: [{ name: "beam", principle: "Selective attention", use: "While the model works." }] },
+      site,
+    )
+    expect(text).toContain("## Effects")
+    expect(text).toContain("- `beam` (Selective attention): While the model works.")
+  })
+
+  it("omits the section for components without effects", () => {
+    expect(formatReference(button, site)).not.toContain("## Effects")
+  })
+})
+
 describe("formatSkill", () => {
   it("starts with frontmatter and lists every component under its category", () => {
     const text = formatSkill([button, thinking], site)
