@@ -14,6 +14,13 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/switch.json
 
 **Don't.** Do not use a Switch for a choice that waits on a Save button; a switch promises instant effect. Use Checkbox when the value is collected and submitted with a form.
 
+## Effects
+
+Pass one as the `effect` prop. The plain component stays the default.
+
+- `gooey` (Squash and stretch): Use it for one playful, prominent setting; a long list of stretching thumbs turns a settings page into noise.
+- `haptic` (Direct manipulation): Use it wherever a switch has to feel physical without being loud, since the thumb answers the finger before the state changes.
+
 ## Usage
 
 ```tsx
@@ -24,6 +31,8 @@ import { Label } from "@/components/ui/label"
   <Switch id="wifi" defaultChecked />
   <Label htmlFor="wifi">Wi-Fi</Label>
 </div>
+
+// effect="gooey" stretches the thumb like a drop as it travels; effect="haptic" dips it the instant it is pressed.
 ```
 
 Exports: `Switch`

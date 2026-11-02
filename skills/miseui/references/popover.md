@@ -14,6 +14,12 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/popover.json
 
 **Don't.** Do not use it for destructive confirmations or anything the user must not miss; it is easy to dismiss by accident, so use a Dialog. For a plain text hint a Tooltip is lighter.
 
+## Effects
+
+Pass one as the `effect` prop. The plain component stays the default.
+
+- `materialize` (Spatial continuity): Use it when a panel holds richer content and people should feel it came from the button they pressed, not from nowhere.
+
 ## Usage
 
 ```tsx
@@ -29,6 +35,8 @@ import { Button } from "@/components/ui/button"
     <p className="text-sm text-muted-foreground">Open issues assigned to you.</p>
   </PopoverContent>
 </Popover>
+
+// <PopoverContent effect="materialize"> grows the panel out of its trigger with scale, blur and opacity together.
 ```
 
 Exports: `Popover`, `PopoverTrigger`, `PopoverContent`, `PopoverAnchor`

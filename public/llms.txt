@@ -15,10 +15,28 @@ Getting started: https://miseui.junsu4621.workers.dev/docs
 - [Tool Call Card](https://miseui.junsu4621.workers.dev/components/tool-call-card): Collapsible record of one tool call: name, status, duration, and the exact input and output on demand. — Transparency builds trust. Install: https://miseui.junsu4621.workers.dev/r/tool-call-card.json
 - [Voice Wave](https://miseui.junsu4621.workers.dev/components/voice-wave): Bars that rise with the microphone level so the user can see they are being heard, and see when they are not. — Visibility of system status. Install: https://miseui.junsu4621.workers.dev/r/voice-wave.json
 
+## Effects
+
+- [Agent Avatar](https://miseui.junsu4621.workers.dev/components/agent-avatar): A deterministic SVG face for an agent: the same seed always draws the same overlapping blobs, in theme colours. — Familiarity · identity. Install: https://miseui.junsu4621.workers.dev/r/agent-avatar.json
+- [Beam Border](https://miseui.junsu4621.workers.dev/components/beam-border): One beam of light travelling the border of the surface the model is working on, so the eye knows where to wait. — Selective attention. Install: https://miseui.junsu4621.workers.dev/r/beam-border.json
+- [Gooey Morph](https://miseui.junsu4621.workers.dev/components/gooey-morph): Status dots that merge into one body and split apart again like a liquid, so the eye tracks one thing changing. — Object permanence. Install: https://miseui.junsu4621.workers.dev/r/gooey-morph.json
+- [Intelligence Glow](https://miseui.junsu4621.workers.dev/components/intelligence-glow): A slow light around the screen edge while the assistant listens or thinks, visible from anywhere on the page. — Global status visibility. Install: https://miseui.junsu4621.workers.dev/r/intelligence-glow.json
+- [Liquid Metal](https://miseui.junsu4621.workers.dev/components/liquid-metal): A WebGL metal surface behind a button or chip, with reflections that drift so the control reads as a real, premium material. — Material honesty · premium cue. Install: https://miseui.junsu4621.workers.dev/r/liquid-metal.json
+- [Reveal Image](https://miseui.junsu4621.workers.dev/components/reveal-image): An image that arrives as it is generated: blur to sharp, coarse mosaic to fine, or a left-to-right wipe, driven by a progress value. — Perceived progress. Install: https://miseui.junsu4621.workers.dev/r/reveal-image.json
+- [Shimmer Text](https://miseui.junsu4621.workers.dev/components/shimmer-text): A band of light passing over a status label, so “Thinking…” reads as in progress without inventing a percentage. — Progress without false precision. Install: https://miseui.junsu4621.workers.dev/r/shimmer-text.json
+- [Thinking Orb](https://miseui.junsu4621.workers.dev/components/thinking-orb): A breathing sphere whose motion says idle, listening, thinking or speaking without a word of text. — Ambient status · labor illusion. Install: https://miseui.junsu4621.workers.dev/r/thinking-orb.json
+- [Voice Glow](https://miseui.junsu4621.workers.dev/components/voice-glow): A round glow that swells with the microphone level, so the user sees the assistant is listening and how loudly it hears them. — Visibility of system status. Install: https://miseui.junsu4621.workers.dev/r/voice-glow.json
+
+## Transitions
+
+- [Materialize](https://miseui.junsu4621.workers.dev/components/materialize): A surface that arrives like a material coming into focus: slightly smaller, softer, from its anchor, and leaves the same way. — Spatial consistency · materials. Install: https://miseui.junsu4621.workers.dev/r/materialize.json
+- [Sheet](https://miseui.junsu4621.workers.dev/components/sheet): Bottom sheet you can grab mid-flight: it tracks the finger 1:1, rubber-bands at the top, and lands where the release velocity was heading. — Interruptibility · momentum projection. Install: https://miseui.junsu4621.workers.dev/r/sheet.json
+- [useViewTransition](https://miseui.junsu4621.workers.dev/components/use-view-transition): Five named page-transition presets on the View Transitions API, with a reduced-motion cross-fade and a plain fallback. — Wayfinding · spatial memory. Install: https://miseui.junsu4621.workers.dev/r/use-view-transition.json
+
 ## Core
 
 - [Badge](https://miseui.junsu4621.workers.dev/components/badge): Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out. — Von Restorff effect. Install: https://miseui.junsu4621.workers.dev/r/badge.json
-- [Button](https://miseui.junsu4621.workers.dev/components/button): Press target with a 150 ms settle and a 2% press-down so the click feels acknowledged. — Doherty threshold. Install: https://miseui.junsu4621.workers.dev/r/button.json
+- [Button](https://miseui.junsu4621.workers.dev/components/button): Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged. — Doherty threshold. Install: https://miseui.junsu4621.workers.dev/r/button.json
 - [Card](https://miseui.junsu4621.workers.dev/components/card): Bordered surface with header, content and footer slots that reads as one region before anyone reads the text. — Law of common region. Install: https://miseui.junsu4621.workers.dev/r/card.json
 - [Checkbox](https://miseui.junsu4621.workers.dev/components/checkbox): Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked. — Immediate feedback. Install: https://miseui.junsu4621.workers.dev/r/checkbox.json
 - [Dialog](https://miseui.junsu4621.workers.dev/components/dialog): Modal surface that dims everything else and holds focus until the user answers one question. — Attention funnel. Install: https://miseui.junsu4621.workers.dev/r/dialog.json

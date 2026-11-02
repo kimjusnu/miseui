@@ -14,6 +14,12 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/tooltip.json
 
 **Don't.** Never put essential instructions, links or buttons in a tooltip: touch users cannot hover and screen readers only hear it as a description. If the text is needed to finish the task, put it on the page.
 
+## Effects
+
+Pass one as the `effect` prop. The plain component stays the default.
+
+- `materialize` (Spatial continuity): Use it for occasional hints on sparse toolbars; on a row of icons people sweep across, the plain tooltip gets out of the way sooner.
+
 ## Usage
 
 ```tsx
@@ -26,6 +32,8 @@ import { Button } from "@/components/ui/button"
   </TooltipTrigger>
   <TooltipContent>Saves the draft without publishing</TooltipContent>
 </Tooltip>
+
+// <TooltipContent effect="materialize"> grows the hint out of its trigger with scale, blur and opacity together.
 ```
 
 Exports: `Tooltip`, `TooltipTrigger`, `TooltipContent`, `TooltipProvider`

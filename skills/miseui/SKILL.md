@@ -1,6 +1,6 @@
 ---
 name: miseui
-description: Use when building React UI with shadcn-style components and AI-era states (thinking, searching, streaming, tool calls, voice). Install from the Mise UI registry and follow each component's psychological rationale.
+description: Use when building React UI with shadcn-style components, AI-era states (thinking, streaming, tool calls, voice), living effects (beam borders, glows, liquid metal, gooey morphs) and fluid transitions. Install from the Mise UI registry and follow each component's psychological rationale.
 ---
 
 # Mise UI
@@ -35,7 +35,18 @@ UI that explains itself. Every component ships with the principle behind its sha
 | Tokens arrive one by one and should read as typing, not as a frozen block | `streaming-text` |
 | An agent ran a tool and the user should be able to trust the result | `tool-call-card` |
 | A multi-step plan the user may want to inspect but should not be forced to read | `reasoning-steps` |
-| The microphone is live and the user must know it | `voice-wave` |
+| The microphone is live and the user must know it | `voice-glow` |
+| The microphone is live and you want bars rather than a glow | `voice-wave` |
+| One surface on the screen is where the AI is working right now | `beam-border` |
+| The whole app should signal that AI is listening or working | `intelligence-glow` |
+| A placeholder like “Thinking…” needs to read as progress without a number | `shimmer-text` |
+| Status should be felt in the periphery, without text | `thinking-orb` |
+| A premium, physical material cue for one hero control | `liquid-metal` |
+| Several status elements merge or split and should feel like one substance | `gooey-morph` |
+| Each agent needs a stable, recognisable face | `agent-avatar` |
+| An image is being generated and the user should see it arrive | `reveal-image` |
+| A sheet or panel the user can drag and flick | `sheet` |
+| A surface should arrive like a material, not a fade | `materialize` |
 | Content is loading and the final layout is known | `skeleton` |
 | One action matters more than the rest of the screen | `button` |
 | Too many options in one place | `select` |
@@ -52,10 +63,28 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Tool Call Card** (`tool-call-card`): Collapsible record of one tool call: name, status, duration, and the exact input and output on demand. — Transparency builds trust · [reference](references/tool-call-card.md)
 - **Voice Wave** (`voice-wave`): Bars that rise with the microphone level so the user can see they are being heard, and see when they are not. — Visibility of system status · [reference](references/voice-wave.md)
 
+## Effects
+
+- **Agent Avatar** (`agent-avatar`): A deterministic SVG face for an agent: the same seed always draws the same overlapping blobs, in theme colours. — Familiarity · identity · [reference](references/agent-avatar.md)
+- **Beam Border** (`beam-border`): One beam of light travelling the border of the surface the model is working on, so the eye knows where to wait. — Selective attention · [reference](references/beam-border.md)
+- **Gooey Morph** (`gooey-morph`): Status dots that merge into one body and split apart again like a liquid, so the eye tracks one thing changing. — Object permanence · [reference](references/gooey-morph.md)
+- **Intelligence Glow** (`intelligence-glow`): A slow light around the screen edge while the assistant listens or thinks, visible from anywhere on the page. — Global status visibility · [reference](references/intelligence-glow.md)
+- **Liquid Metal** (`liquid-metal`): A WebGL metal surface behind a button or chip, with reflections that drift so the control reads as a real, premium material. — Material honesty · premium cue · [reference](references/liquid-metal.md)
+- **Reveal Image** (`reveal-image`): An image that arrives as it is generated: blur to sharp, coarse mosaic to fine, or a left-to-right wipe, driven by a progress value. — Perceived progress · [reference](references/reveal-image.md)
+- **Shimmer Text** (`shimmer-text`): A band of light passing over a status label, so “Thinking…” reads as in progress without inventing a percentage. — Progress without false precision · [reference](references/shimmer-text.md)
+- **Thinking Orb** (`thinking-orb`): A breathing sphere whose motion says idle, listening, thinking or speaking without a word of text. — Ambient status · labor illusion · [reference](references/thinking-orb.md)
+- **Voice Glow** (`voice-glow`): A round glow that swells with the microphone level, so the user sees the assistant is listening and how loudly it hears them. — Visibility of system status · [reference](references/voice-glow.md)
+
+## Transitions
+
+- **Materialize** (`materialize`): A surface that arrives like a material coming into focus: slightly smaller, softer, from its anchor, and leaves the same way. — Spatial consistency · materials · [reference](references/materialize.md)
+- **Sheet** (`sheet`): Bottom sheet you can grab mid-flight: it tracks the finger 1:1, rubber-bands at the top, and lands where the release velocity was heading. — Interruptibility · momentum projection · [reference](references/sheet.md)
+- **useViewTransition** (`use-view-transition`): Five named page-transition presets on the View Transitions API, with a reduced-motion cross-fade and a plain fallback. — Wayfinding · spatial memory · [reference](references/use-view-transition.md)
+
 ## Core
 
 - **Badge** (`badge`): Small status chip in five variants; the warm mise variant is reserved for the one item that must stand out. — Von Restorff effect · [reference](references/badge.md)
-- **Button** (`button`): Press target with a 150 ms settle and a 2% press-down so the click feels acknowledged. — Doherty threshold · [reference](references/button.md)
+- **Button** (`button`): Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged. — Doherty threshold · [reference](references/button.md)
 - **Card** (`card`): Bordered surface with header, content and footer slots that reads as one region before anyone reads the text. — Law of common region · [reference](references/card.md)
 - **Checkbox** (`checkbox`): Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked. — Immediate feedback · [reference](references/checkbox.md)
 - **Dialog** (`dialog`): Modal surface that dims everything else and holds focus until the user answers one question. — Attention funnel · [reference](references/dialog.md)

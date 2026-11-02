@@ -14,6 +14,13 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/select.json
 
 **Don't.** Skip it for fewer than four options, where radio buttons show everything at once, and for more than about fifteen, where a searchable combobox is faster. Never use it to trigger navigation on change.
 
+## Effects
+
+Pass one as the `effect` prop. The plain component stays the default.
+
+- `materialize` (Spatial continuity): Use it for a select that opens rarely, where the entrance can afford to be seen; for one opened all day, the plain list is quicker.
+- `spring` (Object constancy): Use it for a short list scanned by pointer or arrow keys, where one highlight travelling makes the current row easy to keep track of.
+
 ## Usage
 
 ```tsx
@@ -35,6 +42,8 @@ import {
     <SelectItem value="never">Never</SelectItem>
   </SelectContent>
 </Select>
+
+// <SelectContent effect="materialize"> grows the list out of the trigger; effect="spring" slides one highlight between rows.
 ```
 
 Exports: `Select`, `SelectTrigger`, `SelectValue`, `SelectContent`, `SelectItem`, `SelectGroup`, `SelectLabel`, `SelectSeparator`

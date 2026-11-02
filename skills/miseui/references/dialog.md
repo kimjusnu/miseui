@@ -14,6 +14,13 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/dialog.json
 
 **Don't.** Do not open a dialog for information that could sit inline, and never stack one dialog on another. Keep long forms out of it; a full page keeps the user's context visible.
 
+## Effects
+
+Pass one as the `effect` prop. The plain component stays the default.
+
+- `materialize` (Focus pull): Use it for a routine dialog that should arrive with presence while the page stays legible behind the usual scrim.
+- `scrim-blur` (Depth of field): Use it for a decision that deserves the whole screen, such as a destructive confirmation, where the page should stop competing for attention.
+
 ## Usage
 
 ```tsx
@@ -42,6 +49,8 @@ import { Button } from "@/components/ui/button"
     </DialogFooter>
   </DialogContent>
 </Dialog>
+
+// <DialogContent effect="materialize"> brings the surface into focus; effect="scrim-blur" pushes the page back behind it.
 ```
 
 Exports: `Dialog`, `DialogTrigger`, `DialogPortal`, `DialogClose`, `DialogOverlay`, `DialogContent`, `DialogHeader`, `DialogFooter`, `DialogTitle`, `DialogDescription`

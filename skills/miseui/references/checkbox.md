@@ -14,6 +14,12 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/checkbox.json
 
 **Don't.** Do not use a checkbox for a setting that takes effect immediately on a server; that is a Switch. Do not use it for mutually exclusive options either, which belong in a radio group.
 
+## Effects
+
+Pass one as the `effect` prop. The plain component stays the default.
+
+- `draw` (Peak-end rule): Use it where ticking is the reward, like a to-do list or a final confirmation; in a dense table of checkboxes the drawing slows the eye down.
+
 ## Usage
 
 ```tsx
@@ -24,6 +30,8 @@ import { Label } from "@/components/ui/label"
   <Checkbox id="terms" />
   <Label htmlFor="terms">Accept terms</Label>
 </div>
+
+// effect="draw" strokes the check on a spring, as if written by hand, and retracts it when unticked.
 ```
 
 Exports: `Checkbox`
