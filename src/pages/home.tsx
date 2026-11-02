@@ -1,5 +1,6 @@
 import { Link } from "react-router"
 import { Bento } from "@/src/components/landing/bento"
+import { EffectPlayground } from "@/src/components/landing/effect-playground"
 import { Faq } from "@/src/components/landing/faq"
 import { Footer } from "@/src/components/landing/footer"
 import { Hero } from "@/src/components/landing/hero"
@@ -82,6 +83,7 @@ export function Home() {
       <Hero />
       <Story />
       <Bento />
+      <EffectPlayground />
       <WhySection />
       <Steps />
       <KitIndex />
