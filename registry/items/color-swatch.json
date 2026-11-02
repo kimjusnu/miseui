@@ -1,0 +1,13 @@
+{
+  "name": "color-swatch",
+  "type": "registry:ui",
+  "title": "Color Swatch",
+  "description": "Shows a colour with its name and value, alone or as a palette, with a label that stays readable on any fill and a checker under transparency.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/color-swatch.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/color-swatch-math.ts", "type": "registry:ui" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "marquee",
+  "type": "registry:ui",
+  "title": "Marquee",
+  "description": "An endless CSS-driven row that stops when someone reaches for it, and turns into a still, scrollable row for people who turned motion off.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/marquee.tsx", "type": "registry:ui" }]
+}

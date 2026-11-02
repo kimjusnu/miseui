@@ -1,0 +1,14 @@
+{
+  "name": "clipboard",
+  "type": "registry:ui",
+  "title": "Clipboard",
+  "description": "One-press copy with a clear result: a lone icon, a code line, a read-only field or a labelled block, and a safe way out when the browser refuses.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/clipboard.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/clipboard-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/clipboard-state.ts", "type": "registry:ui" }
+  ]
+}

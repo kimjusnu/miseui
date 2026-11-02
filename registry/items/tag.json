@@ -1,0 +1,13 @@
+{
+  "name": "tag",
+  "type": "registry:ui",
+  "title": "Tag",
+  "description": "A short label that can also be pressed or removed: soft tint, outline, solid or a status dot, with status tones that never borrow the accent.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/tag.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tag-classes.ts", "type": "registry:ui" }
+  ]
+}

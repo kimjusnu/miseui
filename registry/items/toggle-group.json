@@ -1,0 +1,10 @@
+{
+  "name": "toggle-group",
+  "type": "registry:ui",
+  "title": "Toggle Group",
+  "description": "A row of buttons that stay pressed, one at a time or several at once: quiet fill, joined outline, wrapping chips or square icons.",
+  "dependencies": ["radix-ui", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [{ "path": "registry/miseui/ui/toggle-group.tsx", "type": "registry:ui" }]
+}

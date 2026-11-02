@@ -1,0 +1,17 @@
+{
+  "name": "calendar",
+  "type": "registry:ui",
+  "title": "Calendar",
+  "description": "A full-size calendar for showing what is on: month grid with labels, a seven day strip, a grouped agenda or a whole year, with a keyboard grid and any locale.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/calendar.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/calendar-grid.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/calendar-views.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/calendar-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/calendar-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/date-picker-math.ts", "type": "registry:ui" }
+  ]
+}

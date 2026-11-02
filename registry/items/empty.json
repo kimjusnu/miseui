@@ -1,0 +1,10 @@
+{
+  "name": "empty",
+  "type": "registry:ui",
+  "title": "Empty",
+  "description": "What a list or a search shows when it has nothing: an icon, a plain reason and the next step, centred, in a dashed slot, on a card or in one row.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["feedback"],
+  "files": [{ "path": "registry/miseui/ui/empty.tsx", "type": "registry:ui" }]
+}

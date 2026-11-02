@@ -1,0 +1,17 @@
+{
+  "name": "tags-input",
+  "type": "registry:ui",
+  "title": "Tags Input",
+  "description": "A field for many short values: add with Enter or comma, paste a whole list, walk tags with the arrows, with limits, validation and suggestions.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/tags-input.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tags-input-field.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tags-input-keys.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tags-input-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tags-input-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tags-input-state.ts", "type": "registry:ui" }
+  ]
+}

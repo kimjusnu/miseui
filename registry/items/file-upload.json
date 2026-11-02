@@ -1,0 +1,15 @@
+{
+  "name": "file-upload",
+  "type": "registry:ui",
+  "title": "File Upload",
+  "description": "A real drop zone and file input with type, size and count limits, clear errors and a progress list. It never touches the network: you upload and pass the state back.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/file-upload.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/file-upload-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/file-upload-row.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/file-upload-zones.tsx", "type": "registry:ui" }
+  ]
+}

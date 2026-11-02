@@ -78,6 +78,30 @@
       ]
     },
     {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "title": "Aspect Ratio",
+      "description": "Holds the space for media before it arrives, so the page does not jump, with a mat, an overlaid caption or an empty slot.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/aspect-ratio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "avatar",
       "type": "registry:ui",
       "title": "Avatar",
@@ -213,6 +237,49 @@
       ]
     },
     {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "A full-size calendar for showing what is on: month grid with labels, a seven day strip, a grouped agenda or a whole year, with a keyboard grid and any locale.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/calendar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/calendar-grid.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/calendar-views.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/calendar-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/calendar-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/date-picker-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "card",
       "type": "registry:ui",
       "title": "Card",
@@ -235,6 +302,40 @@
         },
         {
           "path": "registry/miseui/ui/card-effects.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel",
+      "description": "Slides on native scroll snapping with no library: swipe, buttons and arrow keys, as a single slide, visible neighbours, a stacked deck or a thumbnail strip.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/carousel.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/carousel-controls.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/carousel-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/carousel-state.ts",
           "type": "registry:ui"
         }
       ]
@@ -312,6 +413,37 @@
       ]
     },
     {
+      "name": "clipboard",
+      "type": "registry:ui",
+      "title": "Clipboard",
+      "description": "One-press copy with a clear result: a lone icon, a code line, a read-only field or a labelled block, and a safe way out when the browser refuses.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/clipboard.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/clipboard-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/clipboard-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "collapsible",
       "type": "registry:ui",
       "title": "Collapsible",
@@ -382,6 +514,31 @@
         },
         {
           "path": "registry/miseui/ui/color-picker-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "color-swatch",
+      "type": "registry:ui",
+      "title": "Color Swatch",
+      "description": "Shows a colour with its name and value, alone or as a palette, with a label that stays readable on any fill and a checker under transparency.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/color-swatch.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/color-swatch-math.ts",
           "type": "registry:ui"
         }
       ]
@@ -591,6 +748,28 @@
       ]
     },
     {
+      "name": "empty",
+      "type": "registry:ui",
+      "title": "Empty",
+      "description": "What a list or a search shows when it has nothing: an icon, a plain reason and the next step, centred, in a dashed slot, on a card or in one row.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "feedback"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/empty.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "empty-state",
       "type": "registry:block",
       "title": "Empty State",
@@ -668,6 +847,81 @@
         },
         {
           "path": "registry/miseui/ui/field-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "file-upload",
+      "type": "registry:ui",
+      "title": "File Upload",
+      "description": "A real drop zone and file input with type, size and count limits, clear errors and a progress list. It never touches the network: you upload and pass the state back.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/file-upload.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/file-upload-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/file-upload-row.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/file-upload-zones.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "floating-panel",
+      "type": "registry:ui",
+      "title": "Floating Panel",
+      "description": "A movable window that stays on screen: drag with pointer capture, resize, minimise, close and move by keyboard, as a titled panel, tight chrome, a side dock or a tool palette.",
+      "dependencies": [
+        "lucide-react",
+        "motion",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "overlays"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/floating-panel.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/floating-panel-gestures.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/floating-panel-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/floating-panel-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/floating-panel-state.ts",
           "type": "registry:ui"
         }
       ]
@@ -886,6 +1140,37 @@
       ]
     },
     {
+      "name": "listbox",
+      "type": "registry:ui",
+      "title": "Listbox",
+      "description": "A list you choose from, always open: single or multiple, type-ahead, Home and End, groups and disabled options, written to the full ARIA pattern.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/listbox.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/listbox-option.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/listbox-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "login-form",
       "type": "registry:block",
       "title": "Login Form",
@@ -918,6 +1203,27 @@
         {
           "path": "registry/miseui/blocks/login-form-visual.tsx",
           "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "marquee",
+      "type": "registry:ui",
+      "title": "Marquee",
+      "description": "An endless CSS-driven row that stops when someone reaches for it, and turns into a still, scrollable row for people who turned motion off.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/marquee.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -955,6 +1261,36 @@
         {
           "path": "registry/miseui/lib/motion.ts",
           "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "title": "Navigation Menu",
+      "description": "Site navigation with panels on Radix: a plain bar, a mega panel of groups, a sliding pill or a sliding underline, and a panel that morphs between triggers.",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/navigation-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/navigation-menu-classes.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/navigation-menu-parts.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -1020,6 +1356,37 @@
         },
         {
           "path": "registry/miseui/ui/pagination-window.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "password-input",
+      "type": "registry:ui",
+      "title": "Password Input",
+      "description": "A password field with a reveal button and a caps lock hint, plus a strength meter, a live checklist or a meter on the field edge.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/password-input.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/password-input-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/password-input-strength.ts",
           "type": "registry:ui"
         }
       ]
@@ -1163,6 +1530,38 @@
       ]
     },
     {
+      "name": "rating",
+      "type": "registry:ui",
+      "title": "Rating",
+      "description": "A score picked with a click or the arrow keys, as stars, hearts, a joined number scale or a row of segments, with half steps and a read-only form.",
+      "dependencies": [
+        "radix-ui",
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/rating.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/rating-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/rating-rows.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "reasoning-steps",
       "type": "registry:ui",
       "title": "Reasoning Steps",
@@ -1265,6 +1664,29 @@
         },
         {
           "path": "registry/miseui/ui/scroll-area-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "segmented-control",
+      "type": "registry:ui",
+      "title": "Segmented Control",
+      "description": "A short set of mutually exclusive views, always one on, as a thumb in a track, chips, an underline or square icons.",
+      "dependencies": [
+        "radix-ui",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/segmented-control.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1518,6 +1940,33 @@
       ]
     },
     {
+      "name": "steps",
+      "type": "registry:ui",
+      "title": "Steps",
+      "description": "Shows where someone is in a process, across a line, down a column, as a bar with a count or as numbered rows, with done, current, upcoming and error states.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/steps.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/steps-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "streaming-text",
       "type": "registry:ui",
       "title": "Streaming Text",
@@ -1621,6 +2070,76 @@
       "files": [
         {
           "path": "registry/miseui/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tag",
+      "type": "registry:ui",
+      "title": "Tag",
+      "description": "A short label that can also be pressed or removed: soft tint, outline, solid or a status dot, with status tones that never borrow the accent.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/tag.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tag-classes.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tags-input",
+      "type": "registry:ui",
+      "title": "Tags Input",
+      "description": "A field for many short values: add with Enter or comma, paste a whole list, walk tags with the arrows, with limits, validation and suggestions.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/tags-input.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tags-input-field.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tags-input-keys.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tags-input-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tags-input-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tags-input-state.ts",
           "type": "registry:ui"
         }
       ]
@@ -2177,6 +2696,29 @@
       ]
     },
     {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "A row of buttons that stay pressed, one at a time or several at once: quiet fill, joined outline, wrapping chips or square icons.",
+      "dependencies": [
+        "radix-ui",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/toggle-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "tool-call-card",
       "type": "registry:ui",
       "title": "Tool Call Card",
@@ -2214,6 +2756,41 @@
       "files": [
         {
           "path": "registry/miseui/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tree-view",
+      "type": "registry:ui",
+      "title": "Tree View",
+      "description": "A nested list written to the full ARIA tree pattern: arrow keys, type-ahead, single or multiple selection and lazy children, with guide lines, dense rows or a card per branch.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/tree-view.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tree-view-item.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tree-view-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tree-view-state.ts",
           "type": "registry:ui"
         }
       ]

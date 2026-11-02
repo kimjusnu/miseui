@@ -1,0 +1,16 @@
+{
+  "name": "floating-panel",
+  "type": "registry:ui",
+  "title": "Floating Panel",
+  "description": "A movable window that stays on screen: drag with pointer capture, resize, minimise, close and move by keyboard, as a titled panel, tight chrome, a side dock or a tool palette.",
+  "dependencies": ["lucide-react", "motion", "radix-ui"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["overlays"],
+  "files": [
+    { "path": "registry/miseui/ui/floating-panel.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/floating-panel-gestures.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/floating-panel-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/floating-panel-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/floating-panel-state.ts", "type": "registry:ui" }
+  ]
+}

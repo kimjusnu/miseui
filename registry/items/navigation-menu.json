@@ -1,0 +1,14 @@
+{
+  "name": "navigation-menu",
+  "type": "registry:ui",
+  "title": "Navigation Menu",
+  "description": "Site navigation with panels on Radix: a plain bar, a mega panel of groups, a sliding pill or a sliding underline, and a panel that morphs between triggers.",
+  "dependencies": ["lucide-react", "radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/navigation-menu.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/navigation-menu-classes.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/navigation-menu-parts.tsx", "type": "registry:ui" }
+  ]
+}

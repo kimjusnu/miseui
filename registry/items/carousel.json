@@ -1,0 +1,15 @@
+{
+  "name": "carousel",
+  "type": "registry:ui",
+  "title": "Carousel",
+  "description": "Slides on native scroll snapping with no library: swipe, buttons and arrow keys, as a single slide, visible neighbours, a stacked deck or a thumbnail strip.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/carousel.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/carousel-controls.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/carousel-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/carousel-state.ts", "type": "registry:ui" }
+  ]
+}

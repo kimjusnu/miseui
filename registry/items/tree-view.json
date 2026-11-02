@@ -1,0 +1,15 @@
+{
+  "name": "tree-view",
+  "type": "registry:ui",
+  "title": "Tree View",
+  "description": "A nested list written to the full ARIA tree pattern: arrow keys, type-ahead, single or multiple selection and lazy children, with guide lines, dense rows or a card per branch.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/tree-view.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tree-view-item.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tree-view-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tree-view-state.ts", "type": "registry:ui" }
+  ]
+}

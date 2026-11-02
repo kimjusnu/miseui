@@ -1,0 +1,10 @@
+{
+  "name": "segmented-control",
+  "type": "registry:ui",
+  "title": "Segmented Control",
+  "description": "A short set of mutually exclusive views, always one on, as a thumb in a track, chips, an underline or square icons.",
+  "dependencies": ["radix-ui", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [{ "path": "registry/miseui/ui/segmented-control.tsx", "type": "registry:ui" }]
+}

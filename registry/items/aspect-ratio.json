@@ -1,0 +1,10 @@
+{
+  "name": "aspect-ratio",
+  "type": "registry:ui",
+  "title": "Aspect Ratio",
+  "description": "Holds the space for media before it arrives, so the page does not jump, with a mat, an overlaid caption or an empty slot.",
+  "dependencies": ["radix-ui", "lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/aspect-ratio.tsx", "type": "registry:ui" }]
+}

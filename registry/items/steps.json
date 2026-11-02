@@ -1,0 +1,13 @@
+{
+  "name": "steps",
+  "type": "registry:ui",
+  "title": "Steps",
+  "description": "Shows where someone is in a process, across a line, down a column, as a bar with a count or as numbered rows, with done, current, upcoming and error states.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/steps.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/steps-parts.tsx", "type": "registry:ui" }
+  ]
+}

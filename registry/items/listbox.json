@@ -1,0 +1,14 @@
+{
+  "name": "listbox",
+  "type": "registry:ui",
+  "title": "Listbox",
+  "description": "A list you choose from, always open: single or multiple, type-ahead, Home and End, groups and disabled options, written to the full ARIA pattern.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/listbox.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/listbox-option.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/listbox-state.ts", "type": "registry:ui" }
+  ]
+}

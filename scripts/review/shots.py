@@ -26,7 +26,7 @@ with sync_playwright() as p:
             try:
                 page.goto(f"{BASE}/components/{name}", wait_until="domcontentloaded", timeout=15000)
                 page.wait_for_timeout(1300)
-                page.add_style_tag(content="header{display:none!important}")
+                page.add_style_tag(content="header:not([data-slot] *){display:none!important}")
                 suffix = "" if MODE == "light" and WIDTH == 1200 else f"-{MODE}-{WIDTH}"
                 page.locator('section[aria-label="Demo"]').first.screenshot(path=os.path.join(OUT, f"{name}{suffix}.png"), timeout=10000)
                 overflow = page.evaluate("document.documentElement.scrollWidth > document.documentElement.clientWidth")

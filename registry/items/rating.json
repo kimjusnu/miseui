@@ -1,0 +1,14 @@
+{
+  "name": "rating",
+  "type": "registry:ui",
+  "title": "Rating",
+  "description": "A score picked with a click or the arrow keys, as stars, hearts, a joined number scale or a row of segments, with half steps and a read-only form.",
+  "dependencies": ["radix-ui", "lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/rating.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/rating-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/rating-rows.tsx", "type": "registry:ui" }
+  ]
+}
