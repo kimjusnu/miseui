@@ -1,4 +1,5 @@
 import { Link, Outlet, useLocation } from "react-router"
+import { cn } from "@/registry/miseui/lib/utils"
 import { Button } from "@/registry/miseui/ui/button"
 import { GITHUB_URL } from "@/src/lib/site"
 import { GitHubIcon } from "./github-icon"
@@ -9,7 +10,7 @@ export function Brand() {
   return (
     <Link
       to="/"
-      className="text-title rounded-md text-[19px] outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
+      className="text-title rounded-md text-[19px] whitespace-nowrap outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
     >
       Mise<span className="text-muted-foreground"> UI</span>
     </Link>
@@ -22,8 +23,14 @@ export function Layout() {
 
   return (
     <div className="min-h-dvh">
-      <header className="material sticky top-0 z-20">
-        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
+      <header
+        className={cn(
+          "sticky top-0 z-20 text-foreground",
+          // Over the light sections further down the page, a thin dark material turns grey; the landing bar stays near-solid.
+          isLanding ? "dark bg-background/88 backdrop-blur-xl" : "material",
+        )}
+      >
+        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-4 md:px-6">
           <Brand />
           <div className="flex items-center gap-1">
             <Button variant="ghost" size="sm" asChild>

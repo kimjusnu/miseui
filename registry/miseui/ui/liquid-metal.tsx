@@ -26,8 +26,10 @@ void main() {
 
 /**
  * Two octaves of value noise warp each other and drift, like a room sliding across a curved surface. The field
- * is folded into soft bright bands (environment streaks) and the edges catch extra light, a cheap stand-in for
- * Fresnel on a bevel. Frequencies are low so a 44 px button holds two or three reflections, not a texture.
+ * becomes cosine bands, bright and dark (environment streaks), over a sky-to-ground gradient, and the edges catch
+ * extra light, a cheap stand-in for Fresnel on a bevel. Cosines and quintic noise matter: a triangle wave or
+ * cubic fade leaves creases that read as hard lines. Frequencies are low so a 44 px button holds two or three
+ * reflections, not a texture.
  */
 const FRAGMENT_SHADER = `#version 300 es
 precision highp float;
@@ -44,7 +46,7 @@ float hash(vec2 p) {
 float valueNoise(vec2 p) {
   vec2 cell = floor(p);
   vec2 f = fract(p);
-  vec2 u = f * f * (3.0 - 2.0 * f);
+  vec2 u = f * f * f * (f * (f * 6.0 - 15.0) + 10.0);
   float a = hash(cell), b = hash(cell + vec2(1.0, 0.0));
   float c = hash(cell + vec2(0.0, 1.0)), d = hash(cell + vec2(1.0, 1.0));
   return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);
@@ -59,11 +61,13 @@ void main() {
   float t = u_time;
   float warp = fbm(p * 0.9 + vec2(t * 0.1, -t * 0.07));
   float field = fbm(p * 1.3 + vec2(warp * 1.1 - t * 0.14, warp * 0.5 + t * 0.08));
-  float band = pow(1.0 - abs(fract(field * 1.5 + t * 0.04) * 2.0 - 1.0), 2.0);
+  float band = pow(0.5 + 0.5 * cos(6.2832 * (field * 1.7 + t * 0.03)), 3.0);
+  float dark = pow(0.5 + 0.5 * cos(6.2832 * (field * 0.9 - t * 0.02) + 1.7), 2.0);
+  float sky = 0.74 + 0.3 * uv.y;
   float edge = min(min(uv.x, 1.0 - uv.x) * aspect, min(uv.y, 1.0 - uv.y));
   float fresnel = pow(1.0 - smoothstep(0.0, 0.5, edge), 2.0);
-  float shade = 0.64 + 0.16 * field + u_intensity * (0.36 * band + 0.24 * fresnel);
-  fragColor = vec4(u_tint * shade + vec3(0.2) * u_intensity * band, 1.0);
+  float shade = sky * (0.68 + 0.1 * field) - u_intensity * 0.2 * dark + u_intensity * (0.4 * band + 0.2 * fresnel);
+  fragColor = vec4(u_tint * shade + vec3(0.24) * u_intensity * band, 1.0);
 }`
 
 interface LiquidMetalProps extends React.ComponentProps<"div"> {

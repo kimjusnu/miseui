@@ -30,11 +30,14 @@ const HALO_STILL_SCALE = 1.25
 const SWIRL_LAP_SECONDS = 6
 const SWIRL_OPACITY = 0.7
 
-/** Lit from the upper left, darkening to the rim: a sphere, not a disc. */
+/**
+ * Lit from the upper left, darkening to the rim: a sphere, not a disc. Light is mixed from white and
+ * shade from black, not from theme tokens: those flip in dark mode and would light the sphere from below.
+ */
 const BODY_GRADIENT =
-  "radial-gradient(circle at 35% 30%, var(--mise-soft) 0%, var(--mise) 55%, color-mix(in oklch, var(--mise) 65%, var(--foreground)) 100%)"
-const SWIRL_LIGHT = "radial-gradient(circle at 70% 68%, var(--background) 0%, transparent 50%)"
-const SWIRL_SOFT = "radial-gradient(circle at 28% 72%, var(--mise-soft) 0%, transparent 46%)"
+  "radial-gradient(circle at 35% 30%, color-mix(in oklch, var(--mise) 45%, white) 0%, var(--mise) 55%, color-mix(in oklch, var(--mise) 62%, black) 100%)"
+const SWIRL_LIGHT = "radial-gradient(circle at 70% 68%, color-mix(in oklch, var(--mise) 20%, white) 0%, transparent 50%)"
+const SWIRL_SOFT = "radial-gradient(circle at 28% 72%, color-mix(in oklch, var(--mise) 55%, white) 0%, transparent 46%)"
 
 interface ThinkingOrbProps extends React.ComponentProps<"div"> {
   state?: OrbState

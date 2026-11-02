@@ -1,85 +1,118 @@
+import type * as React from "react"
 import { Link } from "react-router"
 import { ArrowRight } from "lucide-react"
-import { motion, useReducedMotion } from "motion/react"
+import { motion, useMotionValue, useReducedMotion } from "motion/react"
+import { SPRING_DEFAULT } from "@/registry/miseui/lib/motion"
 import { Button } from "@/registry/miseui/ui/button"
+import { IntelligenceGlow } from "@/registry/miseui/ui/intelligence-glow"
 import { components } from "@/src/content"
-import { demos } from "@/src/demos"
+import { BeamScene, GooeyScene, MetalScene, OrbScene, ShimmerScene, VoiceScene } from "./effect-scenes"
+import { HeroTile } from "./hero-tile"
 
-/** Tiles orbit the headline. Each slot lists candidates; the first one that exists is shown. */
-const TILE_SLOTS: ReadonlyArray<{ candidates: readonly string[]; className: string; delay: number }> = [
-  { candidates: ["thinking-orb", "thinking-indicator"], className: "left-[4%] top-[14%]", delay: 0 },
-  { candidates: ["beam-border", "reasoning-steps"], className: "right-[5%] top-[10%]", delay: 0.8 },
-  { candidates: ["liquid-metal", "button"], className: "left-[10%] bottom-[12%]", delay: 1.6 },
-  { candidates: ["voice-glow", "voice-wave"], className: "right-[9%] bottom-[16%]", delay: 2.4 },
-  { candidates: ["gooey-morph", "streaming-text"], className: "left-[30%] top-[4%]", delay: 3.2 },
-  { candidates: ["shimmer-text", "tool-call-card"], className: "right-[28%] bottom-[4%]", delay: 4 },
-]
+/** Three per side, clear of the headline's 700 px column. Below xl they drop into a grid under the CTAs. */
+const TILES = [
+  { name: "thinking-orb", Scene: OrbScene, depth: 22, className: "xl:left-[3%] xl:top-[9%]" },
+  { name: "liquid-metal", Scene: MetalScene, depth: 12, className: "xl:left-[6.5%] xl:top-[38%]" },
+  { name: "shimmer-text", Scene: ShimmerScene, depth: 28, className: "xl:left-[2.5%] xl:top-[67%]" },
+  { name: "beam-border", Scene: BeamScene, depth: 16, className: "xl:right-[3%] xl:top-[7%]" },
+  { name: "voice-glow", Scene: VoiceScene, depth: 26, className: "xl:right-[6.5%] xl:top-[36%]" },
+  { name: "gooey-morph", Scene: GooeyScene, depth: 14, className: "xl:right-[2.5%] xl:top-[65%]" },
+] as const
 
-const FLOAT_DISTANCE_PX = 10
-const FLOAT_SECONDS = 7
+const LINE_STAGGER_SECONDS = 0.08
 
-function resolveTile(candidates: readonly string[]) {
-  const name = candidates.find((candidate) => demos[candidate] && components.some((c) => c.name === candidate))
-  return name ? { name, Demo: demos[name] } : null
-}
-
-function FloatingTile({ name, Demo, className, delay }: { name: string; Demo: React.ComponentType; className: string; delay: number }) {
+function Arrive({ order, className, children }: { order: number; className?: string; children: React.ReactNode }) {
   const reduceMotion = useReducedMotion()
   return (
     <motion.div
-      className={`absolute hidden w-56 md:block ${className}`}
-      animate={reduceMotion ? undefined : { y: [0, -FLOAT_DISTANCE_PX, 0] }}
-      transition={{ duration: FLOAT_SECONDS, repeat: Infinity, ease: "easeInOut", delay }}
+      className={className}
+      initial={reduceMotion ? { opacity: 0 } : { opacity: 0, y: 14, filter: "blur(10px)" }}
+      animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0, filter: "blur(0px)" }}
+      transition={{ ...SPRING_DEFAULT, delay: order * LINE_STAGGER_SECONDS }}
     >
-      <Link
-        to={`/components/${name}`}
-        aria-label={`Open ${name}`}
-        className="block rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm transition-colors duration-(--duration-fast) ease-(--ease-mise) hover:bg-white/[0.07]"
-      >
-        <div className="pointer-events-none flex min-h-24 items-center justify-center overflow-hidden text-foreground">
-          <Demo />
-        </div>
-      </Link>
+      {children}
     </motion.div>
   )
 }
 
-export function Hero() {
-  const tiles = TILE_SLOTS.map((slot) => ({ slot, tile: resolveTile(slot.candidates) }))
+function HeroCopy() {
   const effectCount = components.filter((c) => c.category === "effects" || c.category === "transitions").length
   const stateCount = components.filter((c) => c.category === "ai").length
 
   return (
-    <section className="dark relative overflow-hidden bg-background text-foreground">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_120%,_color-mix(in_oklch,var(--mise)_22%,transparent),transparent_60%)]" />
-      {tiles.map(({ slot, tile }) =>
-        tile ? (
-          <FloatingTile key={tile.name} name={tile.name} Demo={tile.Demo} className={slot.className} delay={slot.delay} />
-        ) : null,
-      )}
-      <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-6 px-6 py-28 text-center md:py-40">
+    <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 text-center">
+      <Arrive order={0}>
         <p className="rounded-full border border-white/10 bg-white/[0.05] px-3.5 py-1 text-xs font-medium text-muted-foreground">
           {components.length} components · {stateCount} AI states · {effectCount} effects & transitions · MIT
         </p>
-        <h1 className="text-display text-5xl text-balance md:text-7xl">
+      </Arrive>
+      <Arrive order={1}>
+        <h1 className="text-display bg-linear-to-b from-foreground from-40% to-foreground/55 bg-clip-text pb-1.5 text-[2.75rem] text-balance text-transparent sm:text-6xl xl:text-7xl">
           UI that explains itself.
           <br />
           Built for the AI era.
         </h1>
-        <p className="max-w-xl text-lg leading-relaxed text-pretty text-muted-foreground md:text-xl">
-          Living effects, AI states and fluid transitions, each with the psychology behind it and an agent skill. Your
-          coding agent installs the right piece and keeps the reason.
+      </Arrive>
+      <Arrive order={2}>
+        <p className="max-w-xl text-[17px] leading-relaxed text-pretty text-muted-foreground md:text-xl">
+          Living effects, AI states and fluid transitions, each with the psychology behind it. Your coding agent
+          installs the right piece and keeps the reason.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-2">
-          <Button variant="mise" size="lg" asChild>
-            <Link to="/components/thinking-orb">
-              Browse <ArrowRight />
-            </Link>
-          </Button>
-          <Button variant="outline" size="lg" asChild>
-            <Link to="/docs">Get started</Link>
-          </Button>
-        </div>
+      </Arrive>
+      <Arrive order={3} className="flex flex-wrap items-center justify-center gap-2">
+        <Button variant="mise" size="lg" asChild>
+          <Link to="/components/thinking-orb">
+            Browse the kit <ArrowRight />
+          </Link>
+        </Button>
+        <Button variant="outline" size="lg" asChild>
+          <Link to="/docs">Get started</Link>
+        </Button>
+      </Arrive>
+    </div>
+  )
+}
+
+export function Hero() {
+  const reduceMotion = useReducedMotion()
+  const pointerX = useMotionValue(0)
+  const pointerY = useMotionValue(0)
+
+  const trackPointer = (event: React.PointerEvent<HTMLElement>) => {
+    if (reduceMotion || event.pointerType !== "mouse") return
+    const rect = event.currentTarget.getBoundingClientRect()
+    pointerX.set(((event.clientX - rect.left) / rect.width) * 2 - 1)
+    pointerY.set(((event.clientY - rect.top) / rect.height) * 2 - 1)
+  }
+  const releasePointer = () => {
+    pointerX.set(0)
+    pointerY.set(0)
+  }
+
+  return (
+    <section
+      onPointerMove={trackPointer}
+      onPointerLeave={releasePointer}
+      className="dark relative isolate flex min-h-[calc(100dvh-3.5rem)] flex-col items-center justify-center overflow-hidden bg-background px-4 py-16 text-foreground md:px-6 xl:min-h-[max(44rem,calc(100dvh-3.5rem))]"
+    >
+      <div className="pointer-events-none absolute inset-1.5 -z-10 rounded-[26px] bg-[radial-gradient(ellipse_70%_55%_at_50%_108%,color-mix(in_oklch,var(--mise)_30%,transparent),transparent)]">
+        <IntelligenceGlow active inset intensity={0.42} />
+      </div>
+      <HeroCopy />
+      <div className="mt-12 grid w-full max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3 xl:contents">
+        {TILES.map(({ name, Scene, depth, className }, index) => (
+          <HeroTile
+            key={name}
+            name={name}
+            index={index}
+            depth={depth}
+            pointerX={pointerX}
+            pointerY={pointerY}
+            className={className}
+          >
+            <Scene />
+          </HeroTile>
+        ))}
       </div>
     </section>
   )

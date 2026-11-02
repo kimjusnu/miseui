@@ -50,7 +50,8 @@ describe("BeamBorder", () => {
     expect(wrapper).toHaveAttribute("data-slot", "beam-border")
     expect(wrapper).toHaveAttribute("data-active", "true")
     expect(screen.getByTestId("beam-layer")).toHaveAttribute("aria-hidden", "true")
-    expect(screen.getByTestId("beam")).toHaveClass("animate-spin")
+    expect(screen.getByTestId("beam-bloom")).toHaveAttribute("aria-hidden", "true")
+    expect(screen.getByTestId("beam").style.width).toBe("120px")
   })
 
   it("drops the beam layer entirely when inactive", () => {
@@ -63,16 +64,33 @@ describe("BeamBorder", () => {
     expect(screen.queryByTestId("beam-layer")).not.toBeInTheDocument()
   })
 
-  it("exposes the lap duration as the CSS variable the spin reads", () => {
-    render(<BeamBorder duration={6}>Slow lap</BeamBorder>)
-    expect(screen.getByTestId("beam-layer").style.getPropertyValue("--beam-duration")).toBe("6s")
-    expect(screen.getByTestId("beam").style.animationDuration).toBe("var(--beam-duration)")
-  })
+  describe("with the Web Animations API", () => {
+    const animate = vi.fn(() => ({ cancel: vi.fn() }))
 
-  it("holds one still highlight instead of spinning under reduced motion", () => {
-    setReducedMotion(true)
-    render(<BeamBorder>Still</BeamBorder>)
-    expect(screen.getByTestId("beam-layer")).toHaveAttribute("data-reduced", "true")
-    expect(screen.getByTestId("beam")).not.toHaveClass("animate-spin")
+    beforeEach(() => {
+      animate.mockClear()
+      Object.defineProperty(Element.prototype, "animate", { configurable: true, writable: true, value: animate })
+    })
+
+    afterEach(() => {
+      Reflect.deleteProperty(Element.prototype, "animate")
+    })
+
+    it("runs one endless lap of the perimeter per duration, for the beam and its bloom", () => {
+      render(<BeamBorder duration={6}>Slow lap</BeamBorder>)
+      expect(animate).toHaveBeenCalledTimes(2)
+      expect(animate).toHaveBeenCalledWith([{ offsetDistance: "0%" }, { offsetDistance: "100%" }], {
+        duration: 6000,
+        iterations: Infinity,
+      })
+    })
+
+    it("holds one still highlight instead of travelling under reduced motion", () => {
+      setReducedMotion(true)
+      render(<BeamBorder>Still</BeamBorder>)
+      expect(screen.getByTestId("beam-layer")).toHaveAttribute("data-reduced", "true")
+      expect(animate).not.toHaveBeenCalled()
+      expect(screen.getByTestId("beam").style.backgroundImage).toContain("conic-gradient")
+    })
   })
 })
