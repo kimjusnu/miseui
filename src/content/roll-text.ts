@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "roll-text",
   title: "Roll Text",
-  category: "display",
+  category: "text",
   description: "A label that rolls to a fresh copy of itself on hover or when its value changes, while assistive tech hears it once.",
   why: {
     principle: "Feedback through continuity",

@@ -1,0 +1,14 @@
+{
+  "name": "typewriter-text",
+  "type": "registry:ui",
+  "title": "Typewriter Text",
+  "description": "A staged line that types itself with a human rhythm, the whole text laid out from the start so lines never reflow, and a caret that goes away when it is done.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/split-text.json"],
+  "categories": ["text"],
+  "files": [
+    { "path": "registry/miseui/ui/typewriter-text.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/typewriter-play.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/typewriter-math.ts", "type": "registry:ui" }
+  ]
+}

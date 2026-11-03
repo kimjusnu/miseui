@@ -5,6 +5,6 @@
   "description": "A band of light passing over a status label, so “Thinking…” reads as in progress without inventing a percentage.",
   "dependencies": ["motion"],
   "registryDependencies": ["utils"],
-  "categories": ["effects"],
+  "categories": ["text"],
   "files": [{ "path": "registry/miseui/ui/shimmer-text.tsx", "type": "registry:ui" }]
 }

@@ -185,14 +185,11 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Resizable** (`resizable`): Two panes with a draggable divider, horizontal or vertical, with limits that stretch, a keyboard-operable separator and a double-click reset. — User control and freedom · [reference](references/resizable.md)
 - **Ring Gallery** (`ring-gallery`): A small set of items on a 3D ring: drag to spin, click to bring one forward, arrow keys to walk around it. — Von Restorff effect · [reference](references/ring-gallery.md)
 - **Role Map** (`role-map`): Who did what on a project: panels, quiet rows or a table of people against areas, with one person in the accent. — Credibility through specifics · [reference](references/role-map.md)
-- **Roll Text** (`roll-text`): A label that rolls to a fresh copy of itself on hover or when its value changes, while assistive tech hears it once. — Feedback through continuity · [reference](references/roll-text.md)
 - **Screen Frame** (`screen-frame`): A window, a phone or a plain hairline around a screenshot or live interface. — Framing effect · [reference](references/screen-frame.md)
 - **Scroll Area** (`scroll-area`): A scroller with a styled bar that matches the theme, as a hover bar, a thin overlay, edge shadows or a snapping row. — Law of continuity · [reference](references/scroll-area.md)
 - **Scroll Shadow** (`scroll-shadow`): A wrapper for any scrolling box that shows edge shadows, fades or hairlines from the real scroll position, so people can see there is more. — Signifiers · [reference](references/scroll-shadow.md)
-- **Scrub Text** (`scrub-text`): A paragraph that arrives word by word as you scroll, so the pace of reading stays in the reader's hand. — Direct manipulation · [reference](references/scrub-text.md)
 - **Separator** (`separator`): A rule between groups of content, as a hairline, a dashed break, a labelled divider or a line that fades at both ends. — Law of uniform connectedness · [reference](references/separator.md)
 - **Skeleton** (`skeleton`): Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner. — Perceived performance · [reference](references/skeleton.md)
-- **Split Text** (`split-text`): A headline that arrives letter by letter or word by word, with the real sentence kept for assistive tech. — Staging · [reference](references/split-text.md)
 - **Spoiler** (`spoiler`): Hides text or a block until someone presses to see it, so the reader chooses the moment. Screen readers do not get ahead of everyone else. — User control and freedom · [reference](references/spoiler.md)
 - **Spotlight** (`spotlight`): A surface that catches a soft light under the pointer, on its face, on its edge or by uncovering a hidden layer. — Affordance through response · [reference](references/spotlight.md)
 - **Stat** (`stat`): One number with its label, change and a small trend line. Colour only appears once you have said which direction is good. — Von Restorff effect · [reference](references/stat.md)
@@ -216,6 +213,21 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Status** (`status`): A state word with a mark that means something: online, away, busy, offline, error or your own, each with its own shape as well as its own hue. — Redundant coding · [reference](references/status.md)
 - **Toast** (`toast`): A brief message about something that just happened, which waits while you read it and leaves without being asked. — Visibility of system status · [reference](references/toast.md)
 
+## Text
+
+- **Count Up** (`count-up`): A number that counts to its value without moving what sits beside it, formatted by Intl, with rolling digits, tiles or a meter line. — Change blindness · [reference](references/count-up.md)
+- **Decrypt Text** (`decrypt-text`): Text that starts unreadable and is decoded in place, on first view or behind a real button. — Curiosity gap · [reference](references/decrypt-text.md)
+- **Glitch Text** (`glitch-text`): A short stepped burst that ends in clean text, for the one line that should feel like something just happened. — Abrupt onset · [reference](references/glitch-text.md)
+- **Gradient Text** (`gradient-text`): A headline painted with a gradient from theme tokens, legible in every palette, with solid fallbacks for high contrast and forced colours. — Von Restorff effect · [reference](references/gradient-text.md)
+- **Highlighter Text** (`highlighter-text`): A mark drawn over text that is already readable, line by line, as a marker band, an underline or a hand-drawn stroke or outline. — Signalling · [reference](references/highlighter-text.md)
+- **Roll Text** (`roll-text`): A label that rolls to a fresh copy of itself on hover or when its value changes, while assistive tech hears it once. — Feedback through continuity · [reference](references/roll-text.md)
+- **Rotating Text** (`rotating-text`): One word in a sentence that takes turns with others, with a slot that springs to each new width and stops whenever someone is reading. — Selective attention · [reference](references/rotating-text.md)
+- **Scramble Text** (`scramble-text`): Noise that settles into the real sentence, with every letter holding its final width so nothing on the page moves. — Von Restorff effect · [reference](references/scramble-text.md)
+- **Scrub Text** (`scrub-text`): A paragraph that arrives word by word as you scroll, so the pace of reading stays in the reader's hand. — Direct manipulation · [reference](references/scrub-text.md)
+- **Shimmer Text** (`shimmer-text`): A band of light passing over a status label, so “Thinking…” reads as in progress without inventing a percentage. — Progress without false precision · [reference](references/shimmer-text.md)
+- **Split Text** (`split-text`): A headline that arrives letter by letter or word by word, with the real sentence kept for assistive tech. — Staging · [reference](references/split-text.md)
+- **Typewriter Text** (`typewriter-text`): A staged line that types itself with a human rhythm, the whole text laid out from the start so lines never reflow. — Labor illusion · [reference](references/typewriter-text.md)
+
 ## Effects
 
 - **Agent Avatar** (`agent-avatar`): A deterministic SVG face for an agent: the same seed always draws the same overlapping blobs, in theme colours. — Familiarity · identity · [reference](references/agent-avatar.md)
@@ -224,7 +236,6 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Intelligence Glow** (`intelligence-glow`): A slow light around the screen edge while the assistant listens or thinks, visible from anywhere on the page. — Global status visibility · [reference](references/intelligence-glow.md)
 - **Liquid Metal** (`liquid-metal`): A WebGL metal surface behind a button or chip, with reflections that drift so the control reads as a real, premium material. — Material honesty · premium cue · [reference](references/liquid-metal.md)
 - **Reveal Image** (`reveal-image`): An image that arrives as it is generated: blur to sharp, coarse mosaic to fine, or a left-to-right wipe, driven by a progress value. — Perceived progress · [reference](references/reveal-image.md)
-- **Shimmer Text** (`shimmer-text`): A band of light passing over a status label, so “Thinking…” reads as in progress without inventing a percentage. — Progress without false precision · [reference](references/shimmer-text.md)
 - **Thinking Orb** (`thinking-orb`): A breathing sphere whose motion says idle, listening, thinking or speaking without a word of text. — Ambient status · labor illusion · [reference](references/thinking-orb.md)
 - **Voice Glow** (`voice-glow`): A round glow that swells with the microphone level, so the user sees the assistant is listening and how loudly it hears them. — Visibility of system status · [reference](references/voice-glow.md)
 

@@ -116,7 +116,7 @@ function SplitText({ text, as: Tag = "span", variant = "rise", effect, by = "cha
   return (
     <Tag {...root} className={cn("relative", className)}>
       {/* Spans of single letters are read out one letter at a time, so assistive tech gets the real sentence instead. */}
-      <span className="sr-only">{text}</span>
+      <span className="sr-only select-none">{text}</span>
       <span ref={ref} key={`${variant}:${by}:${text}`} aria-hidden="true" data-slot="split-text-visual">
         <SplitPieces
           text={text}

@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "split-text",
   title: "Split Text",
-  category: "display",
+  category: "text",
   description: "A headline that arrives letter by letter or word by word, with the real sentence kept for assistive tech.",
   why: {
     principle: "Staging",

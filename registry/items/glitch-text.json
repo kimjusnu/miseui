@@ -1,0 +1,14 @@
+{
+  "name": "glitch-text",
+  "type": "registry:ui",
+  "title": "Glitch Text",
+  "description": "A short stepped burst that ends in clean text: colour fringes, shifting bands, dropped letters or a jumping line, and it never loops.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/split-text.json"],
+  "categories": ["text"],
+  "files": [
+    { "path": "registry/miseui/ui/glitch-text.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/glitch-play.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/glitch-math.ts", "type": "registry:ui" }
+  ]
+}

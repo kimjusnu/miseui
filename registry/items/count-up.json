@@ -1,0 +1,16 @@
+{
+  "name": "count-up",
+  "type": "registry:ui",
+  "title": "Count Up",
+  "description": "A number that counts to its value without moving what sits beside it, formatted by Intl, with rolling digits, tiles or a meter line.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["text"],
+  "files": [
+    { "path": "registry/miseui/ui/count-up.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/count-up-figure.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/count-up-reels.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/count-up-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/count-up-roll.ts", "type": "registry:ui" }
+  ]
+}

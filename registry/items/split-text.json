@@ -5,7 +5,7 @@
   "description": "A headline that arrives letter by letter or word by word, with the real sentence kept for assistive tech and a table of presets to extend.",
   "dependencies": ["motion"],
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
-  "categories": ["display"],
+  "categories": ["text"],
   "files": [
     { "path": "registry/miseui/ui/split-text.tsx", "type": "registry:ui" },
     { "path": "registry/miseui/ui/split-text-math.ts", "type": "registry:ui" }

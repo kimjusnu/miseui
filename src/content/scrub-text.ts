@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "scrub-text",
   title: "Scrub Text",
-  category: "display",
+  category: "text",
   description: "A paragraph that arrives word by word as you scroll, so the pace of reading stays in the reader's hand.",
   why: {
     principle: "Direct manipulation",

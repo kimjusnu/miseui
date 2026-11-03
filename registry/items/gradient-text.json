@@ -1,0 +1,10 @@
+{
+  "name": "gradient-text",
+  "type": "registry:ui",
+  "title": "Gradient Text",
+  "description": "A headline painted with a gradient from theme tokens, legible in every palette, with solid fallbacks for high contrast and forced colours.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["text"],
+  "files": [{ "path": "registry/miseui/ui/gradient-text.tsx", "type": "registry:ui" }]
+}

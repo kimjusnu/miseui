@@ -1,0 +1,14 @@
+{
+  "name": "highlighter-text",
+  "type": "registry:ui",
+  "title": "Highlighter Text",
+  "description": "A mark drawn over text that is already readable, line by line, as a marker band, an underline or a hand-drawn stroke or outline.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["text"],
+  "files": [
+    { "path": "registry/miseui/ui/highlighter-text.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/highlighter-marks.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/highlighter-math.ts", "type": "registry:ui" }
+  ]
+}

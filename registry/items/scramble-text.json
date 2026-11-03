@@ -1,0 +1,14 @@
+{
+  "name": "scramble-text",
+  "type": "registry:ui",
+  "title": "Scramble Text",
+  "description": "Noise that settles into the real sentence, from a small seeded engine, with every letter holding its final width so nothing on the page moves.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/split-text.json"],
+  "categories": ["text"],
+  "files": [
+    { "path": "registry/miseui/ui/scramble-text.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/scramble-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/scramble-play.tsx", "type": "registry:ui" }
+  ]
+}

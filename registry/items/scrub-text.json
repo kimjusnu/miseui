@@ -5,6 +5,6 @@
   "description": "A paragraph that arrives word by word as you scroll, so the pace of reading stays in the reader's hand. People who turned motion off get the finished text.",
   "dependencies": ["motion"],
   "registryDependencies": ["utils"],
-  "categories": ["display"],
+  "categories": ["text"],
   "files": [{ "path": "registry/miseui/ui/scrub-text.tsx", "type": "registry:ui" }]
 }

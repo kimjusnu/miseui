@@ -5,6 +5,6 @@
   "description": "A label that rolls to a fresh copy of itself on hover or when its value changes, while assistive tech hears it once.",
   "dependencies": ["motion"],
   "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
-  "categories": ["display"],
+  "categories": ["text"],
   "files": [{ "path": "registry/miseui/ui/roll-text.tsx", "type": "registry:ui" }]
 }

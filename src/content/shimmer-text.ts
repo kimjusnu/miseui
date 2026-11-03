@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "shimmer-text",
   title: "Shimmer Text",
-  category: "effects",
+  category: "text",
   description:
     "A band of light passing over a status label, so “Thinking…” reads as in progress without inventing a percentage.",
   why: {

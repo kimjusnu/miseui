@@ -1,0 +1,19 @@
+{
+  "name": "decrypt-text",
+  "type": "registry:ui",
+  "title": "Decrypt Text",
+  "description": "Text that starts unreadable and is decoded in place, on first view or behind a real button, with the sentence out of the accessibility tree until it opens.",
+  "dependencies": ["motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/scramble-text.json",
+    "https://miseui.junsu4621.workers.dev/r/split-text.json"
+  ],
+  "categories": ["text"],
+  "files": [
+    { "path": "registry/miseui/ui/decrypt-text.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/decrypt-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/decrypt-math.ts", "type": "registry:ui" }
+  ]
+}

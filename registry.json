@@ -997,6 +997,44 @@
       ]
     },
     {
+      "name": "count-up",
+      "type": "registry:ui",
+      "title": "Count Up",
+      "description": "A number that counts to its value without moving what sits beside it, formatted by Intl, with rolling digits, tiles or a meter line.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "text"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/count-up.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/count-up-figure.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/count-up-reels.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/count-up-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/count-up-roll.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dashboard-overview",
       "type": "registry:block",
       "title": "Dashboard Overview",
@@ -1150,6 +1188,38 @@
         },
         {
           "path": "registry/miseui/ui/decision-cards-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "decrypt-text",
+      "type": "registry:ui",
+      "title": "Decrypt Text",
+      "description": "Text that starts unreadable and is decoded in place, on first view or behind a real button, with the sentence out of the accessibility tree until it opens.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/scramble-text.json",
+        "https://miseui.junsu4621.workers.dev/r/split-text.json"
+      ],
+      "categories": [
+        "text"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/decrypt-text.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/decrypt-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/decrypt-math.ts",
           "type": "registry:ui"
         }
       ]
@@ -1562,6 +1632,36 @@
       ]
     },
     {
+      "name": "glitch-text",
+      "type": "registry:ui",
+      "title": "Glitch Text",
+      "description": "A short stepped burst that ends in clean text: colour fringes, shifting bands, dropped letters or a jumping line, and it never loops.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/split-text.json"
+      ],
+      "categories": [
+        "text"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/glitch-text.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/glitch-play.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/glitch-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "gooey-morph",
       "type": "registry:ui",
       "title": "Gooey Morph",
@@ -1579,6 +1679,57 @@
       "files": [
         {
           "path": "registry/miseui/ui/gooey-morph.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "gradient-text",
+      "type": "registry:ui",
+      "title": "Gradient Text",
+      "description": "A headline painted with a gradient from theme tokens, legible in every palette, with solid fallbacks for high contrast and forced colours.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "text"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/gradient-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "highlighter-text",
+      "type": "registry:ui",
+      "title": "Highlighter Text",
+      "description": "A mark drawn over text that is already readable, line by line, as a marker band, an underline or a hand-drawn stroke or outline.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "text"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/highlighter-text.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/highlighter-marks.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/highlighter-math.ts",
           "type": "registry:ui"
         }
       ]
@@ -2750,11 +2901,68 @@
         "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
-        "display"
+        "text"
       ],
       "files": [
         {
           "path": "registry/miseui/ui/roll-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rotating-text",
+      "type": "registry:ui",
+      "title": "Rotating Text",
+      "description": "One word in a sentence that takes turns with others, with a slot that springs to each new width and stops whenever someone is reading.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/split-text.json"
+      ],
+      "categories": [
+        "text"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/rotating-text.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/rotating-text-word.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "scramble-text",
+      "type": "registry:ui",
+      "title": "Scramble Text",
+      "description": "Noise that settles into the real sentence, from a small seeded engine, with every letter holding its final width so nothing on the page moves.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/split-text.json"
+      ],
+      "categories": [
+        "text"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/scramble-text.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/scramble-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/scramble-play.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2847,7 +3055,7 @@
         "utils"
       ],
       "categories": [
-        "display"
+        "text"
       ],
       "files": [
         {
@@ -3074,7 +3282,7 @@
         "utils"
       ],
       "categories": [
-        "effects"
+        "text"
       ],
       "files": [
         {
@@ -3278,7 +3486,7 @@
         "https://miseui.junsu4621.workers.dev/r/motion.json"
       ],
       "categories": [
-        "display"
+        "text"
       ],
       "files": [
         {
@@ -4492,6 +4700,36 @@
         },
         {
           "path": "registry/miseui/ui/tree-view-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typewriter-text",
+      "type": "registry:ui",
+      "title": "Typewriter Text",
+      "description": "A staged line that types itself with a human rhythm, the whole text laid out from the start so lines never reflow, and a caret that goes away when it is done.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/split-text.json"
+      ],
+      "categories": [
+        "text"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/typewriter-text.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/typewriter-play.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/typewriter-math.ts",
           "type": "registry:ui"
         }
       ]

@@ -1,0 +1,17 @@
+{
+  "name": "rotating-text",
+  "type": "registry:ui",
+  "title": "Rotating Text",
+  "description": "One word in a sentence that takes turns with others, with a slot that springs to each new width and stops whenever someone is reading.",
+  "dependencies": ["motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/split-text.json"
+  ],
+  "categories": ["text"],
+  "files": [
+    { "path": "registry/miseui/ui/rotating-text.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/rotating-text-word.tsx", "type": "registry:ui" }
+  ]
+}
