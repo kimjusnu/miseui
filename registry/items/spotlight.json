@@ -1,0 +1,10 @@
+{
+  "name": "spotlight",
+  "type": "registry:ui",
+  "title": "Spotlight",
+  "description": "A surface that catches a soft light under the pointer, on its face, on its edge or by uncovering a hidden layer. Off on touch.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/spotlight.tsx", "type": "registry:ui" }]
+}

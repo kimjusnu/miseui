@@ -1,0 +1,13 @@
+{
+  "name": "flow",
+  "type": "registry:ui",
+  "title": "Flow",
+  "description": "A process drawn from data with no diagram library: a step-by-step walkthrough, boxes and arrows that wrap, a numbered rail or one inline line.",
+  "dependencies": ["lucide-react", "motion", "radix-ui"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/flow.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/flow-parts.tsx", "type": "registry:ui" }
+  ]
+}

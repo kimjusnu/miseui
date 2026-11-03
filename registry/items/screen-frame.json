@@ -1,0 +1,10 @@
+{
+  "name": "screen-frame",
+  "type": "registry:ui",
+  "title": "Screen Frame",
+  "description": "A window, a phone or a plain hairline around a screenshot or live interface, with the real address in the bar and no decorative traffic lights.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/screen-frame.tsx", "type": "registry:ui" }]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "post-row",
+  "type": "registry:ui",
+  "title": "Post Row",
+  "description": "One writing entry as a single link: a title, a date that stays on its calendar day and quiet tags, for blogs, changelogs and archives.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/post-row.tsx", "type": "registry:ui" }]
+}

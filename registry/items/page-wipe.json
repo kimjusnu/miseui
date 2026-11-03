@@ -1,0 +1,9 @@
+{
+  "name": "page-wipe",
+  "type": "registry:ui",
+  "title": "Page Wipe",
+  "description": "Full-page wipes on the View Transitions API: an accent curtain, a slanted sweep or an iris from the click. Reduced motion falls back to a fade.",
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/use-view-transition.json"],
+  "categories": ["transitions"],
+  "files": [{ "path": "registry/miseui/ui/page-wipe.tsx", "type": "registry:ui" }]
+}

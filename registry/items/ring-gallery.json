@@ -1,0 +1,14 @@
+{
+  "name": "ring-gallery",
+  "type": "registry:ui",
+  "title": "Ring Gallery",
+  "description": "A small set of items on a CSS 3D ring you spin by drag or keyboard, with no WebGL. Reduced motion gets a plain list.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/ring-gallery.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/ring-gallery-item.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/ring-gallery-state.ts", "type": "registry:ui" }
+  ]
+}

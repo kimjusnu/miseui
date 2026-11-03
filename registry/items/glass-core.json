@@ -1,0 +1,16 @@
+{
+  "name": "glass-core",
+  "type": "registry:ui",
+  "title": "Glass Core",
+  "description": "A glass object for the centre of a hero, with no WebGL: a shaded knot on a small canvas, a CSS sphere or frosted panes. Respects reduced motion and reduced transparency.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/glass-core.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/glass-core-faces.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/glass-core-knot.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/glass-core-painter.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/glass-core-raster.ts", "type": "registry:ui" }
+  ]
+}

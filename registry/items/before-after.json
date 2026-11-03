@@ -1,0 +1,14 @@
+{
+  "name": "before-after",
+  "type": "registry:ui",
+  "title": "Before After",
+  "description": "Two versions of one thing, compared with a divider you drag or a lens that follows the pointer. A real slider, keyboard included.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/before-after.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/before-after-geometry.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/before-after-state.ts", "type": "registry:ui" }
+  ]
+}

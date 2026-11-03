@@ -1,0 +1,14 @@
+{
+  "name": "filter-chips",
+  "type": "registry:ui",
+  "title": "Filter Chips",
+  "description": "Filters a list you already have: chips with result counts, an all chip, a clear button, dead ends disabled and the result count announced.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/filter-chips.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/filter-chips-chip.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/filter-chips-math.ts", "type": "registry:ui" }
+  ]
+}

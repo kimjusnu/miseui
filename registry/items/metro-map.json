@@ -1,0 +1,14 @@
+{
+  "name": "metro-map",
+  "type": "registry:ui",
+  "title": "Metro Map",
+  "description": "Lines and stations drawn from data, for a process or a path with branches: arrow keys between stations, and it scrolls inside itself when narrow.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/metro-map.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/metro-map-layout.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/metro-map-parts.tsx", "type": "registry:ui" }
+  ]
+}

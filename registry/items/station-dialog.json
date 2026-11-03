@@ -1,0 +1,15 @@
+{
+  "name": "station-dialog",
+  "type": "registry:ui",
+  "title": "Station Dialog",
+  "description": "A detail dialog that opens from a point on a map or list, can grow out of it, and sends focus back to it on close.",
+  "dependencies": ["lucide-react", "motion", "radix-ui"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["overlays"],
+  "files": [
+    { "path": "registry/miseui/ui/station-dialog.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/station-dialog-context.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/station-dialog-geometry.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/station-dialog-surface.tsx", "type": "registry:ui" }
+  ]
+}

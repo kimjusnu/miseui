@@ -1,0 +1,15 @@
+{
+  "name": "section-index",
+  "type": "registry:ui",
+  "title": "Section Index",
+  "description": "A numbered map of the chapters in a long read that fills as you go, as a rail, a sticky strip or a one-line counter.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/section-index.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/section-index-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/section-index-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/section-index-views.tsx", "type": "registry:ui" }
+  ]
+}

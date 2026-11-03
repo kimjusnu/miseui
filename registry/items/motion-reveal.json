@@ -1,0 +1,10 @@
+{
+  "name": "motion-reveal",
+  "type": "registry:ui",
+  "title": "Motion Reveal",
+  "description": "One wrapper that lets its content arrive when it comes into view, once, as a block or child by child. People who turned motion off see it at once.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/motion-reveal.tsx", "type": "registry:ui" }]
+}

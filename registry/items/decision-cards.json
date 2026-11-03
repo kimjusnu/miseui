@@ -1,0 +1,13 @@
+{
+  "name": "decision-cards",
+  "type": "registry:ui",
+  "title": "Decision Cards",
+  "description": "A record of decisions: the question, what was chosen, what lost and why, for case studies, design docs and postmortems.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/decision-cards.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/decision-cards-parts.tsx", "type": "registry:ui" }
+  ]
+}

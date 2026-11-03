@@ -1,0 +1,14 @@
+{
+  "name": "panel-stack",
+  "type": "registry:ui",
+  "title": "Panel Stack",
+  "description": "A story told one panel at a time with a page count and a progress line: in the page, with the next panel peeking, or sliding over the whole screen.",
+  "dependencies": ["lucide-react", "motion", "radix-ui"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/panel-stack.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/panel-stack-deck.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/panel-stack-state.ts", "type": "registry:ui" }
+  ]
+}

@@ -303,6 +303,37 @@
       ]
     },
     {
+      "name": "before-after",
+      "type": "registry:ui",
+      "title": "Before After",
+      "description": "Two versions of one thing, compared with a divider you drag or a lens that follows the pointer. A real slider, keyboard included.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/before-after.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/before-after-geometry.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/before-after-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "breadcrumb",
       "type": "registry:ui",
       "title": "Breadcrumb",
@@ -448,6 +479,41 @@
         },
         {
           "path": "registry/miseui/ui/card-effects.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card-deck",
+      "type": "registry:ui",
+      "title": "Card Deck",
+      "description": "A one-at-a-time deck for an argument told in order: a swipeable strip, a pile, story tap zones or titles beside the slide, with an optional rewind.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/card-deck.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-deck-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-deck-stages.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-deck-state.ts",
           "type": "registry:ui"
         }
       ]
@@ -1062,6 +1128,33 @@
       ]
     },
     {
+      "name": "decision-cards",
+      "type": "registry:ui",
+      "title": "Decision Cards",
+      "description": "A record of decisions: the question, what was chosen, what lost and why, for case studies, design docs and postmortems.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/decision-cards.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/decision-cards-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "description-list",
       "type": "registry:ui",
       "title": "Description List",
@@ -1332,6 +1425,37 @@
       ]
     },
     {
+      "name": "filter-chips",
+      "type": "registry:ui",
+      "title": "Filter Chips",
+      "description": "Filters a list you already have: chips with result counts, an all chip, a clear button, dead ends disabled and the result count announced.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/filter-chips.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/filter-chips-chip.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/filter-chips-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "floating-panel",
       "type": "registry:ui",
       "title": "Floating Panel",
@@ -1367,6 +1491,72 @@
         },
         {
           "path": "registry/miseui/ui/floating-panel-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "flow",
+      "type": "registry:ui",
+      "title": "Flow",
+      "description": "A process drawn from data with no diagram library: a step-by-step walkthrough, boxes and arrows that wrap, a numbered rail or one inline line.",
+      "dependencies": [
+        "lucide-react",
+        "motion",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/flow.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/flow-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-core",
+      "type": "registry:ui",
+      "title": "Glass Core",
+      "description": "A glass object for the centre of a hero, with no WebGL: a shaded knot on a small canvas, a CSS sphere or frosted panes. Respects reduced motion and reduced transparency.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/glass-core.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/glass-core-faces.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/glass-core-knot.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/glass-core-painter.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/glass-core-raster.ts",
           "type": "registry:ui"
         }
       ]
@@ -1414,6 +1604,36 @@
         },
         {
           "path": "registry/miseui/ui/hover-card-bodies.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-preview",
+      "type": "registry:ui",
+      "title": "Hover Preview",
+      "description": "A preview that follows the pointer over a list of links. Off on touch, reachable by keyboard, and never the only way to anything.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "overlays"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/hover-preview.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/hover-preview-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/hover-preview-surface.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1898,6 +2118,36 @@
       ]
     },
     {
+      "name": "metro-map",
+      "type": "registry:ui",
+      "title": "Metro Map",
+      "description": "Lines and stations drawn from data, for a process or a path with branches: arrow keys between stations, and it scrolls inside itself when narrow.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/metro-map.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/metro-map-layout.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/metro-map-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "motion",
       "type": "registry:lib",
       "title": "Motion presets",
@@ -1909,6 +2159,28 @@
         {
           "path": "registry/miseui/lib/motion.ts",
           "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "motion-reveal",
+      "type": "registry:ui",
+      "title": "Motion Reveal",
+      "description": "One wrapper that lets its content arrive when it comes into view, once, as a block or child by child. People who turned motion off see it at once.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/motion-reveal.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -1978,6 +2250,25 @@
       ]
     },
     {
+      "name": "page-wipe",
+      "type": "registry:ui",
+      "title": "Page Wipe",
+      "description": "Full-page wipes on the View Transitions API: an accent curtain, a slanted sweep or an iris from the click. Reduced motion falls back to a fade.",
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/use-view-transition.json"
+      ],
+      "categories": [
+        "transitions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/page-wipe.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "pagination",
       "type": "registry:ui",
       "title": "Pagination",
@@ -2004,6 +2295,38 @@
         },
         {
           "path": "registry/miseui/ui/pagination-window.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "panel-stack",
+      "type": "registry:ui",
+      "title": "Panel Stack",
+      "description": "A story told one panel at a time with a page count and a progress line: in the page, with the next panel peeking, or sliding over the whole screen.",
+      "dependencies": [
+        "lucide-react",
+        "motion",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/panel-stack.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/panel-stack-deck.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/panel-stack-state.ts",
           "type": "registry:ui"
         }
       ]
@@ -2056,6 +2379,27 @@
       "files": [
         {
           "path": "registry/miseui/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "post-row",
+      "type": "registry:ui",
+      "title": "Post Row",
+      "description": "One writing entry as a single link: a title, a date that stays on its calendar day and quiet tags, for blogs, changelogs and archives.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/post-row.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2338,6 +2682,106 @@
       ]
     },
     {
+      "name": "ring-gallery",
+      "type": "registry:ui",
+      "title": "Ring Gallery",
+      "description": "A small set of items on a CSS 3D ring you spin by drag or keyboard, with no WebGL. Reduced motion gets a plain list.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/ring-gallery.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/ring-gallery-item.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/ring-gallery-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "role-map",
+      "type": "registry:ui",
+      "title": "Role Map",
+      "description": "Who did what on a project: panels, quiet rows or a table of people against areas, with one person in the accent.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/role-map.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/role-map-views.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "roll-text",
+      "type": "registry:ui",
+      "title": "Roll Text",
+      "description": "A label that rolls to a fresh copy of itself on hover or when its value changes, while assistive tech hears it once.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/roll-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "screen-frame",
+      "type": "registry:ui",
+      "title": "Screen Frame",
+      "description": "A window, a phone or a plain hairline around a screenshot or live interface, with the real address in the bar and no decorative traffic lights.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/screen-frame.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "scroll-area",
       "type": "registry:ui",
       "title": "Scroll Area",
@@ -2392,6 +2836,27 @@
       ]
     },
     {
+      "name": "scrub-text",
+      "type": "registry:ui",
+      "title": "Scrub Text",
+      "description": "A paragraph that arrives word by word as you scroll, so the pace of reading stays in the reader's hand. People who turned motion off get the finished text.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/scrub-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "search-field",
       "type": "registry:ui",
       "title": "Search Field",
@@ -2416,6 +2881,41 @@
         },
         {
           "path": "registry/miseui/ui/search-field-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "section-index",
+      "type": "registry:ui",
+      "title": "Section Index",
+      "description": "A numbered map of the chapters in a long read that fills as you go, as a rail, a sticky strip or a one-line counter.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/section-index.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/section-index-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/section-index-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/section-index-views.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2766,6 +3266,32 @@
       ]
     },
     {
+      "name": "split-text",
+      "type": "registry:ui",
+      "title": "Split Text",
+      "description": "A headline that arrives letter by letter or word by word, with the real sentence kept for assistive tech and a table of presets to extend.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/split-text.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/split-text-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "spoiler",
       "type": "registry:ui",
       "title": "Spoiler",
@@ -2797,6 +3323,27 @@
       ]
     },
     {
+      "name": "spotlight",
+      "type": "registry:ui",
+      "title": "Spotlight",
+      "description": "A surface that catches a soft light under the pointer, on its face, on its edge or by uncovering a hidden layer. Off on touch.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/spotlight.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "stat",
       "type": "registry:ui",
       "title": "Stat",
@@ -2822,6 +3369,68 @@
         },
         {
           "path": "registry/miseui/ui/stat-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat-line",
+      "type": "registry:ui",
+      "title": "Stat Line",
+      "description": "One line of several figures, before and after included: equal columns, a running sentence or one big number above the rest.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/stat-line.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/stat-line-count.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "station-dialog",
+      "type": "registry:ui",
+      "title": "Station Dialog",
+      "description": "A detail dialog that opens from a point on a map or list, can grow out of it, and sends focus back to it on close.",
+      "dependencies": [
+        "lucide-react",
+        "motion",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "overlays"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/station-dialog.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/station-dialog-context.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/station-dialog-geometry.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/station-dialog-surface.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2870,6 +3479,28 @@
         },
         {
           "path": "registry/miseui/ui/steps-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "story-section",
+      "type": "registry:ui",
+      "title": "Story Section",
+      "description": "A numbered section of a long read, with the number, heading and text set three ways and a note for what is still to be written.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/story-section.tsx",
           "type": "registry:ui"
         }
       ]
@@ -3893,6 +4524,33 @@
         {
           "path": "registry/miseui/lib/utils.ts",
           "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "view-counter",
+      "type": "registry:ui",
+      "title": "View Counter",
+      "description": "A view count from a fetcher you pass, with loading and failure states and no network code of its own.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/view-counter.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/view-counter-state.ts",
+          "type": "registry:ui"
         }
       ]
     },

@@ -1,0 +1,13 @@
+{
+  "name": "stat-line",
+  "type": "registry:ui",
+  "title": "Stat Line",
+  "description": "One line of several figures, before and after included: equal columns, a running sentence or one big number above the rest.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/stat-line.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/stat-line-count.tsx", "type": "registry:ui" }
+  ]
+}

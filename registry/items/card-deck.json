@@ -1,0 +1,15 @@
+{
+  "name": "card-deck",
+  "type": "registry:ui",
+  "title": "Card Deck",
+  "description": "A one-at-a-time deck for an argument told in order: a swipeable strip, a pile, story tap zones or titles beside the slide, with an optional rewind.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/card-deck.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/card-deck-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/card-deck-stages.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/card-deck-state.ts", "type": "registry:ui" }
+  ]
+}

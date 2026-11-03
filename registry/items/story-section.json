@@ -1,0 +1,10 @@
+{
+  "name": "story-section",
+  "type": "registry:ui",
+  "title": "Story Section",
+  "description": "A numbered section of a long read, with the number, heading and text set three ways and a note for what is still to be written.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/story-section.tsx", "type": "registry:ui" }]
+}

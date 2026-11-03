@@ -1,0 +1,14 @@
+{
+  "name": "hover-preview",
+  "type": "registry:ui",
+  "title": "Hover Preview",
+  "description": "A preview that follows the pointer over a list of links. Off on touch, reachable by keyboard, and never the only way to anything.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["overlays"],
+  "files": [
+    { "path": "registry/miseui/ui/hover-preview.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/hover-preview-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/hover-preview-surface.tsx", "type": "registry:ui" }
+  ]
+}

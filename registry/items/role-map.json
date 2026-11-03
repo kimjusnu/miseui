@@ -1,0 +1,13 @@
+{
+  "name": "role-map",
+  "type": "registry:ui",
+  "title": "Role Map",
+  "description": "Who did what on a project: panels, quiet rows or a table of people against areas, with one person in the accent.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/role-map.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/role-map-views.tsx", "type": "registry:ui" }
+  ]
+}
