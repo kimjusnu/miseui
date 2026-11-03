@@ -1,0 +1,13 @@
+{
+  "name": "indicator",
+  "type": "registry:ui",
+  "title": "Indicator",
+  "description": "A small count, dot, ring or word pinned to the corner of what it describes, gone at zero and spelled out for screen readers.",
+  "dependencies": ["motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json"
+  ],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/indicator.tsx", "type": "registry:ui" }]
+}

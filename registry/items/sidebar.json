@@ -1,0 +1,21 @@
+{
+  "name": "sidebar",
+  "type": "registry:ui",
+  "title": "Sidebar",
+  "description": "A collapsible column of navigation with nested groups, an active item and badges, toggled with Mod+B, saved through a prop, and a drawer on phones.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/drawer.json",
+    "https://miseui.junsu4621.workers.dev/r/dropdown-menu.json",
+    "https://miseui.junsu4621.workers.dev/r/tooltip.json"
+  ],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/sidebar.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/sidebar-items.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/sidebar-state.tsx", "type": "registry:ui" }
+  ]
+}

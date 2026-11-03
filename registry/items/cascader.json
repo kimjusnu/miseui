@@ -1,0 +1,23 @@
+{
+  "name": "cascader",
+  "type": "registry:ui",
+  "title": "Cascader",
+  "description": "Pick from nested options: columns on wide screens, one level at a time on phones, with search, full keyboard, lazy children and the path shown in the trigger.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/popover.json",
+    "https://miseui.junsu4621.workers.dev/r/spinner.json"
+  ],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/cascader.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/cascader-classes.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/cascader-columns.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/cascader-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/cascader-row.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/cascader-search.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/cascader-state.ts", "type": "registry:ui" }
+  ]
+}

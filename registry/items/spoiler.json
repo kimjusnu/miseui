@@ -1,0 +1,17 @@
+{
+  "name": "spoiler",
+  "type": "registry:ui",
+  "title": "Spoiler",
+  "description": "Hides text or a block until someone presses to see it, so the reader chooses the moment. Screen readers do not get ahead of everyone else.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json"
+  ],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/spoiler.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/spoiler-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/spoiler-state.ts", "type": "registry:ui" }
+  ]
+}

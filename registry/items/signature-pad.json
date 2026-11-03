@@ -1,0 +1,20 @@
+{
+  "name": "signature-pad",
+  "type": "registry:ui",
+  "title": "Signature Pad",
+  "description": "Sign with a finger, pen or mouse in smooth strokes, with undo, SVG and PNG export, and a typed name for anyone using a keyboard.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/input.json"
+  ],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/signature-pad.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/signature-pad-export.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/signature-pad-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/signature-pad-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/signature-pad-state.ts", "type": "registry:ui" }
+  ]
+}

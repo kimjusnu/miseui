@@ -1,0 +1,25 @@
+{
+  "name": "data-table",
+  "type": "registry:ui",
+  "title": "Data Table",
+  "description": "Hand it rows and columns and get sorting, a filter box, selection, column visibility, pages, loading rows and bulk actions, with rows that turn into cards in a narrow container.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/table.json",
+    "https://miseui.junsu4621.workers.dev/r/checkbox.json",
+    "https://miseui.junsu4621.workers.dev/r/pagination.json",
+    "https://miseui.junsu4621.workers.dev/r/popover.json",
+    "https://miseui.junsu4621.workers.dev/r/input.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/skeleton.json"
+  ],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/data-table.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/data-table-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/data-table-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/data-table-toolbar.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/data-table-views.tsx", "type": "registry:ui" }
+  ]
+}

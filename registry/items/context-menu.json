@@ -1,0 +1,14 @@
+{
+  "name": "context-menu",
+  "type": "registry:ui",
+  "title": "Context Menu",
+  "description": "The menu that opens where you press: right-click, long press or the Menu key, with sub menus, check and radio items and shortcuts.",
+  "dependencies": ["lucide-react", "radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["overlays"],
+  "files": [
+    { "path": "registry/miseui/ui/context-menu.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/context-menu-classes.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/context-menu-items.tsx", "type": "registry:ui" }
+  ]
+}

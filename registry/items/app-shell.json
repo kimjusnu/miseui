@@ -1,0 +1,13 @@
+{
+  "name": "app-shell",
+  "type": "registry:ui",
+  "title": "App Shell",
+  "description": "The frame of an app: sidebar, top bar, list and detail, or one reading column, with a skip link and landmarks, following its own width rather than the viewport.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/sidebar.json"],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/app-shell.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/app-shell-layouts.tsx", "type": "registry:ui" }
+  ]
+}

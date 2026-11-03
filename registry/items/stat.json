@@ -1,0 +1,14 @@
+{
+  "name": "stat",
+  "type": "registry:ui",
+  "title": "Stat",
+  "description": "One number with its label, change and a small trend line. Colour only appears once you have said which direction is good.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/stat.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/stat-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/stat-parts.tsx", "type": "registry:ui" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "scroll-shadow",
+  "type": "registry:ui",
+  "title": "Scroll Shadow",
+  "description": "A wrapper for any scrolling box that shows edge shadows, fades or hairlines from the real scroll position, so people can see there is more.",
+  "dependencies": ["radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/scroll-shadow.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/scroll-shadow-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/scroll-shadow-state.ts", "type": "registry:ui" }
+  ]
+}

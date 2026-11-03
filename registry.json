@@ -176,6 +176,32 @@
       ]
     },
     {
+      "name": "app-shell",
+      "type": "registry:ui",
+      "title": "App Shell",
+      "description": "The frame of an app: sidebar, top bar, list and detail, or one reading column, with a skip link and landmarks, following its own width rather than the viewport.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/sidebar.json"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/app-shell.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/app-shell-layouts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "aspect-ratio",
       "type": "registry:ui",
       "title": "Aspect Ratio",
@@ -456,6 +482,101 @@
         },
         {
           "path": "registry/miseui/ui/carousel-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cascader",
+      "type": "registry:ui",
+      "title": "Cascader",
+      "description": "Pick from nested options: columns on wide screens, one level at a time on phones, with search, full keyboard, lazy children and the path shown in the trigger.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/popover.json",
+        "https://miseui.junsu4621.workers.dev/r/spinner.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/cascader.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/cascader-classes.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/cascader-columns.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/cascader-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/cascader-row.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/cascader-search.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/cascader-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "Bar, line, area and donut charts from one data shape, hand-drawn in SVG with nice-number axes, keyboard points and a real data table for assistive tech.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/chart.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/chart-axes.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/chart-marks.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/chart-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/chart-model.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/chart-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/chart-state.ts",
           "type": "registry:ui"
         }
       ]
@@ -780,6 +901,36 @@
       ]
     },
     {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "description": "The menu that opens where you press: right-click, long press or the Menu key, with sub menus, check and radio items and shortcuts.",
+      "dependencies": [
+        "lucide-react",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "overlays"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/context-menu.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/context-menu-classes.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/context-menu-items.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dashboard-overview",
       "type": "registry:block",
       "title": "Dashboard Overview",
@@ -818,6 +969,50 @@
         {
           "path": "registry/miseui/blocks/dashboard-overview-sample.ts",
           "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "Data Table",
+      "description": "Hand it rows and columns and get sorting, a filter box, selection, column visibility, pages, loading rows and bulk actions, with rows that turn into cards in a narrow container.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/table.json",
+        "https://miseui.junsu4621.workers.dev/r/checkbox.json",
+        "https://miseui.junsu4621.workers.dev/r/pagination.json",
+        "https://miseui.junsu4621.workers.dev/r/popover.json",
+        "https://miseui.junsu4621.workers.dev/r/input.json",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/skeleton.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/data-table.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/data-table-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/data-table-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/data-table-toolbar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/data-table-views.tsx",
+          "type": "registry:ui"
         }
       ]
     },
@@ -1244,6 +1439,71 @@
       ]
     },
     {
+      "name": "image-cropper",
+      "type": "registry:ui",
+      "title": "Image Cropper",
+      "description": "Drag, pinch or wheel to frame a picture, with keyboard nudges and an aspect lock, returning a crop rectangle that can never leave the image.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/slider.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/image-cropper.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/image-cropper-corners.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/image-cropper-gestures.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/image-cropper-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/image-cropper-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/image-cropper-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "indicator",
+      "type": "registry:ui",
+      "title": "Indicator",
+      "description": "A small count, dot, ring or word pinned to the corner of what it describes, gone at zero and spelled out for screen readers.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/indicator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
@@ -1466,6 +1726,34 @@
       ]
     },
     {
+      "name": "loading-overlay",
+      "type": "registry:ui",
+      "title": "Loading Overlay",
+      "description": "Covers its parent while work runs, and only its parent. Waits before showing so fast answers never flash, and keeps layout and focus in place.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/skeleton.json",
+        "https://miseui.junsu4621.workers.dev/r/spinner.json"
+      ],
+      "categories": [
+        "feedback"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/loading-overlay.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/loading-overlay-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "login-form",
       "type": "registry:block",
       "title": "Login Form",
@@ -1518,6 +1806,41 @@
       "files": [
         {
           "path": "registry/miseui/ui/marquee.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "mask-input",
+      "type": "registry:ui",
+      "title": "Mask Input",
+      "description": "Formats dates, phone numbers, cards and your own patterns as you type. The caret stays put in the middle and on paste, and deleting across a dash works.",
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/input.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/mask-input.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/mask-input-boxes.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/mask-input-edit.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/mask-input-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/mask-input-state.ts",
           "type": "registry:ui"
         }
       ]
@@ -2040,6 +2363,64 @@
       ]
     },
     {
+      "name": "scroll-shadow",
+      "type": "registry:ui",
+      "title": "Scroll Shadow",
+      "description": "A wrapper for any scrolling box that shows edge shadows, fades or hairlines from the real scroll position, so people can see there is more.",
+      "dependencies": [
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/scroll-shadow.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/scroll-shadow-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/scroll-shadow-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "search-field",
+      "type": "registry:ui",
+      "title": "Search Field",
+      "description": "A search box with a leading icon, clear button, loading state, debounced onSearch and a Mod K hint. Escape clears it.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/kbd.json",
+        "https://miseui.junsu4621.workers.dev/r/spinner.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/search-field.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/search-field-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "segmented-control",
       "type": "registry:ui",
       "title": "Segmented Control",
@@ -2203,6 +2584,80 @@
       ]
     },
     {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "A collapsible column of navigation with nested groups, an active item and badges, toggled with Mod+B, saved through a prop, and a drawer on phones.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/drawer.json",
+        "https://miseui.junsu4621.workers.dev/r/dropdown-menu.json",
+        "https://miseui.junsu4621.workers.dev/r/tooltip.json"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/sidebar.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/sidebar-items.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/sidebar-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signature-pad",
+      "type": "registry:ui",
+      "title": "Signature Pad",
+      "description": "Sign with a finger, pen or mouse in smooth strokes, with undo, SVG and PNG export, and a typed name for anyone using a keyboard.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/input.json"
+      ],
+      "categories": [
+        "forms"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/signature-pad.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/signature-pad-export.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/signature-pad-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/signature-pad-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/signature-pad-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "signup-steps",
       "type": "registry:block",
       "title": "Signup Steps",
@@ -2306,6 +2761,88 @@
       "files": [
         {
           "path": "registry/miseui/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spoiler",
+      "type": "registry:ui",
+      "title": "Spoiler",
+      "description": "Hides text or a block until someone presses to see it, so the reader chooses the moment. Screen readers do not get ahead of everyone else.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/spoiler.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/spoiler-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/spoiler-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat",
+      "type": "registry:ui",
+      "title": "Stat",
+      "description": "One number with its label, change and a small trend line. Colour only appears once you have said which direction is good.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/stat.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/stat-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/stat-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "status",
+      "type": "registry:ui",
+      "title": "Status",
+      "description": "A state word with a mark that means something: online, away, busy, offline, error or your own, each with its own shape as well as its own hue.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "feedback"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/status.tsx",
           "type": "registry:ui"
         }
       ]
@@ -3066,6 +3603,41 @@
         },
         {
           "path": "registry/miseui/ui/timeline-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timer",
+      "type": "registry:ui",
+      "title": "Timer",
+      "description": "Counts down to a moment or up from one, with pause and resume. It reads the clock instead of adding ticks, so a sleeping tab cannot make it wrong.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "display"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/timer.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/timer-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/timer-parts.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/timer-state.ts",
           "type": "registry:ui"
         }
       ]

@@ -1,0 +1,18 @@
+{
+  "name": "timer",
+  "type": "registry:ui",
+  "title": "Timer",
+  "description": "Counts down to a moment or up from one, with pause and resume. It reads the clock instead of adding ticks, so a sleeping tab cannot make it wrong.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json"
+  ],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/timer.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/timer-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/timer-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/timer-state.ts", "type": "registry:ui" }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "image-cropper",
+  "type": "registry:ui",
+  "title": "Image Cropper",
+  "description": "Drag, pinch or wheel to frame a picture, with keyboard nudges and an aspect lock, returning a crop rectangle that can never leave the image.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/slider.json"
+  ],
+  "categories": [
+    "forms"
+  ],
+  "files": [
+    {
+      "path": "registry/miseui/ui/image-cropper.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/miseui/ui/image-cropper-corners.ts",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/miseui/ui/image-cropper-gestures.ts",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/miseui/ui/image-cropper-math.ts",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/miseui/ui/image-cropper-parts.tsx",
+      "type": "registry:ui"
+    },
+    {
+      "path": "registry/miseui/ui/image-cropper-state.ts",
+      "type": "registry:ui"
+    }
+  ]
+}
