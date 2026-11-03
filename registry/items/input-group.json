@@ -1,0 +1,13 @@
+{
+  "name": "input-group",
+  "type": "registry:ui",
+  "title": "Input Group",
+  "description": "One field with text, icons, buttons or a select attached to it, sharing a single border and focus ring, in four layouts.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["utils"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/input-group.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/input-group-classes.ts", "type": "registry:ui" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "description-list",
+  "type": "registry:ui",
+  "title": "Description List",
+  "description": "Labels and values on a real dl, as ruled rows, two columns, single lines or tiles, with a slot for a copy button and long values that wrap.",
+  "dependencies": [],
+  "registryDependencies": ["utils"],
+  "categories": ["display"],
+  "files": [{ "path": "registry/miseui/ui/description-list.tsx", "type": "registry:ui" }]
+}

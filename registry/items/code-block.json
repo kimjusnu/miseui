@@ -1,0 +1,20 @@
+{
+  "name": "code-block",
+  "type": "registry:ui",
+  "title": "Code Block",
+  "description": "Readable code without a highlighting library: a small tokenizer for ts, json and bash, line numbers, marked lines, wrap, copy, file tabs and diffs.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/clipboard.json"
+  ],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/code-block.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/code-block-bar.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/code-block-diff.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/code-block-lines.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/code-block-tokens.ts", "type": "registry:ui" }
+  ]
+}

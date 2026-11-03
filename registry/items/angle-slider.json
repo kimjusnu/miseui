@@ -1,0 +1,15 @@
+{
+  "name": "angle-slider",
+  "type": "registry:ui",
+  "title": "Angle Slider",
+  "description": "A dial for rotation and other circular values: drags one to one under pointer capture, steps by keyboard, wraps past 360, with a ring, a marked compass, a small knob and a 270 degree gauge.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/angle-slider.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/angle-slider-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/angle-slider-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/angle-slider-state.ts", "type": "registry:ui" }
+  ]
+}

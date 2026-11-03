@@ -1,0 +1,14 @@
+{
+  "name": "menubar",
+  "type": "registry:ui",
+  "title": "Menubar",
+  "description": "The row of menus desktop tools are built on, with sub menus, check and radio items, shortcuts and full arrow key movement across the bar.",
+  "dependencies": ["lucide-react", "radix-ui"],
+  "registryDependencies": ["utils"],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/menubar.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/menubar-classes.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/menubar-items.tsx", "type": "registry:ui" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "command",
+  "type": "registry:ui",
+  "title": "Command",
+  "description": "A command palette with its own fuzzy search: groups, shortcuts, recent items, an empty state, full combobox and listbox semantics and a Mod+K helper.",
+  "dependencies": ["lucide-react", "motion", "radix-ui"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["overlays"],
+  "files": [
+    { "path": "registry/miseui/ui/command.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/command-classes.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/command-list.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/command-score.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/command-state.ts", "type": "registry:ui" }
+  ]
+}

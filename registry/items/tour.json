@@ -1,0 +1,19 @@
+{
+  "name": "tour",
+  "type": "registry:ui",
+  "title": "Tour",
+  "description": "A step-by-step product tour with a spotlight cut-out, anchored to a selector or a ref. It manages focus, scrolls targets into view, follows them on resize and skips the ones that are missing.",
+  "dependencies": ["lucide-react", "motion", "radix-ui"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json"
+  ],
+  "categories": ["overlays"],
+  "files": [
+    { "path": "registry/miseui/ui/tour.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tour-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tour-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tour-state.ts", "type": "registry:ui" }
+  ]
+}

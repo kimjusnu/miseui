@@ -1,0 +1,10 @@
+{
+  "name": "button-group",
+  "type": "registry:ui",
+  "title": "Button Group",
+  "description": "Related actions joined under one border, across or down, including a main action with a menu of its alternatives.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/dropdown-menu.json"],
+  "categories": ["forms"],
+  "files": [{ "path": "registry/miseui/ui/button-group.tsx", "type": "registry:ui" }]
+}

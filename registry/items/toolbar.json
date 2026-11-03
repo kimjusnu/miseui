@@ -1,0 +1,10 @@
+{
+  "name": "toolbar",
+  "type": "registry:ui",
+  "title": "Toolbar",
+  "description": "A row of tools that is one tab stop: arrow keys rove inside it, with groups, separators, links and toggles, and it wraps or scrolls instead of breaking the layout.",
+  "dependencies": ["motion", "radix-ui"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [{ "path": "registry/miseui/ui/toolbar.tsx", "type": "registry:ui" }]
+}

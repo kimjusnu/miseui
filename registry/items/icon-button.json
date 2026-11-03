@@ -1,0 +1,10 @@
+{
+  "name": "icon-button",
+  "type": "registry:ui",
+  "title": "Icon Button",
+  "description": "A glyph-only button that cannot be shipped without a name, with four surfaces, a pending state that keeps focus and a 40 px hit area on touch.",
+  "dependencies": [],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/tooltip.json"],
+  "categories": ["forms"],
+  "files": [{ "path": "registry/miseui/ui/icon-button.tsx", "type": "registry:ui" }]
+}

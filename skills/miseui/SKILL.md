@@ -87,15 +87,20 @@ UI that explains itself. Every component ships with the principle behind its sha
 
 ## Forms
 
+- **Angle Slider** (`angle-slider`): A dial for rotation and other circular values: drags one to one under pointer capture, steps by keyboard, wraps past 360, with a ring, a marked compass, a small knob and a 270 degree gauge. — Natural mapping · [reference](references/angle-slider.md)
 - **Button** (`button`): Press target that answers on pointer-down: a 3% dip in 100 ms, so the click feels acknowledged. — Doherty threshold · [reference](references/button.md)
+- **Button Group** (`button-group`): Related actions joined under one border, across or down, including a main action with a menu of its alternatives. — Law of common region · [reference](references/button-group.md)
 - **Checkbox** (`checkbox`): Square toggle that fills and draws its check within 150 ms of the press, and announces the change through aria-checked. — Immediate feedback · [reference](references/checkbox.md)
 - **Clipboard** (`clipboard`): One-press copy with a clear result: a lone icon, a code line, a read-only field or a labelled block, and a safe way out when the browser refuses. — Visibility of system status · [reference](references/clipboard.md)
 - **Color Picker** (`color-picker`): A saturation square, hue and opacity sliders, typed hex and presets, in four layouts, with a thumb that never lags behind the hand. — Direct manipulation · [reference](references/color-picker.md)
 - **Combobox** (`combobox`): A searchable select for long lists, single or multiple, with people rows, section headers, chips and loading built in. — Hick's law · [reference](references/combobox.md)
 - **Date Picker** (`date-picker`): A calendar with no date library: single days or ranges, limits, a full keyboard grid and any locale, in four layouts. — Recognition over recall · [reference](references/date-picker.md)
+- **Editable** (`editable`): Text that turns into a field in place without moving the page: Enter commits, Escape reverts, leaving commits or reverts by prop, with validation and optional buttons. — Direct manipulation · [reference](references/editable.md)
 - **Field** (`field`): Gives any control a label, description, error and required mark, and wires the ids and aria attributes so nobody has to remember them. — Proximity · [reference](references/field.md)
 - **File Upload** (`file-upload`): A real drop zone and file input with limits, clear errors and a progress list, and no network code of its own. — Error prevention · [reference](references/file-upload.md)
+- **Icon Button** (`icon-button`): A glyph-only button that cannot be shipped without a name, with four surfaces, a pending state that keeps focus and a 40 px hit area on touch. — Fitts's law · [reference](references/icon-button.md)
 - **Input** (`input`): Single-line text field, 36 px tall to match Button, that moves the invalid state onto its border and ring. — Fitts's law · [reference](references/input.md)
+- **Input Group** (`input-group`): One field with text, icons, buttons or a select attached to it, sharing a single border and focus ring, in four layouts. — Law of uniform connectedness · [reference](references/input-group.md)
 - **Input OTP** (`input-otp`): One-time code entry drawn as boxes but built on one real input, so SMS autofill, paste, backspace and screen readers all work. — Error prevention · [reference](references/input-otp.md)
 - **Label** (`label`): Caption bound to a control: clicking it focuses the field, and it dims when the field is disabled. — Law of proximity · [reference](references/label.md)
 - **Listbox** (`listbox`): A list you choose from that stays open, for when seeing every option is the point. — Recognition over recall · [reference](references/listbox.md)
@@ -111,24 +116,31 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Textarea** (`textarea`): Multi-line text field that starts at 64 px and grows with its content, so the answer is never hidden behind a scrollbar. — Chunking · [reference](references/textarea.md)
 - **Toggle** (`toggle`): A button that stays pressed, for turning a view or format on and off without leaving the page. — Visibility of system status · [reference](references/toggle.md)
 - **Toggle Group** (`toggle-group`): A row of buttons that stay pressed, one at a time or several at once: quiet fill, joined outline, wrapping chips or square icons. — Law of common region · [reference](references/toggle-group.md)
+- **Toolbar** (`toolbar`): A row of tools that is one tab stop: arrow keys rove inside it, with groups, separators, links and toggles, and it wraps or scrolls instead of breaking the layout. — Fitts's law · [reference](references/toolbar.md)
 
 ## Navigation
 
 - **Breadcrumb** (`breadcrumb`): A trail from the root to the current page, with a nav landmark, a current marker and a middle that collapses into a menu. — Information scent · [reference](references/breadcrumb.md)
 - **Dropdown Menu** (`dropdown-menu`): Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant. — Hick's law · [reference](references/dropdown-menu.md)
+- **Menubar** (`menubar`): The row of menus desktop tools are built on, with sub menus, check and radio items, shortcuts and full arrow key movement across the bar. — Jakob's law · [reference](references/menubar.md)
 - **Navigation Menu** (`navigation-menu`): Site navigation with panels that open from the bar, by pointer or keyboard. — Information scent · [reference](references/navigation-menu.md)
 - **Pagination** (`pagination`): Moves through a long list in steady chunks, with the window of pages always the same width so controls never shift. — Spatial memory · [reference](references/pagination.md)
 - **Steps** (`steps`): Shows where someone is in a process, across a line, down a column, as a bar with a count or as numbered rows, with done, current, upcoming and error states. — Goal gradient effect · [reference](references/steps.md)
+- **Table of Contents** (`table-of-contents`): Lists the sections of a page, from data or read from the headings, follows the one being read and jumps to any of them with motion that respects reduced motion. — Visibility of system status · [reference](references/table-of-contents.md)
 - **Tabs** (`tabs`): Segmented control that swaps one panel for another in place, so related views share a single spot on the screen. — Chunking · [reference](references/tabs.md)
 
 ## Overlays
 
+- **Action Bar** (`action-bar`): Appears when items are selected, with the count, the actions and a way to clear, floating over the page, docked to its edge or sitting in the flow. — Progressive disclosure · [reference](references/action-bar.md)
+- **Alert Dialog** (`alert-dialog`): A question that has to be answered before anything else, with focus on the safe answer, a typed confirmation for the worst cases and a bottom sheet on phones. — Error prevention · [reference](references/alert-dialog.md)
+- **Command** (`command`): A command palette with its own fuzzy search: groups, shortcuts, recent items, an empty state, full combobox and listbox semantics and a Mod+K helper. — Hick's law · [reference](references/command.md)
 - **Dialog** (`dialog`): Modal surface that dims everything else and holds focus until the user answers one question. — Attention funnel · [reference](references/dialog.md)
 - **Drawer** (`drawer`): A panel that slides in from an edge for a side task, so the page you came from stays where you left it. — Spatial continuity · [reference](references/drawer.md)
 - **Floating Panel** (`floating-panel`): A movable, resizable window that stays on screen, for tools people keep open beside their work. — User control and freedom · [reference](references/floating-panel.md)
 - **Hover Card** (`hover-card`): A preview that appears over a link when the pointer rests on it, laid out for free content, a person, a page or a number. — Progressive disclosure · [reference](references/hover-card.md)
 - **Popover** (`popover`): Small floating panel anchored to the control that opened it, for a form or detail that does not need a full dialog. — Spatial memory · [reference](references/popover.md)
 - **Tooltip** (`tooltip`): One-line hint that appears on hover or focus with no delay and leaves with the pointer, for detail that does not deserve screen space. — Progressive disclosure · [reference](references/tooltip.md)
+- **Tour** (`tour`): A step-by-step product tour with a spotlight cut-out, anchored to a selector or a ref. It manages focus, scrolls targets into view, follows them on resize and skips the ones that are missing. — Von Restorff effect · [reference](references/tour.md)
 
 ## Display
 
@@ -139,16 +151,20 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Calendar** (`calendar`): A full-size calendar for showing what is on, as a month grid, a week strip, an agenda or a whole year. — Spatial memory · [reference](references/calendar.md)
 - **Card** (`card`): Bordered surface with header, content and footer slots that reads as one region before anyone reads the text. — Law of common region · [reference](references/card.md)
 - **Carousel** (`carousel`): A row of slides on the browser's own scroll snapping, so swiping feels native and no library is needed. — Direct manipulation · [reference](references/carousel.md)
+- **Code Block** (`code-block`): Readable code without a highlighting library: a small tokenizer for ts, json and bash, line numbers, marked lines, wrap, copy, file tabs and diffs. — Pre-attentive processing · [reference](references/code-block.md)
 - **Collapsible** (`collapsible`): One disclosure: a label that opens the detail under it, for the one thing most readers can skip. — Progressive disclosure · [reference](references/collapsible.md)
 - **Color Swatch** (`color-swatch`): Shows a colour with its name and value, alone or as a palette, with a label that stays readable on any fill and a checker under transparency. — WCAG contrast · [reference](references/color-swatch.md)
+- **Description List** (`description-list`): Labels and values on a real dl, as ruled rows, two columns, single lines or tiles, with a slot for a copy button and long values that wrap. — Visual hierarchy · [reference](references/description-list.md)
 - **Kbd** (`kbd`): Keyboard keys as hairline caps, physical keys, tight chips or plain text, with chords, a platform-aware modifier and a cap that dips on the real key. — Flexibility and efficiency of use · [reference](references/kbd.md)
 - **Marquee** (`marquee`): An endless CSS-driven row that stops when someone reaches for it, and turns into a still, scrollable row for people who turned motion off. — Peripheral motion · [reference](references/marquee.md)
+- **QR Code** (`qr-code`): A QR code encoder written from scratch and drawn as crisp SVG with a quiet zone, in square, dotted, framed and logo forms, always dark on light so it scans. — Reducing interaction cost · [reference](references/qr-code.md)
 - **Resizable** (`resizable`): Two panes with a draggable divider, horizontal or vertical, with limits that stretch, a keyboard-operable separator and a double-click reset. — User control and freedom · [reference](references/resizable.md)
 - **Scroll Area** (`scroll-area`): A scroller with a styled bar that matches the theme, as a hover bar, a thin overlay, edge shadows or a snapping row. — Law of continuity · [reference](references/scroll-area.md)
 - **Separator** (`separator`): A rule between groups of content, as a hairline, a dashed break, a labelled divider or a line that fades at both ends. — Law of uniform connectedness · [reference](references/separator.md)
 - **Skeleton** (`skeleton`): Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner. — Perceived performance · [reference](references/skeleton.md)
 - **Table** (`table`): Real table markup with sortable headers, a sticky head, selection, an empty row and aligned figures, in four densities. — Law of continuity · [reference](references/table.md)
 - **Tag** (`tag`): A short label that can also be pressed or removed: soft tint, outline, solid or a status dot, with status tones that never borrow the accent. — Pre-attentive processing · [reference](references/tag.md)
+- **Timeline** (`timeline`): Events in order with time, title, detail and a status that keeps its meaning under any accent, down a rail, on two sides, as one-liners or across a row. — Law of continuity · [reference](references/timeline.md)
 - **Tree View** (`tree-view`): A nested list that opens level by level, with the full keyboard pattern people know from file explorers. — Progressive disclosure · [reference](references/tree-view.md)
 
 ## Feedback

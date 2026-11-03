@@ -1,0 +1,14 @@
+{
+  "name": "timeline",
+  "type": "registry:ui",
+  "title": "Timeline",
+  "description": "Events in order with time, title, detail and a status that keeps its meaning under any accent, down a rail, on two sides, as one-liners or across a row.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/timeline.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/timeline-lists.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/timeline-parts.tsx", "type": "registry:ui" }
+  ]
+}

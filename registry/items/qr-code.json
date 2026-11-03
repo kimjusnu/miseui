@@ -1,0 +1,18 @@
+{
+  "name": "qr-code",
+  "type": "registry:ui",
+  "title": "QR Code",
+  "description": "A QR code encoder written from scratch and drawn as crisp SVG with a quiet zone, in square, dotted, framed and logo forms, always dark on light so it scans.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["display"],
+  "files": [
+    { "path": "registry/miseui/ui/qr-code.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/qr-code-encode.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/qr-code-matrix.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/qr-code-penalty.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/qr-code-rs.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/qr-code-shapes.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/qr-code-tables.ts", "type": "registry:ui" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "alert-dialog",
+  "type": "registry:ui",
+  "title": "Alert Dialog",
+  "description": "A question that has to be answered before anything else, with focus on the safe answer, a typed confirmation for the worst cases and a bottom sheet on phones.",
+  "dependencies": ["radix-ui", "lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/input.json"
+  ],
+  "categories": ["overlays"],
+  "files": [
+    { "path": "registry/miseui/ui/alert-dialog.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/alert-dialog-classes.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/alert-dialog-confirm.tsx", "type": "registry:ui" }
+  ]
+}

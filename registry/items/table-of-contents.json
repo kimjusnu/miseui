@@ -1,0 +1,19 @@
+{
+  "name": "table-of-contents",
+  "type": "registry:ui",
+  "title": "Table of Contents",
+  "description": "Lists the sections of a page, from data or read from the headings, follows the one being read and jumps to any of them with motion that respects reduced motion.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/popover.json"
+  ],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/table-of-contents.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/table-of-contents-list.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/table-of-contents-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/table-of-contents-state.ts", "type": "registry:ui" }
+  ]
+}

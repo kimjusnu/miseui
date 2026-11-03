@@ -1,0 +1,14 @@
+{
+  "name": "action-bar",
+  "type": "registry:ui",
+  "title": "Action Bar",
+  "description": "Appears when items are selected, with the count, the actions and a way to clear, floating over the page, docked to its edge or sitting in the flow.",
+  "dependencies": ["radix-ui", "lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["overlays"],
+  "files": [
+    { "path": "registry/miseui/ui/action-bar.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/action-bar-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/action-bar-state.ts", "type": "registry:ui" }
+  ]
+}

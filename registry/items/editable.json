@@ -1,0 +1,14 @@
+{
+  "name": "editable",
+  "type": "registry:ui",
+  "title": "Editable",
+  "description": "Text that turns into a field in place without moving the page: Enter commits, Escape reverts, leaving commits or reverts by prop, with validation and optional buttons.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["forms"],
+  "files": [
+    { "path": "registry/miseui/ui/editable.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/editable-parts.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/editable-state.ts", "type": "registry:ui" }
+  ]
+}
