@@ -1,0 +1,16 @@
+{
+  "name": "lens",
+  "type": "registry:ui",
+  "title": "Lens",
+  "description": "A magnifier over any content: a round lens, a lifted loupe, a zoomed panel beside it or a full-width band, with a second copy that focus and assistive tech never reach.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["interactions"],
+  "files": [
+    { "path": "registry/miseui/ui/lens.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/lens-gestures.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/lens-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/lens-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/pointer-fine.ts", "type": "registry:ui" }
+  ]
+}

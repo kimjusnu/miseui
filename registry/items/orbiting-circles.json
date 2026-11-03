@@ -1,0 +1,15 @@
+{
+  "name": "orbiting-circles",
+  "type": "registry:ui",
+  "title": "Orbiting Circles",
+  "description": "Small things travelling around a centre: one orbit, several at different speeds, a tilted ellipse that passes behind or an arch at the foot of a hero. Focus and pointing stop it.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["interactions"],
+  "files": [
+    { "path": "registry/miseui/ui/orbiting-circles.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/orbiting-circles-loop.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/orbiting-circles-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-loop.ts", "type": "registry:ui" }
+  ]
+}

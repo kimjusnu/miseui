@@ -1,0 +1,16 @@
+{
+  "name": "image-trail",
+  "type": "registry:ui",
+  "title": "Image Trail",
+  "description": "Pictures appear along the pointer's path and fade in order, pile up, fan out or slide past, with a still arrangement on touch so the box is never blank.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["interactions"],
+  "files": [
+    { "path": "registry/miseui/ui/image-trail.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/image-trail-engine.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/image-trail-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-seed.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/pointer-fine.ts", "type": "registry:ui" }
+  ]
+}

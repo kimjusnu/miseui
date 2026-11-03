@@ -1,4 +1,4 @@
-export type Category = "blocks" | "ai" | "forms" | "navigation" | "overlays" | "display" | "feedback" | "text" | "backgrounds" | "effects" | "transitions"
+export type Category = "blocks" | "ai" | "forms" | "navigation" | "overlays" | "display" | "feedback" | "text" | "backgrounds" | "interactions" | "effects" | "transitions"
 
 export interface EffectMeta {
   /** value of the `variant` or `effect` prop */
@@ -45,6 +45,7 @@ export const CATEGORY_ORDER: readonly Category[] = [
   "feedback",
   "text",
   "backgrounds",
+  "interactions",
   "effects",
   "transitions",
 ]
@@ -59,6 +60,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   feedback: "Feedback",
   text: "Text",
   backgrounds: "Backgrounds",
+  interactions: "Interactions",
   effects: "Effects",
   transitions: "Transitions",
 }

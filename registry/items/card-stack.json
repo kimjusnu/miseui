@@ -1,0 +1,24 @@
+{
+  "name": "card-stack",
+  "type": "registry:ui",
+  "title": "Card Stack",
+  "description": "A pile of things with no order: a scattered heap to drag through, a fan that spreads, a swipe to decide on each or notification rows that open into a list.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json"
+  ],
+  "categories": ["interactions"],
+  "files": [
+    { "path": "registry/miseui/ui/card-stack.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/card-stack-card.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/card-stack-cascade.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/card-stack-fan.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/card-stack-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/card-stack-pile.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/card-stack-swipe.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-loop.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-seed.ts", "type": "registry:ui" }
+  ]
+}

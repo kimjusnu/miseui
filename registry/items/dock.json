@@ -1,0 +1,15 @@
+{
+  "name": "dock",
+  "type": "registry:ui",
+  "title": "Dock",
+  "description": "A row of icon buttons that swell near the pointer and rise without moving the page: a glass bar, bare tiles, a side rail or words under every icon.",
+  "dependencies": ["motion", "radix-ui"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/tooltip.json"],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/dock.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/dock-magnify.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/dock-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/pointer-fine.ts", "type": "registry:ui" }
+  ]
+}

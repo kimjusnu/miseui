@@ -1,0 +1,15 @@
+{
+  "name": "magnet",
+  "type": "registry:ui",
+  "title": "Magnet",
+  "description": "A wrapper that pulls any child toward the pointer from past its own bounds: the whole element, inner layers, a row by distance, or a soft ring that trails.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["interactions"],
+  "files": [
+    { "path": "registry/miseui/ui/magnet.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/magnet-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/magnet-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/pointer-fine.ts", "type": "registry:ui" }
+  ]
+}

@@ -128,7 +128,9 @@ UI that explains itself. Every component ships with the principle behind its sha
 
 - **App Shell** (`app-shell`): The frame of an app: navigation, a top bar and a content region, with a skip link and landmarks, where the content scrolls on its own on wide screens. — Jakob's law · [reference](references/app-shell.md)
 - **Breadcrumb** (`breadcrumb`): A trail from the root to the current page, with a nav landmark, a current marker and a middle that collapses into a menu. — Information scent · [reference](references/breadcrumb.md)
+- **Dock** (`dock`): A row of icon buttons that swell near the pointer and rise without moving the page: a glass bar, bare tiles, a side rail or words under every icon. — Fitts's law · [reference](references/dock.md)
 - **Dropdown Menu** (`dropdown-menu`): Compact menu of actions that opens from a button and closes on choice, with arrow-key navigation and a destructive variant. — Hick's law · [reference](references/dropdown-menu.md)
+- **Floating Nav** (`floating-nav`): Navigation that floats over the page: a pill with a sliding highlight, a capsule that opens into a panel, a bar that shrinks on scroll or a bottom tab bar. — Visibility of system status · [reference](references/floating-nav.md)
 - **Menubar** (`menubar`): The row of menus desktop tools are built on, with sub menus, check and radio items, shortcuts and full arrow key movement across the bar. — Jakob's law · [reference](references/menubar.md)
 - **Metro Map** (`metro-map`): Lines and stations from data, for a path that branches and meets again: tap a station, walk with the arrow keys. — Spatial memory · [reference](references/metro-map.md)
 - **Navigation Menu** (`navigation-menu`): Site navigation with panels that open from the bar, by pointer or keyboard. — Information scent · [reference](references/navigation-menu.md)
@@ -239,6 +241,18 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Particles Background** (`particles-background`): Points on one canvas behind a section: floating, joined by faint lines, rising, or an even field with a clearing that follows the pointer. — Law of common fate · [reference](references/particles-background.md)
 - **Ripple Background** (`ripple-background`): Rings spreading behind a section: still lines, a slow pulse, a turning sonar sweep or several sources, plus a ring from where someone pressed. — Gestalt continuity · [reference](references/ripple-background.md)
 - **Spotlight** (`spotlight`): A surface that catches a soft light under the pointer, on its face, on its edge or by uncovering a hidden layer. — Affordance through response · [reference](references/spotlight.md)
+
+## Interactions
+
+- **Animated Beam** (`animated-beam`): A line of light running between two real elements, measured so it follows every reflow: straight, bowed, stepped like a circuit or many sources into one hub. — Gestalt connectedness · [reference](references/animated-beam.md)
+- **Card Stack** (`card-stack`): A pile of things with no order: a scattered heap to drag through, a fan that spreads, a swipe to decide on each or notification rows that open into a list. — Hick's law · [reference](references/card-stack.md)
+- **Click Spark** (`click-spark`): A wrapper that answers a press with a small burst from that point: lines, falling bits, one soft ring or a little confetti, on one canvas that only draws while something is alive. — Peak-end rule · [reference](references/click-spark.md)
+- **Globe** (`globe`): A turning dotted earth on one canvas with no 3D library: land dots, a wire ball, a shaded disc or routes with a light along them, plus markers and drag to spin. — Picture superiority · [reference](references/globe.md)
+- **Image Trail** (`image-trail`): Pictures appear along the pointer's path and fade in order, pile up, fan out or slide past, with a still arrangement on touch so the box is never blank. — Direct manipulation · [reference](references/image-trail.md)
+- **Lens** (`lens`): A magnifier over any content: a round lens, a lifted loupe, a zoomed panel beside it or a full-width band, with a second copy that focus and assistive tech never reach. — Focus plus context · [reference](references/lens.md)
+- **Magnet** (`magnet`): A wrapper that pulls any child toward the pointer from past its own bounds: the whole element, inner layers, a row by distance, or a soft ring that trails. — Affordance · [reference](references/magnet.md)
+- **Orbiting Circles** (`orbiting-circles`): Small things travelling around a centre: one orbit, several at different speeds, a tilted ellipse that passes behind or an arch at the foot of a hero. Focus and pointing stop it. — Gestalt common region · [reference](references/orbiting-circles.md)
+- **Tilted Card** (`tilted-card`): A showcase card with strong tilt and depth for a picture or a pass: a floating caption, a foil sheen, parts on separate planes or a notched ticket, with text sharp at rest. — Object permanence · [reference](references/tilted-card.md)
 
 ## Effects
 

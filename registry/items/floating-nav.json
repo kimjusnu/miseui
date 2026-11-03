@@ -1,0 +1,15 @@
+{
+  "name": "floating-nav",
+  "type": "registry:ui",
+  "title": "Floating Nav",
+  "description": "Navigation that floats over the page: a pill with a sliding highlight, a capsule that opens into a panel, a bar that shrinks on scroll or a bottom tab bar.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/motion.json"],
+  "categories": ["navigation"],
+  "files": [
+    { "path": "registry/miseui/ui/floating-nav.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/floating-nav-island.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/floating-nav-state.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/floating-nav-views.tsx", "type": "registry:ui" }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "click-spark",
+  "type": "registry:ui",
+  "title": "Click Spark",
+  "description": "A wrapper that answers a press with a small burst from that point: lines, falling bits, one soft ring or a little confetti, on one canvas that only draws while something is alive.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["interactions"],
+  "files": [
+    { "path": "registry/miseui/ui/click-spark.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/click-spark-engine.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/click-spark-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-seed.ts", "type": "registry:ui" }
+  ]
+}

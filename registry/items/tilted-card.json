@@ -1,0 +1,14 @@
+{
+  "name": "tilted-card",
+  "type": "registry:ui",
+  "title": "Tilted Card",
+  "description": "A showcase card with strong tilt and depth for a picture or a pass: a floating caption, a foil sheen, parts on separate planes or a notched ticket, with text sharp at rest.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["interactions"],
+  "files": [
+    { "path": "registry/miseui/ui/tilted-card.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tilted-card-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/tilted-card-parts.tsx", "type": "registry:ui" }
+  ]
+}

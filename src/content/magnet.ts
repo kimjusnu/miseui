@@ -1,0 +1,62 @@
+import type { ComponentMeta } from "./types"
+
+export const meta: ComponentMeta = {
+  name: "magnet",
+  title: "Magnet",
+  category: "interactions",
+  description: "A wrapper that pulls any child toward the pointer from past its own bounds: the whole element, inner layers, a row by distance, or a soft ring that trails.",
+  why: {
+    principle: "Affordance",
+    explanation:
+      "Something that leans toward the pointer before it is reached says it can be pressed, and it says so while the pointer is still on its way. The pull is drawn with a transform on an inner element, so the layout box never changes and no invisible area takes clicks from a neighbour.",
+    avoid:
+      "Keep it for one or two important actions on a page. A plain button that only needs a small lean belongs in Button with effect magnetic, which stays inside its own bounds. Nothing may depend on the pull: a finger or a keyboard never sees it.",
+  },
+  designs: [
+    {
+      name: "pull",
+      principle: "Affordance",
+      use: "The single main action of a hero or a landing section, where the whole button drifting toward the pointer is the invitation.",
+    },
+    {
+      name: "layers",
+      principle: "Motion parallax",
+      use: "A card or a large tile with an icon on top: inner parts travel further than the surface, which reads as depth without any 3D.",
+    },
+    {
+      name: "field",
+      principle: "Common fate",
+      use: "A row of social links or small tools: each one leans by its own distance, so the pointer seems to pass through a field. Wrap them in MagnetGroup.",
+    },
+    {
+      name: "halo",
+      principle: "Figure and ground",
+      use: "When the element must not move, such as a field label or a price: it stays exactly where it is and a soft ring trails the pointer around it.",
+    },
+  ],
+  effects: [
+    {
+      name: "sticky",
+      principle: "Fitts's law",
+      use: "A small target that is worth reaching: it latches when the pointer is close and holds on until the pointer is well clear, with no jitter at the edge.",
+    },
+  ],
+  usage: `import { Magnet, MagnetGroup, MagnetLayer } from "@/components/ui/magnet"
+
+<Magnet variant="pull" reach={96}>
+  <Button>Start a project</Button>
+</Magnet>
+
+<Magnet variant="layers">
+  <div className="rounded-xl border p-6">
+    <MagnetLayer depth={2}><SparkIcon /></MagnetLayer>
+    <p>New this week</p>
+  </div>
+</Magnet>
+
+<MagnetGroup reach={120}>
+  <Magnet><IconButton label="Mail"><Mail /></IconButton></Magnet>
+  <Magnet><IconButton label="Feed"><Rss /></IconButton></Magnet>
+</MagnetGroup>`,
+  exports: ["Magnet", "MagnetGroup", "MagnetLayer"],
+}

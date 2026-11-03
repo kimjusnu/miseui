@@ -1,0 +1,16 @@
+{
+  "name": "animated-beam",
+  "type": "registry:ui",
+  "title": "Animated Beam",
+  "description": "A line of light running between two real elements, measured so it follows every reflow: straight, bowed, stepped like a circuit or many sources into one hub.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["interactions"],
+  "files": [
+    { "path": "registry/miseui/ui/animated-beam.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/animated-beam-hub.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/animated-beam-line.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/animated-beam-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-loop.ts", "type": "registry:ui" }
+  ]
+}

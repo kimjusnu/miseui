@@ -1,0 +1,20 @@
+{
+  "name": "globe",
+  "type": "registry:ui",
+  "title": "Globe",
+  "description": "A turning dotted earth on one canvas with no 3D library: land dots, a wire ball, a shaded disc or routes with a light along them, plus markers and drag to spin.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["interactions"],
+  "files": [
+    { "path": "registry/miseui/ui/globe.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/globe-color.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/globe-draw.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/globe-frame.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/globe-land.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/globe-math.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/globe-painter.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/globe-solid.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-loop.ts", "type": "registry:ui" }
+  ]
+}

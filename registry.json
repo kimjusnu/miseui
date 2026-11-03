@@ -176,6 +176,43 @@
       ]
     },
     {
+      "name": "animated-beam",
+      "type": "registry:ui",
+      "title": "Animated Beam",
+      "description": "A line of light running between two real elements, measured so it follows every reflow: straight, bowed, stepped like a circuit or many sources into one hub.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "interactions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/animated-beam.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/animated-beam-hub.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/animated-beam-line.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/animated-beam-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-loop.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "app-shell",
       "type": "registry:ui",
       "title": "App Shell",
@@ -574,6 +611,62 @@
       ]
     },
     {
+      "name": "card-stack",
+      "type": "registry:ui",
+      "title": "Card Stack",
+      "description": "A pile of things with no order: a scattered heap to drag through, a fan that spreads, a swipe to decide on each or notification rows that open into a list.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/button.json"
+      ],
+      "categories": [
+        "interactions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/card-stack.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-stack-card.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-stack-cascade.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-stack-fan.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-stack-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-stack-pile.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/card-stack-swipe.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-loop.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-seed.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "carousel",
       "type": "registry:ui",
       "title": "Carousel",
@@ -770,6 +863,39 @@
       "files": [
         {
           "path": "registry/miseui/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "click-spark",
+      "type": "registry:ui",
+      "title": "Click Spark",
+      "description": "A wrapper that answers a press with a small burst from that point: lines, falling bits, one soft ring or a little confetti, on one canvas that only draws while something is alive.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "interactions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/click-spark.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/click-spark-engine.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/click-spark-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-seed.ts",
           "type": "registry:ui"
         }
       ]
@@ -1321,6 +1447,41 @@
       ]
     },
     {
+      "name": "dock",
+      "type": "registry:ui",
+      "title": "Dock",
+      "description": "A row of icon buttons that swell near the pointer and rise without moving the page: a glass bar, bare tiles, a side rail or words under every icon.",
+      "dependencies": [
+        "motion",
+        "radix-ui"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/tooltip.json"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/dock.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/dock-magnify.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/dock-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/pointer-fine.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dot-background",
       "type": "registry:ui",
       "title": "Dot Background",
@@ -1600,6 +1761,41 @@
       ]
     },
     {
+      "name": "floating-nav",
+      "type": "registry:ui",
+      "title": "Floating Nav",
+      "description": "Navigation that floats over the page: a pill with a sliding highlight, a capsule that opens into a panel, a bar that shrinks on scroll or a bottom tab bar.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json"
+      ],
+      "categories": [
+        "navigation"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/floating-nav.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/floating-nav-island.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/floating-nav-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/floating-nav-views.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "floating-panel",
       "type": "registry:ui",
       "title": "Floating Panel",
@@ -1731,6 +1927,59 @@
         },
         {
           "path": "registry/miseui/ui/glitch-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "globe",
+      "type": "registry:ui",
+      "title": "Globe",
+      "description": "A turning dotted earth on one canvas with no 3D library: land dots, a wire ball, a shaded disc or routes with a light along them, plus markers and drag to spin.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "interactions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/globe.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/globe-color.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/globe-draw.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/globe-frame.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/globe-land.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/globe-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/globe-painter.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/globe-solid.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-loop.ts",
           "type": "registry:ui"
         }
       ]
@@ -1949,6 +2198,43 @@
       ]
     },
     {
+      "name": "image-trail",
+      "type": "registry:ui",
+      "title": "Image Trail",
+      "description": "Pictures appear along the pointer's path and fade in order, pile up, fan out or slide past, with a still arrangement on touch so the box is never blank.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "interactions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/image-trail.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/image-trail-engine.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/image-trail-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-seed.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/pointer-fine.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "indicator",
       "type": "registry:ui",
       "title": "Indicator",
@@ -2140,6 +2426,43 @@
       ]
     },
     {
+      "name": "lens",
+      "type": "registry:ui",
+      "title": "Lens",
+      "description": "A magnifier over any content: a round lens, a lifted loupe, a zoomed panel beside it or a full-width band, with a second copy that focus and assistive tech never reach.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "interactions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/lens.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/lens-gestures.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/lens-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/lens-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/pointer-fine.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "liquid-metal",
       "type": "registry:ui",
       "title": "Liquid Metal",
@@ -2253,6 +2576,39 @@
         {
           "path": "registry/miseui/blocks/login-form-visual.tsx",
           "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "magnet",
+      "type": "registry:ui",
+      "title": "Magnet",
+      "description": "A wrapper that pulls any child toward the pointer from past its own bounds: the whole element, inner layers, a row by distance, or a soft ring that trails.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "interactions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/magnet.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/magnet-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/magnet-state.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/pointer-fine.ts",
+          "type": "registry:ui"
         }
       ]
     },
@@ -2568,6 +2924,39 @@
         },
         {
           "path": "registry/miseui/ui/number-input-math.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "orbiting-circles",
+      "type": "registry:ui",
+      "title": "Orbiting Circles",
+      "description": "Small things travelling around a centre: one orbit, several at different speeds, a tilted ellipse that passes behind or an arch at the foot of a hero. Focus and pointing stop it.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "interactions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/orbiting-circles.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/orbiting-circles-loop.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/orbiting-circles-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-loop.ts",
           "type": "registry:ui"
         }
       ]
@@ -4661,6 +5050,35 @@
       "files": [
         {
           "path": "registry/miseui/ui/thinking-orb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tilted-card",
+      "type": "registry:ui",
+      "title": "Tilted Card",
+      "description": "A showcase card with strong tilt and depth for a picture or a pass: a floating caption, a foil sheen, parts on separate planes or a notched ticket, with text sharp at rest.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "interactions"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/tilted-card.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tilted-card-math.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/tilted-card-parts.tsx",
           "type": "registry:ui"
         }
       ]
