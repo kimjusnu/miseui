@@ -1,0 +1,18 @@
+{
+  "name": "particles-background",
+  "type": "registry:ui",
+  "title": "Particles Background",
+  "description": "Points on one canvas behind a section: floating, joined by faint lines, rising, or an even field with a clearing that follows the pointer.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["backgrounds"],
+  "files": [
+    { "path": "registry/miseui/ui/particles-background.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/particles-background-engine.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/particles-background-step.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/particles-background-links.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/particles-background-painter.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-loop.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-seed.ts", "type": "registry:ui" }
+  ]
+}

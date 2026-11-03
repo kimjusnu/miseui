@@ -1,0 +1,15 @@
+{
+  "name": "meteors-background",
+  "type": "registry:ui",
+  "title": "Meteors Background",
+  "description": "Short streaks crossing a section: thin meteors, faint rain, slow comets or a twinkling sky, placed from a seed and moved with transforms only.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["backgrounds"],
+  "files": [
+    { "path": "registry/miseui/ui/meteors-background.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/meteors-background-layout.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-loop.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-seed.ts", "type": "registry:ui" }
+  ]
+}

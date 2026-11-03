@@ -1,0 +1,10 @@
+{
+  "name": "aurora-background",
+  "type": "registry:ui",
+  "title": "Aurora Background",
+  "description": "Light with height and direction: curtains from the top, a glow from the bottom edge, a ring behind the centre or one diagonal ribbon, with an optional slow drift.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/mesh-background.json"],
+  "categories": ["backgrounds"],
+  "files": [{ "path": "registry/miseui/ui/aurora-background.tsx", "type": "registry:ui" }]
+}

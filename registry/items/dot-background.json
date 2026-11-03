@@ -1,0 +1,9 @@
+{
+  "name": "dot-background",
+  "type": "registry:ui",
+  "title": "Dot Background",
+  "description": "Small marks behind your content: an even dot field, a fading one, plus marks or a halftone growing toward one corner, with an optional colour around the pointer.",
+  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/grid-background.json"],
+  "categories": ["backgrounds"],
+  "files": [{ "path": "registry/miseui/ui/dot-background.tsx", "type": "registry:ui" }]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "grid-background",
+  "type": "registry:ui",
+  "title": "Grid Background",
+  "description": "Hairlines behind your content: an even grid, a fading one, a floor receding to a horizon or a few filled cells, with an optional brightening around the pointer.",
+  "registryDependencies": ["utils"],
+  "categories": ["backgrounds"],
+  "files": [
+    { "path": "registry/miseui/ui/grid-background.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/grid-background-pointer.tsx", "type": "registry:ui" }
+  ]
+}

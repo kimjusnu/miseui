@@ -226,6 +226,28 @@
       ]
     },
     {
+      "name": "aurora-background",
+      "type": "registry:ui",
+      "title": "Aurora Background",
+      "description": "Light with height and direction: curtains from the top, a glow from the bottom edge, a ring behind the centre or one diagonal ribbon, with an optional slow drift.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/mesh-background.json"
+      ],
+      "categories": [
+        "backgrounds"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/aurora-background.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "avatar",
       "type": "registry:ui",
       "title": "Avatar",
@@ -298,6 +320,39 @@
       "files": [
         {
           "path": "registry/miseui/ui/beam-border.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "beams-background",
+      "type": "registry:ui",
+      "title": "Beams Background",
+      "description": "Straight lines of light behind a section: a fan, lights on a grid, one slow band or soft shafts, quiet enough to keep the sentence on top first.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "backgrounds"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/beams-background.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/beams-background-layout.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-loop.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-seed.ts",
           "type": "registry:ui"
         }
       ]
@@ -1266,6 +1321,25 @@
       ]
     },
     {
+      "name": "dot-background",
+      "type": "registry:ui",
+      "title": "Dot Background",
+      "description": "Small marks behind your content: an even dot field, a fading one, plus marks or a halftone growing toward one corner, with an optional colour around the pointer.",
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/grid-background.json"
+      ],
+      "categories": [
+        "backgrounds"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/dot-background.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "drawer",
       "type": "registry:ui",
       "title": "Drawer",
@@ -1700,6 +1774,28 @@
       "files": [
         {
           "path": "registry/miseui/ui/gradient-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "grid-background",
+      "type": "registry:ui",
+      "title": "Grid Background",
+      "description": "Hairlines behind your content: an even grid, a fading one, a floor receding to a horizon or a few filled cells, with an optional brightening around the pointer.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "backgrounds"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/grid-background.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/grid-background-pointer.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2269,6 +2365,64 @@
       ]
     },
     {
+      "name": "mesh-background",
+      "type": "registry:ui",
+      "title": "Mesh Background",
+      "description": "Large soft colour from the accent and its neighbours, barely tinted to vivid, from one corner or split on a diagonal, with an optional slow drift.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "backgrounds"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/mesh-background.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/mesh-background-drift.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "meteors-background",
+      "type": "registry:ui",
+      "title": "Meteors Background",
+      "description": "Short streaks crossing a section: thin meteors, faint rain, slow comets or a twinkling sky, placed from a seed and moved with transforms only.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "backgrounds"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/meteors-background.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/meteors-background-layout.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-loop.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-seed.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "metro-map",
       "type": "registry:ui",
       "title": "Metro Map",
@@ -2361,6 +2515,24 @@
         },
         {
           "path": "registry/miseui/ui/navigation-menu-parts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "noise-background",
+      "type": "registry:ui",
+      "title": "Noise Background",
+      "description": "Film grain drawn from an inline SVG with no image files: fine grain, warm paper, grain over a soft accent wash, or sparse flecks.",
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "backgrounds"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/noise-background.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2478,6 +2650,51 @@
         },
         {
           "path": "registry/miseui/ui/panel-stack-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "particles-background",
+      "type": "registry:ui",
+      "title": "Particles Background",
+      "description": "Points on one canvas behind a section: floating, joined by faint lines, rising, or an even field with a clearing that follows the pointer.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "backgrounds"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/particles-background.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/particles-background-engine.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/particles-background-step.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/particles-background-links.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/particles-background-painter.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-loop.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-seed.ts",
           "type": "registry:ui"
         }
       ]
@@ -2859,6 +3076,39 @@
         },
         {
           "path": "registry/miseui/ui/ring-gallery-state.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "ripple-background",
+      "type": "registry:ui",
+      "title": "Ripple Background",
+      "description": "Rings spreading behind a section: still lines, a slow pulse, a turning sonar sweep or several sources, plus a ring from where someone pressed.",
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils"
+      ],
+      "categories": [
+        "backgrounds"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/ui/ripple-background.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/ripple-background-layout.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-loop.ts",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/miseui/ui/background-seed.ts",
           "type": "registry:ui"
         }
       ]
@@ -3542,7 +3792,7 @@
         "utils"
       ],
       "categories": [
-        "display"
+        "backgrounds"
       ],
       "files": [
         {

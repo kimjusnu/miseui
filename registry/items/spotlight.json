@@ -5,6 +5,6 @@
   "description": "A surface that catches a soft light under the pointer, on its face, on its edge or by uncovering a hidden layer. Off on touch.",
   "dependencies": ["motion"],
   "registryDependencies": ["utils"],
-  "categories": ["display"],
+  "categories": ["backgrounds"],
   "files": [{ "path": "registry/miseui/ui/spotlight.tsx", "type": "registry:ui" }]
 }

@@ -1,0 +1,13 @@
+{
+  "name": "mesh-background",
+  "type": "registry:ui",
+  "title": "Mesh Background",
+  "description": "Large soft colour from the accent and its neighbours, barely tinted to vivid, from one corner or split on a diagonal, with an optional slow drift.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["backgrounds"],
+  "files": [
+    { "path": "registry/miseui/ui/mesh-background.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/mesh-background-drift.ts", "type": "registry:ui" }
+  ]
+}

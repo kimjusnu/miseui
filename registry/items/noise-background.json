@@ -1,0 +1,9 @@
+{
+  "name": "noise-background",
+  "type": "registry:ui",
+  "title": "Noise Background",
+  "description": "Film grain drawn from an inline SVG with no image files: fine grain, warm paper, grain over a soft accent wash, or sparse flecks.",
+  "registryDependencies": ["utils"],
+  "categories": ["backgrounds"],
+  "files": [{ "path": "registry/miseui/ui/noise-background.tsx", "type": "registry:ui" }]
+}

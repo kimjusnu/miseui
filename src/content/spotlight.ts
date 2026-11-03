@@ -3,7 +3,7 @@ import type { ComponentMeta } from "./types"
 export const meta: ComponentMeta = {
   name: "spotlight",
   title: "Spotlight",
-  category: "display",
+  category: "backgrounds",
   description: "A surface that catches a soft light under the pointer, on its face, on its edge or by uncovering a hidden layer.",
   why: {
     principle: "Affordance through response",

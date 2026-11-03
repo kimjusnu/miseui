@@ -1,0 +1,15 @@
+{
+  "name": "ripple-background",
+  "type": "registry:ui",
+  "title": "Ripple Background",
+  "description": "Rings spreading behind a section: still lines, a slow pulse, a turning sonar sweep or several sources, plus a ring from where someone pressed.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["backgrounds"],
+  "files": [
+    { "path": "registry/miseui/ui/ripple-background.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/ripple-background-layout.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-loop.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-seed.ts", "type": "registry:ui" }
+  ]
+}

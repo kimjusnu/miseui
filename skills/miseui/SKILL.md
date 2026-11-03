@@ -191,7 +191,6 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Separator** (`separator`): A rule between groups of content, as a hairline, a dashed break, a labelled divider or a line that fades at both ends. — Law of uniform connectedness · [reference](references/separator.md)
 - **Skeleton** (`skeleton`): Pulsing placeholder shaped like the content that is loading, so the wait feels shorter than a spinner. — Perceived performance · [reference](references/skeleton.md)
 - **Spoiler** (`spoiler`): Hides text or a block until someone presses to see it, so the reader chooses the moment. Screen readers do not get ahead of everyone else. — User control and freedom · [reference](references/spoiler.md)
-- **Spotlight** (`spotlight`): A surface that catches a soft light under the pointer, on its face, on its edge or by uncovering a hidden layer. — Affordance through response · [reference](references/spotlight.md)
 - **Stat** (`stat`): One number with its label, change and a small trend line. Colour only appears once you have said which direction is good. — Von Restorff effect · [reference](references/stat.md)
 - **Stat Line** (`stat-line`): One line of several figures, before and after included: equal columns, a running sentence or one big number above the rest. — Chunking · [reference](references/stat-line.md)
 - **Story Section** (`story-section`): A numbered section of a long read, with the number, heading and text set three ways. — Chunking · [reference](references/story-section.md)
@@ -227,6 +226,19 @@ UI that explains itself. Every component ships with the principle behind its sha
 - **Shimmer Text** (`shimmer-text`): A band of light passing over a status label, so “Thinking…” reads as in progress without inventing a percentage. — Progress without false precision · [reference](references/shimmer-text.md)
 - **Split Text** (`split-text`): A headline that arrives letter by letter or word by word, with the real sentence kept for assistive tech. — Staging · [reference](references/split-text.md)
 - **Typewriter Text** (`typewriter-text`): A staged line that types itself with a human rhythm, the whole text laid out from the start so lines never reflow. — Labor illusion · [reference](references/typewriter-text.md)
+
+## Backgrounds
+
+- **Aurora Background** (`aurora-background`): Light with height and direction: curtains from the top, a glow from the bottom edge, a ring behind the centre or one diagonal ribbon, with an optional slow drift. — Directional cue · [reference](references/aurora-background.md)
+- **Beams Background** (`beams-background`): Straight lines of light behind a section: a fan, lights on a grid, one slow band or soft shafts, quiet enough to keep the sentence on top first. — Figure and ground · [reference](references/beams-background.md)
+- **Dot Background** (`dot-background`): Small marks behind your content: an even dot field, a fading one, plus marks or a halftone growing toward one corner, with an optional colour around the pointer. — Figure and ground · [reference](references/dot-background.md)
+- **Grid Background** (`grid-background`): Hairlines behind your content: an even grid, a fading one, a floor receding to a horizon or a few filled cells, with an optional brightening around the pointer. — Figure and ground · [reference](references/grid-background.md)
+- **Mesh Background** (`mesh-background`): Large soft colour from the accent and its neighbours, barely tinted to vivid, from one corner or split on a diagonal, with an optional slow drift. — Aesthetic-usability effect · [reference](references/mesh-background.md)
+- **Meteors Background** (`meteors-background`): Short streaks crossing a section: thin meteors, faint rain, slow comets or a twinkling sky, placed from a seed and moved with transforms only. — Peripheral vision · [reference](references/meteors-background.md)
+- **Noise Background** (`noise-background`): Film grain drawn from an inline SVG with no image files: fine grain, warm paper, grain over a soft accent wash, or sparse flecks. — Aesthetic-usability effect · [reference](references/noise-background.md)
+- **Particles Background** (`particles-background`): Points on one canvas behind a section: floating, joined by faint lines, rising, or an even field with a clearing that follows the pointer. — Law of common fate · [reference](references/particles-background.md)
+- **Ripple Background** (`ripple-background`): Rings spreading behind a section: still lines, a slow pulse, a turning sonar sweep or several sources, plus a ring from where someone pressed. — Gestalt continuity · [reference](references/ripple-background.md)
+- **Spotlight** (`spotlight`): A surface that catches a soft light under the pointer, on its face, on its edge or by uncovering a hidden layer. — Affordance through response · [reference](references/spotlight.md)
 
 ## Effects
 

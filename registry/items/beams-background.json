@@ -1,0 +1,15 @@
+{
+  "name": "beams-background",
+  "type": "registry:ui",
+  "title": "Beams Background",
+  "description": "Straight lines of light behind a section: a fan, lights on a grid, one slow band or soft shafts, quiet enough to keep the sentence on top first.",
+  "dependencies": ["motion"],
+  "registryDependencies": ["utils"],
+  "categories": ["backgrounds"],
+  "files": [
+    { "path": "registry/miseui/ui/beams-background.tsx", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/beams-background-layout.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-loop.ts", "type": "registry:ui" },
+    { "path": "registry/miseui/ui/background-seed.ts", "type": "registry:ui" }
+  ]
+}
