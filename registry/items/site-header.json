@@ -1,0 +1,23 @@
+{
+  "name": "site-header",
+  "type": "registry:block",
+  "title": "Site Header",
+  "description": "A marketing site's top navigation with a skip link and a drawer on phones: a plain row of links, panels of grouped links, or pieces floating over the page.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/drawer.json",
+    "https://miseui.junsu4621.workers.dev/r/floating-nav.json",
+    "https://miseui.junsu4621.workers.dev/r/navigation-menu.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/site-header.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/site-header-bar.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/site-header-floating.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/site-header-mega.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/site-header-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/site-header-sample.ts", "type": "registry:component" }
+  ]
+}

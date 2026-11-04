@@ -1,0 +1,22 @@
+{
+  "name": "onboarding-checklist",
+  "type": "registry:block",
+  "title": "Onboarding Checklist",
+  "description": "First-run setup with a true progress count: a list as its own screen, a slim row above the page, or welcome steps one at a time in a dialog.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/checkbox.json",
+    "https://miseui.junsu4621.workers.dev/r/dialog.json",
+    "https://miseui.junsu4621.workers.dev/r/progress.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/onboarding-checklist.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/onboarding-checklist-banner.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/onboarding-checklist-dialog.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/onboarding-checklist-panel.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/onboarding-checklist-state.ts", "type": "registry:component" }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "error-page",
+  "type": "registry:block",
+  "title": "Error Page",
+  "description": "A 404, 500 or offline screen with honest wording and a way out that can work: one sentence, beside places that still work, or a plain readout for developer tools.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/clipboard.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/error-page.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/error-page-copy.ts", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/error-page-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/error-page-split.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/error-page-state.ts", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/error-page-terminal.tsx", "type": "registry:component" }
+  ]
+}

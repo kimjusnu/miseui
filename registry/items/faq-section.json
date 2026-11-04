@@ -1,0 +1,21 @@
+{
+  "name": "faq-section",
+  "type": "registry:block",
+  "title": "FAQ Section",
+  "description": "Answers before someone has to ask: a short list on one plate, a longer list beside a heading that stays in view, or a filter box with an empty state.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/accordion.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/empty.json",
+    "https://miseui.junsu4621.workers.dev/r/search-field.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/faq-section.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/faq-section-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/faq-section-search.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/faq-section-filter.ts", "type": "registry:component" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "site-footer",
+  "type": "registry:block",
+  "title": "Site Footer",
+  "description": "The end of every page, in three decisions: a full map of the site, one quiet line, or a newsletter field above the links.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/input.json",
+    "https://miseui.junsu4621.workers.dev/r/label.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/site-footer.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/site-footer-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/site-footer-signup.tsx", "type": "registry:component" }
+  ]
+}

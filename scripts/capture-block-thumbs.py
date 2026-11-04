@@ -2,12 +2,14 @@
 import io
 import json
 import os
+import sys
 
 from PIL import Image
 from playwright.sync_api import sync_playwright
 
 DEST = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "public", "thumbs")
-NAMES = ["empty-state", "chat-assistant", "login-form", "signup-steps", "pricing-table", "dashboard-overview", "settings-page", "landing-hero", "feature-bento"]
+NAMES = ["empty-state", "chat-assistant", "login-form", "signup-steps", "pricing-table", "dashboard-overview", "settings-page", "landing-hero", "feature-bento", "onboarding-checklist", "verification-code", "docs-layout", "error-page", "site-header", "site-footer", "faq-section", "cta-section", "logo-wall", "stats-section"]
+NAMES = sys.argv[1].split(",") if len(sys.argv) > 1 else NAMES
 WIDTH = 960
 done, errors = [], []
 with sync_playwright() as p:

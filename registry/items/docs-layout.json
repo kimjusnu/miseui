@@ -1,0 +1,24 @@
+{
+  "name": "docs-layout",
+  "type": "registry:block",
+  "title": "Docs Layout",
+  "description": "A documentation screen from a list of pages: nav, page and table of contents, one column for a short guide, or text beside its code. Collapses on phones.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/code-block.json",
+    "https://miseui.junsu4621.workers.dev/r/collapsible.json",
+    "https://miseui.junsu4621.workers.dev/r/sidebar.json",
+    "https://miseui.junsu4621.workers.dev/r/table-of-contents.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/docs-layout.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/docs-layout-centered.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/docs-layout-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/docs-layout-reference.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/docs-layout-sample.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/docs-layout-sidebar.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/docs-layout-state.ts", "type": "registry:component" }
+  ]
+}

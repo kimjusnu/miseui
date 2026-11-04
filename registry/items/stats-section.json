@@ -1,0 +1,17 @@
+{
+  "name": "stats-section",
+  "type": "registry:block",
+  "title": "Stats Section",
+  "description": "Numbers that make a claim believable, in three decisions: several of equal weight, one to remember above the rest, or each beside what it counts.",
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/count-up.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/stats-section.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/stats-section-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/stats-section-plate.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/stats-section-split.tsx", "type": "registry:component" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "cta-section",
+  "type": "registry:block",
+  "title": "CTA Section",
+  "description": "One clear thing to do, in three decisions: a plate that ends the page, text beside a piece of the product, or a slim row inside a long page.",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/badge.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/cta-section.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/cta-section-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/cta-section-split.tsx", "type": "registry:component" }
+  ]
+}

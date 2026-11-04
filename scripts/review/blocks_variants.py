@@ -18,6 +18,16 @@ BLOCKS = {
     "dashboard-overview": ["overview", "analytics", "table"],
     "settings-page": ["sections", "sidebar", "cards"],
     "chat-assistant": ["full", "docked", "popup"],
+    "onboarding-checklist": ["panel", "banner", "dialog"],
+    "verification-code": ["card", "split", "inline"],
+    "docs-layout": ["sidebar", "centered", "reference"],
+    "error-page": ["centered", "split", "terminal"],
+    "site-header": ["bar", "mega", "floating"],
+    "site-footer": ["columns", "minimal", "signup"],
+    "faq-section": ["accordion", "split", "search"],
+    "cta-section": ["plate", "split", "banner"],
+    "logo-wall": ["row", "grid", "marquee"],
+    "stats-section": ["row", "plate", "split"],
 }
 MODE = sys.argv[1]
 WIDTH = int(sys.argv[2])

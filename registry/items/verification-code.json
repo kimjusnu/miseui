@@ -1,0 +1,21 @@
+{
+  "name": "verification-code",
+  "type": "registry:block",
+  "title": "Verification Code",
+  "description": "A one-time code screen with a resend countdown, wrong-code and success states, in wording that never reveals whether an address exists: one card, beside what to look for in the inbox, or a row inside your own form.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/input-otp.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/verification-code.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/verification-code-inline.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/verification-code-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/verification-code-split.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/verification-code-state.ts", "type": "registry:component" }
+  ]
+}

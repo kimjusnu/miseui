@@ -1,0 +1,18 @@
+{
+  "name": "logo-wall",
+  "type": "registry:block",
+  "title": "Logo Wall",
+  "description": "Logos you have permission to show, in three decisions: a quiet row, a plate for each, or a marquee for more than fit. Includes dashed placeholders to build with until you have them.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/icon-button.json",
+    "https://miseui.junsu4621.workers.dev/r/marquee.json"
+  ],
+  "categories": ["blocks"],
+  "files": [
+    { "path": "registry/miseui/blocks/logo-wall.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/logo-wall-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/logo-wall-marquee.tsx", "type": "registry:component" }
+  ]
+}

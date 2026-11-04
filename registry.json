@@ -1236,6 +1236,37 @@
       ]
     },
     {
+      "name": "cta-section",
+      "type": "registry:block",
+      "title": "CTA Section",
+      "description": "One clear thing to do, in three decisions: a plate that ends the page, text beside a piece of the product, or a slim row inside a long page.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/badge.json",
+        "https://miseui.junsu4621.workers.dev/r/button.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/cta-section.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/cta-section-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/cta-section-split.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "dashboard-overview",
       "type": "registry:block",
       "title": "Dashboard Overview",
@@ -1521,6 +1552,55 @@
       ]
     },
     {
+      "name": "docs-layout",
+      "type": "registry:block",
+      "title": "Docs Layout",
+      "description": "A documentation screen from a list of pages: nav, page and table of contents, one column for a short guide, or text beside its code. Collapses on phones.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/code-block.json",
+        "https://miseui.junsu4621.workers.dev/r/collapsible.json",
+        "https://miseui.junsu4621.workers.dev/r/sidebar.json",
+        "https://miseui.junsu4621.workers.dev/r/table-of-contents.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/docs-layout.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/docs-layout-centered.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/docs-layout-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/docs-layout-reference.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/docs-layout-sample.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/docs-layout-sidebar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/docs-layout-state.ts",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "dot-background",
       "type": "registry:ui",
       "title": "Dot Background",
@@ -1682,6 +1762,86 @@
         },
         {
           "path": "registry/miseui/blocks/empty-state-sample.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "error-page",
+      "type": "registry:block",
+      "title": "Error Page",
+      "description": "A 404, 500 or offline screen with honest wording and a way out that can work: one sentence, beside places that still work, or a plain readout for developer tools.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/clipboard.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/error-page.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/error-page-copy.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/error-page-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/error-page-split.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/error-page-state.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/error-page-terminal.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-section",
+      "type": "registry:block",
+      "title": "FAQ Section",
+      "description": "Answers before someone has to ask: a short list on one plate, a longer list beside a heading that stays in view, or a filter box with an empty state.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/accordion.json",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/empty.json",
+        "https://miseui.junsu4621.workers.dev/r/search-field.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/faq-section.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/faq-section-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/faq-section-search.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/faq-section-filter.ts",
           "type": "registry:component"
         }
       ]
@@ -2679,6 +2839,38 @@
       ]
     },
     {
+      "name": "logo-wall",
+      "type": "registry:block",
+      "title": "Logo Wall",
+      "description": "Logos you have permission to show, in three decisions: a quiet row, a plate for each, or a marquee for more than fit. Includes dashed placeholders to build with until you have them.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/icon-button.json",
+        "https://miseui.junsu4621.workers.dev/r/marquee.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/logo-wall.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/logo-wall-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/logo-wall-marquee.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "magnet",
       "type": "registry:ui",
       "title": "Magnet",
@@ -3024,6 +3216,47 @@
         {
           "path": "registry/miseui/ui/number-input-math.ts",
           "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "onboarding-checklist",
+      "type": "registry:block",
+      "title": "Onboarding Checklist",
+      "description": "First-run setup with a true progress count: a list as its own screen, a slim row above the page, or welcome steps one at a time in a dialog.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/checkbox.json",
+        "https://miseui.junsu4621.workers.dev/r/dialog.json",
+        "https://miseui.junsu4621.workers.dev/r/progress.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/onboarding-checklist.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/onboarding-checklist-banner.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/onboarding-checklist-dialog.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/onboarding-checklist-panel.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/onboarding-checklist-state.ts",
+          "type": "registry:component"
         }
       ]
     },
@@ -4199,6 +4432,83 @@
       ]
     },
     {
+      "name": "site-footer",
+      "type": "registry:block",
+      "title": "Site Footer",
+      "description": "The end of every page, in three decisions: a full map of the site, one quiet line, or a newsletter field above the links.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/input.json",
+        "https://miseui.junsu4621.workers.dev/r/label.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/site-footer.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/site-footer-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/site-footer-signup.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "site-header",
+      "type": "registry:block",
+      "title": "Site Header",
+      "description": "A marketing site's top navigation with a skip link and a drawer on phones: a plain row of links, panels of grouped links, or pieces floating over the page.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/drawer.json",
+        "https://miseui.junsu4621.workers.dev/r/floating-nav.json",
+        "https://miseui.junsu4621.workers.dev/r/navigation-menu.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/site-header.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/site-header-bar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/site-header-floating.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/site-header-mega.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/site-header-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/site-header-sample.ts",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "skeleton",
       "type": "registry:ui",
       "title": "Skeleton",
@@ -4438,6 +4748,37 @@
         {
           "path": "registry/miseui/ui/station-dialog-surface.tsx",
           "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stats-section",
+      "type": "registry:block",
+      "title": "Stats Section",
+      "description": "Numbers that make a claim believable, in three decisions: several of equal weight, one to remember above the rest, or each beside what it counts.",
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/count-up.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/stats-section.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/stats-section-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/stats-section-plate.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/stats-section-split.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -5589,6 +5930,47 @@
         {
           "path": "registry/miseui/lib/utils.ts",
           "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "verification-code",
+      "type": "registry:block",
+      "title": "Verification Code",
+      "description": "A one-time code screen with a resend countdown, wrong-code and success states, in wording that never reveals whether an address exists: one card, beside what to look for in the inbox, or a row inside your own form.",
+      "dependencies": [
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/input-otp.json"
+      ],
+      "categories": [
+        "blocks"
+      ],
+      "files": [
+        {
+          "path": "registry/miseui/blocks/verification-code.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/verification-code-inline.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/verification-code-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/verification-code-split.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/verification-code-state.ts",
+          "type": "registry:component"
         }
       ]
     },
