@@ -51,6 +51,12 @@ describe("formatReference effects", () => {
 })
 
 describe("formatSkill", () => {
+  it("quotes the description, because an unquoted colon made the frontmatter invalid and npx skills add found nothing", () => {
+    const line = formatSkill([button], site).split("\n")[2]
+    expect(line.startsWith('description: "')).toBe(true)
+    expect(JSON.parse(line.replace("description: ", ""))).toContain("no designer is involved: whole screens")
+  })
+
   it("starts with frontmatter and lists every component under its category", () => {
     const text = formatSkill([button, thinking], site)
     expect(text.startsWith("---\nname: miseui\ndescription: ")).toBe(true)

@@ -24,6 +24,16 @@ const STEPS = [
   },
 ] as const
 
+const NAMESPACE_CONFIG = `{
+  "registries": {
+    "@miseui": "${SITE_URL}/r/{name}.json"
+  }
+}`
+
+const MCP_COMMANDS = `npx shadcn@latest mcp init --client claude
+# the same namespace also works by hand
+npx shadcn@latest add @miseui/pricing-table`
+
 export function GettingStarted() {
   return (
     <article className="flex flex-col gap-10">
@@ -45,6 +55,16 @@ export function GettingStarted() {
           </li>
         ))}
       </ol>
+      <section aria-labelledby="mcp-heading" className="flex min-w-0 flex-col gap-3 border-t pt-8">
+        <h2 id="mcp-heading" className="text-lg font-semibold">
+          Let your agent search and install
+        </h2>
+        <p className="max-w-prose text-sm leading-relaxed text-muted-foreground">
+          The shadcn MCP server lets Claude Code, Cursor and other MCP clients browse this registry and install from it. Add the namespace to components.json, connect the server, then ask for what you need, such as a pricing page from miseui.
+        </p>
+        <CodeBlock code={NAMESPACE_CONFIG} language="json" />
+        <CodeBlock code={MCP_COMMANDS} language="bash" />
+      </section>
       <section className="flex flex-col gap-3 border-t pt-8">
         <h2 className="text-lg font-semibold">For agents and search</h2>
         <p className="max-w-prose text-sm leading-relaxed text-muted-foreground">

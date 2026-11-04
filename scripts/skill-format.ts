@@ -118,7 +118,7 @@ export function formatSkill(components: readonly ComponentMeta[], site: string):
   return [
     "---",
     `name: ${SKILL_NAME}`,
-    `description: ${SKILL_DESCRIPTION}`,
+    `description: ${JSON.stringify(SKILL_DESCRIPTION)}`,
     "---",
     "",
     "# Mise UI",

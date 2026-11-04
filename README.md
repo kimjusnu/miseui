@@ -37,17 +37,37 @@ npx skills add kimjusnu/miseui
 # or copy skills/miseui into .claude/skills/
 ```
 
+## Let your agent search and install
+
+The [shadcn MCP server](https://ui.shadcn.com/docs/mcp) lets Claude Code, Cursor and other MCP clients browse this registry and install from it. Add the namespace to `components.json`:
+
+```json
+{
+  "registries": {
+    "@miseui": "https://miseui.junsu4621.workers.dev/r/{name}.json"
+  }
+}
+```
+
+Then connect the server and ask for what you need, such as "add a pricing page from miseui":
+
+```bash
+npx shadcn@latest mcp init --client claude
+# the same namespace also works by hand
+npx shadcn@latest add @miseui/pricing-table
+```
+
 ## Components
 
-**Blocks** — `chat-assistant`, `dashboard-overview`, `empty-state`, `feature-bento`, `landing-hero`, `login-form`, `pricing-table`, `settings-page`, `signup-steps`
+More than 180 pieces, all with a live demo. Every block comes in at least three designs through its `variant` prop.
+
+**Blocks** — `chat-assistant`, `cta-section`, `dashboard-overview`, `docs-layout`, `empty-state`, `error-page`, `faq-section`, `feature-bento`, `landing-hero`, `login-form`, `logo-wall`, `onboarding-checklist`, `pricing-table`, `settings-page`, `signup-steps`, `site-footer`, `site-header`, `stats-section`, `verification-code`
 
 **AI states** — `thinking-indicator`, `streaming-text`, `tool-call-card`, `reasoning-steps`, `voice-wave`
 
-**Effects** — `beam-border`, `intelligence-glow`, `shimmer-text`, `thinking-orb`, `gooey-morph`, `liquid-metal`, `voice-glow`, `agent-avatar`, `reveal-image`
+**Parts** — forms, navigation, overlays, display and feedback, from `button` and `dialog` to `data-table`, `chart`, `date-picker`, `command` and `sidebar`
 
-**Transitions** — `materialize`, `sheet`, `use-view-transition` (presets: `fade-through`, `shared-axis-x`, `shared-axis-y`, `scale-up`, `blur-in`)
-
-**Core** — `button`, `badge`, `card`, `input`, `textarea`, `label`, `checkbox`, `switch`, `tabs`, `tooltip`, `dialog`, `dropdown-menu`, `popover`, `select`, `skeleton`
+**Motion** — text effects, backgrounds, interactions, effects and transitions, from `count-up` and `aurora-background` to `dock`, `beam-border` and `use-view-transition`
 
 Each one has a page with a live demo, its principle and install command: https://miseui.junsu4621.workers.dev/components/thinking-orb
 
