@@ -12,6 +12,8 @@ interface PricingFeature {
   label: string
   /** Text such as "Unlimited", or a plain yes or no. */
   value: string | boolean
+  /** A heading the row sits under on `comparison`. Rows with the same group stay together. */
+  group?: string
 }
 
 interface PricingPlan {
@@ -33,6 +35,12 @@ const MONTHS_IN_YEAR = 12
 const PRICE_START = { opacity: 0, y: 8 }
 const PRICE_END = { opacity: 1, y: 0 }
 
+/** What a plan's price means in words, so a yearly number never hides what actually gets charged. */
+function billingNote(plan: PricingPlan, billing: PricingBilling, currency: string) {
+  if (plan.monthly === 0) return "No card needed"
+  return billing === "yearly" ? `${formatMoney(plan.yearly * MONTHS_IN_YEAR, currency)} billed yearly` : "Billed monthly"
+}
+
 function formatMoney(amount: number, currency: string) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -53,12 +61,6 @@ function PlanPrice({ plan, billing, currency }: PlanPriceProps) {
   const yearly = billing === "yearly"
   const amount = yearly ? plan.yearly : plan.monthly
   const anchored = yearly && plan.monthly > plan.yearly
-  const free = plan.monthly === 0
-  const note = free
-    ? "No card needed"
-    : yearly
-      ? `${formatMoney(plan.yearly * MONTHS_IN_YEAR, currency)} billed yearly`
-      : "Billed monthly"
   return (
     <div className="flex flex-col gap-1 px-6">
       <div className="flex flex-wrap items-baseline gap-x-2">
@@ -79,7 +81,7 @@ function PlanPrice({ plan, billing, currency }: PlanPriceProps) {
         </motion.span>
         <span className="text-[13px] text-muted-foreground">/ month</span>
       </div>
-      <p className="text-[13px] text-muted-foreground">{note}</p>
+      <p className="text-[13px] text-muted-foreground">{billingNote(plan, billing, currency)}</p>
     </div>
   )
 }
@@ -154,4 +156,4 @@ function PlanCard({ plan, billing, currency, beam, pending, current, disabled, o
   )
 }
 
-export { PlanCard, type PricingBilling, type PricingFeature, type PricingPlan }
+export { FeatureValue, MONTHS_IN_YEAR, PlanCard, billingNote, formatMoney, type PricingBilling, type PricingFeature, type PricingPlan }

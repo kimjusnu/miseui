@@ -2,7 +2,7 @@
   "name": "signup-steps",
   "type": "registry:block",
   "title": "Signup Steps",
-  "description": "A sign-up that asks one question at a time, starts with real progress on the bar and never ticks consent for anyone.",
+  "description": "A sign-up that asks one question at a time, starts with real progress and never ticks consent for anyone, in a card, beside a rail of what is left, or as one large question per screen.",
   "dependencies": ["lucide-react", "motion"],
   "registryDependencies": [
     "utils",
@@ -10,12 +10,17 @@
     "https://miseui.junsu4621.workers.dev/r/button.json",
     "https://miseui.junsu4621.workers.dev/r/checkbox.json",
     "https://miseui.junsu4621.workers.dev/r/input.json",
-    "https://miseui.junsu4621.workers.dev/r/label.json"
+    "https://miseui.junsu4621.workers.dev/r/kbd.json",
+    "https://miseui.junsu4621.workers.dev/r/label.json",
+    "https://miseui.junsu4621.workers.dev/r/steps.json"
   ],
   "categories": ["blocks"],
   "files": [
     { "path": "registry/miseui/blocks/signup-steps.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/signup-steps-conversation.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/signup-steps-flow.ts", "type": "registry:component" },
     { "path": "registry/miseui/blocks/signup-steps-parts.tsx", "type": "registry:component" },
-    { "path": "registry/miseui/blocks/signup-steps-flow.ts", "type": "registry:component" }
+    { "path": "registry/miseui/blocks/signup-steps-question.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/signup-steps-rail.tsx", "type": "registry:component" }
   ]
 }

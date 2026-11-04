@@ -14,6 +14,9 @@ import type {
 } from "./settings-page-form"
 
 const ROW_CLASS = RESPONSIVE_ROW_CLASS
+
+/** The new layouts only: the sections default keeps the sizes people already copied. */
+const SETTINGS_TOUCH_CLASS = "pointer-coarse:[&_input]:h-10 pointer-coarse:[&_[data-slot=button]]:h-10 pointer-coarse:[&_[data-slot=select-trigger]]:h-10 pointer-coarse:[&_[data-slot=switch]]:relative pointer-coarse:[&_[data-slot=switch]]:after:absolute pointer-coarse:[&_[data-slot=switch]]:after:-inset-3"
 const errorId = (id: string) => `${id}-error`
 
 interface FieldProps<Row> {
@@ -124,4 +127,4 @@ function SettingsRowView({ row, fieldId, value, error, onChange, onBlur }: Setti
   return <SwitchRow row={row} {...field} />
 }
 
-export { SettingsRowView }
+export { SETTINGS_TOUCH_CLASS, SettingsRowView }

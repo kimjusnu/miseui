@@ -1,3 +1,4 @@
+import type * as React from "react"
 import { useEffect, useMemo, useState } from "react"
 
 type SettingsValue = string | boolean
@@ -57,11 +58,22 @@ interface SettingsSection {
   description?: string
   /** Pushes the section away from the rest and marks its edge, so it cannot be hit on the way to something else. */
   tone?: "danger"
+  /** Shown beside the title in the `sidebar` design. */
+  icon?: React.ComponentType<{ className?: string }>
   rows: readonly SettingsRow[]
 }
 
 type SaveStatus = "idle" | "saving" | "saved" | "failed"
 type OnSave = (values: SettingsValues, changedIds: readonly string[]) => void | Promise<void>
+
+interface SettingsViewProps extends Omit<React.ComponentProps<"div">, "title"> {
+  title?: string
+  /** Continues the title in the same size, one tone quieter. */
+  titleQuiet?: string
+  sections?: readonly SettingsSection[]
+  /** Receives the editable values and the ids that changed. Reject to keep the edits on screen and offer a retry. In the `cards` design it receives one group at a time. */
+  onSave?: OnSave
+}
 
 /** Long enough to read "Changes saved" without looking for it, short enough not to linger. */
 const SAVED_MESSAGE_MS = 2400
@@ -142,6 +154,7 @@ function useSettingsForm(sections: readonly SettingsSection[], onSave?: OnSave) 
 }
 
 export {
+  isEditable,
   useSettingsForm,
   type OnSave,
   type SaveStatus,
@@ -154,4 +167,5 @@ export {
   type SettingsTextRow,
   type SettingsValue,
   type SettingsValues,
+  type SettingsViewProps,
 }

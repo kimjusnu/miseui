@@ -2,7 +2,7 @@
   "name": "login-form",
   "type": "registry:block",
   "title": "Login Form",
-  "description": "A split login screen with labels that stay visible, inline errors, a password you can reveal and a calm brand panel.",
+  "description": "A login with labels that stay visible and inline errors, in three forms: beside a calm brand panel with a password you can reveal, one card on a grey ground, or email only with a check-your-inbox screen.",
   "dependencies": ["lucide-react", "motion"],
   "registryDependencies": [
     "utils",
@@ -16,6 +16,9 @@
   "categories": ["blocks"],
   "files": [
     { "path": "registry/miseui/blocks/login-form.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/login-form-credentials.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/login-form-magic.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/login-form-magic-state.ts", "type": "registry:component" },
     { "path": "registry/miseui/blocks/login-form-parts.tsx", "type": "registry:component" },
     { "path": "registry/miseui/blocks/login-form-visual.tsx", "type": "registry:component" }
   ]

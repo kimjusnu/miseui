@@ -1,5 +1,5 @@
-import { EmptyState } from "@/registry/miseui/blocks/empty-state"
+import { EmptyState, type EmptyStateVariant } from "@/registry/miseui/blocks/empty-state"
 
-export function Demo() {
-  return <EmptyState />
+export function Demo({ variant }: { variant?: string }) {
+  return <EmptyState variant={variant as EmptyStateVariant | undefined} />
 }

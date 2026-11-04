@@ -2,6 +2,10 @@ import type * as React from "react"
 import { ArrowRight, FileText, ListChecks, Mic } from "lucide-react"
 import { cn } from "@/registry/miseui/lib/utils"
 import { Button } from "@/registry/miseui/ui/button"
+import { EmptyStateChecklist, type EmptyStateChecklistProps, type EmptyStateTask } from "./empty-state-checklist"
+import { EmptyStateSample, type EmptyStateSampleProps, type EmptyStateSampleRow } from "./empty-state-sample"
+
+type EmptyStateVariant = "centered" | "checklist" | "sample"
 
 interface EmptyStateStarter {
   id: string
@@ -16,7 +20,7 @@ const DEFAULT_STARTERS: readonly EmptyStateStarter[] = [
   { id: "meeting", title: "Record a meeting", description: "Talk for an hour, read the two-minute version.", icon: Mic },
 ]
 
-interface EmptyStateProps extends React.ComponentProps<"section"> {
+interface EmptyStateCenteredProps extends React.ComponentProps<"section"> {
   title?: string
   description?: string
   actionLabel?: string
@@ -26,7 +30,7 @@ interface EmptyStateProps extends React.ComponentProps<"section"> {
   onStarter?: (id: string) => void
 }
 
-function EmptyState({
+function EmptyStateCentered({
   title = "Your first project starts here",
   description = "Start from an example or from nothing. You can change everything later.",
   actionLabel = "New project",
@@ -35,9 +39,9 @@ function EmptyState({
   onStarter,
   className,
   ...props
-}: EmptyStateProps) {
+}: EmptyStateCenteredProps) {
   return (
-    <section data-slot="empty-state" className={cn("@container w-full px-6 py-14 @2xl:py-20", className)} {...props}>
+    <section data-slot="empty-state" data-variant="centered" className={cn("@container w-full px-6 py-14", className)} {...props}>
       <div className="mx-auto flex max-w-2xl flex-col items-start gap-8 @2xl:items-center">
         <div className="flex flex-col gap-3 @2xl:items-center @2xl:text-center">
           <h2 className="text-display text-3xl text-balance @2xl:text-4xl">{title}</h2>
@@ -73,4 +77,36 @@ function EmptyState({
   )
 }
 
-export { EmptyState, type EmptyStateProps, type EmptyStateStarter }
+type EmptyStateVariantProps = Pick<EmptyStateChecklistProps, "tasks" | "completed" | "defaultCompleted" | "onCompletedChange" | "onTask"> &
+  Pick<EmptyStateSampleProps, "sampleRows" | "sampleLabel" | "onUseSample" | "onClearSample">
+
+interface EmptyStateProps extends EmptyStateCenteredProps, EmptyStateVariantProps {
+  /** `centered` gives examples to start from, `checklist` the first things to do, `sample` a ghost of the filled screen. Anything else is `centered`. */
+  variant?: EmptyStateVariant
+}
+
+function EmptyState({
+  variant,
+  starters,
+  onStarter,
+  tasks,
+  completed,
+  defaultCompleted,
+  onCompletedChange,
+  onTask,
+  sampleRows,
+  sampleLabel,
+  onUseSample,
+  onClearSample,
+  ...shared
+}: EmptyStateProps) {
+  if (variant === "checklist") {
+    return <EmptyStateChecklist {...shared} tasks={tasks} completed={completed} defaultCompleted={defaultCompleted} onCompletedChange={onCompletedChange} onTask={onTask} />
+  }
+  if (variant === "sample") {
+    return <EmptyStateSample {...shared} sampleRows={sampleRows} sampleLabel={sampleLabel} onUseSample={onUseSample} onClearSample={onClearSample} />
+  }
+  return <EmptyStateCentered {...shared} starters={starters} onStarter={onStarter} />
+}
+
+export { EmptyState, type EmptyStateProps, type EmptyStateSampleRow, type EmptyStateStarter, type EmptyStateTask, type EmptyStateVariant }

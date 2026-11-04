@@ -125,19 +125,24 @@ interface DashboardRailProps {
   product: string
   nav: readonly DashboardNavItem[]
   onNavigate?: (id: string) => void
+  /** `rail` stands at the side from @3xl. `bar` stays on top at every width, giving the content the full width. */
+  layout?: "rail" | "bar"
+  /** Grows the items to 40 px under a finger. */
+  touch?: boolean
 }
 
 /** A top bar under @3xl. The bar scrolls by itself, so five labels never push the page sideways on a phone. */
-function DashboardRail({ product, nav, onNavigate }: DashboardRailProps) {
+function DashboardRail({ product, nav, onNavigate, layout = "rail", touch = false }: DashboardRailProps) {
   const [active, setActive] = useState(nav[0]?.id ?? "")
+  const rail = layout === "rail"
   const select = (id: string) => {
     setActive(id)
     onNavigate?.(id)
   }
   return (
-    <div className="flex min-w-0 flex-col gap-3 border-b p-4 @3xl:w-56 @3xl:shrink-0 @3xl:gap-6 @3xl:border-r @3xl:border-b-0">
-      <p className="px-3 text-[15px] font-medium">{product}</p>
-      <nav aria-label="Main" className="flex gap-1 overflow-x-auto @3xl:flex-col @3xl:overflow-visible">
+    <div className={cn("flex min-w-0 flex-col gap-3 border-b p-4", rail ? "@3xl:w-56 @3xl:shrink-0 @3xl:gap-6 @3xl:border-r @3xl:border-b-0" : "@3xl:flex-row @3xl:items-center @3xl:gap-6 @3xl:px-8 @3xl:py-3")}>
+      <p className={cn("px-3 text-[15px] font-medium", !rail && "@3xl:px-0")}>{product}</p>
+      <nav aria-label="Main" className={cn("flex gap-1 overflow-x-auto", rail && "@3xl:flex-col @3xl:overflow-visible")}>
         {nav.map((item) => (
           <button
             key={item.id}
@@ -148,6 +153,7 @@ function DashboardRail({ product, nav, onNavigate }: DashboardRailProps) {
               "inline-flex h-9 shrink-0 items-center gap-3 rounded-md px-3 text-[13px] whitespace-nowrap outline-none",
               "transition-colors duration-(--duration-fast) ease-(--ease-mise)",
               "focus-visible:ring-[3px] focus-visible:ring-inset focus-visible:ring-ring/50",
+              touch && "pointer-coarse:h-10",
               item.id === active ? "bg-background dark:bg-card text-foreground shadow-xs" : "text-muted-foreground hover:bg-background/60",
             )}
           >

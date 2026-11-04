@@ -1,25 +1,23 @@
 import type * as React from "react"
-import { useState } from "react"
 import { ChartLine, LayoutDashboard, ReceiptText, Settings, Users } from "lucide-react"
 import { cn } from "@/registry/miseui/lib/utils"
-import { Button } from "@/registry/miseui/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/miseui/ui/tabs"
-import { AreaChart } from "./dashboard-overview-chart"
+import { Tabs, TabsContent } from "@/registry/miseui/ui/tabs"
+import { AnalyticsBody, AnalyticsSkeleton } from "./dashboard-overview-analytics"
+import { DashboardContent, OverviewBody } from "./dashboard-overview-body"
 import {
-  ActivityList,
-  AttentionItem,
-  ChangeLabel,
   DashboardRail,
-  PANEL_CLASS,
-  SecondaryMetrics,
   type DashboardActivity,
   type DashboardAttention,
   type DashboardMetric,
   type DashboardNavItem,
   type DashboardRange,
 } from "./dashboard-overview-parts"
-import { DashboardMessage, DashboardSkeleton } from "./dashboard-overview-states"
-import { SAMPLE_ACTIVITY, SAMPLE_ATTENTION, SAMPLE_METRICS } from "./dashboard-overview-sample"
+import { SAMPLE_ACTIVITY, SAMPLE_ATTENTION, SAMPLE_METRICS, SAMPLE_WORK } from "./dashboard-overview-sample"
+import { RangeHeader, useRange } from "./dashboard-overview-shell"
+import { DashboardSkeleton } from "./dashboard-overview-states"
+import { WorkListBody, WorkListSkeleton, type DashboardWorkItem } from "./dashboard-overview-table"
+
+type DashboardVariant = "overview" | "analytics" | "table"
 
 const DEFAULT_NAV: readonly DashboardNavItem[] = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
@@ -29,12 +27,9 @@ const DEFAULT_NAV: readonly DashboardNavItem[] = [
   { id: "settings", label: "Settings", icon: Settings },
 ]
 
-const RANGE_LABELS: Readonly<Record<DashboardRange, string>> = { "7d": "7 days", "30d": "30 days", "90d": "90 days" }
-const RANGES = Object.keys(RANGE_LABELS) as DashboardRange[]
-/** One number first means the row under it stays short. A fourth metric belongs on its own page. */
-const MAX_SECONDARY = 3
-
 interface DashboardOverviewProps extends Omit<React.ComponentProps<"div">, "title"> {
+  /** `overview` one number first, `analytics` one large chart first, `table` the work list first. Anything else is `overview`. */
+  variant?: DashboardVariant
   /** The first is the number the page is about; up to three more sit in a quieter row. An empty list shows the empty state. */
   metrics?: readonly DashboardMetric[]
   activity?: readonly DashboardActivity[]
@@ -53,88 +48,59 @@ interface DashboardOverviewProps extends Omit<React.ComponentProps<"div">, "titl
   onNavigate?: (id: string) => void
   emptyActionLabel?: string
   onEmptyAction?: () => void
+  /** `table` only: the rows to work through. */
+  workItems?: readonly DashboardWorkItem[]
+  /** `table` only: heads the page and names the table. */
+  workTitle?: string
+  /** `table` only: fires with the row and whether it is now handled. */
+  onWorkAction?: (item: DashboardWorkItem, handled: boolean) => void
 }
 
-function DashboardBody({ metrics, activity, attention }: Required<Pick<DashboardOverviewProps, "metrics" | "activity">> & Pick<DashboardOverviewProps, "attention">) {
-  const [primary, ...rest] = metrics
+const SKELETON: Readonly<Record<DashboardVariant, React.ReactNode>> = {
+  overview: <DashboardSkeleton />,
+  analytics: <AnalyticsSkeleton />,
+  table: <WorkListSkeleton />,
+}
+
+type DashboardPanelProps = Pick<
+  DashboardOverviewProps,
+  "metrics" | "activity" | "attention" | "error" | "onRetry" | "onEmptyAction" | "workItems" | "onWorkAction"
+> & {
+  shape: DashboardVariant
+  range: DashboardRange
+  pending: boolean
+  emptyActionLabel: string
+  workTitle: string
+}
+
+function DashboardPanel({ shape, range, pending, error, onRetry, metrics, activity, attention, emptyActionLabel, onEmptyAction, workItems, workTitle, onWorkAction }: DashboardPanelProps) {
+  // Sample data only stands in when nothing real was passed, so it can never leak into a live dashboard.
+  const shownMetrics = metrics ?? SAMPLE_METRICS[range]
+  const content = {
+    metrics: shownMetrics,
+    activity: activity ?? (metrics ? [] : SAMPLE_ACTIVITY),
+    attention: attention ?? (metrics ? undefined : SAMPLE_ATTENTION),
+  }
   return (
-    <div className="grid gap-4 @5xl:grid-cols-[minmax(0,1fr)_320px]">
-      <div className="flex min-w-0 flex-col gap-4">
-        <section className={cn(PANEL_CLASS, "flex flex-col gap-6 p-4 @md:p-6")}>
-          <div className="flex flex-col gap-2">
-            <p className="text-[13px] text-muted-foreground">{primary.label}</p>
-            <p className="text-display text-5xl @2xl:text-6xl">{primary.value}</p>
-            <ChangeLabel metric={primary} className="text-[15px]" />
-          </div>
-          <AreaChart label={primary.label} points={primary.series ?? []} format={primary.formatPoint} />
-        </section>
-        <SecondaryMetrics metrics={rest.slice(0, MAX_SECONDARY)} />
-      </div>
-      <div className="flex min-w-0 flex-col gap-4">
-        {attention ? <AttentionItem key={attention.title} attention={attention} /> : null}
-        <ActivityList activity={activity} />
-      </div>
-    </div>
+    <DashboardContent
+      pending={pending}
+      error={error}
+      onRetry={onRetry}
+      empty={shownMetrics.length === 0}
+      emptyActionLabel={emptyActionLabel}
+      onEmptyAction={onEmptyAction}
+      skeleton={SKELETON[shape]}
+    >
+      {shape === "analytics" ? <AnalyticsBody {...content} /> : null}
+      {shape === "overview" ? <OverviewBody {...content} /> : null}
+      {/* The sample list is already the failed payments, so the sample attention item would only repeat it. */}
+      {shape === "table" ? <WorkListBody metrics={shownMetrics} items={workItems ?? (metrics ? [] : SAMPLE_WORK)} title={workTitle} attention={attention} onAction={onWorkAction} /> : null}
+    </DashboardContent>
   )
-}
-
-interface DashboardContentProps
-  extends Pick<DashboardOverviewProps, "pending" | "error" | "onRetry" | "attention" | "emptyActionLabel" | "onEmptyAction"> {
-  metrics: readonly DashboardMetric[]
-  activity: readonly DashboardActivity[]
-}
-
-function DashboardContent({ pending, error, onRetry, metrics, activity, attention, emptyActionLabel, onEmptyAction }: DashboardContentProps) {
-  if (pending) return <DashboardSkeleton />
-  if (error) {
-    return (
-      <DashboardMessage
-        role="alert"
-        title="These numbers did not load"
-        description={error}
-        action={<Button variant="outline" onClick={onRetry}>Try again</Button>}
-      />
-    )
-  }
-  if (metrics.length === 0) {
-    return (
-      <DashboardMessage
-        title="No numbers to show yet"
-        description="Connect a billing account and your revenue appears here within a few minutes."
-        action={<Button variant="mise" onClick={onEmptyAction}>{emptyActionLabel}</Button>}
-      />
-    )
-  }
-  return <DashboardBody metrics={metrics} activity={activity} attention={attention} />
-}
-
-function RangeHeader({ range, pending }: { range: DashboardRange; pending: boolean }) {
-  return (
-    <div className="flex flex-wrap items-center justify-between gap-3">
-      <h2 className="text-title text-xl">
-        Overview. <span className="text-muted-foreground">Last {RANGE_LABELS[range]}.</span>
-      </h2>
-      <TabsList aria-label="Date range">
-        {RANGES.map((value) => (
-          <TabsTrigger key={value} value={value} disabled={pending} className="px-3">
-            {RANGE_LABELS[value]}
-          </TabsTrigger>
-        ))}
-      </TabsList>
-    </div>
-  )
-}
-
-function useRange(range: DashboardRange | undefined, defaultRange: DashboardRange, onChange?: (range: DashboardRange) => void) {
-  const [internal, setInternal] = useState(defaultRange)
-  const select = (next: string) => {
-    setInternal(next as DashboardRange)
-    onChange?.(next as DashboardRange)
-  }
-  return [range ?? internal, select] as const
 }
 
 function DashboardOverview({
+  variant,
   metrics,
   activity,
   attention,
@@ -149,30 +115,25 @@ function DashboardOverview({
   onNavigate,
   emptyActionLabel = "Connect billing",
   onEmptyAction,
+  workItems,
+  workTitle = "Payments to chase",
+  onWorkAction,
   className,
   ...props
 }: DashboardOverviewProps) {
   const [currentRange, selectRange] = useRange(range, defaultRange, onRangeChange)
+  const shape: DashboardVariant = variant === "analytics" || variant === "table" ? variant : "overview"
+  const panel = { shape, range: currentRange, pending, error, onRetry, metrics, activity, attention, emptyActionLabel, onEmptyAction, workItems, workTitle, onWorkAction }
 
   return (
-    <div data-slot="dashboard-overview" className={cn("@container w-full bg-muted dark:bg-background", className)} {...props}>
-      <div className="flex min-w-0 flex-col @3xl:flex-row">
-        <DashboardRail product={product} nav={nav} onNavigate={onNavigate} />
+    <div data-slot="dashboard-overview" data-variant={shape} className={cn("@container w-full bg-muted dark:bg-background", className)} {...props}>
+      <div className={cn("flex min-w-0 flex-col", shape !== "analytics" && "@3xl:flex-row")}>
+        <DashboardRail product={product} nav={nav} onNavigate={onNavigate} layout={shape === "analytics" ? "bar" : "rail"} touch={shape !== "overview"} />
         <Tabs value={currentRange} onValueChange={selectRange} className="min-w-0 flex-1 gap-6 p-4 @md:p-6 @3xl:p-8">
-          <RangeHeader range={currentRange} pending={pending} />
+          <RangeHeader title={shape === "table" ? `${workTitle}.` : "Overview."} range={currentRange} pending={pending} touch={shape !== "overview"} />
           {/* Not a tab stop of its own: a focused panel has no visible ring, and its controls are reachable anyway. */}
           <TabsContent value={currentRange} tabIndex={-1} className="min-w-0">
-            {/* Sample data only stands in when nothing real was passed, so it can never leak into a live dashboard. */}
-            <DashboardContent
-              pending={pending}
-              error={error}
-              onRetry={onRetry}
-              metrics={metrics ?? SAMPLE_METRICS[currentRange]}
-              activity={activity ?? (metrics ? [] : SAMPLE_ACTIVITY)}
-              attention={attention ?? (metrics ? undefined : SAMPLE_ATTENTION)}
-              emptyActionLabel={emptyActionLabel}
-              onEmptyAction={onEmptyAction}
-            />
+            <DashboardPanel {...panel} />
           </TabsContent>
         </Tabs>
       </div>
@@ -180,4 +141,13 @@ function DashboardOverview({
   )
 }
 
-export { DashboardOverview, type DashboardOverviewProps, type DashboardActivity, type DashboardAttention, type DashboardMetric, type DashboardRange }
+export {
+  DashboardOverview,
+  type DashboardOverviewProps,
+  type DashboardActivity,
+  type DashboardAttention,
+  type DashboardMetric,
+  type DashboardRange,
+  type DashboardVariant,
+  type DashboardWorkItem,
+}

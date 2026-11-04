@@ -2,9 +2,20 @@
   "name": "empty-state",
   "type": "registry:block",
   "title": "Empty State",
-  "description": "A first screen that gives people somewhere to start, with one action and three worked examples.",
-  "dependencies": ["lucide-react"],
-  "registryDependencies": ["utils", "https://miseui.junsu4621.workers.dev/r/button.json"],
+  "description": "A first screen that gives people somewhere to start: worked examples, the first three things to do, or a ghost of the filled screen with sample data.",
+  "dependencies": ["lucide-react", "motion"],
+  "registryDependencies": [
+    "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
+    "https://miseui.junsu4621.workers.dev/r/button.json",
+    "https://miseui.junsu4621.workers.dev/r/checkbox.json",
+    "https://miseui.junsu4621.workers.dev/r/progress.json",
+    "https://miseui.junsu4621.workers.dev/r/status.json"
+  ],
   "categories": ["blocks"],
-  "files": [{ "path": "registry/miseui/blocks/empty-state.tsx", "type": "registry:component" }]
+  "files": [
+    { "path": "registry/miseui/blocks/empty-state.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/empty-state-checklist.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/empty-state-sample.tsx", "type": "registry:component" }
+  ]
 }

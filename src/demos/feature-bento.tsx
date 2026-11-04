@@ -1,5 +1,5 @@
-import { FeatureBento } from "@/registry/miseui/blocks/feature-bento"
+import { FeatureBento, type FeatureBentoVariant } from "@/registry/miseui/blocks/feature-bento"
 
-export function Demo() {
-  return <FeatureBento />
+export function Demo({ variant }: { variant?: string }) {
+  return <FeatureBento variant={variant as FeatureBentoVariant} />
 }

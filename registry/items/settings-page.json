@@ -2,7 +2,7 @@
   "name": "settings-page",
   "type": "registry:block",
   "title": "Settings Page",
-  "description": "A settings screen in grouped rows, with a save bar that appears only when something changed and a destructive area kept well away from the rest.",
+  "description": "A settings screen in three decisions: one page with one save bar, one section at a time beside a side nav, or each group as its own plate with its own Save.",
   "dependencies": ["lucide-react", "motion"],
   "registryDependencies": [
     "utils",
@@ -16,6 +16,10 @@
   "categories": ["blocks"],
   "files": [
     { "path": "registry/miseui/blocks/settings-page.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/settings-page-sections.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/settings-page-sidebar.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/settings-page-cards.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/settings-page-savebar.tsx", "type": "registry:component" },
     { "path": "registry/miseui/blocks/settings-page-parts.tsx", "type": "registry:component" },
     { "path": "registry/miseui/blocks/settings-page-row-text.tsx", "type": "registry:component" },
     { "path": "registry/miseui/blocks/settings-page-danger.tsx", "type": "registry:component" },

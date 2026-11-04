@@ -2,7 +2,7 @@
   "name": "pricing-table",
   "type": "registry:block",
   "title": "Pricing Table",
-  "description": "Three plans with one dominant centre, an honest yearly anchor and feature rows you can read straight across.",
+  "description": "Pricing with an honest yearly anchor, in three forms: three plans with one raised, a side-by-side feature matrix with a sticky plan header, or one plan priced by the seat.",
   "dependencies": ["lucide-react", "motion"],
   "registryDependencies": [
     "utils",
@@ -11,11 +11,20 @@
     "https://miseui.junsu4621.workers.dev/r/button.json",
     "https://miseui.junsu4621.workers.dev/r/card.json",
     "https://miseui.junsu4621.workers.dev/r/label.json",
+    "https://miseui.junsu4621.workers.dev/r/number-input.json",
+    "https://miseui.junsu4621.workers.dev/r/scroll-shadow.json",
     "https://miseui.junsu4621.workers.dev/r/switch.json"
   ],
   "categories": ["blocks"],
   "files": [
     { "path": "registry/miseui/blocks/pricing-table.tsx", "type": "registry:component" },
-    { "path": "registry/miseui/blocks/pricing-table-parts.tsx", "type": "registry:component" }
+    { "path": "registry/miseui/blocks/pricing-table-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/pricing-table-billing.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/pricing-table-cards.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/pricing-table-comparison.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/pricing-table-matrix.ts", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/pricing-table-sample.ts", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/pricing-table-seats.ts", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/pricing-table-single.tsx", "type": "registry:component" }
   ]
 }

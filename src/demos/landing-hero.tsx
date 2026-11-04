@@ -1,5 +1,5 @@
-import { LandingHero } from "@/registry/miseui/blocks/landing-hero"
+import { LandingHero, type LandingHeroVariant } from "@/registry/miseui/blocks/landing-hero"
 
-export function Demo() {
-  return <LandingHero />
+export function Demo({ variant }: { variant?: string }) {
+  return <LandingHero variant={variant as LandingHeroVariant} />
 }

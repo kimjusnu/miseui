@@ -2,7 +2,7 @@
   "name": "landing-hero",
   "type": "registry:block",
   "title": "Landing Hero",
-  "description": "A left-aligned marketing hero with one message, two actions and a live product preview built from real components, not a screenshot.",
+  "description": "A marketing hero with one message and two actions, in four layouts: beside a live preview, over a wide product plate, beside two overlapped fragments, or type alone.",
   "dependencies": ["lucide-react", "motion"],
   "registryDependencies": [
     "utils",
@@ -18,6 +18,10 @@
   "categories": ["blocks"],
   "files": [
     { "path": "registry/miseui/blocks/landing-hero.tsx", "type": "registry:component" },
-    { "path": "registry/miseui/blocks/landing-hero-parts.tsx", "type": "registry:component" }
+    { "path": "registry/miseui/blocks/landing-hero-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/landing-hero-copy.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/landing-hero-centered.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/landing-hero-overlap.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/landing-hero-minimal.tsx", "type": "registry:component" }
   ]
 }

@@ -4,7 +4,7 @@ export const meta: ComponentMeta = {
   name: "signup-steps",
   title: "Signup Steps",
   category: "blocks",
-  description: "A sign-up that asks one question at a time, starts with real progress on the bar and never ticks consent for anyone.",
+  description: "A sign-up that asks one question at a time, starts with real progress and never ticks consent for anyone, in a card, beside a rail of what is left, or as one large question per screen.",
   why: {
     principle: "Goal-gradient effect",
     explanation:
@@ -12,9 +12,27 @@ export const meta: ComponentMeta = {
     avoid:
       "Credit only something the person has really done; a bar that lies about progress stops being believed. Never pre-tick consent or bundle marketing into the terms, because that is a dark pattern and in many places illegal. If you only need one or two fields, use a single form instead.",
   },
+  designs: [
+    {
+      name: "card",
+      principle: "Goal-gradient effect",
+      use: "A short sign-up of two or three questions, placed on a page of its own or over your marketing page.",
+    },
+    {
+      name: "rail",
+      principle: "Zeigarnik effect",
+      use: "A longer setup people may worry about: the rail names what is left and lets them step back to an earlier answer, and it folds to a bar on phones.",
+    },
+    {
+      name: "conversation",
+      principle: "Cognitive load",
+      use: "Questions people have to think about, such as naming a team: nothing else on the screen, and the last answer read back.",
+    },
+  ],
   usage: `import { SignupSteps } from "@/components/signup-steps"
 
 <SignupSteps
+  variant="card"
   steps={[
     { id: "start", label: "Started", credited: true },
     { id: "email", label: "Email", question: "What is your work email?", fieldLabel: "Work email", type: "email" },
@@ -23,6 +41,10 @@ export const meta: ComponentMeta = {
   onComplete={async (values) => {
     await createAccount(values) // a rejection's message appears inline
   }}
-/>`,
+/>
+
+// A step's aside doubles as what the rail says about it while it is still ahead
+<SignupSteps variant="rail" steps={steps} onComplete={createAccount} />
+<SignupSteps variant="conversation" steps={steps} onComplete={createAccount} />`,
   exports: ["SignupSteps"],
 }

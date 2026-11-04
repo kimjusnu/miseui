@@ -26,10 +26,13 @@ export function ComponentPage() {
       </header>
 
       {meta.category === "blocks" ? (
-        <BlockPreview name={meta.name}>
-          <Suspense fallback={<div className="min-h-96" />}>
-            <Demo />
-          </Suspense>
+        // Keyed by name: moving to another block must not carry over a variant it does not have.
+        <BlockPreview key={meta.name} name={meta.name} designs={meta.designs}>
+          {(variant) => (
+            <Suspense fallback={<div className="min-h-96" />}>
+              <Demo variant={variant} />
+            </Suspense>
+          )}
         </BlockPreview>
       ) : (
         <section aria-label="Demo" className="flex min-h-56 items-center rounded-2xl bg-card p-8 md:p-10">

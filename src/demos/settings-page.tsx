@@ -1,5 +1,5 @@
-import { SettingsPage } from "@/registry/miseui/blocks/settings-page"
+import { SettingsPage, type SettingsPageVariant } from "@/registry/miseui/blocks/settings-page"
 
-export function Demo() {
-  return <SettingsPage />
+export function Demo({ variant }: { variant?: string }) {
+  return <SettingsPage variant={variant as SettingsPageVariant | undefined} />
 }

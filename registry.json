@@ -799,7 +799,7 @@
       "name": "chat-assistant",
       "type": "registry:block",
       "title": "Chat Assistant",
-      "description": "A full AI chat screen that shows the model working: steps, tool calls, streaming text and a composer that swaps Send for Stop.",
+      "description": "An AI chat that shows the model working, as a full screen, a panel docked beside the work, or a launcher that opens a small window.",
       "dependencies": [
         "lucide-react",
         "motion"
@@ -823,6 +823,26 @@
       "files": [
         {
           "path": "registry/miseui/blocks/chat-assistant.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/chat-assistant-screen.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/chat-assistant-docked.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/chat-assistant-popup.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/chat-assistant-panel-state.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/chat-assistant-work.tsx",
           "type": "registry:component"
         },
         {
@@ -1219,7 +1239,7 @@
       "name": "dashboard-overview",
       "type": "registry:block",
       "title": "Dashboard Overview",
-      "description": "A product dashboard built around one number: a large metric with its chart, a quieter row under it, recent activity and the one thing that needs you.",
+      "description": "A product dashboard in three decisions: one number first, one large chart first, or the work list first with the numbers as one line.",
       "dependencies": [
         "lucide-react",
         "motion"
@@ -1228,7 +1248,10 @@
         "utils",
         "https://miseui.junsu4621.workers.dev/r/motion.json",
         "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/chart.json",
+        "https://miseui.junsu4621.workers.dev/r/data-table.json",
         "https://miseui.junsu4621.workers.dev/r/skeleton.json",
+        "https://miseui.junsu4621.workers.dev/r/status.json",
         "https://miseui.junsu4621.workers.dev/r/tabs.json"
       ],
       "categories": [
@@ -1237,6 +1260,22 @@
       "files": [
         {
           "path": "registry/miseui/blocks/dashboard-overview.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/dashboard-overview-shell.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/dashboard-overview-body.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/dashboard-overview-analytics.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/dashboard-overview-table.tsx",
           "type": "registry:component"
         },
         {
@@ -1616,13 +1655,18 @@
       "name": "empty-state",
       "type": "registry:block",
       "title": "Empty State",
-      "description": "A first screen that gives people somewhere to start, with one action and three worked examples.",
+      "description": "A first screen that gives people somewhere to start: worked examples, the first three things to do, or a ghost of the filled screen with sample data.",
       "dependencies": [
-        "lucide-react"
+        "lucide-react",
+        "motion"
       ],
       "registryDependencies": [
         "utils",
-        "https://miseui.junsu4621.workers.dev/r/button.json"
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
+        "https://miseui.junsu4621.workers.dev/r/button.json",
+        "https://miseui.junsu4621.workers.dev/r/checkbox.json",
+        "https://miseui.junsu4621.workers.dev/r/progress.json",
+        "https://miseui.junsu4621.workers.dev/r/status.json"
       ],
       "categories": [
         "blocks"
@@ -1631,6 +1675,14 @@
         {
           "path": "registry/miseui/blocks/empty-state.tsx",
           "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/empty-state-checklist.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/empty-state-sample.tsx",
+          "type": "registry:component"
         }
       ]
     },
@@ -1638,12 +1690,14 @@
       "name": "feature-bento",
       "type": "registry:block",
       "title": "Feature Bento",
-      "description": "An asymmetric feature grid: mixed cell sizes, live visuals built from kit effects in some cells and large type in the others.",
+      "description": "A features section in three forms: an asymmetric grid of mixed cell sizes, alternating picture and text rows, or a list of features driving one large panel.",
       "dependencies": [
-        "lucide-react"
+        "lucide-react",
+        "motion"
       ],
       "registryDependencies": [
         "utils",
+        "https://miseui.junsu4621.workers.dev/r/motion.json",
         "https://miseui.junsu4621.workers.dev/r/badge.json",
         "https://miseui.junsu4621.workers.dev/r/button.json",
         "https://miseui.junsu4621.workers.dev/r/card.json",
@@ -1651,6 +1705,7 @@
         "https://miseui.junsu4621.workers.dev/r/input.json",
         "https://miseui.junsu4621.workers.dev/r/materialize.json",
         "https://miseui.junsu4621.workers.dev/r/shimmer-text.json",
+        "https://miseui.junsu4621.workers.dev/r/tabs.json",
         "https://miseui.junsu4621.workers.dev/r/thinking-orb.json"
       ],
       "categories": [
@@ -1662,7 +1717,23 @@
           "type": "registry:component"
         },
         {
+          "path": "registry/miseui/blocks/feature-bento-grid.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/feature-bento-panels.tsx",
+          "type": "registry:component"
+        },
+        {
           "path": "registry/miseui/blocks/feature-bento-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/feature-bento-rows.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/feature-bento-tabs.tsx",
           "type": "registry:component"
         }
       ]
@@ -2395,7 +2466,7 @@
       "name": "landing-hero",
       "type": "registry:block",
       "title": "Landing Hero",
-      "description": "A left-aligned marketing hero with one message, two actions and a live product preview built from real components, not a screenshot.",
+      "description": "A marketing hero with one message and two actions, in four layouts: beside a live preview, over a wide product plate, beside two overlapped fragments, or type alone.",
       "dependencies": [
         "lucide-react",
         "motion"
@@ -2421,6 +2492,22 @@
         },
         {
           "path": "registry/miseui/blocks/landing-hero-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/landing-hero-copy.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/landing-hero-centered.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/landing-hero-overlap.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/landing-hero-minimal.tsx",
           "type": "registry:component"
         }
       ]
@@ -2547,7 +2634,7 @@
       "name": "login-form",
       "type": "registry:block",
       "title": "Login Form",
-      "description": "A split login screen with labels that stay visible, inline errors, a password you can reveal and a calm brand panel.",
+      "description": "A login with labels that stay visible and inline errors, in three forms: beside a calm brand panel with a password you can reveal, one card on a grey ground, or email only with a check-your-inbox screen.",
       "dependencies": [
         "lucide-react",
         "motion"
@@ -2567,6 +2654,18 @@
       "files": [
         {
           "path": "registry/miseui/blocks/login-form.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/login-form-credentials.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/login-form-magic.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/login-form-magic-state.ts",
           "type": "registry:component"
         },
         {
@@ -3165,7 +3264,7 @@
       "name": "pricing-table",
       "type": "registry:block",
       "title": "Pricing Table",
-      "description": "Three plans with one dominant centre, an honest yearly anchor and feature rows you can read straight across.",
+      "description": "Pricing with an honest yearly anchor, in three forms: three plans with one raised, a side-by-side feature matrix with a sticky plan header, or one plan priced by the seat.",
       "dependencies": [
         "lucide-react",
         "motion"
@@ -3177,6 +3276,8 @@
         "https://miseui.junsu4621.workers.dev/r/button.json",
         "https://miseui.junsu4621.workers.dev/r/card.json",
         "https://miseui.junsu4621.workers.dev/r/label.json",
+        "https://miseui.junsu4621.workers.dev/r/number-input.json",
+        "https://miseui.junsu4621.workers.dev/r/scroll-shadow.json",
         "https://miseui.junsu4621.workers.dev/r/switch.json"
       ],
       "categories": [
@@ -3189,6 +3290,34 @@
         },
         {
           "path": "registry/miseui/blocks/pricing-table-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/pricing-table-billing.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/pricing-table-cards.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/pricing-table-comparison.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/pricing-table-matrix.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/pricing-table-sample.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/pricing-table-seats.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/pricing-table-single.tsx",
           "type": "registry:component"
         }
       ]
@@ -3843,7 +3972,7 @@
       "name": "settings-page",
       "type": "registry:block",
       "title": "Settings Page",
-      "description": "A settings screen in grouped rows, with a save bar that appears only when something changed and a destructive area kept well away from the rest.",
+      "description": "A settings screen in three decisions: one page with one save bar, one section at a time beside a side nav, or each group as its own plate with its own Save.",
       "dependencies": [
         "lucide-react",
         "motion"
@@ -3863,6 +3992,22 @@
       "files": [
         {
           "path": "registry/miseui/blocks/settings-page.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/settings-page-sections.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/settings-page-sidebar.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/settings-page-cards.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/settings-page-savebar.tsx",
           "type": "registry:component"
         },
         {
@@ -4008,7 +4153,7 @@
       "name": "signup-steps",
       "type": "registry:block",
       "title": "Signup Steps",
-      "description": "A sign-up that asks one question at a time, starts with real progress on the bar and never ticks consent for anyone.",
+      "description": "A sign-up that asks one question at a time, starts with real progress and never ticks consent for anyone, in a card, beside a rail of what is left, or as one large question per screen.",
       "dependencies": [
         "lucide-react",
         "motion"
@@ -4019,7 +4164,9 @@
         "https://miseui.junsu4621.workers.dev/r/button.json",
         "https://miseui.junsu4621.workers.dev/r/checkbox.json",
         "https://miseui.junsu4621.workers.dev/r/input.json",
-        "https://miseui.junsu4621.workers.dev/r/label.json"
+        "https://miseui.junsu4621.workers.dev/r/kbd.json",
+        "https://miseui.junsu4621.workers.dev/r/label.json",
+        "https://miseui.junsu4621.workers.dev/r/steps.json"
       ],
       "categories": [
         "blocks"
@@ -4030,11 +4177,23 @@
           "type": "registry:component"
         },
         {
-          "path": "registry/miseui/blocks/signup-steps-parts.tsx",
+          "path": "registry/miseui/blocks/signup-steps-conversation.tsx",
           "type": "registry:component"
         },
         {
           "path": "registry/miseui/blocks/signup-steps-flow.ts",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/signup-steps-parts.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/signup-steps-question.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/miseui/blocks/signup-steps-rail.tsx",
           "type": "registry:component"
         }
       ]

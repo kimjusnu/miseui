@@ -2,7 +2,7 @@
   "name": "chat-assistant",
   "type": "registry:block",
   "title": "Chat Assistant",
-  "description": "A full AI chat screen that shows the model working: steps, tool calls, streaming text and a composer that swaps Send for Stop.",
+  "description": "An AI chat that shows the model working, as a full screen, a panel docked beside the work, or a launcher that opens a small window.",
   "dependencies": ["lucide-react", "motion"],
   "registryDependencies": [
     "utils",
@@ -20,6 +20,11 @@
   "categories": ["blocks"],
   "files": [
     { "path": "registry/miseui/blocks/chat-assistant.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/chat-assistant-screen.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/chat-assistant-docked.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/chat-assistant-popup.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/chat-assistant-panel-state.ts", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/chat-assistant-work.tsx", "type": "registry:component" },
     { "path": "registry/miseui/blocks/chat-assistant-parts.tsx", "type": "registry:component" },
     { "path": "registry/miseui/blocks/chat-assistant-thread.tsx", "type": "registry:component" },
     { "path": "registry/miseui/blocks/chat-assistant-composer.tsx", "type": "registry:component" },

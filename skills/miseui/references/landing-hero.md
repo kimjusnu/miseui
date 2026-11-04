@@ -1,6 +1,6 @@
 # Landing Hero
 
-A left-aligned marketing hero with one message, two actions and a live product preview built from real components, not a screenshot. The call and the people in it are sample content.
+A marketing hero with one message and two actions, in four layouts: beside a live preview, over a wide product plate, beside two overlapped fragments, or type alone. The call and the people in it are sample content.
 
 ## Install
 
@@ -14,12 +14,22 @@ npx shadcn@latest add https://miseui.junsu4621.workers.dev/r/landing-hero.json
 
 **Don't.** Do not stretch the headline past two lines or add a tagline under the buttons, since every extra line weakens the first one. Do not put a preview here that your product cannot really do, because the first thing people try is what they just watched. A hero with no product to show should pass preview={null} and let the headline carry the page.
 
+## Designs
+
+Pass one as the `variant` prop.
+
+- `split` (Serial position effect): Your product can show itself working in a small space: the claim is read first and the preview proves it right beside it.
+- `centered` (Picture superiority effect): Your screen is the selling point and needs width: one centred claim, then the product at full size on a rounded plate.
+- `overlap` (Figure and ground): Your product turns one thing into another: the raw input sits behind and the finished output lies in front of it.
+- `minimal` (Hick's law): You have nothing to show yet: no invented screenshot, one sentence in large type and one thing to do.
+
 ## Usage
 
 ```tsx
 import { LandingHero } from "@/components/landing-hero"
 
 <LandingHero
+  variant="split"
   headline="Calls that end in a plan."
   headlineQuiet="Written before you leave."
   description="It listens to the call, writes down who owns what, and sends it to everyone who was there."
@@ -27,6 +37,12 @@ import { LandingHero } from "@/components/landing-hero"
   secondaryAction={{ label: "See a sample summary", href: "/sample" }}
   preview={<YourProduct />}
 />
+
+// Two pieces of your product, the one behind first
+<LandingHero variant="overlap" fragments={[<YourInput />, <YourResult />]} />
+
+// Nothing to show yet: one button
+<LandingHero variant="minimal" primaryAction={{ label: "Get early access", href: "/waitlist" }} />
 ```
 
 Exports: `LandingHero`, `LandingHeroPreview`

@@ -1,3 +1,4 @@
+import type * as React from "react"
 import { ArrowRight } from "lucide-react"
 import { cn } from "@/registry/miseui/lib/utils"
 import { AgentAvatar } from "@/registry/miseui/ui/agent-avatar"
@@ -35,9 +36,11 @@ interface ChatHeaderProps {
   description: string
   generating: boolean
   onNewChat?: () => void
+  /** Extra controls after New chat, such as a way to close a panel. */
+  actions?: React.ReactNode
 }
 
-function ChatHeader({ agentName, description, generating, onNewChat }: ChatHeaderProps) {
+function ChatHeader({ agentName, description, generating, onNewChat, actions }: ChatHeaderProps) {
   return (
     <header className="border-b px-4 py-3 @md:px-6">
       <div className={cn(COLUMN_CLASS, "flex items-center gap-3")}>
@@ -49,10 +52,11 @@ function ChatHeader({ agentName, description, generating, onNewChat }: ChatHeade
           </p>
         </div>
         {onNewChat ? (
-          <Button variant="ghost" size="sm" onClick={onNewChat}>
+          <Button variant="ghost" size="sm" className={actions ? "pointer-coarse:h-10" : undefined} onClick={onNewChat}>
             New chat
           </Button>
         ) : null}
+        {actions}
       </div>
     </header>
   )
@@ -63,13 +67,15 @@ interface ChatStarterProps {
   suggestions: readonly string[]
   disabled: boolean
   onPick: (suggestion: string) => void
+  /** A narrow panel: the headline would otherwise take the whole thread. */
+  compact?: boolean
 }
 
 /** Sits at the bottom of the thread, just above the composer, so sending the first message moves nothing. */
-function ChatStarter({ agentName, suggestions, disabled, onPick }: ChatStarterProps) {
+function ChatStarter({ agentName, suggestions, disabled, onPick, compact = false }: ChatStarterProps) {
   return (
     <div className="mt-auto flex flex-col gap-6">
-      <h3 className="text-display text-3xl leading-[1.12]! text-balance @2xl:text-4xl">
+      <h3 className={cn("text-display leading-[1.12]! text-balance", compact ? "text-xl" : "text-3xl @2xl:text-4xl")}>
         What should we look at?{" "}
         <span className="text-muted-foreground">{agentName} reads your reports and answers with the numbers.</span>
       </h3>

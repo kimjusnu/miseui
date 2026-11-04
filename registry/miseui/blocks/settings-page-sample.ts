@@ -1,3 +1,4 @@
+import { Bell, CreditCard, TriangleAlert, UserRound } from "lucide-react"
 import type { SettingsSection } from "./settings-page-form"
 
 /** Invented sample content. The person, the plan and every figure are made up. */
@@ -9,6 +10,7 @@ const SAMPLE_SECTIONS: readonly SettingsSection[] = [
     id: "profile",
     title: "Profile",
     description: "How you appear to the people in this workspace.",
+    icon: UserRound,
     rows: [
       {
         kind: "text",
@@ -47,6 +49,7 @@ const SAMPLE_SECTIONS: readonly SettingsSection[] = [
     id: "notifications",
     title: "Notifications",
     description: "Only what you would want to be interrupted for.",
+    icon: Bell,
     rows: [
       {
         kind: "switch",
@@ -74,6 +77,7 @@ const SAMPLE_SECTIONS: readonly SettingsSection[] = [
   {
     id: "plan",
     title: "Plan",
+    icon: CreditCard,
     rows: [
       {
         kind: "info",
@@ -89,6 +93,7 @@ const SAMPLE_SECTIONS: readonly SettingsSection[] = [
     id: "danger",
     title: "Delete workspace",
     tone: "danger",
+    icon: TriangleAlert,
     rows: [
       {
         kind: "danger",

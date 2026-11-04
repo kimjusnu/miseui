@@ -27,14 +27,14 @@ const FIELD_ERROR_START = { opacity: 0, y: -4 }
 const FIELD_ERROR_END = { opacity: 1, y: 0 }
 const SUBMIT_FAILED = "Could not log in. Check your connection and try again."
 
-function validate({ email, password }: LoginValues): FieldErrors {
+function validateEmail(email: string) {
   const trimmed = email.trim()
-  const emailError = !trimmed
-    ? "Enter your email address."
-    : EMAIL_SHAPE.test(trimmed)
-      ? undefined
-      : "That email looks incomplete. Check the @ and what follows it."
-  return { email: emailError, password: password ? undefined : "Enter your password." }
+  if (!trimmed) return "Enter your email address."
+  return EMAIL_SHAPE.test(trimmed) ? undefined : "That email looks incomplete. Check the @ and what follows it."
+}
+
+function validate({ email, password }: LoginValues): FieldErrors {
+  return { email: validateEmail(email), password: password ? undefined : "Enter your password." }
 }
 
 function useLoginForm(
@@ -178,6 +178,7 @@ export {
   PasswordField,
   SocialRow,
   useLoginForm,
+  validateEmail,
   type LoginProvider,
   type LoginValues,
 }

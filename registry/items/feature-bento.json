@@ -2,10 +2,11 @@
   "name": "feature-bento",
   "type": "registry:block",
   "title": "Feature Bento",
-  "description": "An asymmetric feature grid: mixed cell sizes, live visuals built from kit effects in some cells and large type in the others.",
-  "dependencies": ["lucide-react"],
+  "description": "A features section in three forms: an asymmetric grid of mixed cell sizes, alternating picture and text rows, or a list of features driving one large panel.",
+  "dependencies": ["lucide-react", "motion"],
   "registryDependencies": [
     "utils",
+    "https://miseui.junsu4621.workers.dev/r/motion.json",
     "https://miseui.junsu4621.workers.dev/r/badge.json",
     "https://miseui.junsu4621.workers.dev/r/button.json",
     "https://miseui.junsu4621.workers.dev/r/card.json",
@@ -13,11 +14,16 @@
     "https://miseui.junsu4621.workers.dev/r/input.json",
     "https://miseui.junsu4621.workers.dev/r/materialize.json",
     "https://miseui.junsu4621.workers.dev/r/shimmer-text.json",
+    "https://miseui.junsu4621.workers.dev/r/tabs.json",
     "https://miseui.junsu4621.workers.dev/r/thinking-orb.json"
   ],
   "categories": ["blocks"],
   "files": [
     { "path": "registry/miseui/blocks/feature-bento.tsx", "type": "registry:component" },
-    { "path": "registry/miseui/blocks/feature-bento-parts.tsx", "type": "registry:component" }
+    { "path": "registry/miseui/blocks/feature-bento-grid.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/feature-bento-panels.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/feature-bento-parts.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/feature-bento-rows.tsx", "type": "registry:component" },
+    { "path": "registry/miseui/blocks/feature-bento-tabs.tsx", "type": "registry:component" }
   ]
 }

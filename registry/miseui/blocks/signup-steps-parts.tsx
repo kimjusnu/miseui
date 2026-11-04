@@ -19,31 +19,36 @@ interface StepProgressProps {
   completed: number
 }
 
-function StepProgress({ steps, completed }: StepProgressProps) {
+function ProgressTrack({ total, completed, className }: { total: number; completed: number; className?: string }) {
   const reduceMotion = useReducedMotion()
-  const percent = Math.round((completed / steps.length) * PERCENT)
-  const current = Math.min(completed + 1, steps.length)
+  const percent = Math.round((completed / total) * PERCENT)
+  return (
+    <div
+      role="progressbar"
+      aria-label="Sign-up progress"
+      aria-valuemin={0}
+      aria-valuemax={PERCENT}
+      aria-valuenow={percent}
+      aria-valuetext={`Step ${Math.min(completed + 1, total)} of ${total}`}
+      className={cn("h-1 overflow-hidden rounded-full bg-muted", className)}
+    >
+      {/* Sliding a full-width bar, not scaling it: scale would squash the rounded leading edge. */}
+      <motion.div
+        data-testid="progress-fill"
+        data-reduced={reduceMotion ? "true" : "false"}
+        className="h-full rounded-full bg-mise"
+        initial={false}
+        animate={{ x: `${percent - PERCENT}%` }}
+        transition={reduceMotion ? { duration: 0 } : SPRING_DEFAULT}
+      />
+    </div>
+  )
+}
+
+function StepProgress({ steps, completed }: StepProgressProps) {
   return (
     <div className="flex flex-col gap-2">
-      <div
-        role="progressbar"
-        aria-label="Sign-up progress"
-        aria-valuemin={0}
-        aria-valuemax={PERCENT}
-        aria-valuenow={percent}
-        aria-valuetext={`Step ${current} of ${steps.length}`}
-        className="h-1 overflow-hidden rounded-full bg-muted"
-      >
-        {/* Sliding a full-width bar, not scaling it: scale would squash the rounded leading edge. */}
-        <motion.div
-          data-testid="progress-fill"
-          data-reduced={reduceMotion ? "true" : "false"}
-          className="h-full rounded-full bg-mise"
-          initial={false}
-          animate={{ x: `${percent - PERCENT}%` }}
-          transition={reduceMotion ? { duration: 0 } : SPRING_DEFAULT}
-        />
-      </div>
+      <ProgressTrack total={steps.length} completed={completed} />
       <ol className="grid text-[13px]" style={{ gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))` }}>
         {steps.map((step, index) => (
           <li
@@ -153,4 +158,4 @@ function Confirmation({ title, description }: ConfirmationProps) {
   )
 }
 
-export { Confirmation, QuestionFields, StepProgress }
+export { Confirmation, ConsentField, ProgressTrack, QuestionFields, StepProgress }

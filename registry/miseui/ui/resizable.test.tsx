@@ -15,16 +15,22 @@ import {
 const CONTAINER_PX = 1000
 const LIMITS = { min: 20, max: 80 }
 let clockOffset = 0
+let frozenAt: number | null = null
 const realNow = performance.now.bind(performance)
 
 beforeAll(() => {
   Element.prototype.setPointerCapture = vi.fn()
   Element.prototype.releasePointerCapture = vi.fn()
   // Only ever jumps forward from real time, because the motion springs read the same clock.
-  vi.spyOn(performance, "now").mockImplementation(() => realNow() + clockOffset)
+  // Real time stands still during a drag: on a loaded machine it would leak in and turn a flick into a slow release.
+  vi.spyOn(performance, "now").mockImplementation(() => (frozenAt ?? realNow()) + clockOffset)
   vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(
     () => ({ width: CONTAINER_PX, height: CONTAINER_PX, top: 0, left: 0, right: 0, bottom: 0, x: 0, y: 0, toJSON: () => ({}) }) as DOMRect,
   )
+})
+
+afterEach(() => {
+  frozenAt = null
 })
 
 afterAll(() => {
@@ -45,6 +51,7 @@ const valueNow = () => Number(handle().getAttribute("aria-valuenow"))
 const painted = () => Number(document.querySelector<HTMLElement>("[data-slot='resizable-panel']")?.style.getPropertyValue("--resizable-size"))
 
 function press(position = 500, axis: "clientX" | "clientY" = "clientX") {
+  frozenAt = realNow()
   fireEvent.pointerDown(handle(), { pointerId: 1, button: 0, [axis]: position })
 }
 
@@ -56,6 +63,7 @@ function move(position: number, elapsedMs = 16, axis: "clientX" | "clientY" = "c
 
 function release() {
   fireEvent.pointerUp(handle(), { pointerId: 1 })
+  frozenAt = null
 }
 
 describe("resizable math", () => {
